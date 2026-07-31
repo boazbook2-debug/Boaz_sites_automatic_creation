@@ -30,7 +30,10 @@ export default function PropertyCard({ property, className = "" }) {
       <div className="p-3 lg:p-6">
         <p className="truncate text-sm font-bold tracking-tight lg:text-xl">{property.title}</p>
         <p className="mt-0.5 truncate text-xs text-[var(--color-main)]/60 lg:mt-1 lg:text-base">{property.location}</p>
-        <p className="mt-1 text-xs text-[var(--color-main)]/50 lg:hidden">חדרים: {property.rooms}</p>
+        <p className="mt-1 text-xs text-[var(--color-main)]/50 lg:hidden">{property.rooms} חדרים</p>
+        <p className="mt-0.5 text-sm font-extrabold text-[var(--color-accent2)] lg:hidden">
+          {formatPrice(property.price, property.status)}
+        </p>
 
         <div className="mt-4 hidden items-center justify-between border-t border-[var(--color-main)]/10 pt-4 lg:flex lg:mt-5 lg:pt-5">
           <span className="text-xl font-extrabold text-[var(--color-accent2)]">
