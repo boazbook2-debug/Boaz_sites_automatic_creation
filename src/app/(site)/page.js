@@ -76,15 +76,21 @@ export default function HomePage() {
       <section className="py-6 sm:py-12">
         <div className="mx-auto max-w-3xl px-6 lg:px-10">
           <div className="flex items-center gap-4 sm:flex-col sm:gap-0 sm:text-center">
-            <SampleImage
-              src={owner.photo}
-              alt={owner.name}
-              className="aspect-square w-20 shrink-0 rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.15)] ring-2 ring-[var(--color-surface)] sm:w-32 sm:ring-4"
-            />
+            {owner && (
+              <SampleImage
+                src={owner.photo}
+                alt={owner.name}
+                className="aspect-square w-20 shrink-0 rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.15)] ring-2 ring-[var(--color-surface)] sm:w-32 sm:ring-4"
+              />
+            )}
             <div>
               <h2 className="text-xl font-extrabold tracking-tight sm:mt-4 sm:text-3xl">אודותינו</h2>
-              <p className="mt-1 text-sm font-bold sm:mt-2">{owner.name}</p>
-              <p className="text-xs text-[var(--color-accent2)] sm:text-sm">{owner.role}</p>
+              {owner && (
+                <>
+                  <p className="mt-1 text-sm font-bold sm:mt-2">{owner.name}</p>
+                  <p className="text-xs text-[var(--color-accent2)] sm:text-sm">{owner.role}</p>
+                </>
+              )}
             </div>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-[var(--color-main)]/80 sm:mt-5 sm:text-center sm:text-lg">
