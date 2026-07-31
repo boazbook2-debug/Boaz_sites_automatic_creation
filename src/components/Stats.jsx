@@ -11,7 +11,7 @@ const stats = [
 
 function StatItem({ icon: Icon, value, label }) {
   return (
-    <div className="flex shrink-0 items-center gap-2 sm:gap-3">
+    <div className="flex shrink-0 items-center gap-2 pl-8 sm:gap-3 sm:pl-10">
       <Icon className="h-5 w-5 shrink-0 text-[var(--color-accent2)] sm:h-8 sm:w-8" />
       <div className="whitespace-nowrap">
         <span className="text-sm font-extrabold sm:text-lg">{value}</span>
@@ -24,7 +24,7 @@ function StatItem({ icon: Icon, value, label }) {
 export default function Stats() {
   return (
     <div className="overflow-hidden py-2 sm:py-4">
-      <div className="flex w-max animate-marquee gap-8 sm:gap-10">
+      <div className="flex w-max animate-marquee">
         {[...stats, ...stats].map((stat, i) => (
           <StatItem key={i} {...stat} />
         ))}

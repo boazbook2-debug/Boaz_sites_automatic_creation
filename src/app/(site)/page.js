@@ -15,7 +15,8 @@ import testimonials from "@/data/testimonials";
 import faq from "@/data/faq";
 
 export default function HomePage() {
-  const featured = properties.slice(0, 6);
+  const featured = properties.slice(0, 4);
+  const featuredAgents = agents.slice(0, 4);
   const owner = agents[0];
 
   return (
@@ -35,7 +36,7 @@ export default function HomePage() {
           </div>
           <Link
             href="/properties"
-            className="hidden text-base font-semibold text-[var(--color-accent2)] sm:inline-block"
+            className="text-sm font-semibold text-[var(--color-accent2)] sm:text-base"
           >
             לכל הנכסים ←
           </Link>
@@ -43,22 +44,30 @@ export default function HomePage() {
 
         <div className="grid grid-cols-2 gap-3 sm:gap-8 lg:grid-cols-3">
           {featured.map((p) => (
-            <PropertyCard key={p.id} property={p} />
+            <PropertyCard key={p.id} property={p} compact />
           ))}
         </div>
       </section>
 
       <section className="bg-[var(--color-surface)] py-8 sm:py-12">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="mb-4 text-center sm:mb-8">
-            <h2 className="text-2xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">הסוכנים שלנו</h2>
-            <p className="mt-1 text-sm text-[var(--color-main)]/60 sm:mt-2 sm:text-lg">
-              צוות מקצועי וזמין שילווה אתכם לאורך כל הדרך
-            </p>
+          <div className="mb-4 flex items-end justify-between sm:mb-8">
+            <div>
+              <h2 className="text-2xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">הסוכנים שלנו</h2>
+              <p className="mt-1 text-sm text-[var(--color-main)]/60 sm:mt-2 sm:text-lg">
+                צוות מקצועי וזמין שילווה אתכם לאורך כל הדרך
+              </p>
+            </div>
+            <Link
+              href="/agents"
+              className="text-sm font-semibold text-[var(--color-accent2)] sm:text-base"
+            >
+              כל הסוכנים ←
+            </Link>
           </div>
           <div className="grid grid-cols-2 gap-3 sm:gap-8 lg:grid-cols-3">
-            {agents.map((agent) => (
-              <AgentCard key={agent.id} agent={agent} />
+            {featuredAgents.map((agent) => (
+              <AgentCard key={agent.id} agent={agent} compact />
             ))}
           </div>
         </div>
@@ -100,12 +109,12 @@ export default function HomePage() {
             </h2>
             <Link
               href="/reviews"
-              className="hidden text-base font-semibold text-[var(--color-accent2)] sm:inline-block"
+              className="text-sm font-semibold text-[var(--color-accent2)] sm:text-base"
             >
               כל הביקורות ←
             </Link>
           </div>
-          <Testimonials testimonials={testimonials.slice(0, 3)} />
+          <Testimonials testimonials={testimonials.slice(0, 4)} />
         </div>
       </section>
 
@@ -131,7 +140,7 @@ export default function HomePage() {
             <h2 className="text-2xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">שאלות ותשובות</h2>
             <Link
               href="/faq"
-              className="hidden text-base font-semibold text-[var(--color-accent2)] sm:inline-block"
+              className="text-sm font-semibold text-[var(--color-accent2)] sm:text-base"
             >
               כל השאלות ←
             </Link>

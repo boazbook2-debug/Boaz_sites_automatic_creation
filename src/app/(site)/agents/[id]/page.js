@@ -35,6 +35,21 @@ export default async function AgentProfilePage({ params }) {
         <div>
           <h1 className="text-4xl font-extrabold tracking-tight">{agent.name}</h1>
           <p className="mt-1 text-lg font-medium text-[var(--color-accent2)]">{agent.role}</p>
+          <div className="mt-4 flex flex-col items-center gap-1.5 text-[var(--color-main)]/70 sm:items-start">
+            <a
+              href={`tel:${agent.phone.replace(/[\s-]/g, "")}`}
+              dir="ltr"
+              className="underline decoration-[var(--color-main)]/20 underline-offset-2 transition hover:text-[var(--color-main)]"
+            >
+              {agent.phone}
+            </a>
+            <a
+              href={`mailto:${agent.email}`}
+              className="underline decoration-[var(--color-main)]/20 underline-offset-2 transition hover:text-[var(--color-main)]"
+            >
+              {agent.email}
+            </a>
+          </div>
           <ContactButtons
             phone={agent.phone}
             whatsapp={agent.whatsapp}

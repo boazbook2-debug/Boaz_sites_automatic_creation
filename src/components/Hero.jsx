@@ -50,10 +50,10 @@ export default function Hero({ images, title, tagline, ctaLabel = "לצפייה 
       <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent" />
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
-        <h1 className="hero-text-glow text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-7xl lg:text-8xl">
+        <h1 className="hero-text-glow text-5xl font-black leading-[1.05] tracking-tight text-white sm:text-7xl sm:font-extrabold lg:text-8xl">
           {title}
         </h1>
-        <p className="hero-text-glow mx-auto mt-3 max-w-2xl text-base font-semibold text-white sm:mt-6 sm:text-2xl">
+        <p className="hero-text-glow mx-auto mt-3 max-w-2xl text-lg font-bold text-white sm:mt-6 sm:text-2xl sm:font-semibold">
           {tagline}
         </p>
         <Link

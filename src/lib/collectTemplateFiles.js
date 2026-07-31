@@ -26,6 +26,18 @@ function walk(dir, base, files) {
   return files;
 }
 
+// Data files that get replaced with freshly generated, client-specific
+// content by the deploy route — every other file under src/data/ (like
+// clients.js, the intake tool's login list) ships through as-is.
+const REGENERATED_DATA_FILES = new Set([
+  "src/data/agency.js",
+  "src/data/agents.js",
+  "src/data/properties.js",
+  "src/data/testimonials.js",
+  "src/data/faq.js",
+  "src/data/siteConfig.js",
+]);
+
 // Reads the whole deployable template (src/, public/ minus uploads, and root
 // config files) from disk at request time. Requires
 // next.config.mjs's outputFileTracingIncludes to list these paths for this
@@ -42,5 +54,5 @@ export function collectTemplateFiles(root) {
     }
   }
 
-  return files.filter((f) => !f.file.startsWith("src/data/"));
+  return files.filter((f) => !REGENERATED_DATA_FILES.has(f.file));
 }

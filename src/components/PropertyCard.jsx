@@ -2,7 +2,37 @@ import Link from "next/link";
 import SampleImage from "./SampleImage";
 import { formatPrice, statusLabel } from "@/lib/format";
 
-export default function PropertyCard({ property }) {
+export default function PropertyCard({ property, compact = false }) {
+  if (compact) {
+    return (
+      <Link
+        href={`/properties/${property.id}`}
+        className="group block overflow-hidden rounded-2xl bg-[var(--color-background)] shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_rgba(0,0,0,0.14)] sm:rounded-[1.75rem]"
+      >
+        <SampleImage
+          src={property.images[0]}
+          alt={property.title}
+          className="aspect-[4/3]"
+          imgClassName="transition-transform duration-500 group-hover:scale-105"
+          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+        >
+          <span
+            className={`absolute right-2 top-2 rounded-full px-2.5 py-0.5 text-[10px] font-medium text-white sm:right-3 sm:top-3 sm:px-3 sm:py-1 sm:text-xs ${
+              property.status === "sale" ? "bg-[var(--color-accent1)]" : "bg-[var(--color-accent2)]"
+            }`}
+          >
+            {statusLabel[property.status]}
+          </span>
+        </SampleImage>
+
+        <div className="p-3 sm:p-4">
+          <p className="truncate text-sm font-bold tracking-tight sm:text-base">{property.title}</p>
+          <p className="mt-0.5 truncate text-xs text-[var(--color-main)]/60 sm:text-sm">{property.location}</p>
+        </div>
+      </Link>
+    );
+  }
+
   return (
     <Link
       href={`/properties/${property.id}`}
