@@ -16,8 +16,10 @@ function TestimonialCard({ t }) {
 export default function Testimonials({ testimonials }) {
   return (
     <div className="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3">
-      {testimonials.map((t) => (
-        <TestimonialCard key={t.id} t={t} />
+      {testimonials.map((t, i) => (
+        <div key={t.id} className={i >= 4 ? "hidden lg:block" : ""}>
+          <TestimonialCard t={t} />
+        </div>
       ))}
     </div>
   );

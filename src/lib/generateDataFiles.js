@@ -55,6 +55,7 @@ ${agents
     phone: ${jsString(a.phone)},
     whatsapp: ${jsString(a.whatsapp)},
     email: ${jsString(a.email)},
+    bio: ${jsString(a.bio)},
   },`
   )
   .join("\n")}

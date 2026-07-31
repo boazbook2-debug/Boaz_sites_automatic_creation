@@ -112,7 +112,7 @@ export default async function PropertyDetailPage({ params }) {
           <h2 className="mb-3 text-lg font-extrabold tracking-tight sm:mb-6 sm:text-3xl">נכסים דומים</h2>
           <div className="grid grid-cols-2 gap-3 sm:gap-8 lg:grid-cols-3">
             {similar.map((p) => (
-              <PropertyCard key={p.id} property={p} compact />
+              <PropertyCard key={p.id} property={p} />
             ))}
           </div>
         </div>

@@ -26,7 +26,7 @@ export default function ContactPage() {
             </div>
             <div>
               <p className="font-bold text-[var(--color-accent2)]">פרטי התקשרות</p>
-              <p className="mt-1 text-lg text-[var(--color-main)]/70" dir="ltr">
+              <p className="mt-1 text-right text-lg text-[var(--color-main)]/70" dir="ltr">
                 <a
                   href={`tel:${agency.phone.replace(/[\s-]/g, "")}`}
                   className="underline decoration-[var(--color-main)]/20 underline-offset-2 transition hover:text-[var(--color-main)]"

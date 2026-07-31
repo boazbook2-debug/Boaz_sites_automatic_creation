@@ -49,13 +49,13 @@ function FooterContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="flex w-full flex-col gap-3">
-      <div className="flex flex-col gap-3 sm:flex-row">
+      <div className="flex flex-col gap-2.5 sm:flex-row">
         <input
           type="text"
           placeholder="שם מלא"
           value={values.name}
           onChange={(e) => setValues((v) => ({ ...v, name: e.target.value }))}
-          className="w-full rounded-full border border-white/20 bg-white/10 px-6 py-3.5 text-base font-medium text-white placeholder:text-white/50 outline-none transition focus:border-[var(--color-accent2)] sm:w-52"
+          className="w-full rounded-full border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-medium text-white placeholder:text-white/50 outline-none transition focus:border-[var(--color-accent2)] sm:w-48"
         />
         <input
           type="tel"
@@ -63,7 +63,7 @@ function FooterContactForm() {
           placeholder="טלפון"
           value={values.phone}
           onChange={(e) => setValues((v) => ({ ...v, phone: e.target.value }))}
-          className="w-full rounded-full border border-white/20 bg-white/10 px-6 py-3.5 text-right text-base font-medium text-white placeholder:text-white/50 outline-none transition focus:border-[var(--color-accent2)] sm:w-52"
+          className="w-full rounded-full border border-white/20 bg-white/10 px-5 py-2.5 text-right text-sm font-medium text-white placeholder:text-white/50 outline-none transition focus:border-[var(--color-accent2)] sm:w-48"
         />
       </div>
       <textarea
@@ -71,11 +71,11 @@ function FooterContactForm() {
         value={values.message}
         onChange={(e) => setValues((v) => ({ ...v, message: e.target.value }))}
         rows={2}
-        className="w-full max-w-xl resize-none rounded-3xl border border-white/20 bg-white/10 px-6 py-3.5 text-base font-medium text-white placeholder:text-white/50 outline-none transition focus:border-[var(--color-accent2)]"
+        className="w-full max-w-xl resize-none rounded-2xl border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-medium text-white placeholder:text-white/50 outline-none transition focus:border-[var(--color-accent2)]"
       />
       <button
         type="submit"
-        className="shrink-0 self-start rounded-full bg-[var(--color-accent2)] px-8 py-3.5 text-base font-bold text-white shadow-[0_15px_35px_rgba(176,141,87,0.45)] transition hover:scale-105"
+        className="shrink-0 self-start rounded-full bg-[var(--color-accent2)] px-6 py-2.5 text-sm font-bold text-white shadow-[0_15px_35px_rgba(176,141,87,0.45)] transition hover:scale-105"
       >
         שליחה
       </button>

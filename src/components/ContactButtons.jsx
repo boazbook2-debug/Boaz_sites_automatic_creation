@@ -9,32 +9,34 @@ export default function ContactButtons({
   email,
   whatsappMessage = "היי, ראיתי את הנכס שלכם ואשמח לקבל פרטים נוספים",
   className = "",
+  compact = false,
 }) {
   const waHref = `https://wa.me/${whatsapp}?text=${encodeURIComponent(whatsappMessage)}`;
+  const pillClass = compact
+    ? "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition"
+    : "inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition";
+  const iconClass = compact ? "h-3.5 w-3.5" : "h-4 w-4";
 
   return (
-    <div className={`flex flex-wrap gap-3 ${className}`}>
-      <a
-        href={`tel:${phone}`}
-        className="inline-flex items-center gap-2 rounded-full bg-[var(--color-accent1)] px-5 py-2.5 text-sm font-medium text-white transition hover:opacity-90"
-      >
-        <PhoneIcon className="h-4 w-4" />
+    <div className={`flex flex-wrap gap-2 sm:gap-3 ${className}`}>
+      <a href={`tel:${phone}`} className={`${pillClass} bg-[var(--color-accent1)] text-white hover:opacity-90`}>
+        <PhoneIcon className={iconClass} />
         חייג
       </a>
       <a
         href={waHref}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 rounded-full bg-[var(--color-accent2)] px-5 py-2.5 text-sm font-medium text-white transition hover:opacity-90"
+        className={`${pillClass} bg-[var(--color-accent2)] text-white hover:opacity-90`}
       >
-        <WhatsAppIcon className="h-4 w-4" />
+        <WhatsAppIcon className={iconClass} />
         וואטסאפ
       </a>
       <a
         href={`mailto:${email}`}
-        className="inline-flex items-center gap-2 rounded-full border border-[var(--color-main)]/20 px-5 py-2.5 text-sm font-medium text-[var(--color-main)] transition hover:bg-[var(--color-surface)]"
+        className={`${pillClass} border border-[var(--color-main)]/20 text-[var(--color-main)] hover:bg-[var(--color-surface)]`}
       >
-        <MailIcon className="h-4 w-4" />
+        <MailIcon className={iconClass} />
         אימייל
       </a>
     </div>

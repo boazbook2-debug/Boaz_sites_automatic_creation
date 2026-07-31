@@ -91,7 +91,7 @@ export default function IntakeForm({ onBack }) {
   const [generating, setGenerating] = useState(false);
 
   const [agents, setAgents] = useState([
-    { id: nextId("agent"), name: "", role: "", photoFilename: "", phone: "", whatsapp: "", email: "" },
+    { id: nextId("agent"), name: "", role: "", photoFilename: "", phone: "", whatsapp: "", email: "", bio: "" },
   ]);
   const [properties, setProperties] = useState([
     {
@@ -434,6 +434,15 @@ export default function IntakeForm({ onBack }) {
               }
               error={errors?.agents[i]?.photoFilename}
             />
+            <TextAreaField
+              label="קצת על הסוכן/ת (מוצג כציטוט בעמוד הפרופיל)"
+              placeholder="לדוגמה: כמה שנות ניסיון בתחום, רקע מקצועי, התמחויות והישגים בולטים..."
+              required
+              rows={3}
+              value={agent.bio}
+              onChange={(v) => setAgents(agents.map((a) => (a.id === agent.id ? { ...a, bio: v } : a)))}
+              error={errors?.agents[i]?.bio}
+            />
             {agents.length > 1 && (
               <button
                 type="button"
@@ -450,7 +459,7 @@ export default function IntakeForm({ onBack }) {
           onClick={() =>
             setAgents([
               ...agents,
-              { id: nextId("agent"), name: "", role: "", photoFilename: "", phone: "", whatsapp: "", email: "" },
+              { id: nextId("agent"), name: "", role: "", photoFilename: "", phone: "", whatsapp: "", email: "", bio: "" },
             ])
           }
           className="rounded-full border-2 border-[var(--color-main)]/20 px-6 py-2.5 text-sm font-bold transition hover:bg-[var(--color-background)]"

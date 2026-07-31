@@ -15,7 +15,7 @@ import testimonials from "@/data/testimonials";
 import faq from "@/data/faq";
 
 export default function HomePage() {
-  const featured = properties.slice(0, 4);
+  const featured = properties.slice(0, 6);
   const featuredAgents = agents.slice(0, 4);
   const owner = agents[0];
 
@@ -43,8 +43,8 @@ export default function HomePage() {
         </div>
 
         <div className="grid grid-cols-2 gap-3 sm:gap-8 lg:grid-cols-3">
-          {featured.map((p) => (
-            <PropertyCard key={p.id} property={p} compact />
+          {featured.map((p, i) => (
+            <PropertyCard key={p.id} property={p} className={i >= 4 ? "hidden lg:block" : ""} />
           ))}
         </div>
       </section>
@@ -120,7 +120,7 @@ export default function HomePage() {
               כל הביקורות ←
             </Link>
           </div>
-          <Testimonials testimonials={testimonials.slice(0, 4)} />
+          <Testimonials testimonials={testimonials.slice(0, 6)} />
         </div>
       </section>
 

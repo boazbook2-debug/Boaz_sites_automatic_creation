@@ -16,7 +16,7 @@ export default function AgentsPage() {
           צוות מקצועי וזמין שילווה אתכם לאורך כל הדרך.
         </p>
 
-        <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-8 lg:grid-cols-3">
           {agents.map((agent) => (
             <AgentCard key={agent.id} agent={agent} />
           ))}

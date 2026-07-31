@@ -39,6 +39,7 @@ export function validateAgent(agent) {
   if (!agent.phone.trim()) errors.phone = "שדה חובה";
   if (!agent.email.trim()) errors.email = "שדה חובה";
   if (!agent.photoFilename) errors.photoFilename = "יש להעלות תמונה";
+  if (!agent.bio.trim()) errors.bio = "שדה חובה";
   return errors;
 }
 
