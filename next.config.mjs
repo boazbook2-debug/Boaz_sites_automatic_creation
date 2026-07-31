@@ -1,6 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "images.unsplash.com", port: "", pathname: "/**" },
+    ],
+  },
+  outputFileTracingIncludes: {
+    "/api/deploy-site": [
+      "./src/**/*",
+      "./public/**/*",
+      "./package.json",
+      "./package-lock.json",
+      "./next.config.mjs",
+      "./jsconfig.json",
+      "./postcss.config.mjs",
+    ],
+  },
 };
 
 export default nextConfig;
