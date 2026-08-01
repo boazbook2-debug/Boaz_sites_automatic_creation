@@ -10,6 +10,7 @@ export const metadata = pageMetadata({
   description: `הכירו את סוכני הנדל״ן של ${agency.name} — צוות מקצועי וזמין המלווה אתכם ברכישה, מכירה והשכרה של נכסים.`,
   path: "/agents",
   keywords: `${agency.name}, סוכני נדל״ן, סוכן נדלן, תיווך`,
+  properties,
 });
 
 export default function AgentsPage() {

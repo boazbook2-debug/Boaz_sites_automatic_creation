@@ -28,6 +28,7 @@ export async function generateMetadata({ params }) {
     path: `/properties/${property.id}`,
     keywords: `${property.title}, ${property.location}, ${property.type}, ${statusLabel[property.status]}, ${agency.name}, נדל״ן`,
     image: property.images[0],
+    properties,
   });
 }
 
@@ -118,7 +119,7 @@ export default async function PropertyDetailPage({ params }) {
       </div>
 
       <div className="mt-6 sm:mt-10">
-        <LeadForm propertyTitle={property.title} />
+        <LeadForm propertyTitle={property.title} toEmail={agent?.email} />
       </div>
 
       {similar.length > 0 && (

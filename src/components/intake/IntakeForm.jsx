@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { TextField, TextAreaField, SelectField, ColorField, FileField, SectionCard } from "./FormField";
 import iconRegistry from "@/lib/iconRegistry";
+import { buildDefaultSeoTerms } from "@/lib/seo";
 import {
   generateAgencyFile,
   generateAgentsFile,
@@ -94,7 +95,7 @@ export default function IntakeForm({ onBack }) {
   const [generating, setGenerating] = useState(false);
 
   const [agents, setAgents] = useState([
-    { id: nextId("agent"), name: "", role: "", photoFilename: "", phone: "", whatsapp: "", email: "", bio: "" },
+    { id: nextId("agent"), name: "", role: "", photoFilename: "", phone: "", whatsapp: "", email: "", bio: "", yearsOfExperience: "" },
   ]);
   const [properties, setProperties] = useState([
     {
@@ -119,16 +120,7 @@ export default function IntakeForm({ onBack }) {
   const [deploying, setDeploying] = useState(false);
   const [deployResult, setDeployResult] = useState(null);
 
-  const defaultSeoTerms = [
-    agency.name || "שם העסק",
-    "נדל״ן",
-    "נדלן",
-    "תיווך דירות",
-    "דירות למכירה",
-    "דירות להשכרה",
-    "בתים למכירה",
-    ...Array.from(new Set(properties.map((p) => p.location).filter(Boolean))),
-  ].filter(Boolean);
+  const defaultSeoTerms = buildDefaultSeoTerms(properties, agency.name || "שם העסק");
 
   const addSeoTerm = () => {
     const term = seoTermInput.trim();
@@ -541,6 +533,14 @@ export default function IntakeForm({ onBack }) {
               onChange={(v) => setAgents(agents.map((a) => (a.id === agent.id ? { ...a, bio: v } : a)))}
               error={errors?.agents[i]?.bio}
             />
+            <TextField
+              label="שנות ניסיון"
+              type="number"
+              value={agent.yearsOfExperience}
+              onChange={(v) =>
+                setAgents(agents.map((a) => (a.id === agent.id ? { ...a, yearsOfExperience: v.replace(/\D/g, "") } : a)))
+              }
+            />
             {agents.length > 1 && (
               <button
                 type="button"
@@ -557,7 +557,7 @@ export default function IntakeForm({ onBack }) {
           onClick={() =>
             setAgents([
               ...agents,
-              { id: nextId("agent"), name: "", role: "", photoFilename: "", phone: "", whatsapp: "", email: "", bio: "" },
+              { id: nextId("agent"), name: "", role: "", photoFilename: "", phone: "", whatsapp: "", email: "", bio: "", yearsOfExperience: "" },
             ])
           }
           className="rounded-full border-2 border-[var(--color-main)]/20 px-6 py-2.5 text-sm font-bold transition hover:bg-[var(--color-background)]"

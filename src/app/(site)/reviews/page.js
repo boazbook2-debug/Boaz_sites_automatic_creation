@@ -10,6 +10,7 @@ export const metadata = pageMetadata({
   description: `ביקורות והמלצות אמיתיות מלקוחות של ${agency.name} על תהליך רכישה, מכירה והשכרה של נכסים.`,
   path: "/reviews",
   keywords: `${agency.name}, ביקורות, המלצות, לקוחות מרוצים, נדל״ן`,
+  properties,
 });
 
 export default function ReviewsPage() {

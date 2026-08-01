@@ -15,6 +15,7 @@ export const metadata = pageMetadata({
   }. ${types.slice(0, 4).join(", ")} ועוד.`,
   path: "/properties",
   keywords: `${agency.name}, נכסים למכירה, נכסים להשכרה, ${locations.join(", ")}, ${types.join(", ")}`,
+  properties,
 });
 
 export default function PropertiesPage() {

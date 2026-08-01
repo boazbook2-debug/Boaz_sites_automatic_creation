@@ -4,7 +4,7 @@ import { useState } from "react";
 import { isValidName, isValidPhone } from "@/lib/contactValidation";
 import agency from "@/data/agency";
 
-export default function LeadForm({ title = "מעוניינים בנכס?", propertyTitle }) {
+export default function LeadForm({ title = "מעוניינים בנכס?", propertyTitle, toEmail }) {
   const [values, setValues] = useState({ name: "", phone: "", message: "" });
   const [error, setError] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -26,7 +26,7 @@ export default function LeadForm({ title = "מעוניינים בנכס?", prope
       await fetch("/api/send-lead", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ ...values, propertyTitle, to: agency.email }),
+        body: JSON.stringify({ ...values, propertyTitle, to: toEmail || agency.email }),
       });
     } catch {
       // Non-fatal: still show success — the lead was validated client-side.

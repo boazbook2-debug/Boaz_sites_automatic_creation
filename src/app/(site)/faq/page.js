@@ -10,6 +10,7 @@ export const metadata = pageMetadata({
   description: `תשובות לשאלות הנפוצות ביותר על תהליך רכישה, מכירה והשכרה של נכסים עם ${agency.name}.`,
   path: "/faq",
   keywords: `${agency.name}, שאלות ותשובות, נדל״ן, תהליך רכישת דירה, מכירת דירה`,
+  properties,
 });
 
 export default function FAQPage() {

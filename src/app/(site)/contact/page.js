@@ -11,6 +11,7 @@ export const metadata = pageMetadata({
   description: `צרו קשר עם ${agency.name} בכתובת ${agency.address}, בטלפון ${agency.phone} או בהודעה. נשמח לעזור במציאת הנכס המושלם עבורכם.`,
   path: "/contact",
   keywords: `${agency.name}, צור קשר, יצירת קשר, נדל״ן, ${agency.address}`,
+  properties,
 });
 
 export default function ContactPage() {

@@ -26,6 +26,7 @@ export async function generateMetadata({ params }) {
     path: `/agents/${agent.id}`,
     keywords: `${agent.name}, ${agent.role}, ${agency.name}, סוכן נדל״ן`,
     image: agent.photo,
+    properties,
   });
 }
 
@@ -114,7 +115,7 @@ export default async function AgentProfilePage({ params }) {
       )}
 
       <div className="mt-6 sm:mt-10">
-        <LeadForm title={`השאירו פרטים ל${agent.name}`} />
+        <LeadForm title={`השאירו פרטים ל${agent.name}`} toEmail={agent.email} />
       </div>
     </div>
   );

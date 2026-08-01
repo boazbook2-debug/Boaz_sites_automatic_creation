@@ -10,6 +10,7 @@ export const metadata = pageMetadata({
   description: `${agency.aboutText.slice(0, 150)} הכירו את ${agency.name} וצוות הסוכנים שלנו.`,
   path: "/about",
   keywords: `${agency.name}, אודות, נדל״ן, תיווך, ${agency.tagline}`,
+  properties,
 });
 
 export default function AboutPage() {

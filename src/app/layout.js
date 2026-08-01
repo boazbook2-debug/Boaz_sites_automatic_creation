@@ -4,6 +4,7 @@ import agency from "@/data/agency";
 import properties from "@/data/properties";
 import { SITE_URL } from "@/lib/siteUrl";
 import { uniqueSorted } from "@/lib/properties";
+import { buildDefaultSeoTerms } from "@/lib/seo";
 
 const heebo = Heebo({
   variable: "--font-heebo",
@@ -13,17 +14,7 @@ const heebo = Heebo({
 
 const description = agency.aboutText.slice(0, 160);
 const locations = uniqueSorted(properties.map((p) => p.location));
-const keywords = [
-  agency.name,
-  "נדל״ן",
-  "נדלן",
-  "תיווך דירות",
-  "דירות למכירה",
-  "דירות להשכרה",
-  "בתים למכירה",
-  ...locations,
-  ...(agency.customSeoTerms ?? []),
-].join(", ");
+const keywords = [...buildDefaultSeoTerms(properties), ...(agency.customSeoTerms ?? [])].join(", ");
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),

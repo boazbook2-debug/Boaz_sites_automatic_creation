@@ -16,6 +16,9 @@ export default function AgentCard({ agent, compact = false, className = "" }) {
         />
         <p className="mt-3 text-sm font-bold sm:mt-6 sm:text-xl">{agent.name}</p>
         <p className="mt-0.5 text-xs font-medium text-[var(--color-accent2)] sm:mt-1 sm:text-base">{agent.role}</p>
+        {agent.yearsOfExperience && (
+          <p className="mt-0.5 text-xs font-bold sm:mt-1 sm:text-base">{agent.yearsOfExperience} שנות ניסיון</p>
+        )}
         <span className="mt-3 w-full rounded-full bg-[var(--color-accent2)] px-4 py-2 text-xs font-bold text-white shadow-[0_12px_30px_rgba(176,141,87,0.4)] sm:mt-6 sm:px-6 sm:py-3 sm:text-sm">
           לפרופיל הסוכן/ת
         </span>
@@ -34,6 +37,9 @@ export default function AgentCard({ agent, compact = false, className = "" }) {
       />
       <p className="mt-3 text-base font-bold sm:mt-4 sm:text-lg">{agent.name}</p>
       <p className="mt-0.5 text-sm font-medium text-[var(--color-accent2)]">{agent.role}</p>
+      {agent.yearsOfExperience && (
+        <p className="mt-0.5 text-sm font-bold">{agent.yearsOfExperience} שנות ניסיון</p>
+      )}
       <ContactButtons
         phone={agent.phone}
         whatsapp={agent.whatsapp}
