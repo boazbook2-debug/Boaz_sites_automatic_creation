@@ -100,6 +100,7 @@ ${testimonials
     name: ${jsString(t.name)},
     context: ${jsString(t.context)},
     text: ${jsString(t.text)},
+    placeholder: ${t.placeholder ? "true" : "false"},
   },`
   )
   .join("\n")}
@@ -116,6 +117,7 @@ ${faq
     (f) => `  {
     question: ${jsString(f.question)},
     answer: ${jsString(f.answer)},
+    placeholder: ${f.placeholder ? "true" : "false"},
   },`
   )
   .join("\n")}

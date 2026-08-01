@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TextField, TextAreaField, SelectField, ColorField, FileField, SectionCard } from "./FormField";
 import ImageTile from "./ImageTile";
-import iconRegistry from "@/lib/iconRegistry";
+import iconRegistry, { matchIconIdFromText } from "@/lib/iconRegistry";
 import { buildDefaultSeoTerms } from "@/lib/seo";
+import defaultTestimonials from "@/data/testimonials";
+import defaultFaq from "@/data/faq";
 import {
   generateAgencyFile,
   generateAgentsFile,
@@ -63,7 +65,11 @@ function CodeOutput({ filename, content }) {
   );
 }
 
-export default function IntakeForm({ onBack }) {
+export default function IntakeForm({ onBack, siteId }) {
+  const [loadingExisting, setLoadingExisting] = useState(Boolean(siteId));
+  const [loadError, setLoadError] = useState(false);
+  const [existingProjectName, setExistingProjectName] = useState(null);
+  const [existingCreatedAt, setExistingCreatedAt] = useState(null);
   const [agency, setAgency] = useState({
     name: "",
     tagline: "",
@@ -122,6 +128,41 @@ export default function IntakeForm({ onBack }) {
   const [deploying, setDeploying] = useState(false);
   const [deployResult, setDeployResult] = useState(null);
 
+  useEffect(() => {
+    if (!siteId) return;
+    fetch(`/api/sites/${siteId}`)
+      .then((res) => {
+        if (!res.ok) throw new Error("not-found");
+        return res.json();
+      })
+      .then((site) => {
+        setAgency({ ...site.agency, customSeoTerms: site.agency.customSeoTerms || [] });
+        setColors(site.agency.colors);
+        setGenerated({ aboutText: site.agency.aboutText || "", ownerQuote: site.agency.ownerQuote || "" });
+        setAgents(site.agents?.length ? site.agents : agents);
+        setProperties(
+          (site.properties?.length ? site.properties : properties).map((p) => ({
+            ...p,
+            images: (p.imageFilenames || []).map((filename) => ({
+              id: nextId("img"),
+              previewUrl: `/uploads/${filename}`,
+              existing: true,
+              removed: false,
+            })),
+          }))
+        );
+        setTestimonials(site.testimonials?.length ? site.testimonials : testimonials);
+        setFaq(site.faq?.length ? site.faq : faq);
+        setStats(site.stats || []);
+        setExistingProjectName(site.projectName);
+        setExistingCreatedAt(site.createdAt);
+      })
+      .catch(() => setLoadError(true))
+      .finally(() => setLoadingExisting(false));
+    // Only ever runs once per mount (siteId is fixed for the lifetime of this form instance).
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [siteId]);
+
   const defaultSeoTerms = buildDefaultSeoTerms(properties, agency.name || "שם העסק");
 
   const addSeoTerm = () => {
@@ -138,7 +179,14 @@ export default function IntakeForm({ onBack }) {
     setAgency((a) => ({ ...a, customSeoTerms: a.customSeoTerms.filter((_, i) => i !== index) }));
   };
 
-  const syncImageFilenames = (images) => images.filter((img) => !img.removed).map((img) => img.file.name);
+  // New uploads carry a File (name is the eventual /uploads/<name> filename);
+  // existing images loaded from a saved site only have a previewUrl already
+  // pointing at /uploads/<name> — strip that prefix back to the bare filename
+  // so it round-trips through generatePropertiesFile unchanged either way.
+  const syncImageFilenames = (images) =>
+    images
+      .filter((img) => !img.removed)
+      .map((img) => (img.file ? img.file.name : img.previewUrl.replace(/^\/uploads\//, "")));
 
   const addPropertyImages = (propertyId, fileList) => {
     const added = Array.from(fileList).map((file) => ({
@@ -185,10 +233,13 @@ export default function IntakeForm({ onBack }) {
     const nextErrors = {
       agency: validateAgency(agency),
       colors: validateColors(colors),
-      brandStory: validateBrandStory(brandStory),
+      // Brand story fields only feed the AI "about text" generator — when
+      // editing an existing site, aboutText/ownerQuote are already set, so
+      // there's nothing forcing the owner to re-fill these intermediate fields.
+      brandStory: siteId ? {} : validateBrandStory(brandStory),
       agents: agents.map(validateAgent),
       properties: properties.map(validateProperty),
-      faq: faq.map(validateFaqItem),
+      faq: faq.length === 1 && isPlaceholderEntry(faq[0]) ? [{}] : faq.map(validateFaqItem),
     };
     setErrors(nextErrors);
 
@@ -202,6 +253,39 @@ export default function IntakeForm({ onBack }) {
     );
   };
 
+  const buildStatsPayload = () =>
+    stats.map((s) => {
+      const iconId = s.iconId || matchIconIdFromText(`${s.label} ${s.value}`);
+      return { ...s, iconId, iconImport: iconImportNames[iconId] };
+    });
+
+  const buildAgencyPayload = () => ({ ...agency, ...generated, colors });
+  // Strip the local-only `images` preview objects (File instances aren't
+  // JSON-serializable) — only `imageFilenames` is sent/generated from.
+  const buildPropertiesPayload = () => properties.map(({ images, ...rest }) => rest);
+
+  // If the agency owner types just "x" into any field of the single blank
+  // entry instead of filling it in for real, swap in the template's own
+  // default content for the whole section (flagged so the live site shows
+  // it in red) — a quick way to spin up a free demo without filling everything.
+  const isXTrigger = (value) => typeof value === "string" && value.trim().toLowerCase() === "x";
+  const isPlaceholderEntry = (entry) =>
+    Object.entries(entry).some(([key, value]) => key !== "id" && isXTrigger(value));
+
+  const buildTestimonialsPayload = () => {
+    if (testimonials.length === 1 && isPlaceholderEntry(testimonials[0])) {
+      return defaultTestimonials.map((t) => ({ ...t, placeholder: true }));
+    }
+    return testimonials;
+  };
+
+  const buildFaqPayload = () => {
+    if (faq.length === 1 && isPlaceholderEntry(faq[0])) {
+      return defaultFaq.map((f) => ({ ...f, placeholder: true }));
+    }
+    return faq;
+  };
+
   const handleBuild = () => {
     const valid = runValidation();
     if (!valid) {
@@ -209,12 +293,12 @@ export default function IntakeForm({ onBack }) {
       return;
     }
     setOutput({
-      agency: generateAgencyFile({ ...agency, ...generated }),
+      agency: generateAgencyFile(buildAgencyPayload()),
       agents: generateAgentsFile(agents),
-      properties: generatePropertiesFile(properties),
-      testimonials: generateTestimonialsFile(testimonials),
-      faq: generateFaqFile(faq),
-      stats: generateStatsFile(stats.map((s) => ({ ...s, iconImport: iconImportNames[s.iconId] }))),
+      properties: generatePropertiesFile(buildPropertiesPayload()),
+      testimonials: generateTestimonialsFile(buildTestimonialsPayload()),
+      faq: generateFaqFile(buildFaqPayload()),
+      stats: generateStatsFile(buildStatsPayload()),
     });
 
     fetch("/api/notify", {
@@ -238,12 +322,15 @@ export default function IntakeForm({ onBack }) {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
-          agency: { ...agency, ...generated },
+          agency: buildAgencyPayload(),
           agents,
-          properties,
-          testimonials,
-          faq,
-          stats: stats.map((s) => ({ ...s, iconImport: iconImportNames[s.iconId] })),
+          properties: buildPropertiesPayload(),
+          testimonials: buildTestimonialsPayload(),
+          faq: buildFaqPayload(),
+          stats: buildStatsPayload(),
+          siteId: siteId || undefined,
+          projectName: existingProjectName || undefined,
+          createdAt: existingCreatedAt || undefined,
         }),
       });
       const data = await res.json();
@@ -264,6 +351,23 @@ export default function IntakeForm({ onBack }) {
       !errors.properties.every(isEmpty) ||
       !errors.faq.every(isEmpty));
 
+  if (loadingExisting) {
+    return <p className="px-6 py-20 text-center text-lg text-[var(--color-main)]/60">טוען את פרטי האתר...</p>;
+  }
+
+  if (loadError) {
+    return (
+      <div className="mx-auto max-w-lg space-y-4 px-6 py-20 text-center">
+        <p className="text-lg font-bold text-red-600">לא ניתן היה לטעון את פרטי האתר.</p>
+        {onBack && (
+          <button type="button" onClick={onBack} className="text-sm font-semibold text-[var(--color-main)]/60">
+            ← חזרה
+          </button>
+        )}
+      </div>
+    );
+  }
+
   return (
     <div className="mx-auto max-w-4xl space-y-8 px-6 py-14 lg:px-10">
       <div>
@@ -272,9 +376,13 @@ export default function IntakeForm({ onBack }) {
             ← חזרה
           </button>
         )}
-        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">שאלון הקמת אתר ללקוח חדש</h1>
+        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
+          {siteId ? "עריכת אתר קיים" : "שאלון הקמת אתר ללקוח חדש"}
+        </h1>
         <p className="mt-2 text-lg text-[var(--color-main)]/60">
-          מלאו את הפרטים הבאים כדי לייצר את קובצי הנתונים המוכנים להטמעה באתר. שדות עם * הם שדות חובה.
+          {siteId
+            ? "ערכו את הפרטים ולחצו על עדכן שינויים כדי לפרסם אותם לאתר החי."
+            : "מלאו את הפרטים הבאים כדי לייצר את קובצי הנתונים המוכנים להטמעה באתר. שדות עם * הם שדות חובה."}
         </p>
       </div>
 
@@ -826,10 +934,17 @@ export default function IntakeForm({ onBack }) {
         </div>
 
         {stats.map((stat, i) => {
-          const { Icon } = iconRegistry.find((entry) => entry.id === stat.iconId) ?? {};
+          const Icon = iconRegistry.find((entry) => entry.id === stat.iconId)?.Icon;
           return (
             <div key={i} className="flex items-center gap-3 rounded-xl border border-[var(--color-main)]/10 p-4">
-              {Icon && <Icon className="h-6 w-6 shrink-0 text-[var(--color-accent2)]" />}
+              {Icon ? (
+                <Icon className="h-6 w-6 shrink-0 text-[var(--color-accent2)]" />
+              ) : (
+                <div
+                  className="h-6 w-6 shrink-0 rounded border-2 border-dashed border-[var(--color-main)]/25"
+                  title="האייקון ייבחר אוטומטית לפי הטקסט"
+                />
+              )}
               <input
                 type="text"
                 placeholder="ערך (לדוגמה: 450+)"
@@ -856,7 +971,7 @@ export default function IntakeForm({ onBack }) {
         })}
         <button
           type="button"
-          onClick={() => setStats([...stats, { iconId: iconRegistry[0].id, value: "", label: "" }])}
+          onClick={() => setStats([...stats, { iconId: null, value: "", label: "" }])}
           className="rounded-full border-2 border-[var(--color-main)]/20 px-6 py-2.5 text-sm font-bold transition hover:bg-[var(--color-background)]"
         >
           + הוסף אייקון מותאם אישית
@@ -870,7 +985,7 @@ export default function IntakeForm({ onBack }) {
           disabled={deploying}
           className="rounded-full bg-[var(--color-accent2)] px-10 py-4 text-lg font-bold text-white shadow-[0_15px_40px_rgba(176,141,87,0.55)] transition hover:scale-105 disabled:opacity-60"
         >
-          {deploying ? "מעלה את האתר לאוויר..." : "צור אתר חי"}
+          {deploying ? (siteId ? "מעדכן את האתר..." : "מעלה את האתר לאוויר...") : siteId ? "עדכן שינויים" : "צור אתר חי"}
         </button>
         <button
           type="button"
@@ -889,7 +1004,7 @@ export default function IntakeForm({ onBack }) {
         >
           {deployResult.ok ? (
             <>
-              <p className="text-lg font-bold">האתר עלה לאוויר בהצלחה! 🎉</p>
+              <p className="text-lg font-bold">{siteId ? "השינויים פורסמו בהצלחה! 🎉" : "האתר עלה לאוויר בהצלחה! 🎉"}</p>
               <a
                 href={deployResult.url}
                 target="_blank"
@@ -901,7 +1016,9 @@ export default function IntakeForm({ onBack }) {
             </>
           ) : (
             <>
-              <p className="font-bold">היצירה נכשלה ({deployResult.reason || deployResult.status})</p>
+              <p className="font-bold">
+                {siteId ? "העדכון נכשל" : "היצירה נכשלה"} ({deployResult.reason || deployResult.status})
+              </p>
               <p className="mt-1 text-sm">אפשר לנסות שוב, או להשתמש ב&quot;הצג קבצי נתונים בלבד&quot; ולהעביר ידנית.</p>
             </>
           )}

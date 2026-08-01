@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import IntakeForm from "./IntakeForm";
 import ClientLogin from "./ClientLogin";
 import ClientPropertyForm from "./ClientPropertyForm";
@@ -99,12 +99,18 @@ function AdminPasswordGate({ onSuccess, onBack }) {
   );
 }
 
-// No persistence layer yet, so this is always empty except for the
-// permanent "create new site" cell — once client records are stored
-// somewhere, populate this list from there.
-const existingSites = [];
+function AdminDashboard({ onCreateNew, onSelectSite, onBack }) {
+  const [sites, setSites] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-function AdminDashboard({ onCreateNew, onBack }) {
+  useEffect(() => {
+    fetch("/api/sites")
+      .then((res) => res.json())
+      .then((data) => setSites(data.sites || []))
+      .catch(() => setSites([]))
+      .finally(() => setLoading(false));
+  }, []);
+
   return (
     <div className="mx-auto max-w-5xl px-6 py-16 lg:px-10">
       <button type="button" onClick={onBack} className="mb-6 text-sm font-semibold text-[var(--color-main)]/60">
@@ -113,28 +119,35 @@ function AdminDashboard({ onCreateNew, onBack }) {
       <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">אתרי לקוחות</h1>
       <p className="mt-2 text-[var(--color-main)]/60">בחרו אתר קיים לעריכה, או צרו אתר חדש</p>
 
-      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {existingSites.map((site) => (
-          <button
-            key={site.id}
-            type="button"
-            className="rounded-[2rem] bg-[var(--color-surface)] p-8 text-right shadow-[0_10px_30px_rgba(0,0,0,0.06)] transition hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)]"
-          >
-            <p className="text-lg font-bold">{site.name}</p>
-            <p className="mt-1 text-sm text-[var(--color-main)]/60">{site.email}</p>
-          </button>
-        ))}
+      {loading ? (
+        <p className="mt-10 text-[var(--color-main)]/60">טוען...</p>
+      ) : (
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {sites.map((site) => (
+            <button
+              key={site.id}
+              type="button"
+              onClick={() => onSelectSite(site.id)}
+              className="rounded-[2rem] bg-[var(--color-surface)] p-8 text-right shadow-[0_10px_30px_rgba(0,0,0,0.06)] transition hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)]"
+            >
+              <p className="text-lg font-bold">{site.name}</p>
+              {site.liveUrl && (
+                <p className="mt-1 truncate text-sm text-[var(--color-accent2)]">{site.liveUrl.replace("https://", "")}</p>
+              )}
+            </button>
+          ))}
 
-        <button
-          type="button"
-          onClick={onCreateNew}
-          className="rounded-[2rem] bg-[var(--color-main)] p-8 text-right text-white shadow-[0_10px_30px_rgba(0,0,0,0.15)] transition hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(0,0,0,0.25)]"
-        >
-          <p className="text-3xl">➕</p>
-          <p className="mt-3 text-lg font-bold">צור אתר חדש</p>
-          <p className="mt-1 text-sm text-white/60">רישום לקוח חדש</p>
-        </button>
-      </div>
+          <button
+            type="button"
+            onClick={onCreateNew}
+            className="rounded-[2rem] bg-[var(--color-main)] p-8 text-right text-white shadow-[0_10px_30px_rgba(0,0,0,0.15)] transition hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(0,0,0,0.25)]"
+          >
+            <p className="text-3xl">➕</p>
+            <p className="mt-3 text-lg font-bold">צור אתר חדש</p>
+            <p className="mt-1 text-sm text-white/60">רישום לקוח חדש</p>
+          </button>
+        </div>
+      )}
     </div>
   );
 }
@@ -143,6 +156,7 @@ export default function IntakeFlow() {
   const [step, setStep] = useState("landing");
   const [client, setClient] = useState(null);
   const [selectedProperty, setSelectedProperty] = useState(null);
+  const [selectedSiteId, setSelectedSiteId] = useState(null);
 
   if (step === "landing") return <Landing onSelect={setStep} />;
 
@@ -152,12 +166,22 @@ export default function IntakeFlow() {
 
   if (step === "admin-dashboard") {
     return (
-      <AdminDashboard onCreateNew={() => setStep("admin-form")} onBack={() => setStep("admin-password")} />
+      <AdminDashboard
+        onCreateNew={() => {
+          setSelectedSiteId(null);
+          setStep("admin-form");
+        }}
+        onSelectSite={(id) => {
+          setSelectedSiteId(id);
+          setStep("admin-form");
+        }}
+        onBack={() => setStep("admin-password")}
+      />
     );
   }
 
   if (step === "admin-form") {
-    return <IntakeForm onBack={() => setStep("admin-dashboard")} />;
+    return <IntakeForm siteId={selectedSiteId} onBack={() => setStep("admin-dashboard")} />;
   }
 
   if (step === "client-login-add") {

@@ -8,6 +8,9 @@ import {
 } from "@/lib/generateDataFiles";
 import { collectTemplateFiles } from "@/lib/collectTemplateFiles";
 import { sendNtfy } from "@/lib/ntfy";
+import { saveSite } from "@/lib/sitesStore";
+
+const nextSiteId = () => `site-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
 
 function slugify(name) {
   const base = name
@@ -44,7 +47,7 @@ export async function POST(request) {
   }
 
   const body = await request.json();
-  const { agency, agents, properties, testimonials, faq, stats, iconImportNames } = body;
+  const { agency, agents, properties, testimonials, faq, stats, siteId, projectName: existingProjectName } = body;
 
   const dataFiles = [
     { file: "src/data/agency.js", data: generateAgencyFile(agency) },
@@ -65,7 +68,7 @@ export async function POST(request) {
     return Response.json({ ok: false, reason: "file-collection-failed", detail: String(err) }, { status: 500 });
   }
 
-  const projectName = slugify(agency.name);
+  const projectName = existingProjectName || slugify(agency.name);
   const files = [...templateFiles, ...dataFiles];
 
   const createRes = await fetch("https://api.vercel.com/v13/deployments", {
@@ -89,16 +92,37 @@ export async function POST(request) {
   }
 
   const finalState = await pollDeployment(created.id, token);
+  const isReady = finalState.readyState === "READY";
+  const isUpdate = Boolean(siteId && existingProjectName);
+  const resolvedSiteId = siteId || nextSiteId();
+
+  if (isReady) {
+    const now = new Date().toISOString();
+    await saveSite({
+      id: resolvedSiteId,
+      projectName,
+      liveUrl: `https://${created.url}`,
+      createdAt: isUpdate ? body.createdAt : now,
+      updatedAt: now,
+      agency,
+      agents,
+      properties,
+      testimonials: testimonials || [],
+      faq: faq || [],
+      stats: stats || [],
+    });
+  }
 
   await sendNtfy({
-    title: finalState.readyState === "READY" ? "אתר חדש עלה לאוויר" : "יצירת אתר נכשלה",
+    title: isReady ? (isUpdate ? "אתר עודכן" : "אתר חדש עלה לאוויר") : isUpdate ? "עדכון אתר נכשל" : "יצירת אתר נכשלה",
     message: `סוכנות: ${agency.name}\nכתובת: https://${created.url}\nסטטוס: ${finalState.readyState}`,
   });
 
   return Response.json({
-    ok: finalState.readyState === "READY",
+    ok: isReady,
     url: `https://${created.url}`,
     projectName,
+    siteId: resolvedSiteId,
     status: finalState.readyState,
     error: finalState.errorMessage,
   });

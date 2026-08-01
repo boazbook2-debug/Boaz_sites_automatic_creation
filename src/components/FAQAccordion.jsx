@@ -17,7 +17,9 @@ export default function FAQAccordion({ items }) {
               onClick={() => setOpenIndex(isOpen ? -1 : index)}
               className="flex w-full items-center justify-between gap-3 px-4 py-3 text-right sm:gap-4 sm:px-7 sm:py-5"
             >
-              <span className="text-sm font-bold sm:text-lg">{item.question}</span>
+              <span className={`text-sm font-bold sm:text-lg ${item.placeholder ? "text-red-600" : ""}`}>
+                {item.question}
+              </span>
               {isOpen ? (
                 <MinusIcon className="h-4 w-4 shrink-0 text-[var(--color-accent2)] sm:h-5 sm:w-5" />
               ) : (
@@ -25,7 +27,11 @@ export default function FAQAccordion({ items }) {
               )}
             </button>
             {isOpen && (
-              <p className="px-4 pb-3 text-sm leading-relaxed text-[var(--color-main)]/70 sm:px-7 sm:pb-5 sm:text-lg">
+              <p
+                className={`px-4 pb-3 text-sm leading-relaxed sm:px-7 sm:pb-5 sm:text-lg ${
+                  item.placeholder ? "text-red-600" : "text-[var(--color-main)]/70"
+                }`}
+              >
                 {item.answer}
               </p>
             )}
