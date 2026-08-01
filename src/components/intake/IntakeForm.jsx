@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { TextField, TextAreaField, SelectField, ColorField, FileField, SectionCard } from "./FormField";
+import ImageTile from "./ImageTile";
 import iconRegistry from "@/lib/iconRegistry";
 import { buildDefaultSeoTerms } from "@/lib/seo";
 import {
@@ -108,6 +109,7 @@ export default function IntakeForm({ onBack }) {
       status: "sale",
       features: [""],
       imageFilenames: [],
+      images: [],
       assignedAgentId: "",
     },
   ]);
@@ -134,6 +136,34 @@ export default function IntakeForm({ onBack }) {
 
   const removeSeoTerm = (index) => {
     setAgency((a) => ({ ...a, customSeoTerms: a.customSeoTerms.filter((_, i) => i !== index) }));
+  };
+
+  const syncImageFilenames = (images) => images.filter((img) => !img.removed).map((img) => img.file.name);
+
+  const addPropertyImages = (propertyId, fileList) => {
+    const added = Array.from(fileList).map((file) => ({
+      id: nextId("img"),
+      file,
+      previewUrl: URL.createObjectURL(file),
+      removed: false,
+    }));
+    setProperties(
+      properties.map((p) => {
+        if (p.id !== propertyId) return p;
+        const images = [...added, ...p.images];
+        return { ...p, images, imageFilenames: syncImageFilenames(images) };
+      })
+    );
+  };
+
+  const togglePropertyImage = (propertyId, imageId) => {
+    setProperties(
+      properties.map((p) => {
+        if (p.id !== propertyId) return p;
+        const images = p.images.map((img) => (img.id === imageId ? { ...img, removed: !img.removed } : img));
+        return { ...p, images, imageFilenames: syncImageFilenames(images) };
+      })
+    );
   };
 
   const handleGenerateAbout = async () => {
@@ -634,17 +664,38 @@ export default function IntakeForm({ onBack }) {
                 setProperties(properties.map((p) => (p.id === property.id ? { ...p, features: v.split("\n") } : p)))
               }
             />
-            <FileField
-              label="תמונות הנכס"
-              required
-              multiple
-              onChange={(files) =>
-                setProperties(
-                  properties.map((p) => (p.id === property.id ? { ...p, imageFilenames: files.map((f) => f.name) } : p))
-                )
-              }
-              error={errors?.properties[i]?.imageFilenames}
-            />
+            <div>
+              <span className="mb-1.5 block text-sm font-semibold text-[var(--color-main)]/80">
+                תמונות הנכס <span className="text-red-500">*</span>
+              </span>
+
+              {property.images.length > 0 && (
+                <div className="mb-4 grid grid-cols-3 gap-3">
+                  {property.images.map((img) => (
+                    <ImageTile
+                      key={img.id}
+                      src={img.previewUrl}
+                      removed={img.removed}
+                      onToggleRemove={() => togglePropertyImage(property.id, img.id)}
+                    />
+                  ))}
+                </div>
+              )}
+
+              <input
+                type="file"
+                accept="image/*"
+                multiple
+                onChange={(e) => {
+                  addPropertyImages(property.id, e.target.files);
+                  e.target.value = "";
+                }}
+                className="w-full rounded-xl border border-dashed border-[var(--color-main)]/25 bg-[var(--color-background)] px-4 py-2.5 text-sm outline-none file:ml-3 file:rounded-full file:border-0 file:bg-[var(--color-accent2)] file:px-4 file:py-1.5 file:text-xs file:font-bold file:text-white"
+              />
+              {errors?.properties[i]?.imageFilenames && (
+                <p className="mt-1 text-xs font-medium text-red-500">{errors.properties[i].imageFilenames}</p>
+              )}
+            </div>
             {properties.length > 1 && (
               <button
                 type="button"
@@ -671,6 +722,7 @@ export default function IntakeForm({ onBack }) {
                 status: "sale",
                 features: [""],
                 imageFilenames: [],
+                images: [],
                 assignedAgentId: "",
               },
             ])

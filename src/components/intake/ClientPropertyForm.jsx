@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { TextField, TextAreaField, SelectField, SectionCard } from "./FormField";
-import { CloseIcon } from "@/components/Icons";
+import ImageTile from "./ImageTile";
 import { validateProperty } from "@/lib/intakeValidation";
 import { generatePropertiesFile } from "@/lib/generateDataFiles";
 
@@ -18,29 +18,6 @@ const blankProperty = {
 
 let imgIdCounter = 0;
 const nextImgId = () => `img-${++imgIdCounter}`;
-
-function ImageTile({ src, removed, onToggleRemove }) {
-  return (
-    <div className="relative aspect-square overflow-hidden rounded-xl">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={src}
-        alt=""
-        className={`h-full w-full object-cover transition ${removed ? "grayscale opacity-40" : ""}`}
-      />
-      <button
-        type="button"
-        onClick={onToggleRemove}
-        className={`absolute top-2 left-2 inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold shadow ${
-          removed ? "bg-white text-[var(--color-main)]" : "bg-red-600 text-white"
-        }`}
-      >
-        {removed ? "בטל" : "מחיקה"}
-        <CloseIcon className="h-3 w-3" />
-      </button>
-    </div>
-  );
-}
 
 export default function ClientPropertyForm({ title, initialProperty, client, onSaved, onBack }) {
   const [property, setProperty] = useState({ ...blankProperty, ...initialProperty });
