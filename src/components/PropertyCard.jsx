@@ -15,7 +15,7 @@ export default function PropertyCard({ property, className = "" }) {
         src={property.images[0]}
         alt={property.title}
         className="aspect-[4/3]"
-        imgClassName="transition-transform duration-500 group-hover:scale-105"
+        imgClassName="transition-all duration-500 group-hover:scale-105 group-hover:brightness-110"
         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
       >
         <span

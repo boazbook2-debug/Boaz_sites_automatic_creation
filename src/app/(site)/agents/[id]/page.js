@@ -103,7 +103,13 @@ export default async function AgentProfilePage({ params }) {
       {agent.bio && (
         <div className="mt-5 rounded-2xl bg-[var(--color-surface)] p-5 shadow-[0_10px_30px_rgba(0,0,0,0.06)] sm:mt-6 sm:rounded-[2rem] sm:p-8">
           <QuoteIcon className="h-6 w-6 text-[var(--color-accent2)] sm:h-8 sm:w-8" />
-          <p className="mt-3 text-sm leading-relaxed text-[var(--color-main)]/80 sm:text-lg">&ldquo;{agent.bio}&rdquo;</p>
+          <p
+            className={`mt-3 text-sm leading-relaxed sm:text-lg ${
+              agent.bioPlaceholder ? "text-red-600" : "text-[var(--color-main)]/80"
+            }`}
+          >
+            &ldquo;{agent.bio}&rdquo;
+          </p>
         </div>
       )}
 

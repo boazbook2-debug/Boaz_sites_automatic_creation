@@ -19,7 +19,11 @@ export default function AboutPage() {
       <div className="mx-auto max-w-4xl px-6 py-12 lg:px-10">
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">{agency.name}</h1>
         <p className="mt-2 text-lg text-[var(--color-main)]/60">{agency.tagline}</p>
-        <p className="mt-6 whitespace-pre-line text-lg leading-relaxed text-[var(--color-main)]/80">
+        <p
+          className={`mt-6 whitespace-pre-line text-lg leading-relaxed ${
+            agency.aboutTextPlaceholder ? "text-red-600" : "text-[var(--color-main)]/80"
+          }`}
+        >
           {agency.aboutText}
         </p>
 

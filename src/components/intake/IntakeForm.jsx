@@ -7,6 +7,8 @@ import iconRegistry, { matchIconIdFromText } from "@/lib/iconRegistry";
 import { buildDefaultSeoTerms } from "@/lib/seo";
 import defaultTestimonials from "@/data/testimonials";
 import defaultFaq from "@/data/faq";
+import defaultAgencyData from "@/data/agency";
+import defaultAgentsData from "@/data/agents";
 import {
   generateAgencyFile,
   generateAgentsFile,
@@ -237,7 +239,10 @@ export default function IntakeForm({ onBack, siteId }) {
       // Brand story fields only feed the AI "about text" generator — when
       // editing an existing site, aboutText/ownerQuote are already set, so
       // there's nothing forcing the owner to re-fill these intermediate fields.
-      brandStory: siteId ? {} : validateBrandStory(brandStory),
+      // Typing "x" in any one of the 4 about-page fields also skips requiring
+      // the other 3, since the whole paragraph gets swapped for the template
+      // default in that case.
+      brandStory: siteId || isAboutTextPlaceholderTriggered() ? {} : validateBrandStory(brandStory),
       agents: agents.map(validateAgent),
       properties: properties.map(validateProperty),
       faq: faq.length === 1 && isPlaceholderEntry(faq[0]) ? [{}] : faq.map(validateFaqItem),
@@ -260,11 +265,6 @@ export default function IntakeForm({ onBack, siteId }) {
       return { ...s, iconId, iconImport: iconImportNames[iconId] };
     });
 
-  const buildAgencyPayload = () => ({ ...agency, ...generated, colors });
-  // Strip the local-only `images` preview objects (File instances aren't
-  // JSON-serializable) — only `imageFilenames` is sent/generated from.
-  const buildPropertiesPayload = () => properties.map(({ images, ...rest }) => rest);
-
   // If the agency owner types just "x" into any field of the single blank
   // entry instead of filling it in for real, swap in the template's own
   // default content for the whole section (flagged so the live site shows
@@ -272,6 +272,34 @@ export default function IntakeForm({ onBack, siteId }) {
   const isXTrigger = (value) => typeof value === "string" && value.trim().toLowerCase() === "x";
   const isPlaceholderEntry = (entry) =>
     Object.entries(entry).some(([key, value]) => key !== "id" && isXTrigger(value));
+
+  // Same idea for the 4 fields that build the "אודות" page paragraph —
+  // typing "x" in any one of them swaps in the template's own about text.
+  const isAboutTextPlaceholderTriggered = () =>
+    [brandStory.yearsInBusiness, brandStory.whatMakesSpecial, brandStory.areas, brandStory.approach].some(isXTrigger);
+
+  const buildAgencyPayload = () => {
+    const base = { ...agency, ...generated, colors };
+    if (isAboutTextPlaceholderTriggered()) {
+      return { ...base, aboutText: defaultAgencyData.aboutText, aboutTextPlaceholder: true };
+    }
+    return { ...base, aboutTextPlaceholder: Boolean(agency.aboutTextPlaceholder) };
+  };
+
+  // Strip the local-only `images` preview objects (File instances aren't
+  // JSON-serializable) — only `imageFilenames` is sent/generated from.
+  const buildPropertiesPayload = () => properties.map(({ images, ...rest }) => rest);
+
+  // Same "x" shortcut per agent bio — swaps that one agent's bio for a
+  // template agent's bio (cycling through the demo roster by position).
+  const buildAgentsPayload = () =>
+    agents.map((a, i) => {
+      if (isXTrigger(a.bio)) {
+        const demoBio = defaultAgentsData[i % defaultAgentsData.length].bio;
+        return { ...a, bio: demoBio, bioPlaceholder: true };
+      }
+      return { ...a, bioPlaceholder: Boolean(a.bioPlaceholder) };
+    });
 
   const buildTestimonialsPayload = () => {
     if (testimonials.length === 1 && isPlaceholderEntry(testimonials[0])) {
@@ -295,7 +323,7 @@ export default function IntakeForm({ onBack, siteId }) {
     }
     setOutput({
       agency: generateAgencyFile(buildAgencyPayload()),
-      agents: generateAgentsFile(agents),
+      agents: generateAgentsFile(buildAgentsPayload()),
       properties: generatePropertiesFile(buildPropertiesPayload()),
       testimonials: generateTestimonialsFile(buildTestimonialsPayload()),
       faq: generateFaqFile(buildFaqPayload()),
@@ -324,7 +352,7 @@ export default function IntakeForm({ onBack, siteId }) {
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
           agency: buildAgencyPayload(),
-          agents,
+          agents: buildAgentsPayload(),
           properties: buildPropertiesPayload(),
           testimonials: buildTestimonialsPayload(),
           faq: buildFaqPayload(),
@@ -572,8 +600,8 @@ export default function IntakeForm({ onBack, siteId }) {
       </SectionCard>
 
       <SectionCard
-        title="סיפור המותג"
-        description="התשובות ישמשו ליצירת פסקת 'אודות' וציטוט אישי מבעל העסק. הציטוט האישי מוצג בעמוד הבית, מתחת לתמונה ולשם של בעל העסק, בסעיף 'אודותינו'."
+        title="סיפור המותג — בונה את עמוד 'אודותינו'"
+        description="ארבעת השדות הבאים בונים יחד את פסקת ה'אודות' שמופיעה בעמוד /about באתר (עמוד אודותינו הנפרד, לא עמוד הבית). ה-AI ישלב אותם לפסקה אחת רהוטה ומקצועית. אפשר גם לערוך את התוצאה ישירות. אם תכתבו x בלבד באחד מהשדות האלה, תישלח בפסקת האודות ברירת המחדל של התבנית, ותוצג באתר החי בצבע אדום כדי שיהיה ברור שצריך להחליף אותה."
       >
         <TextAreaField
           label="כמה שנים אתם בתחום?"
@@ -604,13 +632,17 @@ export default function IntakeForm({ onBack, siteId }) {
           error={errors?.brandStory.approach}
         />
         <TextAreaField
-          label="ציטוט אישי — כתבו במילים שלכם, ה-AI ישפר וירחיב מעט"
+          label="אודותינו למסך ראשי (לא עמוד של אודותינו) — כתבו במילים שלכם, ה-AI ישפר וירחיב מעט"
           placeholder="לדוגמה: אני מאמין שכל לקוח מגיע עם חלום, והתפקיד שלי הוא להפוך אותו למציאות."
           required
           value={brandStory.personalQuote}
           onChange={(v) => setBrandStory({ ...brandStory, personalQuote: v })}
           error={errors?.brandStory.personalQuote}
         />
+        <p className="text-xs text-[var(--color-main)]/50">
+          השדה הזה שונה מהשדות שמעליו: הוא מיועד לעמוד הבית בלבד (לא לעמוד האודותינו), ומוצג שם מתחת לתמונה ולשם של
+          בעל העסק, בסעיף &quot;אודותינו&quot; שבעמוד הבית.
+        </p>
         <button
           type="button"
           onClick={handleGenerateAbout}
@@ -622,13 +654,13 @@ export default function IntakeForm({ onBack, siteId }) {
         {generated.aboutText && (
           <>
             <TextAreaField
-              label="אודות (ניתן לערוך ישירות)"
+              label="אודות — לעמוד האודותינו (ניתן לערוך ישירות; מה שכתוב כאן בזמן השליחה הוא מה שיפורסם)"
               rows={5}
               value={generated.aboutText}
               onChange={(v) => setGenerated({ ...generated, aboutText: v })}
             />
             <TextAreaField
-              label="ציטוט אישי (ניתן לערוך ישירות)"
+              label="אודותינו למסך ראשי (ניתן לערוך ישירות; מה שכתוב כאן בזמן השליחה הוא מה שיפורסם)"
               rows={3}
               value={generated.ownerQuote}
               onChange={(v) => setGenerated({ ...generated, ownerQuote: v })}
@@ -681,8 +713,8 @@ export default function IntakeForm({ onBack, siteId }) {
               error={errors?.agents[i]?.photoFilename}
             />
             <TextAreaField
-              label="קצת על הסוכן/ת (מוצג כציטוט בעמוד הפרופיל)"
-              placeholder="לדוגמה: כמה שנות ניסיון בתחום, רקע מקצועי, התמחויות והישגים בולטים..."
+              label="קצת על הסוכן/ת (מוצג כציטוט בעמוד הפרופיל האישי של הסוכן/ת הזה בלבד — שדה נפרד לגמרי מהאודות ומהציטוט למסך הראשי, גם עבור בעל העסק)"
+              placeholder="לדוגמה: כמה שנות ניסיון בתחום, רקע מקצועי, התמחויות והישגים בולטים... (או x בלבד כדי להשתמש בטקסט לדוגמה, שיוצג באדום)"
               required
               rows={3}
               value={agent.bio}
@@ -1005,6 +1037,11 @@ export default function IntakeForm({ onBack, siteId }) {
         >
           {deploying ? (siteId ? "מעדכן את האתר..." : "מעלה את האתר לאוויר...") : siteId ? "עדכן שינויים" : "צור אתר חי"}
         </button>
+        {hasErrors && (
+          <p className="text-sm font-bold text-red-600">
+            חסרים שדות חובה (מסומנים ב-*) — גללו למעלה כדי לראות אילו.
+          </p>
+        )}
         <button
           type="button"
           onClick={handleBuild}

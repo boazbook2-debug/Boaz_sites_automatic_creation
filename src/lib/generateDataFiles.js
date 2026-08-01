@@ -20,6 +20,7 @@ const agency = {
   logo: ${form.logoFilename ? jsString(`/uploads/${form.logoFilename}`) : "null"},
   tagline: ${jsString(form.tagline)},
   aboutText: ${jsString(form.aboutText)},
+  aboutTextPlaceholder: ${form.aboutTextPlaceholder ? "true" : "false"},
   ownerQuote: ${jsString(form.ownerQuote)},
   phone: ${jsString(form.phone)},
   whatsapp: ${jsString(form.whatsapp)},
@@ -57,6 +58,7 @@ ${agents
     whatsapp: ${jsString(a.whatsapp)},
     email: ${jsString(a.email)},
     bio: ${jsString(a.bio)},
+    bioPlaceholder: ${a.bioPlaceholder ? "true" : "false"},
     yearsOfExperience: ${jsString(a.yearsOfExperience)},
   },`
   )
