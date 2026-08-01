@@ -17,6 +17,7 @@ const agency = {
   address: "רחוב ארבי נחל 9, מודיעין מכבים רעות",
   facebookUrl: "https://facebook.com/almornechasim",
   instagramUrl: "https://instagram.com/almornechasim",
+  customSeoTerms: [],
   colors: {
     background: "#FFFFFF",
     surface: "#F4F4F5",

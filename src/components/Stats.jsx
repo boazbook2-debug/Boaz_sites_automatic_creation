@@ -1,4 +1,5 @@
 import { HouseIcon, TrendingUpIcon, AwardIcon, MapPinIcon, StarIcon, PhoneIcon } from "./Icons";
+import AnimatedStatValue from "./AnimatedStatValue";
 
 const stats = [
   { icon: HouseIcon, value: "450+", label: "נכסים שנמכרו והושכרו" },
@@ -13,7 +14,7 @@ function StatTile({ icon: Icon, value, label }) {
   return (
     <div className="flex flex-col items-center gap-1.5 rounded-2xl bg-[var(--color-surface)] px-3 py-4 text-center">
       <Icon className="h-6 w-6 text-[var(--color-accent2)] sm:h-7 sm:w-7" />
-      <span className="text-base font-extrabold sm:text-lg">{value}</span>
+      <AnimatedStatValue value={value} className="text-base font-extrabold sm:text-lg" />
       <span className="text-xs font-bold text-[var(--color-main)]/70 sm:text-sm">{label}</span>
     </div>
   );

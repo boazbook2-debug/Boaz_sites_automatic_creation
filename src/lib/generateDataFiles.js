@@ -27,6 +27,7 @@ const agency = {
   address: ${jsString(form.address)},
   facebookUrl: ${jsString(form.facebookUrl)},
   instagramUrl: ${jsString(form.instagramUrl)},
+  customSeoTerms: ${jsArray(form.customSeoTerms ?? [])},
   colors: {
     background: ${jsString(form.colors.background)},
     surface: ${jsString(form.colors.surface)},

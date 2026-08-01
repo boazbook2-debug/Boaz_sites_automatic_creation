@@ -9,11 +9,12 @@ export function pageMetadata({ title, description, path = "", keywords, image })
   const url = `${SITE_URL}${path}`;
   const ogImage = image || agency.heroImages?.[0];
   const fullTitle = `${title} | ${agency.name}`;
+  const fullKeywords = [keywords, ...(agency.customSeoTerms ?? [])].filter(Boolean).join(", ");
 
   return {
     title,
     description,
-    keywords,
+    keywords: fullKeywords,
     alternates: { canonical: url },
     openGraph: {
       type: "website",

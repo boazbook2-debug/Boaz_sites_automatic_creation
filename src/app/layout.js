@@ -22,6 +22,7 @@ const keywords = [
   "דירות להשכרה",
   "בתים למכירה",
   ...locations,
+  ...(agency.customSeoTerms ?? []),
 ].join(", ");
 
 export const metadata = {

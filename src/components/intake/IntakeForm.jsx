@@ -73,7 +73,10 @@ export default function IntakeForm({ onBack }) {
     instagramUrl: "",
     logoFilename: "",
     heroImageFilenames: [],
+    customSeoTerms: [],
   });
+  const [seoTermInput, setSeoTermInput] = useState("");
+  const [showDefaultSeoTerms, setShowDefaultSeoTerms] = useState(false);
   const [colors, setColors] = useState({
     background: "#FFFFFF",
     surface: "#F4F4F5",
@@ -115,6 +118,31 @@ export default function IntakeForm({ onBack }) {
   const [errors, setErrors] = useState(null);
   const [deploying, setDeploying] = useState(false);
   const [deployResult, setDeployResult] = useState(null);
+
+  const defaultSeoTerms = [
+    agency.name || "שם העסק",
+    "נדל״ן",
+    "נדלן",
+    "תיווך דירות",
+    "דירות למכירה",
+    "דירות להשכרה",
+    "בתים למכירה",
+    ...Array.from(new Set(properties.map((p) => p.location).filter(Boolean))),
+  ].filter(Boolean);
+
+  const addSeoTerm = () => {
+    const term = seoTermInput.trim();
+    if (!term || agency.customSeoTerms.includes(term)) {
+      setSeoTermInput("");
+      return;
+    }
+    setAgency((a) => ({ ...a, customSeoTerms: [...a.customSeoTerms, term] }));
+    setSeoTermInput("");
+  };
+
+  const removeSeoTerm = (index) => {
+    setAgency((a) => ({ ...a, customSeoTerms: a.customSeoTerms.filter((_, i) => i !== index) }));
+  };
 
   const handleGenerateAbout = async () => {
     setGenerating(true);
@@ -300,6 +328,76 @@ export default function IntakeForm({ onBack }) {
           onChange={(files) => setAgency({ ...agency, heroImageFilenames: files.map((f) => f.name) })}
           error={errors?.agency.heroImageFilenames}
         />
+      </SectionCard>
+
+      <SectionCard
+        title="מילות חיפוש נוספות ל-SEO"
+        description="האתר שלכם כבר כולל אופטימיזציית SEO מובנית באופן אוטומטי — שם העסק, האזורים בהם אתם פעילים וסוגי הנכסים שלכם. כאן ניתן להוסיף מילות חיפוש ספציפיות נוספות שחשוב לכם שהאתר יופיע בעבורן בגוגל (אופציונלי)."
+      >
+        <button
+          type="button"
+          onClick={() => setShowDefaultSeoTerms((v) => !v)}
+          className="text-sm font-bold text-[var(--color-accent2)] underline"
+        >
+          {showDefaultSeoTerms ? "הסתר" : "ראה הכל"} את מילות ה-SEO המובנות כבר באתר
+        </button>
+
+        {showDefaultSeoTerms && (
+          <div className="flex flex-wrap gap-2 rounded-xl bg-[var(--color-background)] p-4">
+            {defaultSeoTerms.map((term) => (
+              <span
+                key={term}
+                className="rounded-full bg-[var(--color-main)]/10 px-4 py-1.5 text-sm font-medium text-[var(--color-main)]/70"
+              >
+                {term}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {agency.customSeoTerms.length > 0 && (
+          <div className="flex flex-wrap gap-2">
+            {agency.customSeoTerms.map((term, i) => (
+              <span
+                key={`${term}-${i}`}
+                className="flex items-center gap-2 rounded-full bg-[var(--color-accent2)]/15 px-4 py-1.5 text-sm font-bold text-[var(--color-main)]"
+              >
+                {term}
+                <button
+                  type="button"
+                  onClick={() => removeSeoTerm(i)}
+                  aria-label={`הסר ${term}`}
+                  className="text-[var(--color-main)]/50 transition hover:text-red-600"
+                >
+                  ✕
+                </button>
+              </span>
+            ))}
+          </div>
+        )}
+
+        <div className="flex flex-col gap-3 sm:flex-row">
+          <input
+            type="text"
+            value={seoTermInput}
+            onChange={(e) => setSeoTermInput(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                e.preventDefault();
+                addSeoTerm();
+              }
+            }}
+            placeholder="לדוגמה: דירת גן ברמת גן"
+            className="w-full rounded-full border border-[var(--color-main)]/15 bg-[var(--color-background)] px-6 py-3 text-base font-medium outline-none transition focus:border-[var(--color-accent2)]"
+          />
+          <button
+            type="button"
+            onClick={addSeoTerm}
+            className="shrink-0 rounded-full border-2 border-[var(--color-main)]/20 px-6 py-3 text-sm font-bold transition hover:bg-[var(--color-background)]"
+          >
+            + הוסף מונח נוסף
+          </button>
+        </div>
       </SectionCard>
 
       <SectionCard title="צבעי האתר" description="קוד צבע (hex) לכל שדה">
