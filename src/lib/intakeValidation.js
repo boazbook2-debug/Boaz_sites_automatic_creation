@@ -29,6 +29,7 @@ export function validateBrandStory(brandStory) {
   if (!brandStory.whatMakesSpecial.trim()) errors.whatMakesSpecial = "שדה חובה";
   if (!brandStory.areas.trim()) errors.areas = "שדה חובה";
   if (!brandStory.approach.trim()) errors.approach = "שדה חובה";
+  if (!brandStory.personalQuote.trim()) errors.personalQuote = "שדה חובה";
   return errors;
 }
 

@@ -1,20 +1,23 @@
 const MODEL = "claude-sonnet-4-5-20250929";
 
-function buildPrompt({ agencyName, yearsInBusiness, whatMakesSpecial, areas, approach }) {
+function buildPrompt({ agencyName, yearsInBusiness, whatMakesSpecial, areas, approach, personalQuote }) {
   return `כתוב שני טקסטים שיווקיים בעברית עבור אתר של משרד תיווך בשם "${agencyName}", בהתבסס על התשובות הבאות:
 שנות ותק: ${yearsInBusiness}
 מה מייחד אותם: ${whatMakesSpecial}
 אזורי פעילות: ${areas}
 גישה וערכים: ${approach}
+טיוטת ציטוט אישי מבעל העסק (כתובה על ידו): "${personalQuote}"
 
 החזר אך ורק אובייקט JSON תקין בפורמט הבא, ללא טקסט נוסף:
-{"aboutText": "פסקת 'אודות' מקצועית ונעימה, כ-4-5 משפטים, בגוף שלישי", "ownerQuote": "ציטוט אישי קצר בגוף ראשון מבעל המשרד, 2-3 משפטים, חם ואותנטי"}`;
+{"aboutText": "פסקת 'אודות' מקצועית וזורמת בגוף שלישי, כ-4-5 משפטים, שמשלבת בצורה טבעית את כל התשובות למעלה לכדי טקסט אחיד שנשמע כאילו נכתב על ידי קופירייטר, לא רשימת עובדות", "ownerQuote": "גרסה משופרת ומעט ארוכה יותר של הציטוט האישי שנכתב למעלה — לשמור על הקול והמשמעות המקורית של בעל העסק, לתקן ניסוח ולהאריך מעט ל-2-3 משפטים חמים ואותנטיים בגוף ראשון"}`;
 }
 
-function fallback({ agencyName, yearsInBusiness, whatMakesSpecial, areas, approach }) {
+function fallback({ agencyName, yearsInBusiness, whatMakesSpecial, areas, approach, personalQuote }) {
   return {
-    aboutText: `${agencyName} פועל בתחום הנדל"ן כבר ${yearsInBusiness || "מספר"} שנים, ופעיל באזורים ${areas || "המרכז"}. ${whatMakesSpecial || "הצוות מתמחה בליווי אישי ומקצועי לאורך כל התהליך"}. הגישה שלנו: ${approach || "שקיפות, מקצועיות וזמינות מלאה ללקוח"}.`,
-    ownerQuote: `כל לקוח שאני פוגש מקבל ממני יחס אישי ומחויבות מלאה. המטרה שלי היא שתרגישו בטוחים ומלווים לאורך כל הדרך, מהרגע הראשון ועד למסירת המפתח.`,
+    aboutText: `${agencyName} הוא משרד תיווך הפועל בתחום הנדל"ן כבר ${yearsInBusiness || "מספר"} שנים, עם התמחות באזורי ${areas || "המרכז"}. ${whatMakesSpecial || "הצוות מתמחה בליווי אישי ומקצועי לאורך כל התהליך"} — וזו בדיוק הגישה שמנחה אותנו בכל עסקה: ${approach || "שקיפות, מקצועיות וזמינות מלאה ללקוח"}.`,
+    ownerQuote:
+      personalQuote?.trim() ||
+      `כל לקוח שאני פוגש מקבל ממני יחס אישי ומחויבות מלאה. המטרה שלי היא שתרגישו בטוחים ומלווים לאורך כל הדרך, מהרגע הראשון ועד למסירת המפתח.`,
   };
 }
 

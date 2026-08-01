@@ -97,6 +97,7 @@ export default function IntakeForm({ onBack, siteId }) {
     whatMakesSpecial: "",
     areas: "",
     approach: "",
+    personalQuote: "",
   });
   const [generated, setGenerated] = useState({ aboutText: "", ownerQuote: "" });
   const [generating, setGenerating] = useState(false);
@@ -570,7 +571,10 @@ export default function IntakeForm({ onBack, siteId }) {
         </div>
       </SectionCard>
 
-      <SectionCard title="סיפור המותג" description="התשובות ישמשו ליצירת טקסט 'אודות' וציטוט אישי מבעל העסק">
+      <SectionCard
+        title="סיפור המותג"
+        description="התשובות ישמשו ליצירת פסקת 'אודות' וציטוט אישי מבעל העסק. הציטוט האישי מוצג בעמוד הבית, מתחת לתמונה ולשם של בעל העסק, בסעיף 'אודותינו'."
+      >
         <TextAreaField
           label="כמה שנים אתם בתחום?"
           required
@@ -599,6 +603,14 @@ export default function IntakeForm({ onBack, siteId }) {
           onChange={(v) => setBrandStory({ ...brandStory, approach: v })}
           error={errors?.brandStory.approach}
         />
+        <TextAreaField
+          label="ציטוט אישי — כתבו במילים שלכם, ה-AI ישפר וירחיב מעט"
+          placeholder="לדוגמה: אני מאמין שכל לקוח מגיע עם חלום, והתפקיד שלי הוא להפוך אותו למציאות."
+          required
+          value={brandStory.personalQuote}
+          onChange={(v) => setBrandStory({ ...brandStory, personalQuote: v })}
+          error={errors?.brandStory.personalQuote}
+        />
         <button
           type="button"
           onClick={handleGenerateAbout}
@@ -608,14 +620,20 @@ export default function IntakeForm({ onBack, siteId }) {
           {generating ? "מייצר..." : "צור טקסט אודות + ציטוט אישי"}
         </button>
         {generated.aboutText && (
-          <div className="space-y-3 rounded-xl bg-[var(--color-background)] p-4 text-sm">
-            <p>
-              <strong>אודות:</strong> {generated.aboutText}
-            </p>
-            <p>
-              <strong>ציטוט אישי:</strong> {generated.ownerQuote}
-            </p>
-          </div>
+          <>
+            <TextAreaField
+              label="אודות (ניתן לערוך ישירות)"
+              rows={5}
+              value={generated.aboutText}
+              onChange={(v) => setGenerated({ ...generated, aboutText: v })}
+            />
+            <TextAreaField
+              label="ציטוט אישי (ניתן לערוך ישירות)"
+              rows={3}
+              value={generated.ownerQuote}
+              onChange={(v) => setGenerated({ ...generated, ownerQuote: v })}
+            />
+          </>
         )}
       </SectionCard>
 
