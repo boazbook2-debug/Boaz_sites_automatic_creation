@@ -3,10 +3,14 @@ import FeaturedPropertiesSection from "@/components/FeaturedPropertiesSection";
 import agency from "@/data/agency";
 import agents from "@/data/agents";
 import properties from "@/data/properties";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "אודות",
-};
+  description: `${agency.aboutText.slice(0, 150)} הכירו את ${agency.name} וצוות הסוכנים שלנו.`,
+  path: "/about",
+  keywords: `${agency.name}, אודות, נדל״ן, תיווך, ${agency.tagline}`,
+});
 
 export default function AboutPage() {
   return (

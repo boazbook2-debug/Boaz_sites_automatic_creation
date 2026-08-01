@@ -2,10 +2,15 @@ import AgentCard from "@/components/AgentCard";
 import FeaturedPropertiesSection from "@/components/FeaturedPropertiesSection";
 import agents from "@/data/agents";
 import properties from "@/data/properties";
+import agency from "@/data/agency";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "הסוכנים שלנו",
-};
+  description: `הכירו את סוכני הנדל״ן של ${agency.name} — צוות מקצועי וזמין המלווה אתכם ברכישה, מכירה והשכרה של נכסים.`,
+  path: "/agents",
+  keywords: `${agency.name}, סוכני נדל״ן, סוכן נדלן, תיווך`,
+});
 
 export default function AgentsPage() {
   return (

@@ -4,10 +4,14 @@ import FeaturedPropertiesSection from "@/components/FeaturedPropertiesSection";
 import MapEmbed from "@/components/MapEmbed";
 import agency from "@/data/agency";
 import properties from "@/data/properties";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "צור קשר",
-};
+  description: `צרו קשר עם ${agency.name} בכתובת ${agency.address}, בטלפון ${agency.phone} או בהודעה. נשמח לעזור במציאת הנכס המושלם עבורכם.`,
+  path: "/contact",
+  keywords: `${agency.name}, צור קשר, יצירת קשר, נדל״ן, ${agency.address}`,
+});
 
 export default function ContactPage() {
   return (

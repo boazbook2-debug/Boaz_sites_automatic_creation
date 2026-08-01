@@ -2,10 +2,15 @@ import Testimonials from "@/components/Testimonials";
 import FeaturedPropertiesSection from "@/components/FeaturedPropertiesSection";
 import testimonials from "@/data/testimonials";
 import properties from "@/data/properties";
+import agency from "@/data/agency";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "לקוחות ממליצים",
-};
+  description: `ביקורות והמלצות אמיתיות מלקוחות של ${agency.name} על תהליך רכישה, מכירה והשכרה של נכסים.`,
+  path: "/reviews",
+  keywords: `${agency.name}, ביקורות, המלצות, לקוחות מרוצים, נדל״ן`,
+});
 
 export default function ReviewsPage() {
   return (

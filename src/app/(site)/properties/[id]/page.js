@@ -6,9 +6,11 @@ import LeadForm from "@/components/LeadForm";
 import PropertyCard from "@/components/PropertyCard";
 import properties from "@/data/properties";
 import agents from "@/data/agents";
+import agency from "@/data/agency";
 import { formatPrice, statusLabel } from "@/lib/format";
 import { getAgentById, getSimilarProperties } from "@/lib/properties";
 import { SITE_URL } from "@/lib/siteUrl";
+import { pageMetadata, jsonLdScript } from "@/lib/seo";
 
 export function generateStaticParams() {
   return properties.map((property) => ({ id: property.id }));
@@ -19,13 +21,14 @@ export async function generateMetadata({ params }) {
   const property = properties.find((p) => p.id === id);
   if (!property) return { title: "נכס" };
 
-  const description = `${property.title} ב${property.location} — ${property.rooms} חדרים, ${formatPrice(property.price, property.status)}.`;
-  return {
+  const description = `${property.title} ב${property.location} — ${property.rooms} חדרים, ${statusLabel[property.status]} ב${formatPrice(property.price, property.status)}. ${property.features.slice(0, 3).join(", ")}.`;
+  return pageMetadata({
     title: property.title,
     description,
-    openGraph: { title: property.title, description, images: [{ url: property.images[0] }] },
-    twitter: { card: "summary_large_image", title: property.title, description, images: [property.images[0]] },
-  };
+    path: `/properties/${property.id}`,
+    keywords: `${property.title}, ${property.location}, ${property.type}, ${statusLabel[property.status]}, ${agency.name}, נדל״ן`,
+    image: property.images[0],
+  });
 }
 
 export default async function PropertyDetailPage({ params }) {
@@ -55,9 +58,20 @@ export default async function PropertyDetailPage({ params }) {
     },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "עמוד הבית", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "כל הנכסים", item: `${SITE_URL}/properties` },
+      { "@type": "ListItem", position: 3, name: property.title, item: `${SITE_URL}/properties/${property.id}` },
+    ],
+  };
+
   return (
     <div className="mx-auto max-w-6xl px-6 py-6 sm:py-10 lg:px-10">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listingSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(listingSchema)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(breadcrumbSchema)} />
       <Gallery images={property.images} alt={property.title} />
 
       <div className="mt-5 grid gap-6 sm:mt-8 sm:gap-8 lg:grid-cols-[1fr_360px] lg:gap-12">

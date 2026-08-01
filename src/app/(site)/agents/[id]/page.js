@@ -6,6 +6,9 @@ import LeadForm from "@/components/LeadForm";
 import { QuoteIcon } from "@/components/Icons";
 import agents from "@/data/agents";
 import properties from "@/data/properties";
+import agency from "@/data/agency";
+import { pageMetadata, jsonLdScript } from "@/lib/seo";
+import { SITE_URL } from "@/lib/siteUrl";
 
 export function generateStaticParams() {
   return agents.map((agent) => ({ id: agent.id }));
@@ -14,7 +17,16 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { id } = await params;
   const agent = agents.find((a) => a.id === id);
-  return { title: agent?.name ?? "סוכן" };
+  if (!agent) return { title: "סוכן" };
+
+  const description = `${agent.name}, ${agent.role} ב${agency.name}. ${agent.bio?.slice(0, 130) ?? ""}`;
+  return pageMetadata({
+    title: agent.name,
+    description,
+    path: `/agents/${agent.id}`,
+    keywords: `${agent.name}, ${agent.role}, ${agency.name}, סוכן נדל״ן`,
+    image: agent.photo,
+  });
 }
 
 export default async function AgentProfilePage({ params }) {
@@ -25,8 +37,33 @@ export default async function AgentProfilePage({ params }) {
 
   const agentProperties = properties.filter((p) => p.assignedAgentId === agent.id);
 
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: agent.name,
+    jobTitle: agent.role,
+    description: agent.bio,
+    image: agent.photo,
+    telephone: agent.phone,
+    email: agent.email,
+    url: `${SITE_URL}/agents/${agent.id}`,
+    worksFor: { "@type": "Organization", name: agency.name, url: SITE_URL },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "עמוד הבית", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "הסוכנים שלנו", item: `${SITE_URL}/agents` },
+      { "@type": "ListItem", position: 3, name: agent.name, item: `${SITE_URL}/agents/${agent.id}` },
+    ],
+  };
+
   return (
     <div className="mx-auto max-w-6xl px-6 py-6 sm:py-10 lg:px-10">
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(personSchema)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(breadcrumbSchema)} />
       <div className="flex flex-col items-center gap-4 rounded-2xl bg-[var(--color-surface)] p-5 text-center shadow-[0_10px_30px_rgba(0,0,0,0.06)] sm:flex-row sm:gap-6 sm:rounded-[2rem] sm:p-8 sm:text-right">
         <SampleImage
           src={agent.photo}
