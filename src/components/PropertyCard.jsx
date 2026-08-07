@@ -9,13 +9,13 @@ export default function PropertyCard({ property, className = "" }) {
   return (
     <Link
       href={`/properties/${property.id}`}
-      className={`group block overflow-hidden rounded-2xl bg-[var(--color-background)] shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_rgba(0,0,0,0.14)] lg:rounded-[2rem] lg:hover:-translate-y-2 lg:hover:shadow-[0_24px_48px_rgba(0,0,0,0.18)] ${className}`}
+      className={`group block overflow-hidden rounded-2xl bg-[var(--color-background)] shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300 ease-[cubic-bezier(.22,.61,.36,1)] hover:-translate-y-1 hover:shadow-[0_16px_32px_rgba(0,0,0,0.14)] lg:rounded-[2rem] lg:hover:-translate-y-2 lg:hover:shadow-[0_24px_48px_rgba(0,0,0,0.18)] ${className}`}
     >
       <SampleImage
         src={property.images[0]}
         alt={property.title}
         className="aspect-[4/3]"
-        imgClassName="transition-all duration-500 group-hover:scale-105 group-hover:brightness-110"
+        imgClassName="animate-image-in transition-all duration-500 group-hover:scale-105 group-hover:brightness-110"
         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
       >
         <span
@@ -28,7 +28,7 @@ export default function PropertyCard({ property, className = "" }) {
       </SampleImage>
 
       <div className="p-3 lg:p-6">
-        <p className="truncate text-sm font-bold tracking-tight lg:text-xl">{property.title}</p>
+        <p className="truncate font-serif text-sm font-bold tracking-tight lg:text-xl">{property.title}</p>
         <p className="mt-0.5 truncate text-xs text-[var(--color-main)]/60 lg:mt-1 lg:text-base">{property.location}</p>
         <p className="mt-1 text-xs text-[var(--color-main)]/50 lg:hidden">{property.rooms} חדרים</p>
         <p className="mt-0.5 text-sm font-extrabold text-[var(--color-accent2)] lg:hidden">

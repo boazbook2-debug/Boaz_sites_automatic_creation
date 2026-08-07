@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from "react";
+
 function Label({ label, required }) {
   return (
     <span className="mb-1.5 block text-sm font-semibold text-[var(--color-main)]/80">
@@ -67,6 +69,78 @@ export function SelectField({ label, value, onChange, options, required = false,
       </select>
       <ErrorText error={error} />
     </label>
+  );
+}
+
+// Searchable dropdown that only accepts a value from `options` — typing
+// filters the list, but the field's value only changes when an option is
+// clicked, so the admin can't submit free text that isn't in the list.
+export function ComboboxField({ label, value, onChange, options, placeholder, required = false, disabled = false, error }) {
+  const [query, setQuery] = useState(value || "");
+  const [open, setOpen] = useState(false);
+  const [syncedValue, setSyncedValue] = useState(value || "");
+  const boxRef = useRef(null);
+
+  // Keep the visible text in sync when `value` changes from outside this
+  // component (e.g. city selection clearing the neighborhood, or an edit
+  // load pre-filling it) — adjusted during render rather than in an effect,
+  // per React's guidance for resetting state from a changed prop.
+  if ((value || "") !== syncedValue) {
+    setSyncedValue(value || "");
+    setQuery(value || "");
+  }
+
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (boxRef.current && !boxRef.current.contains(e.target)) {
+        setOpen(false);
+        setQuery(value || "");
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [value]);
+
+  const filtered = options.filter((opt) => opt.toLowerCase().includes(query.trim().toLowerCase()));
+
+  return (
+    <div className="relative block" ref={boxRef}>
+      <Label label={label} required={required} />
+      <input
+        type="text"
+        value={query}
+        placeholder={disabled ? "" : placeholder}
+        disabled={disabled}
+        onFocus={() => setOpen(true)}
+        onChange={(e) => {
+          setQuery(e.target.value);
+          setOpen(true);
+        }}
+        className={`w-full rounded-xl border bg-[var(--color-background)] px-4 py-2.5 text-sm outline-none disabled:opacity-50 ${
+          error ? "border-red-400" : "border-[var(--color-main)]/15 focus:border-[var(--color-accent2)]"
+        }`}
+      />
+      {open && !disabled && filtered.length > 0 && (
+        <ul className="absolute z-10 mt-1 max-h-56 w-full overflow-y-auto rounded-xl border border-[var(--color-main)]/15 bg-[var(--color-background)] shadow-lg">
+          {filtered.map((opt) => (
+            <li key={opt}>
+              <button
+                type="button"
+                onClick={() => {
+                  onChange(opt);
+                  setQuery(opt);
+                  setOpen(false);
+                }}
+                className="block w-full px-4 py-2 text-right text-sm hover:bg-[var(--color-surface)]"
+              >
+                {opt}
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+      <ErrorText error={error} />
+    </div>
   );
 }
 

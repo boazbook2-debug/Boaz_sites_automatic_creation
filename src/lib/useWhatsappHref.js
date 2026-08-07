@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import agency from "@/data/agency";
 import properties from "@/data/properties";
+import { toWhatsappNumber } from "./phone";
 
 // Same WhatsApp number everywhere, but the prefilled message adapts: generic
 // agency greeting by default, property-specific question when viewing a
@@ -16,5 +17,5 @@ export default function useWhatsappHref() {
     ? `היי, ראיתי את הנכס "${property.title}" באתר ואשמח לקבל פרטים נוספים`
     : `היי, הגעתי מהאתר של ${agency.name} ואשמח לקבל פרטים נוספים`;
 
-  return `https://wa.me/${agency.whatsapp}?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/${toWhatsappNumber(agency.whatsapp)}?text=${encodeURIComponent(message)}`;
 }

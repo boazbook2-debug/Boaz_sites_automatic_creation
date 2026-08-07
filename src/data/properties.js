@@ -7,6 +7,7 @@ const properties = [
   {
     id: "villa-savyon",
     title: "וילה מודרנית עם בריכה בסביון",
+    address: "רחוב האלון 12",
     location: "סביון",
     price: 8500000,
     rooms: 6,
@@ -31,6 +32,7 @@ const properties = [
   {
     id: "house-ramat-hasharon",
     title: "בית פרטי כפרי ברמת השרון",
+    address: "רחוב סוקולוב 24",
     location: "רמת השרון",
     price: 6200000,
     rooms: 5,
@@ -55,7 +57,8 @@ const properties = [
   {
     id: "house-herzliya-pituach",
     title: "בית עיצוב מודרני בהרצליה פיתוח",
-    location: "הרצליה פיתוח",
+    address: "רחוב הצוק 8",
+    location: "הרצליה פיתוח, הרצליה",
     price: 11200000,
     rooms: 6,
     type: "בית פרטי",
@@ -79,7 +82,8 @@ const properties = [
   {
     id: "apartment-florentin",
     title: "דירת בוטיק עיצובית בפלורנטין",
-    location: "פלורנטין, תל אביב",
+    address: "רחוב פלורנטין 33",
+    location: "פלורנטין, תל אביב-יפו",
     price: 6800,
     rooms: 3,
     type: "דירה",
@@ -102,7 +106,8 @@ const properties = [
   {
     id: "apartment-rothschild",
     title: "דירה מודרנית במגדל יוקרה במרכז העיר",
-    location: "רוטשילד, תל אביב",
+    address: "שדרות רוטשילד 45",
+    location: "רוטשילד, תל אביב-יפו",
     price: 8200,
     rooms: 4,
     type: "דירה",
@@ -125,6 +130,7 @@ const properties = [
   {
     id: "garden-apartment-ganei-tikva",
     title: "דירת גן חמימה בגני תקווה",
+    address: "רחוב הדקל 5",
     location: "גני תקווה",
     price: 5900,
     rooms: 3,

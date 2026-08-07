@@ -20,9 +20,9 @@ const agency = {
   instagramUrl: "https://instagram.com/almornechasim",
   customSeoTerms: [],
   colors: {
-    background: "#FFFFFF",
-    surface: "#F4F4F5",
-    main: "#141414",
+    background: "#FBF9F6",
+    surface: "#F5F0E8",
+    main: "#1C1A16",
     accent1: "#1B2A41",
     accent2: "#B08D57",
   },

@@ -15,7 +15,7 @@ export default function IntakeFooter() {
         href={whatsappHref}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 inline-flex items-center gap-2 rounded-full bg-[var(--color-accent2)] px-6 py-2.5 text-sm font-bold text-white shadow-[0_12px_30px_rgba(176,141,87,0.4)] transition hover:scale-105"
+        className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-2.5 text-sm font-bold text-white shadow-[0_12px_30px_rgba(37,211,102,0.4)] transition hover:scale-105"
       >
         <WhatsAppIcon className="h-4 w-4" />
         שלחו הודעת וואטסאפ

@@ -1,14 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { TextField, TextAreaField, SelectField, SectionCard } from "./FormField";
+import { TextField, TextAreaField, SelectField, SectionCard, ComboboxField } from "./FormField";
 import ImageTile from "./ImageTile";
+import { israelCities, getNeighborhoodsForCity } from "@/data/israelLocations";
 import { validateProperty } from "@/lib/intakeValidation";
 import { generatePropertiesFile } from "@/lib/generateDataFiles";
 
 const blankProperty = {
   title: "",
-  location: "",
+  address: "",
+  city: "",
+  neighborhood: "",
   price: "",
   rooms: "",
   type: "",
@@ -54,8 +57,17 @@ export default function ClientPropertyForm({ title, initialProperty, client, onS
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) return;
 
+    const location =
+      candidate.neighborhood && candidate.neighborhood !== candidate.city
+        ? `${candidate.neighborhood}, ${candidate.city}`
+        : candidate.city;
     const generatedId = property.id ?? property.title.trim().toLowerCase().replace(/\s+/g, "-");
-    const finalProperty = { ...candidate, id: generatedId, assignedAgentId: property.assignedAgentId ?? "" };
+    const finalProperty = {
+      ...candidate,
+      location,
+      id: generatedId,
+      assignedAgentId: property.assignedAgentId ?? "",
+    };
     setOutput(generatePropertiesFile([finalProperty]));
 
     fetch("/api/notify", {
@@ -86,11 +98,31 @@ export default function ClientPropertyForm({ title, initialProperty, client, onS
             error={errors?.title}
           />
           <TextField
-            label="מיקום"
+            label="כתובת"
             required
-            value={property.location}
-            onChange={(v) => setProperty({ ...property, location: v })}
-            error={errors?.location}
+            placeholder="לדוגמה: רוטשילד 15"
+            value={property.address}
+            onChange={(v) => setProperty({ ...property, address: v })}
+            error={errors?.address}
+          />
+          <ComboboxField
+            label="עיר"
+            required
+            placeholder="הקלידו לחיפוש עיר..."
+            value={property.city}
+            options={israelCities}
+            onChange={(v) => setProperty({ ...property, city: v, neighborhood: "" })}
+            error={errors?.city}
+          />
+          <ComboboxField
+            label="שכונה"
+            required
+            disabled={!property.city}
+            placeholder={property.city ? "הקלידו לחיפוש שכונה..." : "יש לבחור עיר קודם"}
+            value={property.neighborhood}
+            options={getNeighborhoodsForCity(property.city)}
+            onChange={(v) => setProperty({ ...property, neighborhood: v })}
+            error={errors?.neighborhood}
           />
           <TextField
             label="מחיר"

@@ -1,14 +1,26 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { TextField, TextAreaField, SelectField, ColorField, FileField, SectionCard } from "./FormField";
+import { upload } from "@vercel/blob/client";
+import { TextField, TextAreaField, SelectField, ColorField, SectionCard, ComboboxField } from "./FormField";
 import ImageTile from "./ImageTile";
+import SortableImageGrid from "./SortableImageGrid";
 import iconRegistry, { matchIconIdFromText } from "@/lib/iconRegistry";
 import { buildDefaultSeoTerms } from "@/lib/seo";
+import {
+  addImages,
+  toggleImageRemoved,
+  reorderImages,
+  syncImageFilenames,
+  storageFilename,
+  filenameForUpload,
+} from "@/lib/imageOrdering";
+import { israelCities, getNeighborhoodsForCity } from "@/data/israelLocations";
 import defaultTestimonials from "@/data/testimonials";
 import defaultFaq from "@/data/faq";
 import defaultAgencyData from "@/data/agency";
 import defaultAgentsData from "@/data/agents";
+import defaultStats from "@/data/stats";
 import {
   generateAgencyFile,
   generateAgentsFile,
@@ -16,6 +28,8 @@ import {
   generateTestimonialsFile,
   generateFaqFile,
   generateStatsFile,
+  generateShowcaseFile,
+  generateWhyUsFile,
 } from "@/lib/generateDataFiles";
 import {
   validateAgency,
@@ -24,20 +38,11 @@ import {
   validateAgent,
   validateProperty,
   validateFaqItem,
+  validateShowcase,
+  validateWhyUs,
+  validateWhyUsCard,
   isEmpty,
 } from "@/lib/intakeValidation";
-
-const iconImportNames = {
-  house: "HouseIcon",
-  "trending-up": "TrendingUpIcon",
-  award: "AwardIcon",
-  "map-pin": "MapPinIcon",
-  star: "StarIcon",
-  phone: "PhoneIcon",
-  whatsapp: "WhatsAppIcon",
-  mail: "MailIcon",
-  quote: "QuoteIcon",
-};
 
 let idCounter = 0;
 const nextId = (prefix) => `${prefix}-${++idCounter}`;
@@ -72,6 +77,15 @@ export default function IntakeForm({ onBack, siteId }) {
   const [loadError, setLoadError] = useState(false);
   const [existingProjectName, setExistingProjectName] = useState(null);
   const [existingCreatedAt, setExistingCreatedAt] = useState(null);
+  // Images upload directly to Blob as soon as they're picked (see
+  // uploadNewImages below), which needs a stable site id up front — for a
+  // brand-new site there's no real one yet, so mint a draft id immediately
+  // and use it consistently for every upload path this form session.
+  const [draftSiteId] = useState(
+    () => siteId || `site-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`
+  );
+  const effectiveSiteId = siteId || draftSiteId;
+  const [projectSlug, setProjectSlug] = useState("");
   const [agency, setAgency] = useState({
     name: "",
     tagline: "",
@@ -85,6 +99,10 @@ export default function IntakeForm({ onBack, siteId }) {
     heroImageFilenames: [],
     customSeoTerms: [],
   });
+  // { id, file?, previewUrl, existing?, removed } | null — kept separate from
+  // `agency` so it can reuse the same preview/remove UI as the image grids.
+  const [logoImage, setLogoImage] = useState(null);
+  const [heroImages, setHeroImages] = useState([]);
   const [seoTermInput, setSeoTermInput] = useState("");
   const [showDefaultSeoTerms, setShowDefaultSeoTerms] = useState(false);
   const [colors, setColors] = useState({
@@ -105,13 +123,27 @@ export default function IntakeForm({ onBack, siteId }) {
   const [generating, setGenerating] = useState(false);
 
   const [agents, setAgents] = useState([
-    { id: nextId("agent"), name: "", role: "", photoFilename: "", phone: "", whatsapp: "", email: "", bio: "", yearsOfExperience: "" },
+    {
+      id: nextId("agent"),
+      name: "",
+      role: "",
+      photoFilename: "",
+      photoFile: null,
+      photoPreviewUrl: "",
+      phone: "",
+      whatsapp: "",
+      email: "",
+      bio: "",
+      yearsOfExperience: "",
+    },
   ]);
   const [properties, setProperties] = useState([
     {
       id: nextId("property"),
       title: "",
-      location: "",
+      address: "",
+      city: "",
+      neighborhood: "",
       price: "",
       rooms: "",
       type: "",
@@ -125,6 +157,20 @@ export default function IntakeForm({ onBack, siteId }) {
   const [testimonials, setTestimonials] = useState([{ id: nextId("t"), name: "", context: "", text: "" }]);
   const [faq, setFaq] = useState([{ question: "", answer: "" }]);
   const [stats, setStats] = useState([]);
+  const [showcase, setShowcase] = useState({
+    projectName: "",
+    description: "",
+    agentName: "",
+    agentPhone: "",
+    linkedPropertyId: "",
+    bullets: [],
+  });
+  const [showcaseImage, setShowcaseImageState] = useState(null);
+  const [showcaseAgentImage, setShowcaseAgentImageState] = useState(null);
+  const [whyUs, setWhyUs] = useState({
+    heading: "",
+    cards: Array.from({ length: 6 }, () => ({ title: "", description: "" })),
+  });
 
   const [output, setOutput] = useState(null);
   const [errors, setErrors] = useState(null);
@@ -139,13 +185,38 @@ export default function IntakeForm({ onBack, siteId }) {
         return res.json();
       })
       .then((site) => {
-        setAgency({ ...site.agency, customSeoTerms: site.agency.customSeoTerms || [] });
+        setAgency({
+          ...site.agency,
+          customSeoTerms: site.agency.customSeoTerms || [],
+        });
         setColors(site.agency.colors);
         setGenerated({ aboutText: site.agency.aboutText || "", ownerQuote: site.agency.ownerQuote || "" });
-        setAgents(site.agents?.length ? site.agents : agents);
+        setLogoImage(
+          site.agency.logoFilename
+            ? { id: nextId("img"), previewUrl: `/uploads/${site.agency.logoFilename}`, existing: true, removed: false }
+            : null
+        );
+        setHeroImages(
+          (site.agency.heroImageFilenames || []).map((filename) => ({
+            id: nextId("img"),
+            previewUrl: `/uploads/${filename}`,
+            existing: true,
+            removed: false,
+          }))
+        );
+        setAgents(
+          (site.agents?.length ? site.agents : agents).map((a) => ({
+            ...a,
+            photoFile: null,
+            photoPreviewUrl: a.photoFilename ? `/uploads/${a.photoFilename}` : "",
+          }))
+        );
         setProperties(
           (site.properties?.length ? site.properties : properties).map((p) => ({
             ...p,
+            address: p.address || "",
+            city: p.city || "",
+            neighborhood: p.neighborhood || "",
             images: (p.imageFilenames || []).map((filename) => ({
               id: nextId("img"),
               previewUrl: `/uploads/${filename}`,
@@ -157,6 +228,36 @@ export default function IntakeForm({ onBack, siteId }) {
         setTestimonials(site.testimonials?.length ? site.testimonials : testimonials);
         setFaq(site.faq?.length ? site.faq : faq);
         setStats(site.stats || []);
+        setShowcase({
+          projectName: site.showcase?.projectName || "",
+          description: site.showcase?.description || "",
+          agentName: site.showcase?.agentName || "",
+          agentPhone: site.showcase?.agentPhone || "",
+          linkedPropertyId: site.showcase?.linkedPropertyId || "",
+          bullets: site.showcase?.bullets || [],
+        });
+        setShowcaseImageState(
+          site.showcase?.imageFilename
+            ? { id: nextId("img"), previewUrl: `/uploads/${site.showcase.imageFilename}`, existing: true, removed: false }
+            : null
+        );
+        setShowcaseAgentImageState(
+          site.showcase?.agentImageFilename
+            ? {
+                id: nextId("img"),
+                previewUrl: `/uploads/${site.showcase.agentImageFilename}`,
+                existing: true,
+                removed: false,
+              }
+            : null
+        );
+        setWhyUs({
+          heading: site.whyUs?.heading || "",
+          cards:
+            site.whyUs?.cards?.length === 6
+              ? site.whyUs.cards
+              : Array.from({ length: 6 }, () => ({ title: "", description: "" })),
+        });
         setExistingProjectName(site.projectName);
         setExistingCreatedAt(site.createdAt);
       })
@@ -182,14 +283,50 @@ export default function IntakeForm({ onBack, siteId }) {
     setAgency((a) => ({ ...a, customSeoTerms: a.customSeoTerms.filter((_, i) => i !== index) }));
   };
 
-  // New uploads carry a File (name is the eventual /uploads/<name> filename);
-  // existing images loaded from a saved site only have a previewUrl already
-  // pointing at /uploads/<name> — strip that prefix back to the bare filename
-  // so it round-trips through generatePropertiesFile unchanged either way.
-  const syncImageFilenames = (images) =>
-    images
-      .filter((img) => !img.removed)
-      .map((img) => (img.file ? img.file.name : img.previewUrl.replace(/^\/uploads\//, "")));
+  const setLogoFile = (file) => {
+    if (!file) return;
+    setLogoImage({ id: nextId("img"), file, previewUrl: URL.createObjectURL(file), removed: false });
+  };
+
+  const toggleLogoRemoved = () => setLogoImage((img) => (img ? { ...img, removed: !img.removed } : img));
+
+  const addHeroImages = (fileList) => {
+    const added = Array.from(fileList).map((file) => ({
+      id: nextId("img"),
+      file,
+      previewUrl: URL.createObjectURL(file),
+      removed: false,
+    }));
+    setHeroImages((prev) => addImages(prev, added));
+  };
+
+  const toggleHeroImage = (imgId) => setHeroImages((prev) => toggleImageRemoved(prev, imgId));
+
+  const reorderHeroImages = (draggedId, targetId) =>
+    setHeroImages((prev) => reorderImages(prev, draggedId, targetId));
+
+  const setShowcaseImageFile = (file) => {
+    if (!file) return;
+    setShowcaseImageState({ id: nextId("img"), file, previewUrl: URL.createObjectURL(file), removed: false });
+  };
+  const toggleShowcaseImageRemoved = () =>
+    setShowcaseImageState((img) => (img ? { ...img, removed: !img.removed } : img));
+
+  const setShowcaseAgentImageFile = (file) => {
+    if (!file) return;
+    setShowcaseAgentImageState({ id: nextId("img"), file, previewUrl: URL.createObjectURL(file), removed: false });
+  };
+  const toggleShowcaseAgentImageRemoved = () =>
+    setShowcaseAgentImageState((img) => (img ? { ...img, removed: !img.removed } : img));
+
+  // Capped at 6 — the popup lays these out as a single row (≤5) or a clean
+  // 3x2 grid (exactly 6); more than that has no good layout in the fixed-height bar.
+  const addShowcaseBullet = () =>
+    setShowcase((s) => (s.bullets.length >= 6 ? s : { ...s, bullets: [...s.bullets, ""] }));
+  const updateShowcaseBullet = (i, value) =>
+    setShowcase((s) => ({ ...s, bullets: s.bullets.map((b, idx) => (idx === i ? value : b)) }));
+  const removeShowcaseBullet = (i) =>
+    setShowcase((s) => ({ ...s, bullets: s.bullets.filter((_, idx) => idx !== i) }));
 
   const addPropertyImages = (propertyId, fileList) => {
     const added = Array.from(fileList).map((file) => ({
@@ -201,7 +338,7 @@ export default function IntakeForm({ onBack, siteId }) {
     setProperties(
       properties.map((p) => {
         if (p.id !== propertyId) return p;
-        const images = [...added, ...p.images];
+        const images = addImages(p.images, added);
         return { ...p, images, imageFilenames: syncImageFilenames(images) };
       })
     );
@@ -211,7 +348,17 @@ export default function IntakeForm({ onBack, siteId }) {
     setProperties(
       properties.map((p) => {
         if (p.id !== propertyId) return p;
-        const images = p.images.map((img) => (img.id === imageId ? { ...img, removed: !img.removed } : img));
+        const images = toggleImageRemoved(p.images, imageId);
+        return { ...p, images, imageFilenames: syncImageFilenames(images) };
+      })
+    );
+  };
+
+  const reorderPropertyImages = (propertyId, draggedId, targetId) => {
+    setProperties(
+      properties.map((p) => {
+        if (p.id !== propertyId) return p;
+        const images = reorderImages(p.images, draggedId, targetId);
         return { ...p, images, imageFilenames: syncImageFilenames(images) };
       })
     );
@@ -234,7 +381,7 @@ export default function IntakeForm({ onBack, siteId }) {
 
   const runValidation = () => {
     const nextErrors = {
-      agency: validateAgency(agency),
+      agency: validateAgency({ ...agency, heroImageFilenames: syncImageFilenames(heroImages) }),
       colors: validateColors(colors),
       // Brand story fields only feed the AI "about text" generator — when
       // editing an existing site, aboutText/ownerQuote are already set, so
@@ -246,6 +393,9 @@ export default function IntakeForm({ onBack, siteId }) {
       agents: agents.map(validateAgent),
       properties: properties.map(validateProperty),
       faq: faq.length === 1 && isPlaceholderEntry(faq[0]) ? [{}] : faq.map(validateFaqItem),
+      showcase: validateShowcase(showcase),
+      whyUs: validateWhyUs(whyUs),
+      whyUsCards: whyUs.cards.map(validateWhyUsCard),
     };
     setErrors(nextErrors);
 
@@ -255,21 +405,32 @@ export default function IntakeForm({ onBack, siteId }) {
       isEmpty(nextErrors.brandStory) &&
       nextErrors.agents.every(isEmpty) &&
       nextErrors.properties.every(isEmpty) &&
-      nextErrors.faq.every(isEmpty)
+      nextErrors.faq.every(isEmpty) &&
+      isEmpty(nextErrors.showcase) &&
+      isEmpty(nextErrors.whyUs) &&
+      nextErrors.whyUsCards.every(isEmpty)
     );
   };
 
-  const buildStatsPayload = () =>
-    stats.map((s) => {
+  // The stats section is optional — if the agency owner never touches it (no
+  // icons picked, nothing typed), ship the template's own 6 default stats
+  // with their template icons, flagged so the live site shows them in red.
+  const buildStatsPayload = () => {
+    if (stats.length === 0) {
+      return defaultStats.map((s) => ({ ...s, placeholder: true }));
+    }
+    return stats.map((s) => {
       const iconId = s.iconId || matchIconIdFromText(`${s.label} ${s.value}`);
-      return { ...s, iconId, iconImport: iconImportNames[iconId] };
+      return { ...s, iconId, placeholder: false };
     });
+  };
 
-  // If the agency owner types just "x" into any field of the single blank
-  // entry instead of filling it in for real, swap in the template's own
-  // default content for the whole section (flagged so the live site shows
-  // it in red) — a quick way to spin up a free demo without filling everything.
-  const isXTrigger = (value) => typeof value === "string" && value.trim().toLowerCase() === "x";
+  // If the agency owner leaves a field blank (or types just "x" into it) in
+  // the single blank entry instead of filling it in for real, swap in the
+  // template's own default content for the whole section instead of
+  // blocking submission — every optional section should always ship with
+  // something rather than force the admin to fill it all out.
+  const isXTrigger = (value) => typeof value === "string" && ["", "x"].includes(value.trim().toLowerCase());
   const isPlaceholderEntry = (entry) =>
     Object.entries(entry).some(([key, value]) => key !== "id" && isXTrigger(value));
 
@@ -279,7 +440,14 @@ export default function IntakeForm({ onBack, siteId }) {
     [brandStory.yearsInBusiness, brandStory.whatMakesSpecial, brandStory.areas, brandStory.approach].some(isXTrigger);
 
   const buildAgencyPayload = () => {
-    const base = { ...agency, ...generated, colors };
+    const logoFilename = logoImage && !logoImage.removed ? syncImageFilenames([logoImage])[0] || "" : "";
+    const base = {
+      ...agency,
+      ...generated,
+      colors,
+      logoFilename,
+      heroImageFilenames: syncImageFilenames(heroImages),
+    };
     if (isAboutTextPlaceholderTriggered()) {
       return { ...base, aboutText: defaultAgencyData.aboutText, aboutTextPlaceholder: true };
     }
@@ -288,32 +456,76 @@ export default function IntakeForm({ onBack, siteId }) {
 
   // Strip the local-only `images` preview objects (File instances aren't
   // JSON-serializable) — only `imageFilenames` is sent/generated from.
-  const buildPropertiesPayload = () => properties.map(({ images, ...rest }) => rest);
+  // The site's property cards/filters read a single `location` string —
+  // compose it from the structured city/neighborhood pickers so every other
+  // component (PropertyCard, filters, AreasWeCover, SEO) needs no changes.
+  const buildPropertiesPayload = () =>
+    properties.map(({ images, ...rest }) => {
+      const location =
+        rest.neighborhood && rest.neighborhood !== rest.city ? `${rest.neighborhood}, ${rest.city}` : rest.city;
+      const features = rest.features.map((f) => f.trim()).filter(Boolean);
+      return { ...rest, location, features };
+    });
 
-  // Same "x" shortcut per agent bio — swaps that one agent's bio for a
-  // template agent's bio (cycling through the demo roster by position).
+  // Generic stock headshots for a blank photo — never agent-1's real photo
+  // (that's this template's own owner, not a fill-in for someone else's site).
+  const AGENT_PHOTO_FALLBACKS = defaultAgentsData.slice(1).map((a) => a.photo);
+
+  // Every agent field is optional: leave any of them blank (or type "x") and
+  // it falls back to something reasonable — contact info falls back to the
+  // agency's own phone/whatsapp/email so real inquiries still reach someone,
+  // role/bio/photo fall back to generic demo content, never to another
+  // agent's real name or personal photo.
   const buildAgentsPayload = () =>
-    agents.map((a, i) => {
-      if (isXTrigger(a.bio)) {
-        const demoBio = defaultAgentsData[i % defaultAgentsData.length].bio;
-        return { ...a, bio: demoBio, bioPlaceholder: true };
-      }
-      return { ...a, bioPlaceholder: Boolean(a.bioPlaceholder) };
+    agents.map(({ photoFile, photoPreviewUrl, ...a }, i) => {
+      const demo = defaultAgentsData[i % defaultAgentsData.length];
+      const bioPlaceholder = isXTrigger(a.bio);
+      return {
+        ...a,
+        name: isXTrigger(a.name) ? "נציג/ת מכירות" : a.name,
+        role: isXTrigger(a.role) ? demo.role : a.role,
+        phone: isXTrigger(a.phone) ? agency.phone : a.phone,
+        whatsapp: isXTrigger(a.whatsapp) ? agency.whatsapp || agency.phone : a.whatsapp,
+        email: isXTrigger(a.email) ? agency.email : a.email,
+        photo: a.photoFilename ? undefined : AGENT_PHOTO_FALLBACKS[i % AGENT_PHOTO_FALLBACKS.length],
+        bio: bioPlaceholder ? demo.bio : a.bio,
+        bioPlaceholder: bioPlaceholder || Boolean(a.bioPlaceholder),
+      };
     });
 
   const buildTestimonialsPayload = () => {
     if (testimonials.length === 1 && isPlaceholderEntry(testimonials[0])) {
       return defaultTestimonials.map((t) => ({ ...t, placeholder: true }));
     }
-    return testimonials;
+    // Drop any extra rows left completely blank rather than shipping empty
+    // testimonial cards to the live site.
+    return testimonials.filter((t) => t.name.trim() || t.context.trim() || t.text.trim());
   };
 
   const buildFaqPayload = () => {
     if (faq.length === 1 && isPlaceholderEntry(faq[0])) {
       return defaultFaq.map((f) => ({ ...f, placeholder: true }));
     }
-    return faq;
+    // Drop any extra rows left completely blank rather than shipping empty
+    // FAQ entries — but never ship a totally empty list (the page always
+    // renders a FAQ block), so fall back to the defaults if nothing's left.
+    const filled = faq.filter((f) => f.question.trim() || f.answer.trim());
+    return filled.length ? filled : defaultFaq.map((f) => ({ ...f, placeholder: true }));
   };
+
+  const buildShowcasePayload = () => ({
+    imageFilename: showcaseImage && !showcaseImage.removed ? syncImageFilenames([showcaseImage])[0] || "" : "",
+    projectName: showcase.projectName,
+    description: showcase.description,
+    agentName: showcase.agentName,
+    agentPhone: showcase.agentPhone,
+    agentImageFilename:
+      showcaseAgentImage && !showcaseAgentImage.removed ? syncImageFilenames([showcaseAgentImage])[0] || "" : "",
+    linkedPropertyId: showcase.linkedPropertyId,
+    bullets: showcase.bullets.map((b) => b.trim()).filter(Boolean),
+  });
+
+  const buildWhyUsPayload = () => whyUs;
 
   const handleBuild = () => {
     const valid = runValidation();
@@ -328,6 +540,8 @@ export default function IntakeForm({ onBack, siteId }) {
       testimonials: generateTestimonialsFile(buildTestimonialsPayload()),
       faq: generateFaqFile(buildFaqPayload()),
       stats: generateStatsFile(buildStatsPayload()),
+      showcase: generateShowcaseFile(buildShowcasePayload()),
+      whyUs: generateWhyUsFile(buildWhyUsPayload()),
     });
 
     fetch("/api/notify", {
@@ -340,6 +554,65 @@ export default function IntakeForm({ onBack, siteId }) {
     }).catch(() => {});
   };
 
+  // Real phone photos — and, it turns out, Mac screenshots the admin drops
+  // in for property photos — routinely run several MB each. A listing with
+  // a dozen of them would blow past the deploy request's size limit (Vercel
+  // returns a 413) once base64-inlined. Downscale to a sane web display size
+  // before upload; skip anything already small, and fall back to the
+  // original file if the browser can't decode it rather than fail.
+  //
+  // PNG is re-encoded as JPEG by default: canvas.toBlob ignores the quality
+  // setting for PNG (lossless), so a busy screenshot stays multi-MB no
+  // matter the resize — only the logo needs `keepPng` to preserve transparency.
+  const compressImageFile = async (file, { maxDimension = 1920, quality = 0.82, keepPng = false } = {}) => {
+    if (!file.type.startsWith("image/") || file.type === "image/gif") return file;
+    if (file.size < 300_000) return file;
+    try {
+      const bitmap = await createImageBitmap(file);
+      const scale = Math.min(1, maxDimension / Math.max(bitmap.width, bitmap.height));
+      const width = Math.round(bitmap.width * scale);
+      const height = Math.round(bitmap.height * scale);
+      const canvas = document.createElement("canvas");
+      canvas.width = width;
+      canvas.height = height;
+      canvas.getContext("2d").drawImage(bitmap, 0, 0, width, height);
+      const mimeType = keepPng && file.type === "image/png" ? "image/png" : "image/jpeg";
+      const blob = await new Promise((resolve) => canvas.toBlob(resolve, mimeType, quality));
+      return blob || file;
+    } catch {
+      return file;
+    }
+  };
+
+  // Every freshly-picked File across the whole form (logo, hero slideshow,
+  // agent photos, property photos) — uploaded straight to Blob under this
+  // site's uploads folder, bypassing the deploy request's body entirely (real
+  // photos would otherwise blow well past Vercel's ~4.5MB body limit). The
+  // deploy route fetches them back out of Blob by the same filename/site id.
+  const uploadNewImages = async () => {
+    const entries = [];
+    if (logoImage?.file && !logoImage.removed) entries.push(logoImage);
+    entries.push(...heroImages.filter((img) => img.file && !img.removed));
+    if (showcaseImage?.file && !showcaseImage.removed) entries.push(showcaseImage);
+    if (showcaseAgentImage?.file && !showcaseAgentImage.removed) entries.push(showcaseAgentImage);
+    for (const a of agents) {
+      if (a.photoFile) entries.push({ id: a.id, file: a.photoFile });
+    }
+    for (const p of properties) {
+      entries.push(...p.images.filter((img) => img.file && !img.removed));
+    }
+    await Promise.all(
+      entries.map(async (img) => {
+        const compressed = await compressImageFile(img.file, { keepPng: img === logoImage });
+        await upload(`sites/${effectiveSiteId}/uploads/${storageFilename(img)}`, compressed, {
+          access: "private",
+          handleUploadUrl: "/api/upload-image",
+          contentType: compressed.type || img.file.type,
+        });
+      })
+    );
+  };
+
   const handleDeploy = async () => {
     const valid = runValidation();
     if (!valid) return;
@@ -347,6 +620,7 @@ export default function IntakeForm({ onBack, siteId }) {
     setDeploying(true);
     setDeployResult(null);
     try {
+      await uploadNewImages();
       const res = await fetch("/api/deploy-site", {
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -357,8 +631,11 @@ export default function IntakeForm({ onBack, siteId }) {
           testimonials: buildTestimonialsPayload(),
           faq: buildFaqPayload(),
           stats: buildStatsPayload(),
-          siteId: siteId || undefined,
+          showcase: buildShowcasePayload(),
+          whyUs: buildWhyUsPayload(),
+          siteId: effectiveSiteId,
           projectName: existingProjectName || undefined,
+          projectSlug: existingProjectName ? undefined : projectSlug,
           createdAt: existingCreatedAt || undefined,
         }),
       });
@@ -378,7 +655,10 @@ export default function IntakeForm({ onBack, siteId }) {
       !isEmpty(errors.brandStory) ||
       !errors.agents.every(isEmpty) ||
       !errors.properties.every(isEmpty) ||
-      !errors.faq.every(isEmpty));
+      !errors.faq.every(isEmpty) ||
+      !isEmpty(errors.showcase) ||
+      !isEmpty(errors.whyUs) ||
+      !errors.whyUsCards.every(isEmpty));
 
   if (loadingExisting) {
     return <p className="px-6 py-20 text-center text-lg text-[var(--color-main)]/60">טוען את פרטי האתר...</p>;
@@ -422,6 +702,21 @@ export default function IntakeForm({ onBack, siteId }) {
       )}
 
       <SectionCard title="פרטי הסוכנות">
+        <div className="rounded-2xl border-2 border-[var(--color-accent2)] bg-[var(--color-background)] p-5">
+          <p className="text-sm text-[var(--color-main)]/70">
+            כל הפניות מהאתר (הטופס הכללי שבתחתית האתר, וטפסי &quot;מעוניינים בנכס&quot; שבעמודי הנכסים והסוכנים)
+            נפתחות כהודעת וואטסאפ מוכנה מהמבקר עצמו — לסוכן הרלוונטי אם יש, ואם לא, למספר הוואטסאפ הכללי
+            שמוזן למטה. אין צורך בכתובת אימייל לקבלת פניות.
+          </p>
+        </div>
+        {!siteId && (
+          <TextField
+            label="כתובת האתר (באנגלית, לניהול מסודר ב-Vercel)"
+            placeholder="לדוגמה: nadlan-com — האתר יעלה לכתובת nadlan-com.vercel.app"
+            value={projectSlug}
+            onChange={setProjectSlug}
+          />
+        )}
         <div className="grid gap-5 sm:grid-cols-2">
           <TextField
             label="שם הסוכנות"
@@ -445,7 +740,7 @@ export default function IntakeForm({ onBack, siteId }) {
             error={errors?.agency.phone}
           />
           <TextField
-            label="וואטסאפ (כולל קידומת מדינה, לדוגמה 972501234567)"
+            label="וואטסאפ (מספר ישראלי רגיל, לדוגמה 0501234567 — אין צורך בקידומת מדינה)"
             required
             value={agency.whatsapp}
             onChange={(v) => setAgency({ ...agency, whatsapp: v })}
@@ -476,17 +771,55 @@ export default function IntakeForm({ onBack, siteId }) {
             onChange={(v) => setAgency({ ...agency, instagramUrl: v })}
           />
         </div>
-        <FileField
-          label="לוגו (אופציונלי)"
-          onChange={(file) => setAgency({ ...agency, logoFilename: file?.name ?? "" })}
-        />
-        <FileField
-          label="תמונות לסליידשואו בעמוד הבית (ניתן לבחור כמה)"
-          required
-          multiple
-          onChange={(files) => setAgency({ ...agency, heroImageFilenames: files.map((f) => f.name) })}
-          error={errors?.agency.heroImageFilenames}
-        />
+        <div>
+          <span className="mb-1.5 block text-sm font-semibold text-[var(--color-main)]/80">לוגו (אופציונלי)</span>
+          {logoImage && (
+            <div className="mb-3 w-24">
+              <ImageTile
+                src={logoImage.previewUrl}
+                removed={logoImage.removed}
+                onToggleRemove={toggleLogoRemoved}
+              />
+            </div>
+          )}
+          <input
+            type="file"
+            accept="image/*"
+            onChange={(e) => {
+              setLogoFile(e.target.files?.[0]);
+              e.target.value = "";
+            }}
+            className="w-full rounded-xl border border-dashed border-[var(--color-main)]/25 bg-[var(--color-background)] px-4 py-2.5 text-sm outline-none file:ml-3 file:rounded-full file:border-0 file:bg-[var(--color-accent2)] file:px-4 file:py-1.5 file:text-xs file:font-bold file:text-white"
+          />
+        </div>
+        <div>
+          <span className="mb-1.5 block text-sm font-semibold text-[var(--color-main)]/80">
+            תמונות לסליידשואו בעמוד הבית (ניתן לבחור כמה) <span className="text-red-500">*</span>
+          </span>
+          {heroImages.length > 0 && (
+            <div className="mb-4">
+              <SortableImageGrid
+                images={heroImages}
+                onToggleRemove={toggleHeroImage}
+                onReorder={reorderHeroImages}
+                columns="grid-cols-4"
+              />
+            </div>
+          )}
+          <input
+            type="file"
+            accept="image/*"
+            multiple
+            onChange={(e) => {
+              addHeroImages(e.target.files);
+              e.target.value = "";
+            }}
+            className="w-full rounded-xl border border-dashed border-[var(--color-main)]/25 bg-[var(--color-background)] px-4 py-2.5 text-sm outline-none file:ml-3 file:rounded-full file:border-0 file:bg-[var(--color-accent2)] file:px-4 file:py-1.5 file:text-xs file:font-bold file:text-white"
+          />
+          {errors?.agency.heroImageFilenames && (
+            <p className="mt-1 text-xs font-medium text-red-500">{errors.agency.heroImageFilenames}</p>
+          )}
+        </div>
       </SectionCard>
 
       <SectionCard
@@ -605,28 +938,24 @@ export default function IntakeForm({ onBack, siteId }) {
       >
         <TextAreaField
           label="כמה שנים אתם בתחום?"
-          required
           value={brandStory.yearsInBusiness}
           onChange={(v) => setBrandStory({ ...brandStory, yearsInBusiness: v })}
           error={errors?.brandStory.yearsInBusiness}
         />
         <TextAreaField
           label="מה מייחד אתכם?"
-          required
           value={brandStory.whatMakesSpecial}
           onChange={(v) => setBrandStory({ ...brandStory, whatMakesSpecial: v })}
           error={errors?.brandStory.whatMakesSpecial}
         />
         <TextAreaField
           label="באילו אזורים אתם פועלים?"
-          required
           value={brandStory.areas}
           onChange={(v) => setBrandStory({ ...brandStory, areas: v })}
           error={errors?.brandStory.areas}
         />
         <TextAreaField
           label="מהי הגישה והערכים שלכם?"
-          required
           value={brandStory.approach}
           onChange={(v) => setBrandStory({ ...brandStory, approach: v })}
           error={errors?.brandStory.approach}
@@ -634,14 +963,14 @@ export default function IntakeForm({ onBack, siteId }) {
         <TextAreaField
           label="אודותינו למסך ראשי (לא עמוד של אודותינו) — כתבו במילים שלכם, ה-AI ישפר וירחיב מעט"
           placeholder="לדוגמה: אני מאמין שכל לקוח מגיע עם חלום, והתפקיד שלי הוא להפוך אותו למציאות."
-          required
           value={brandStory.personalQuote}
           onChange={(v) => setBrandStory({ ...brandStory, personalQuote: v })}
           error={errors?.brandStory.personalQuote}
         />
         <p className="text-xs text-[var(--color-main)]/50">
-          השדה הזה שונה מהשדות שמעליו: הוא מיועד לעמוד הבית בלבד (לא לעמוד האודותינו), ומוצג שם מתחת לתמונה ולשם של
-          בעל העסק, בסעיף &quot;אודותינו&quot; שבעמוד הבית.
+          השדה הזה שונה מהשדות שמעליו: הוא מיועד לעמוד הבית בלבד (לא לעמוד האודותינו), ומוצג שם מתחת לתמונה, לשם
+          ולתפקיד של בעל העסק, בסעיף &quot;אודותינו&quot; שבעמוד הבית. שנות הניסיון שיוזנו עבור בעל העסק (הסוכן הראשון
+          ברשימת הסוכנים למטה) יופיעו שם אוטומטית — אין צורך להזין אותן שוב.
         </p>
         <button
           type="button"
@@ -675,21 +1004,18 @@ export default function IntakeForm({ onBack, siteId }) {
             <div className="grid gap-4 sm:grid-cols-2">
               <TextField
                 label="שם"
-                required
                 value={agent.name}
                 onChange={(v) => setAgents(agents.map((a) => (a.id === agent.id ? { ...a, name: v } : a)))}
                 error={errors?.agents[i]?.name}
               />
               <TextField
                 label="תפקיד"
-                required
                 value={agent.role}
                 onChange={(v) => setAgents(agents.map((a) => (a.id === agent.id ? { ...a, role: v } : a)))}
                 error={errors?.agents[i]?.role}
               />
               <TextField
                 label="טלפון"
-                required
                 value={agent.phone}
                 onChange={(v) =>
                   setAgents(agents.map((a) => (a.id === agent.id ? { ...a, phone: v, whatsapp: a.whatsapp || v } : a)))
@@ -698,24 +1024,54 @@ export default function IntakeForm({ onBack, siteId }) {
               />
               <TextField
                 label="אימייל"
-                required
                 value={agent.email}
                 onChange={(v) => setAgents(agents.map((a) => (a.id === agent.id ? { ...a, email: v } : a)))}
                 error={errors?.agents[i]?.email}
               />
             </div>
-            <FileField
-              label={`תמונת פרופיל${i === 0 ? " (הראשון ברשימה מוצג כבעל העסק בעמוד הבית)" : ""}`}
-              required
-              onChange={(file) =>
-                setAgents(agents.map((a) => (a.id === agent.id ? { ...a, photoFilename: file?.name ?? "" } : a)))
-              }
-              error={errors?.agents[i]?.photoFilename}
-            />
+            <div>
+              <span className="mb-1.5 block text-sm font-semibold text-[var(--color-main)]/80">
+                {`תמונת פרופיל${i === 0 ? " (הראשון ברשימה מוצג כבעל העסק בעמוד הבית)" : ""}`}
+              </span>
+              {agent.photoPreviewUrl && (
+                <div className="mb-3 w-24">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={agent.photoPreviewUrl}
+                    alt=""
+                    className="aspect-square w-full rounded-xl object-cover"
+                  />
+                </div>
+              )}
+              <input
+                type="file"
+                accept="image/*"
+                onChange={(e) => {
+                  const file = e.target.files?.[0];
+                  e.target.value = "";
+                  if (!file) return;
+                  setAgents(
+                    agents.map((a) =>
+                      a.id === agent.id
+                        ? {
+                            ...a,
+                            photoFile: file,
+                            photoPreviewUrl: URL.createObjectURL(file),
+                            photoFilename: filenameForUpload(a.id, file),
+                          }
+                        : a
+                    )
+                  );
+                }}
+                className="w-full rounded-xl border border-dashed border-[var(--color-main)]/25 bg-[var(--color-background)] px-4 py-2.5 text-sm outline-none file:ml-3 file:rounded-full file:border-0 file:bg-[var(--color-accent2)] file:px-4 file:py-1.5 file:text-xs file:font-bold file:text-white"
+              />
+              {errors?.agents[i]?.photoFilename && (
+                <p className="mt-1 text-xs font-medium text-red-500">{errors.agents[i].photoFilename}</p>
+              )}
+            </div>
             <TextAreaField
               label="קצת על הסוכן/ת (מוצג כציטוט בעמוד הפרופיל האישי של הסוכן/ת הזה בלבד — שדה נפרד לגמרי מהאודות ומהציטוט למסך הראשי, גם עבור בעל העסק)"
-              placeholder="לדוגמה: כמה שנות ניסיון בתחום, רקע מקצועי, התמחויות והישגים בולטים... (או x בלבד כדי להשתמש בטקסט לדוגמה, שיוצג באדום)"
-              required
+              placeholder="לדוגמה: כמה שנות ניסיון בתחום, רקע מקצועי, התמחויות והישגים בולטים... (השאירו ריק כדי להשתמש בטקסט לדוגמה)"
               rows={3}
               value={agent.bio}
               onChange={(v) => setAgents(agents.map((a) => (a.id === agent.id ? { ...a, bio: v } : a)))}
@@ -745,7 +1101,19 @@ export default function IntakeForm({ onBack, siteId }) {
           onClick={() =>
             setAgents([
               ...agents,
-              { id: nextId("agent"), name: "", role: "", photoFilename: "", phone: "", whatsapp: "", email: "", bio: "", yearsOfExperience: "" },
+              {
+      id: nextId("agent"),
+      name: "",
+      role: "",
+      photoFilename: "",
+      photoFile: null,
+      photoPreviewUrl: "",
+      phone: "",
+      whatsapp: "",
+      email: "",
+      bio: "",
+      yearsOfExperience: "",
+    },
             ])
           }
           className="rounded-full border-2 border-[var(--color-main)]/20 px-6 py-2.5 text-sm font-bold transition hover:bg-[var(--color-background)]"
@@ -766,11 +1134,37 @@ export default function IntakeForm({ onBack, siteId }) {
                 error={errors?.properties[i]?.title}
               />
               <TextField
-                label="מיקום"
+                label="כתובת"
                 required
-                value={property.location}
-                onChange={(v) => setProperties(properties.map((p) => (p.id === property.id ? { ...p, location: v } : p)))}
-                error={errors?.properties[i]?.location}
+                placeholder="לדוגמה: רוטשילד 15"
+                value={property.address}
+                onChange={(v) => setProperties(properties.map((p) => (p.id === property.id ? { ...p, address: v } : p)))}
+                error={errors?.properties[i]?.address}
+              />
+              <ComboboxField
+                label="עיר"
+                required
+                placeholder="הקלידו לחיפוש עיר..."
+                value={property.city}
+                options={israelCities}
+                onChange={(v) =>
+                  setProperties(
+                    properties.map((p) => (p.id === property.id ? { ...p, city: v, neighborhood: "" } : p))
+                  )
+                }
+                error={errors?.properties[i]?.city}
+              />
+              <ComboboxField
+                label="שכונה"
+                required
+                disabled={!property.city}
+                placeholder={property.city ? "הקלידו לחיפוש שכונה..." : "יש לבחור עיר קודם"}
+                value={property.neighborhood}
+                options={getNeighborhoodsForCity(property.city)}
+                onChange={(v) =>
+                  setProperties(properties.map((p) => (p.id === property.id ? { ...p, neighborhood: v } : p)))
+                }
+                error={errors?.properties[i]?.neighborhood}
               />
               <TextField
                 label="מחיר"
@@ -815,28 +1209,72 @@ export default function IntakeForm({ onBack, siteId }) {
                 options={[{ value: "", label: "בחרו סוכן" }, ...agents.map((a) => ({ value: a.id, label: a.name || a.id }))]}
               />
             </div>
-            <TextAreaField
-              label="מאפייני הנכס (שורה לכל מאפיין, אופציונלי)"
-              value={property.features.join("\n")}
-              onChange={(v) =>
-                setProperties(properties.map((p) => (p.id === property.id ? { ...p, features: v.split("\n") } : p)))
-              }
-            />
+            <div>
+              <span className="mb-1.5 block text-sm font-semibold text-[var(--color-main)]/80">
+                מאפייני הנכס (אופציונלי) — כל מאפיין יוצג כנקודה נפרדת ברשימה באתר
+              </span>
+              <div className="space-y-2">
+                {property.features.map((feature, fi) => (
+                  <div key={fi} className="flex items-center gap-2">
+                    <input
+                      type="text"
+                      value={feature}
+                      placeholder="לדוגמה: מרפסת שמש"
+                      onChange={(e) =>
+                        setProperties(
+                          properties.map((p) =>
+                            p.id === property.id
+                              ? { ...p, features: p.features.map((f, idx) => (idx === fi ? e.target.value : f)) }
+                              : p
+                          )
+                        )
+                      }
+                      className="flex-1 rounded-xl border border-[var(--color-main)]/15 bg-[var(--color-background)] px-4 py-2.5 text-sm outline-none focus:border-[var(--color-accent2)]"
+                    />
+                    {property.features.length > 1 && (
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setProperties(
+                            properties.map((p) =>
+                              p.id === property.id
+                                ? { ...p, features: p.features.filter((_, idx) => idx !== fi) }
+                                : p
+                            )
+                          )
+                        }
+                        className="text-sm font-medium text-red-600"
+                      >
+                        הסר
+                      </button>
+                    )}
+                  </div>
+                ))}
+              </div>
+              <button
+                type="button"
+                onClick={() =>
+                  setProperties(
+                    properties.map((p) => (p.id === property.id ? { ...p, features: [...p.features, ""] } : p))
+                  )
+                }
+                className="mt-3 rounded-full border-2 border-[var(--color-main)]/20 px-6 py-2.5 text-sm font-bold transition hover:bg-[var(--color-background)]"
+              >
+                + הוסף מאפיין
+              </button>
+            </div>
             <div>
               <span className="mb-1.5 block text-sm font-semibold text-[var(--color-main)]/80">
                 תמונות הנכס <span className="text-red-500">*</span>
               </span>
 
               {property.images.length > 0 && (
-                <div className="mb-4 grid grid-cols-3 gap-3">
-                  {property.images.map((img) => (
-                    <ImageTile
-                      key={img.id}
-                      src={img.previewUrl}
-                      removed={img.removed}
-                      onToggleRemove={() => togglePropertyImage(property.id, img.id)}
-                    />
-                  ))}
+                <div className="mb-4">
+                  <SortableImageGrid
+                    images={property.images}
+                    onToggleRemove={(imgId) => togglePropertyImage(property.id, imgId)}
+                    onReorder={(draggedId, targetId) => reorderPropertyImages(property.id, draggedId, targetId)}
+                  />
                 </div>
               )}
 
@@ -873,7 +1311,9 @@ export default function IntakeForm({ onBack, siteId }) {
               {
                 id: nextId("property"),
                 title: "",
-                location: "",
+                address: "",
+                city: "",
+                neighborhood: "",
                 price: "",
                 rooms: "",
                 type: "",
@@ -931,19 +1371,53 @@ export default function IntakeForm({ onBack, siteId }) {
         </button>
       </SectionCard>
 
-      <SectionCard title="שאלות ותשובות" description="לפחות שאלה אחת נדרשת">
+      <SectionCard title="למה עובדים איתנו" description="אופציונלי — כותרת + בדיוק 6 כרטיסים (כותרת ותיאור לכל אחד). מוצג בעמוד הבית בין 'השכונות המבוקשות שלנו' לבין 'שאלות ותשובות'. השאירו ריק כדי להשתמש בתוכן ברירת המחדל של התבנית.">
+        <TextField
+          label="כותרת הסקשן"
+          placeholder="לדוגמה: למה בעלי דירות עובדים איתנו"
+          value={whyUs.heading}
+          onChange={(v) => setWhyUs({ ...whyUs, heading: v })}
+          error={errors?.whyUs.heading}
+        />
+        {whyUs.cards.map((card, i) => (
+          <div key={i} className="grid gap-4 rounded-xl border border-[var(--color-main)]/10 p-5 sm:grid-cols-2">
+            <TextField
+              label={`כרטיס ${i + 1} — כותרת`}
+              value={card.title}
+              onChange={(v) =>
+                setWhyUs({
+                  ...whyUs,
+                  cards: whyUs.cards.map((c, idx) => (idx === i ? { ...c, title: v } : c)),
+                })
+              }
+              error={errors?.whyUsCards[i]?.title}
+            />
+            <TextField
+              label={`כרטיס ${i + 1} — תיאור`}
+              value={card.description}
+              onChange={(v) =>
+                setWhyUs({
+                  ...whyUs,
+                  cards: whyUs.cards.map((c, idx) => (idx === i ? { ...c, description: v } : c)),
+                })
+              }
+              error={errors?.whyUsCards[i]?.description}
+            />
+          </div>
+        ))}
+      </SectionCard>
+
+      <SectionCard title="שאלות ותשובות" description="אופציונלי — השאירו ריק כדי להשתמש בשאלות ברירת המחדל של התבנית">
         {faq.map((item, i) => (
           <div key={i} className="space-y-4 rounded-xl border border-[var(--color-main)]/10 p-5">
             <TextField
               label="שאלה"
-              required={i === 0}
               value={item.question}
               onChange={(v) => setFaq(faq.map((f, idx) => (idx === i ? { ...f, question: v } : f)))}
               error={errors?.faq[i]?.question}
             />
             <TextAreaField
               label="תשובה"
-              required={i === 0}
               value={item.answer}
               onChange={(v) => setFaq(faq.map((f, idx) => (idx === i ? { ...f, answer: v } : f)))}
               error={errors?.faq[i]?.answer}
@@ -968,7 +1442,10 @@ export default function IntakeForm({ onBack, siteId }) {
         </button>
       </SectionCard>
 
-      <SectionCard title="נתונים / סטטיסטיקות" description="אופציונלי — בחרו אייקון מוכן או הוסיפו משלכם">
+      <SectionCard
+        title="נתונים / סטטיסטיקות"
+        description="אופציונלי — בחרו אייקון מוכן או הוסיפו משלכם. אם תשאירו את הסעיף הזה ריק לגמרי, יוצגו באתר 6 הנתונים לדוגמה של התבנית (עם אייקוני התבנית), בצבע אדום."
+      >
         <div className="grid grid-cols-3 gap-3 sm:grid-cols-5">
           {iconRegistry.map(({ id, label, Icon }) => (
             <button
@@ -1026,6 +1503,134 @@ export default function IntakeForm({ onBack, siteId }) {
         >
           + הוסף אייקון מותאם אישית
         </button>
+      </SectionCard>
+
+      <SectionCard
+        title="פרויקט מיוחד להצגה"
+        description="אופציונלי — חלון קופץ שמופיע 3 שניות אחרי כניסה לאתר, עם תמונת פרויקט גדולה, שם ותיאור, פרטי הסוכן, ורשימת מאפיינים בפס לבן בתחתית. אם תשאירו את הסעיף הזה ריק (בלי תמונה ובלי שם פרויקט), החלון פשוט לא יופיע באתר."
+      >
+        <div>
+          <span className="mb-1.5 block text-sm font-semibold text-[var(--color-main)]/80">תמונת הפרויקט</span>
+          {showcaseImage && (
+            <div className="mb-3 w-32">
+              <ImageTile
+                src={showcaseImage.previewUrl}
+                removed={showcaseImage.removed}
+                onToggleRemove={toggleShowcaseImageRemoved}
+              />
+            </div>
+          )}
+          <input
+            type="file"
+            accept="image/*"
+            onChange={(e) => {
+              setShowcaseImageFile(e.target.files?.[0]);
+              e.target.value = "";
+            }}
+            className="w-full rounded-xl border border-dashed border-[var(--color-main)]/25 bg-[var(--color-background)] px-4 py-2.5 text-sm outline-none file:ml-3 file:rounded-full file:border-0 file:bg-[var(--color-accent2)] file:px-4 file:py-1.5 file:text-xs file:font-bold file:text-white"
+          />
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2">
+          <TextField
+            label="שם הפרויקט"
+            value={showcase.projectName}
+            onChange={(v) => setShowcase({ ...showcase, projectName: v })}
+          />
+          <TextField
+            label="שם הסוכן/ת"
+            value={showcase.agentName}
+            onChange={(v) => setShowcase({ ...showcase, agentName: v })}
+          />
+        </div>
+        <TextAreaField
+          label="תיאור הפרויקט"
+          rows={2}
+          value={showcase.description}
+          onChange={(v) => setShowcase({ ...showcase, description: v })}
+        />
+        <TextField
+          label="טלפון הסוכן/ת"
+          placeholder="לדוגמה: 054-6848641"
+          value={showcase.agentPhone}
+          onChange={(v) => setShowcase({ ...showcase, agentPhone: v })}
+          error={errors?.showcase.agentPhone}
+        />
+        <SelectField
+          label="קישור לנכס (אופציונלי) — מציג בחלון כפתור 'מידע נוסף' שמוביל לעמוד הנכס שנבחר"
+          value={showcase.linkedPropertyId}
+          onChange={(v) => setShowcase({ ...showcase, linkedPropertyId: v })}
+          options={[
+            { value: "", label: "ללא קישור" },
+            ...properties.filter((p) => p.title.trim()).map((p) => ({ value: p.id, label: p.title })),
+          ]}
+        />
+
+        <div>
+          <span className="mb-1.5 block text-sm font-semibold text-[var(--color-main)]/80">תמונת הסוכן/ת</span>
+          {showcaseAgentImage?.previewUrl && (
+            <div className="mb-3 w-24">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={showcaseAgentImage.previewUrl}
+                alt=""
+                className={`aspect-square w-full rounded-full object-cover ${
+                  showcaseAgentImage.removed ? "grayscale opacity-40" : ""
+                }`}
+              />
+              <button
+                type="button"
+                onClick={toggleShowcaseAgentImageRemoved}
+                className="mt-1 text-xs font-medium text-red-600"
+              >
+                {showcaseAgentImage.removed ? "שחזר" : "הסר תמונה"}
+              </button>
+            </div>
+          )}
+          <input
+            type="file"
+            accept="image/*"
+            onChange={(e) => {
+              setShowcaseAgentImageFile(e.target.files?.[0]);
+              e.target.value = "";
+            }}
+            className="w-full rounded-xl border border-dashed border-[var(--color-main)]/25 bg-[var(--color-background)] px-4 py-2.5 text-sm outline-none file:ml-3 file:rounded-full file:border-0 file:bg-[var(--color-accent2)] file:px-4 file:py-1.5 file:text-xs file:font-bold file:text-white"
+          />
+        </div>
+
+        <div>
+          <span className="mb-1.5 block text-sm font-semibold text-[var(--color-main)]/80">
+            מאפייני הפרויקט (בולטים בפס הלבן בתחתית החלון) — מקסימום 6
+          </span>
+          <div className="space-y-2">
+            {showcase.bullets.map((bullet, i) => (
+              <div key={i} className="flex items-center gap-2">
+                <input
+                  type="text"
+                  value={bullet}
+                  placeholder="לדוגמה: בריכה פרטית מחוממת"
+                  onChange={(e) => updateShowcaseBullet(i, e.target.value)}
+                  className="flex-1 rounded-xl border border-[var(--color-main)]/15 bg-[var(--color-background)] px-4 py-2.5 text-sm outline-none focus:border-[var(--color-accent2)]"
+                />
+                <button
+                  type="button"
+                  onClick={() => removeShowcaseBullet(i)}
+                  className="text-sm font-medium text-red-600"
+                >
+                  הסר
+                </button>
+              </div>
+            ))}
+          </div>
+          <button
+            type="button"
+            onClick={addShowcaseBullet}
+            disabled={showcase.bullets.length >= 6}
+            className="mt-3 rounded-full border-2 border-[var(--color-main)]/20 px-6 py-2.5 text-sm font-bold transition hover:bg-[var(--color-background)] disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            {showcase.bullets.length >= 6 ? "הגעתם למקסימום (6)" : "+ הוסף מאפיין"}
+          </button>
+        </div>
       </SectionCard>
 
       <div className="flex flex-col items-center gap-3">
@@ -1091,6 +1696,8 @@ export default function IntakeForm({ onBack, siteId }) {
           <CodeOutput filename="src/data/testimonials.js" content={output.testimonials} />
           <CodeOutput filename="src/data/faq.js" content={output.faq} />
           <CodeOutput filename="src/components/Stats.jsx (עדכון רשימת הנתונים)" content={output.stats} />
+          <CodeOutput filename="src/data/showcase.js" content={output.showcase} />
+          <CodeOutput filename="src/data/whyUs.js" content={output.whyUs} />
         </SectionCard>
       )}
     </div>

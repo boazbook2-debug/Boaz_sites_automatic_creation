@@ -8,6 +8,7 @@ import SocialIcons from "./SocialIcons";
 import Logo from "./Logo";
 import MapEmbed from "./MapEmbed";
 import { isValidName, isValidPhone } from "@/lib/contactValidation";
+import { toWhatsappNumber } from "@/lib/phone";
 
 const footerExtraLinks = [
   { label: "לקוחות ממליצים", href: "/reviews" },
@@ -19,7 +20,7 @@ function FooterContactForm() {
   const [error, setError] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!isValidName(values.name)) {
       setError("נא להזין שם תקין");
@@ -30,17 +31,12 @@ function FooterContactForm() {
       return;
     }
     setError("");
-    try {
-      await fetch("/api/send-lead", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ ...values, to: agency.email }),
-      });
-    } catch {
-      // Non-fatal.
-    } finally {
-      setSubmitted(true);
-    }
+
+    const intro = values.message.trim() || "מעוניין/ת לקבל פרטים נוספים";
+    const text = `${intro}\n\nשם: ${values.name}\nטלפון: ${values.phone}`;
+    const number = toWhatsappNumber(agency.whatsapp);
+    window.open(`https://wa.me/${number}?text=${encodeURIComponent(text)}`, "_blank");
+    setSubmitted(true);
   };
 
   if (submitted) {
@@ -87,7 +83,7 @@ function FooterContactForm() {
 export default function Footer() {
   return (
     <footer className="mt-12 bg-[var(--color-main)] text-white sm:mt-24">
-      <div className="mx-auto max-w-7xl px-6 py-8 sm:py-12 lg:px-10">
+      <div className="mx-auto max-w-7xl px-6 py-6 sm:py-8 lg:px-10">
         <div className="flex flex-col items-start justify-between gap-5 border-b border-white/10 pb-6 sm:gap-8 sm:pb-10 lg:flex-row lg:items-center">
           <div>
             <p className="text-xl font-bold sm:text-2xl">
@@ -146,19 +142,34 @@ export default function Footer() {
         </div>
       </div>
 
+      {agency.demoDisclaimer && (
+        <div className="border-t border-white/10 bg-black/20 px-6 py-2 text-center">
+          <p className="text-xs text-white/40">{agency.demoDisclaimer}</p>
+        </div>
+      )}
+
       <div className="border-t border-white/10 px-6 py-4 sm:py-6 lg:px-10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 text-center sm:gap-3 lg:flex-row">
           <p className="text-xs text-white/50">
             © {new Date().getFullYear()} {agency.name}. כל הזכויות שמורות.
           </p>
-          <a
-            href="https://boazmedia.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-shine-gold text-base font-extrabold sm:text-lg"
-          >
-            <span className="animate-sparkle">✨</span> נבנה על ידי בועז מדיה <span className="animate-sparkle">✨</span>
-          </a>
+          <div className="flex flex-col items-center gap-1 sm:flex-row sm:gap-3">
+            <a
+              href="https://boazmedia.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-shine-gold text-base font-extrabold sm:text-lg"
+            >
+              <span className="animate-sparkle">✨</span> נבנה על ידי בועז מדיה{" "}
+              <span className="animate-sparkle">✨</span>
+            </a>
+            <a
+              href="tel:0546848641"
+              className="text-shine-gold text-lg font-extrabold transition hover:scale-105 sm:text-xl"
+            >
+              בועז · <span dir="ltr">0546848641</span>
+            </a>
+          </div>
         </div>
       </div>
     </footer>

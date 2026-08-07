@@ -2,6 +2,7 @@ import ContactButtons from "@/components/ContactButtons";
 import LeadForm from "@/components/LeadForm";
 import FeaturedPropertiesSection from "@/components/FeaturedPropertiesSection";
 import MapEmbed from "@/components/MapEmbed";
+import Reveal from "@/components/Reveal";
 import agency from "@/data/agency";
 import properties from "@/data/properties";
 import { pageMetadata } from "@/lib/seo";
@@ -17,8 +18,8 @@ export const metadata = pageMetadata({
 export default function ContactPage() {
   return (
     <>
-      <div className="mx-auto max-w-4xl px-6 py-12 lg:px-10">
-        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">צור קשר</h1>
+      <Reveal className="mx-auto max-w-4xl px-6 py-8 lg:px-10">
+        <h1 className="text-4xl font-serif font-bold tracking-tight sm:text-5xl">צור קשר</h1>
         <p className="mt-3 max-w-xl text-lg text-[var(--color-main)]/60">
           נשמח לשמוע מכם ולעזור במציאת הנכס המושלם.
         </p>
@@ -55,7 +56,7 @@ export default function ContactPage() {
 
           <LeadForm title="השאירו פרטים ונחזור אליכם בהקדם" />
         </div>
-      </div>
+      </Reveal>
 
       <FeaturedPropertiesSection properties={properties} />
     </>

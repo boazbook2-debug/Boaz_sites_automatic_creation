@@ -1,21 +1,19 @@
-import { HouseIcon, TrendingUpIcon, AwardIcon, MapPinIcon, StarIcon, PhoneIcon } from "./Icons";
+import { getIconById } from "@/lib/iconRegistry";
 import AnimatedStatValue from "./AnimatedStatValue";
+import stats from "@/data/stats";
 
-const stats = [
-  { icon: HouseIcon, value: "450+", label: "נכסים שנמכרו והושכרו" },
-  { icon: TrendingUpIcon, value: "₪280M+", label: "שווי עסקאות מצטבר" },
-  { icon: AwardIcon, value: "15+", label: "שנות ותק בתחום" },
-  { icon: MapPinIcon, value: "6", label: "ערים באזור המרכז" },
-  { icon: StarIcon, value: "300+", label: "לקוחות מרוצים" },
-  { icon: PhoneIcon, value: "24/7", label: "מענה אישי וזמין" },
-];
-
-function StatTile({ icon: Icon, value, label }) {
+// Swiss-editorial "data row" rather than a grid of repeated cards: no card
+// chrome, just hairline dividers between figures — closer to a spec sheet
+// than a dashboard widget.
+function StatTile({ iconId, value, label }) {
+  const Icon = getIconById(iconId).Icon;
   return (
-    <div className="flex flex-col items-center gap-1.5 rounded-2xl bg-[var(--color-surface)] px-3 py-4 text-center">
-      <Icon className="h-6 w-6 text-[var(--color-accent2)] sm:h-7 sm:w-7" />
-      <AnimatedStatValue value={value} className="text-base font-extrabold sm:text-lg" />
-      <span className="text-xs font-bold text-[var(--color-main)]/70 sm:text-sm">{label}</span>
+    <div className="flex flex-col items-center gap-2 px-3 py-6 text-center sm:gap-3 sm:py-9">
+      <Icon className="h-5 w-5 text-[var(--color-accent2)] sm:h-6 sm:w-6" />
+      <AnimatedStatValue value={value} className="font-serif text-xl font-bold sm:text-3xl lg:text-4xl" />
+      <span className="text-[11px] font-semibold uppercase tracking-wide text-[var(--color-main)]/60 sm:text-xs">
+        {label}
+      </span>
     </div>
   );
 }
@@ -24,7 +22,7 @@ export default function Stats() {
   const isOdd = stats.length % 2 === 1;
 
   return (
-    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+    <div className="grid grid-cols-2 divide-x divide-y divide-[var(--color-main)]/10 border-y border-[var(--color-main)]/10 sm:grid-cols-3 sm:divide-y-0 lg:grid-cols-6">
       {stats.map((stat, i) => (
         <div
           key={i}

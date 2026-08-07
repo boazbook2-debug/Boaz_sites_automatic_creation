@@ -25,9 +25,9 @@ export default function QuickSearch({ properties }) {
   };
 
   return (
-    <div className="relative z-10 mx-auto -mt-8 w-full max-w-5xl px-6 sm:-mt-14">
-      <div className="rounded-2xl bg-[var(--color-background)] p-5 shadow-[0_20px_45px_rgba(0,0,0,0.12)] sm:p-8">
-        <h2 className="mb-4 text-center text-lg font-extrabold tracking-tight sm:mb-6 sm:text-2xl">
+    <div className="relative z-10 mx-auto mt-4 w-full max-w-5xl px-6 sm:-mt-14">
+      <div className="rounded-2xl bg-[var(--color-background)] p-5 shadow-[0_20px_45px_rgba(0,0,0,0.12)] sm:p-6">
+        <h2 className="mb-4 text-center text-lg font-serif font-bold tracking-tight sm:mb-6 sm:text-2xl">
           מצאו את הנכס <span className="text-[var(--color-accent2)]">הבא שלכם</span>
         </h2>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-[1fr_1fr_auto_auto]">

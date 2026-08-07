@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const TEXT_EXTENSIONS = new Set([
-  ".js", ".jsx", ".mjs", ".json", ".css", ".md", ".txt",
+  ".js", ".jsx", ".ts", ".tsx", ".mjs", ".json", ".css", ".md", ".txt",
 ]);
 
 const EXCLUDED_DIRS = new Set(["node_modules", ".next", ".git", ".vercel", "uploads"]);
@@ -35,6 +35,9 @@ const REGENERATED_DATA_FILES = new Set([
   "src/data/properties.js",
   "src/data/testimonials.js",
   "src/data/faq.js",
+  "src/data/stats.js",
+  "src/data/showcase.js",
+  "src/data/whyUs.js",
   "src/data/siteConfig.js",
 ]);
 
@@ -47,7 +50,7 @@ export function collectTemplateFiles(root) {
   walk(path.join(root, "src"), "src", files);
   walk(path.join(root, "public"), "public", files);
 
-  for (const rootFile of ["package.json", "next.config.mjs", "jsconfig.json", "postcss.config.mjs"]) {
+  for (const rootFile of ["package.json", "package-lock.json", "next.config.mjs", "tsconfig.json", "components.json", "postcss.config.mjs"]) {
     const fullPath = path.join(root, rootFile);
     if (fs.existsSync(fullPath)) {
       files.push({ file: rootFile, data: fs.readFileSync(fullPath, "utf8") });

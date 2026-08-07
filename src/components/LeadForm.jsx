@@ -2,15 +2,15 @@
 
 import { useState } from "react";
 import { isValidName, isValidPhone } from "@/lib/contactValidation";
+import { toWhatsappNumber } from "@/lib/phone";
 import agency from "@/data/agency";
 
-export default function LeadForm({ title = "מעוניינים בנכס?", propertyTitle, toEmail }) {
+export default function LeadForm({ title = "מעוניינים בנכס?", propertyTitle, toWhatsapp }) {
   const [values, setValues] = useState({ name: "", phone: "", message: "" });
   const [error, setError] = useState("");
   const [submitted, setSubmitted] = useState(false);
-  const [sending, setSending] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!isValidName(values.name)) {
       setError("נא להזין שם תקין");
@@ -21,19 +21,16 @@ export default function LeadForm({ title = "מעוניינים בנכס?", prope
       return;
     }
     setError("");
-    setSending(true);
-    try {
-      await fetch("/api/send-lead", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ ...values, propertyTitle, to: toEmail || agency.email }),
-      });
-    } catch {
-      // Non-fatal: still show success — the lead was validated client-side.
-    } finally {
-      setSending(false);
-      setSubmitted(true);
-    }
+
+    // No backend send — the visitor's own WhatsApp opens with the message
+    // already composed (their typed note, the property if any, then name +
+    // phone appended); they just have to tap send there to complete it.
+    const intro = values.message.trim() || "מעוניין/ת לקבל פרטים נוספים";
+    const propertyLine = propertyTitle ? `\nבנוגע לנכס: ${propertyTitle}` : "";
+    const text = `${intro}${propertyLine}\n\nשם: ${values.name}\nטלפון: ${values.phone}`;
+    const number = toWhatsappNumber(toWhatsapp || agency.whatsapp);
+    window.open(`https://wa.me/${number}?text=${encodeURIComponent(text)}`, "_blank");
+    setSubmitted(true);
   };
 
   if (submitted) {
@@ -78,10 +75,9 @@ export default function LeadForm({ title = "מעוניינים בנכס?", prope
         />
         <button
           type="submit"
-          disabled={sending}
-          className="w-full rounded-full bg-[var(--color-accent2)] px-6 py-3 text-sm font-bold text-white shadow-[0_15px_35px_rgba(176,141,87,0.45)] transition hover:scale-[1.02] hover:shadow-[0_20px_45px_rgba(176,141,87,0.6)] disabled:opacity-60 sm:w-auto"
+          className="w-full rounded-full bg-[var(--color-accent2)] px-6 py-3 text-sm font-bold text-white shadow-[0_15px_35px_rgba(176,141,87,0.45)] transition hover:scale-[1.02] hover:shadow-[0_20px_45px_rgba(176,141,87,0.6)] sm:w-auto"
         >
-          {sending ? "שולח..." : "שליחה"}
+          שליחה
         </button>
       </div>
       {error && <p className="mt-2 text-xs font-medium text-red-600">{error}</p>}
