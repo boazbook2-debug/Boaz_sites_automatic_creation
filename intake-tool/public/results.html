@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<title>תוצאות — אתרי דמו מוכנים</title>
+<style>
+  :root { --accent:#B08D57; --dark:#141414; --bg:#f5f5f4; --card:#fff; --border:#e2e2e0; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "Segoe UI", Arial, sans-serif; background: var(--bg); margin:0; color: var(--dark); }
+  header { position: sticky; top:0; background: var(--dark); color:#fff; padding: 12px 20px; z-index: 50; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+  header h1 { font-size: 16px; margin:0; font-weight:600; }
+  a.back { color:#fff; text-decoration:none; background:#2a2a2a; padding:8px 14px; border-radius:8px; font-size:13px; font-weight:600; }
+  .count { font-size:13px; opacity:.85; }
+  main { max-width: 900px; margin: 24px auto; padding: 0 16px 80px; display:flex; flex-direction:column; gap: 10px; }
+  .site { background: var(--card); border:1px solid var(--border); border-radius: 12px; padding: 14px 16px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+  .info { flex:1; min-width:220px; }
+  .info h2 { font-size:15px; margin:0 0 4px; }
+  .info .meta { font-size:12px; color:#666; }
+  .row { display:flex; gap:8px; }
+  a.btn { text-align:center; text-decoration:none; font-size:13px; font-weight:700; padding:9px 14px; border-radius:8px; white-space:nowrap; }
+  a.demo { background: var(--accent); color:#141414; }
+  a.wa { background:#25D366; color:#fff; }
+  a.wa.disabled, a.demo.disabled { opacity:.35; pointer-events:none; }
+  .empty { text-align:center; color:#888; padding: 60px; }
+  .updated { font-size:11px; color:#999; }
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="/">⟵ Intake</a>
+  <h1>🏁 אתרי דמו מוכנים</h1>
+  <span class="count" id="count">טוען...</span>
+  <span class="updated" id="updated"></span>
+</header>
+<main id="main"></main>
+<script>
+async function load() {
+  const r = await fetch("/api/results");
+  const data = await r.json();
+  document.getElementById("count").textContent = `${data.count} אתרים מוכנים`;
+  document.getElementById("updated").textContent = "עודכן " + new Date(data.updatedAt).toLocaleTimeString("he-IL");
+  const main = document.getElementById("main");
+  if (!data.sites.length) {
+    main.innerHTML = '<div class="empty">אין עדיין אתרים מוכנים — יופיעו כאן אוטומטית בכל פעם שנוצר אתר חדש.</div>';
+    return;
+  }
+  main.innerHTML = data.sites.map(siteCard).join("");
+}
+function esc(s) { return String(s||"").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c])); }
+function siteCard(s) {
+  const hasDemo = s.demoUrl && s.demoUrl.startsWith("http");
+  const hasWa = s.whatsappUrl && s.whatsappUrl.startsWith("http");
+  return `
+  <div class="site">
+    <div class="info">
+      <h2>#${esc(s.id)} — ${esc(s.agency)}</h2>
+      <div class="meta">${esc(s.agent||"")} · ${esc(s.phone||"אין טלפון מאומת")}</div>
+    </div>
+    <div class="row">
+      <a class="btn demo ${hasDemo?"":"disabled"}" href="${esc(s.demoUrl||"#")}" target="_blank">פתח דמו</a>
+      <a class="btn wa ${hasWa?"":"disabled"}" href="${esc(s.whatsappUrl||"#")}" target="_blank">שלח בוואטסאפ</a>
+    </div>
+  </div>`;
+}
+load();
+setInterval(load, 8000);
+</script>
+</body>
+</html>

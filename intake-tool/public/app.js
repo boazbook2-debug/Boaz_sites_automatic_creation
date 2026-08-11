@@ -29,7 +29,9 @@ function render() {
 
 function cardHtml(p) {
   const fbUrl = isRealUrl(p.facebook) ? p.facebook : null;
-  const yad2Url = yad2SearchUrl(p.agency);
+  const yad2Confirmed = isRealUrl(p.yad2Url) ? p.yad2Url : null;
+  const yad2Url = yad2Confirmed || yad2SearchUrl(p.agency);
+  const yad2Label = yad2Confirmed ? "✓ עמוד יד2 (מאומת)" : "חפש ביד2 (לא נמצא עמוד ישיר)";
   const thumbs = p.images.map(f => `
     <div class="thumb" data-id="${p.id}" data-file="${f}">
       <img src="/api/prospects/${encodeURIComponent(p.id)}/images/${encodeURIComponent(f)}" />
@@ -39,14 +41,15 @@ function cardHtml(p) {
   <section class="card ${p.ready ? "ready" : ""}" id="card-${p.id}">
     <div class="card-head">
       <div>
-        <h2>#${p.id} — ${escapeHtml(p.agency)}</h2>
-        <div class="meta">${escapeHtml(p.agent || "")} · ${escapeHtml(p.phone || "אין טלפון מאומת")} · ניקוד ${escapeHtml(p.score || "")}</div>
-        <div class="meta">חסם קודם: ${escapeHtml(p.priorNotes || "—")}</div>
+        <h2><span class="tier tier-${escapeHtml(p.tier || "C")}">Tier ${escapeHtml(p.tier || "?")}</span> #${escapeHtml(p.salesRank || p.id)} — ${escapeHtml(p.agency)}</h2>
+        <div class="meta">${escapeHtml(p.agent || "")} · ${escapeHtml(p.phone || "אין טלפון מאומת")} · ציון מכירתי ${escapeHtml(p.score || "")}/100</div>
+        <div class="why">למה זה ליד טוב: ${escapeHtml(p.recencyEvidence || "—")}</div>
+        ${p.priorNotes ? `<div class="meta">הערת ייצור קודמת: ${escapeHtml(p.priorNotes)}</div>` : ""}
       </div>
     </div>
     <div class="links">
       <a href="${fbUrl || "#"}" target="_blank" class="${fbUrl ? "" : "disabled"}">פתח פייסבוק</a>
-      <a href="${yad2Url}" target="_blank">חפש ביד2</a>
+      <a href="${yad2Url}" target="_blank" class="${yad2Confirmed ? "yad2-confirmed" : "yad2-unconfirmed"}">${yad2Label}</a>
     </div>
     <div class="drop" id="drop-${p.id}" tabindex="0">גרור לכאן תמונות (או הדבק/בחר קובץ)</div>
     <input type="file" id="file-${p.id}" multiple accept="image/*" style="display:none" onchange="handleFiles('${p.id}', this.files)" />

@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const CHART_PATH = path.join(ROOT, "prospects", "campaign-chart.csv");
+const SALES_QUALIFIED_PATH = path.join(ROOT, "prospects", "sales-qualified-2026-08.csv");
 const INTAKE_DIR = path.join(ROOT, "prospects", "intake");
 const QUEUE_PATH = path.join(INTAKE_DIR, "_generate_queue.json");
 
@@ -34,11 +35,9 @@ function parseCsv(text) {
   return rows;
 }
 
-function readChart() {
-  const text = fs.readFileSync(CHART_PATH, "utf-8-bom-strip".includes("") ? "utf-8" : "utf-8");
-  const raw = fs.readFileSync(CHART_PATH);
-  // strip BOM
-  const clean = raw.toString("utf-8").replace(/^﻿/, "");
+function readCsvFile(filePath) {
+  const raw = fs.readFileSync(filePath);
+  const clean = raw.toString("utf-8").replace(/^﻿/, ""); // strip BOM
   const rows = parseCsv(clean);
   const header = rows[0];
   return rows.slice(1).filter(r => r.length > 1 && r[0]).map(r => {
@@ -48,9 +47,48 @@ function readChart() {
   });
 }
 
+function readChart() {
+  return readCsvFile(CHART_PATH);
+}
+
+function chartById() {
+  const map = new Map();
+  for (const r of readChart()) map.set(String(r["#"]), r);
+  return map;
+}
+
 function remainingProspects() {
+  // Source of truth is the SALES-qualified list (survivors of the commercial gates from the
+  // original ~100), ordered by sales tier/rank — not raw demo-production status. Already-built
+  // (READY_TO_SEND) prospects are excluded since they don't need intake material anymore.
+  const chart = chartById();
+  const qualified = readCsvFile(SALES_QUALIFIED_PATH);
+  return qualified
+    .filter(q => {
+      const c = chart.get(String(q["Original Prospect ID"]));
+      return !c || c.Status !== "READY_TO_SEND";
+    })
+    .map(q => {
+      const c = chart.get(String(q["Original Prospect ID"])) || {};
+      return {
+        "#": q["Original Prospect ID"],
+        Agency: q.Agency,
+        "Owner/Agent": q.Agent,
+        Phone: q.Phone || c.Phone || "",
+        Facebook: q["Facebook URL"] || c.Facebook || "",
+        Score: q["TOTAL /100"],
+        Tier: q.Tier,
+        SalesRank: q.Rank,
+        RecencyEvidence: q["Recency Evidence"],
+        Status: c.Status || "Pending",
+        Notes: c.Notes || "",
+      };
+    });
+}
+
+function readySites() {
   const rows = readChart();
-  return rows.filter(r => r.Status === "Pending" || r.Status === "SKIPPED_FOR_NOW");
+  return rows.filter(r => r.Status === "READY_TO_SEND");
 }
 
 function intakeDirFor(id) {
@@ -130,11 +168,15 @@ const server = http.createServer(async (req, res) => {
           phone: r.Phone,
           facebook: r.Facebook,
           score: r.Score,
+          tier: r.Tier,
+          salesRank: r.SalesRank,
+          recencyEvidence: r.RecencyEvidence,
           status: r.Status,
           priorNotes: r.Notes,
           notes: state.notes,
           ready: !!state.ready,
           images: listImages(id),
+          yad2Url: state.yad2Url || null,
         };
       });
       sendJson(res, 200, { prospects: list });
@@ -220,6 +262,20 @@ const server = http.createServer(async (req, res) => {
       } else {
         sendJson(res, 200, { prospects: [] });
       }
+      return;
+    }
+
+    if (p === "/api/results" && req.method === "GET") {
+      const sites = readySites().map(r => ({
+        id: r["#"],
+        agency: r.Agency,
+        agent: r["Owner/Agent"],
+        phone: r.Phone,
+        demoUrl: r["Demo URL"],
+        whatsappUrl: r["WhatsApp Send Link"],
+        notes: r.Notes,
+      }));
+      sendJson(res, 200, { sites, count: sites.length, updatedAt: new Date().toISOString() });
       return;
     }
 
