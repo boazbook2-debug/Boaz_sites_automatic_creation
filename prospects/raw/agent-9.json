@@ -1,0 +1,294 @@
+{
+  "qualified": [
+    {
+      "agency": "תיווך הראשונים-אשקלון",
+      "owner_or_lead_agent": "יגאל (Yigal)",
+      "role_classification": "Owner",
+      "city": "אשקלון",
+      "facebook_url": "https://www.facebook.com/Ashkelon123/",
+      "facebook_followers": "119 likes",
+      "description": "Solo independent broker running \"תיווך הראשונים\" in Ashkelon, posting regular apartment sale/rental listings across the city; relies on Facebook and directories only.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 18,
+        "property_activity": 14,
+        "marketing_brand": 8,
+        "website_need": 18,
+        "photo_opportunity_score": 10,
+        "commercial_value": 6,
+        "total": 74
+      },
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/Ashkelon123/",
+        "website_check": [
+          "Searched multiple DuckDuckGo queries and the d.co.il Ashkelon broker directory — no dedicated domain found for this agency"
+        ],
+        "activity_evidence": "Facebook page snippet: \"תיווך הראשונים-אשקלון | Ashqelon\" with \"119 likes · 1 talking about this\"; regular property-listing posts noted for apartments across Ashkelon neighborhoods, contact 050-6278412 / Beit HaMishpat 4"
+      }
+    },
+    {
+      "agency": "תיווך יאיר (Yair Real Estate)",
+      "owner_or_lead_agent": "יאיר שרעבני (Yair Sharabani)",
+      "role_classification": "Owner",
+      "city": "אשקלון",
+      "facebook_url": "https://www.facebook.com/people/יאיר-שרעבי/100009650237595/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Owner of a long-running (30+ year) independent Ashkelon brokerage with an outdated, basic personal website; lists rental and sale apartments across multiple neighborhoods.",
+      "website_status": "Poor website",
+      "photo_opportunity": "High",
+      "score_breakdown": {
+        "decision_authority": 19,
+        "property_activity": 17,
+        "marketing_brand": 7,
+        "website_need": 14,
+        "photo_opportunity_score": 13,
+        "commercial_value": 8,
+        "total": 78
+      },
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/people/יאיר-שרעבי/100009650237595/",
+        "website_check": [
+          "https://www.ashkelonnadlan.co.il — verified directly: dated/basic layout, basic-quality listing photos, active listings ₪1.08M–₪2.5M sale and ₪3,500–₪6,500 rentals"
+        ],
+        "activity_evidence": "Site states ~34 years experience, address Mechanim 4/3 Ashkelon, phone 052-6688810 / 08-6722799, client testimonials present"
+      }
+    },
+    {
+      "agency": "קבוצת טרי לחמי נדל\"ן (TERRY Lahmi Group)",
+      "owner_or_lead_agent": "טרי לחמי ואמיר לחמי (Terry & Amir Lahmi)",
+      "role_classification": "Owner",
+      "city": "אשקלון",
+      "facebook_url": "https://www.facebook.com/61569489956393/",
+      "facebook_followers": "75 likes (Facebook group)",
+      "description": "Small, family-run (two brothers) independent Ashkelon brokerage licensed with the Ministry of Justice, marketing residential and commercial listings; very limited online following and no dedicated website found.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 18,
+        "property_activity": 12,
+        "marketing_brand": 4,
+        "website_need": 18,
+        "photo_opportunity_score": 9,
+        "commercial_value": 5,
+        "total": 66
+      },
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/61569489956393/",
+        "website_check": [
+          "Searched for a dedicated domain — none found; only Facebook page, Instagram (@terry_nadlan, 4 followers), and Yad2 presence confirmed"
+        ],
+        "activity_evidence": "Broker license #322936 (Ministry of Justice registry via nadlano.co.il); Facebook posts of apartments/villas/commercial spaces priced ₪750,000–₪3,900,000"
+      }
+    },
+    {
+      "agency": "יהלום נכסים (Yahalom Nechasim)",
+      "owner_or_lead_agent": "אתי ג'רבי (Eti Gerbi)",
+      "role_classification": "Owner",
+      "city": "אשקלון",
+      "facebook_url": "https://www.facebook.com/eti.yahalom/",
+      "facebook_followers": "Not publicly visible (Instagram: ~199–263 followers across two accounts)",
+      "description": "Independent Ashkelon broker running \"Yahalom Nechasim\" from a HaNasi Street office, active on personal Facebook/Instagram; no dedicated business website found.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 17,
+        "property_activity": 12,
+        "marketing_brand": 7,
+        "website_need": 18,
+        "photo_opportunity_score": 9,
+        "commercial_value": 6,
+        "total": 69
+      },
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/eti.yahalom/",
+        "website_check": [
+          "Searched — no dedicated domain found; only Dapei Zahav directory listing and personal Facebook/Instagram profiles"
+        ],
+        "activity_evidence": "Listed on Dapei Zahav directory as active broker at HaNasi 17, Ashkelon; Instagram @eti_gerbi (199 followers) and @etiyalom (263 followers)"
+      }
+    },
+    {
+      "agency": "קבוצת מיכאל - תיווך ויזמות נדל\"ן (Michael Group / \"יד טובה\")",
+      "owner_or_lead_agent": "תומר מיכאל (Tomer Michael)",
+      "role_classification": "Owner",
+      "city": "ראש העין",
+      "facebook_url": "https://www.facebook.com/tomermichaelnadlan/",
+      "facebook_followers": "5,677 likes",
+      "description": "High-profile independent Rosh HaAyin broker with 8 years' experience and a very large, active Facebook following (\"בידיים טובות\" / In Good Hands), regularly posting closed deals; relies on Facebook/Instagram/directories only, no dedicated website found.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 19,
+        "property_activity": 18,
+        "marketing_brand": 15,
+        "website_need": 19,
+        "photo_opportunity_score": 10,
+        "commercial_value": 9,
+        "total": 90
+      },
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/tomermichaelnadlan/",
+        "website_check": [
+          "Checked broadcust.co.il/business/0542232266, yad2.co.il profile, ad.co.il/agency/639 — all directory listings only, no owned domain found"
+        ],
+        "activity_evidence": "5,677 Facebook likes; member of National Association of Real Estate Brokers; 10/10 rating on Midrag; regular \"בשעה טובה\" closed-deal posts; also active on Instagram @tomer_michael"
+      }
+    },
+    {
+      "agency": "Royalty נדל\"ן והשקעות",
+      "owner_or_lead_agent": "גיה טוויטו (Giyya Tuito)",
+      "role_classification": "Owner",
+      "city": "ראש העין",
+      "facebook_url": "https://www.facebook.com/royaltynadlan/",
+      "facebook_followers": "201 likes",
+      "description": "20+ year veteran Rosh HaAyin broker running a small team (with marketing/consultant staff) from a Matzrif Oved Street office; no dedicated website could be confirmed for this specific local office.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 17,
+        "property_activity": 15,
+        "marketing_brand": 8,
+        "website_need": 16,
+        "photo_opportunity_score": 9,
+        "commercial_value": 6,
+        "total": 71
+      },
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/royaltynadlan/",
+        "website_check": [
+          "royaltyrealestate.co.il was investigated and confirmed to be a DIFFERENT, unrelated company (different phone number and address, multi-city Tel Aviv/Ramat Gan/Herzliya offices) — deliberately not attributed to this agency to avoid a data mix-up; no site specific to the Rosh HaAyin office was found"
+        ],
+        "activity_evidence": "Facebook page \"201 likes\"; team includes Dalia Rabikovich and Sarah Janet Alter; active exclusive listings in Neve Afek/Psagot Afek per search snippets; office at Matzrif Oved 9, Rosh HaAyin, phone 052-5341494"
+      }
+    },
+    {
+      "agency": "לירון זלאיט - סוכן נדל\"ן ראש העין",
+      "owner_or_lead_agent": "לירון זלאיט (Liron Zalayt)",
+      "role_classification": "Owner",
+      "city": "ראש העין",
+      "facebook_url": "https://www.facebook.com/people/לירון-זלאיט-סוכן-נדלן-ראש-העין/61552958458660/",
+      "facebook_followers": "182 likes",
+      "description": "Independent Rosh HaAyin broker with 15 years' market experience (previously ~3 years with RE/MAX, now independent), active on Facebook with reels/video content; no dedicated website found.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 16,
+        "property_activity": 12,
+        "marketing_brand": 8,
+        "website_need": 18,
+        "photo_opportunity_score": 9,
+        "commercial_value": 6,
+        "total": 69
+      },
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/people/לירון-זלאיט-סוכן-נדלן-ראש-העין/61552958458660/",
+        "website_check": [
+          "Searched — no personal or business domain found; listed only on proagents.co.il directory"
+        ],
+        "activity_evidence": "Facebook page \"182 likes · 9 talking about this\"; broker license #30637455; 15 years experience in Rosh HaAyin market"
+      }
+    },
+    {
+      "agency": "חוטר ישראל (Israel Choter Real Estate)",
+      "owner_or_lead_agent": "ישראל חוטר (Israel Choter)",
+      "role_classification": "Owner",
+      "city": "ראש העין",
+      "facebook_url": "https://www.facebook.com/israor/",
+      "facebook_followers": "4,343 likes",
+      "description": "Independent Rosh HaAyin broker with a large, highly engaged Facebook following (also self-tagged as a \"digital creator\"); no dedicated website found beyond a directory profile.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 18,
+        "property_activity": 16,
+        "marketing_brand": 14,
+        "website_need": 19,
+        "photo_opportunity_score": 9,
+        "commercial_value": 8,
+        "total": 84
+      },
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/israor/",
+        "website_check": [
+          "hon.co.il/professional/חוטר-ישראל/ is a third-party directory profile, not an owned website; no personal domain found"
+        ],
+        "activity_evidence": "Facebook page \"4,343 likes · 440 talking about this\"; address Shabazi 155, Rosh HaAyin, phone 050-6505093"
+      }
+    },
+    {
+      "agency": "אבי הראל נכסים והשקעות (Avi Harel Nechasim VeHashkaot)",
+      "owner_or_lead_agent": "אבי רפאל שמואל (Avi Refael Shmuel)",
+      "role_classification": "Owner",
+      "city": "ראש העין",
+      "facebook_url": "https://www.facebook.com/AVIREFAELSHMUEL",
+      "facebook_followers": "267 likes",
+      "description": "Independent Rosh HaAyin broker managing an active self-reported portfolio of roughly 38 properties across the city's neighborhoods (Psagot Afek resident); no dedicated website found.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 17,
+        "property_activity": 18,
+        "marketing_brand": 9,
+        "website_need": 18,
+        "photo_opportunity_score": 9,
+        "commercial_value": 7,
+        "total": 78
+      },
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/AVIREFAELSHMUEL",
+        "website_check": [
+          "Searched — no dedicated domain found; listed on Dapei Zahav and The Index directories only"
+        ],
+        "activity_evidence": "Facebook page \"267 likes\"; self-reported post: \"ברשותי מאגר הנכסים הגדול בראש העין!! כ-38 נכסים אטרקטיביים\" (~38 properties under management); phone 03-9024449"
+      }
+    }
+  ],
+  "rejected": [
+    { "agency": "דנהנדל\"ן (DanandLan) — Ashkelon", "reason": "Good website — REJECT (danandlan.co.il is modern and professional)" },
+    { "agency": "אפיקי נדל\"ן (Afikei Nadlan) — Rosh HaAyin", "reason": "Good website — REJECT (afikeynadlan.co.il is modern and professional)" },
+    { "agency": "קבוצת נדל\"ן 360 - דודי חלילי (Nadlan Group 360) — Rosh HaAyin", "reason": "Good website — REJECT (nadlangroup360.co.il is modern and professional)" },
+    { "agency": "ארזי נדל\"ן - שלומי ארזי (Arazi Nadlan / as-nadlan.co.il) — Rosh HaAyin", "reason": "Good website — REJECT (as-nadlan.co.il is modern and professional, confirmed via proxy fetch)" },
+    { "agency": "מיכאל מסטר - מאסטר נכסים (Michael Master) — Ashkelon", "reason": "Good website — REJECT (apartmentsashkelon.co.il is modern and professional; also RE/MAX-affiliated)" },
+    { "agency": "ליאון חורסנוב - RE/MAX Promise (Leon Hursanov) — Ashkelon", "reason": "Good website — REJECT (leonhursanov.co.il is modern and professional; RE/MAX franchise agent)" },
+    { "agency": "צופית נכסים - צופית שרפי (Tzofit Sharfi) — Rosh HaAyin", "reason": "Good website — REJECT (tsofits.co.il is modern and professional with high-quality photos)" },
+    { "agency": "איצקוביץ נכסים (Gili Itzcovich Properties) — Rosh HaAyin", "reason": "Good website — REJECT (gilitzcovich.com is modern and professional); also a multi-city chain (Ra'anana, Herzliya, Kfar Saba, etc.), not a single independent local agency" },
+    { "agency": "Landsman — Psagot Afek, Rosh HaAyin", "reason": "Part of a national franchise network (180+ agents) with a professional corporate website (landsman.co); local office owner/decision-authority could not be identified" },
+    { "agency": "קלאס נכסים - אבי סוזי בע\"מ (Class1 / Klass Nechasim) — Rosh HaAyin", "reason": "Good website — REJECT (class1.co.il is modern and professional); headquartered in Petach Tikva as a multi-city new-projects marketing center, not a Rosh HaAyin-specific independent agent" },
+    { "agency": "אנגלו-סכסון (Anglo-Saxon) / עופר עמר — Ashkelon", "reason": "National franchise chain with a professional corporate website (anglo-saxon.co.il); agent is staff, not an independent decision-maker" },
+    { "agency": "RE/MAX Promise — Ashkelon", "reason": "National franchise chain with professional corporate website/marketing" },
+    { "agency": "טופ נדל\"ן - רוני שמר (Top Nadlan) ", "reason": "Based in Rishon LeZion/Ornit, not Ashkelon or Rosh HaAyin — location mismatch" },
+    { "agency": "NS.Nadlan Group — Rosh HaAyin", "reason": "Commercial real estate location-scouting/portfolio firm, not a residential listing agent — poor fit for photo-enhancement ICP" },
+    { "agency": "Sol Zaidi (RE/MAX) — Rosh HaAyin", "reason": "Already has an active website (RE/MAX-affiliated); also hosted on a vercel.app subdomain similar to our own template output, adding conflict risk" },
+    { "agency": "מרכז הנדל\"ן - דב ברייר (Merkaz HaNadlan / Dov Breyer) — Ashkelon", "reason": "Only 5 Facebook likes found — inactive/minimal social presence, fails marketing/activity bar" },
+    { "agency": "\"משה\" (Moshe) — Midrag directory, Ashkelon", "reason": "Only a first name available via directory; no verifiable full identity, Facebook page, or activity evidence found" },
+    { "agency": "\"אלכס\" (Alex) — Midrag directory, Ashkelon", "reason": "Only a first name available via directory; no verifiable full identity, Facebook page, or activity evidence found" },
+    { "agency": "צמד-חן תיווך נכסים (Tzemed-Chen) — Ashkelon", "reason": "No verifiable owner name, Facebook page, or follower/activity evidence found despite searching" },
+    { "agency": "תיווך עינן (Einan Brokerage) — Ashkelon", "reason": "No verifiable owner name or dedicated Facebook business page found; only a private Facebook group reference" },
+    { "agency": "אבי גוילי מתווכים (Avi Guili Brokers) — Ashkelon", "reason": "Facebook page exists but no follower count or listing-activity evidence could be found despite searching" },
+    { "agency": "מרכז התיווך (Merkaz HaTivuch) — Ashkelon", "reason": "Ownership unclear (only a tentative first name found); no verifiable follower count or activity evidence" },
+    { "agency": "תיווך יישוב הארץ - לוי (Yishuv HaAretz / Levi) — Ashkelon", "reason": "No verifiable follower count or listing-activity evidence found despite a Facebook page existing" },
+    { "agency": "וואן הום (One Home) — Rosh HaAyin", "reason": "No verifiable owner name, follower count, or listing-activity evidence found" },
+    { "agency": "תיווך ראש העין (053-2771737) — Rosh HaAyin", "reason": "Multiple unclear agent names (Amir/Giora) with no single verifiable owner or follower count" },
+    { "agency": "תיווך 2000 — Rosh HaAyin", "reason": "No verifiable owner name or follower count found; only a Facebook group reference" },
+    { "agency": "שוקי - נכסים והשקעות (Shuki) — Rosh HaAyin", "reason": "No dedicated Facebook business page found; insufficient marketing/activity evidence" },
+    { "agency": "אור פרץ (Or Peretz) — Rosh HaAyin", "reason": "Facebook page exists but follower count and listing-activity evidence could not be verified" },
+    { "agency": "יעקבי נכסים (Yaakovi Nechasim) — Rosh HaAyin", "reason": "Facebook profile exists but no follower count, owner full name, or activity evidence could be verified" },
+    { "agency": "אלוני נכסים (Aloni Nechasim) — Rosh HaAyin", "reason": "Search results conflated this with an unrelated company (Alony Hetz holding group) — dropped for data-integrity risk; ownership unclear" },
+    { "agency": "אקספו נדל\"ן (Expo Nadlan) — Rosh HaAyin", "reason": "National franchise network, not an independent local agency" },
+    { "agency": "Century 21 Empire — Ashkelon", "reason": "National franchise chain" },
+    { "agency": "משרד תיווך פעמון 21 (Paamon 21) — Ashkelon", "reason": "No verifiable owner name, Facebook page, or activity evidence found" },
+    { "agency": "תיווך הלל / Hillel Real Estate — Ashkelon", "reason": "Address/phone found via directory but no verifiable owner name, Facebook page, or activity evidence found" },
+    { "agency": "נאור נדל\"ן - נאור טרבלסקי (Naor Real Estate) — Ashkelon", "reason": "No verifiable Facebook page or follower/activity evidence found despite a strong directory rating (5.0/20 reviews)" },
+    { "agency": "מרכז הנדל\"ן (International) / אינטרנשיונל — Ashkelon", "reason": "No verifiable owner name, Facebook presence, or activity evidence found" }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "qualified": [
+    {
+      "agency": "שמוליק כוכבי – יועץ נדל\"ן",
+      "owner_or_lead_agent": "שמוליק כוכבי",
+      "role_classification": "Lead Agent",
+      "city": "כפר סבא",
+      "facebook_url": "https://www.facebook.com/shmulik.bfxho/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Independent real estate consultant marketing apartments and houses across Kfar Saba under his own name, self-representing with no franchise backing and no digital storefront beyond Facebook.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 16, "property_activity": 12, "marketing_brand": 9, "website_need": 18, "photo_opportunity_score": 9, "commercial_value": 5, "total": 69},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/shmulik.bfxho/",
+        "website_check": ["Google/web search for 'שמוליק כוכבי יועץ נדל\"ן כפר סבא אתר' — only Facebook page + directory listings (b144, easy.co.il) appeared, no owned domain found"],
+        "activity_evidence": "Multiple directory listings (b144, easy.co.il) plus active FB page describing ongoing apartment/house marketing in Kfar Saba; exact listing count not publicly confirmable."
+      }
+    },
+    {
+      "agency": "אילנית שיר – שיווק נדל\"ן כפר סבא הירוקה",
+      "owner_or_lead_agent": "אילנית שיר",
+      "role_classification": "Lead Agent",
+      "city": "כפר סבא",
+      "facebook_url": "https://www.facebook.com/p/%D7%90%D7%99%D7%9C%D7%A0%D7%99%D7%AA-%D7%A9%D7%99%D7%A8-%D7%A9%D7%99%D7%95%D7%95%D7%A7-%D7%A0%D7%93%D7%9C%D7%9F-%D7%9B%D7%A4%D7%A8-%D7%A1%D7%91%D7%90-%D7%94%D7%99%D7%A8%D7%95%D7%A7%D7%94-%D7%9F-%D7%90%D7%96%D7%95%D7%A8-%D7%94%D7%A9%D7%A8%D7%95%D7%9F-%D7%95%D7%94%D7%9E%D7%A8%D7%9B%D7%96-%D7%A4%D7%A8%D7%98%D7%99-%D7%95%D7%9E%D7%A1%D7%97%D7%A8%D7%99-100063673925480/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Solo real estate marketer covering Kfar Saba's Green neighborhood plus wider Sharon/central region, handling both private residential and commercial listings, active on Facebook Reels with no owned website.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 14, "property_activity": 13, "marketing_brand": 9, "website_need": 16, "photo_opportunity_score": 8, "commercial_value": 6, "total": 66},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/p/%D7%90%D7%99%D7%9C%D7%A0%D7%99%D7%AA-%D7%A9%D7%99%D7%A8-%D7%A9%D7%99%D7%95%D7%95%D7%A7-%D7%A0%D7%93%D7%9C%D7%9F-%D7%9B%D7%A4%D7%A8-%D7%A1%D7%91%D7%90-%D7%94%D7%99%D7%A8%D7%95%D7%A7%D7%94-%D7%9F-%D7%90%D7%96%D7%95%D7%A8-%D7%94%D7%A9%D7%A8%D7%95%D7%9F-%D7%95%D7%94%D7%9E%D7%A8%D7%9B%D7%96-%D7%A4%D7%A8%D7%98%D7%99-%D7%95%D7%9E%D7%A1%D7%97%D7%A8%D7%99-100063673925480/",
+        "website_check": ["Web search for 'אילנית שיר שיווק נדל\"ן כפר סבא אתר' — only FB page + generic directory hits, no owned domain surfaced"],
+        "activity_evidence": "FB page includes Reels/video content marketing commercial and residential listings in Kfar Saba Green + Sharon/central region."
+      }
+    },
+    {
+      "agency": "ירין בן דוד – טלי בן דוד תיווך ושיווק נכסים",
+      "owner_or_lead_agent": "טלי בן דוד וירין בן דוד",
+      "role_classification": "Owner",
+      "city": "כפר סבא",
+      "facebook_url": "https://www.facebook.com/p/%D7%99%D7%A8%D7%99%D7%9F-%D7%91%D7%9F-%D7%93%D7%95%D7%93-%D7%98%D7%9C%D7%99-%D7%91%D7%9F-%D7%93%D7%95%D7%93-%D7%AA%D7%99%D7%95%D7%95%D7%9A-%D7%95%D7%A9%D7%99%D7%95%D7%95%D7%A7-%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-100063678571431/",
+      "facebook_followers": "877 likes",
+      "description": "Husband-and-wife owned brokerage running 29 active Yad2 listings and marketing a large 21-building Tama 38 urban-renewal project with the Kfar Saba economic company — real deal flow at scale, no owned website.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "High",
+      "score_breakdown": {"decision_authority": 18, "property_activity": 18, "marketing_brand": 11, "website_need": 16, "photo_opportunity_score": 12, "commercial_value": 7, "total": 82},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/p/%D7%99%D7%A8%D7%99%D7%9F-%D7%91%D7%9F-%D7%93%D7%95%D7%93-%D7%98%D7%9C%D7%99-%D7%91%D7%9F-%D7%93%D7%95%D7%93-%D7%AA%D7%99%D7%95%D7%95%D7%9A-%D7%95%D7%A9%D7%99%D7%95%D7%95%D7%A7-%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-100063678571431/",
+        "website_check": ["Web search for 'ירין בן דוד טלי בן דוד תיווך נכסים כפר סבא אתר' — results only show Instagram (@ybd_realestateagency), Yad2 agency page, Yandex Maps listing, directories — no owned domain found"],
+        "activity_evidence": "29 properties listed on Yad2 agency page; marketing a 21-building Tama 38 project in partnership with the Kfar Saba economic development company; FB page has 877 likes."
+      }
+    },
+    {
+      "agency": "ליה נכסים",
+      "owner_or_lead_agent": "ליה הוד",
+      "role_classification": "Owner",
+      "city": "כפר סבא",
+      "facebook_url": "https://www.facebook.com/liahomenadlan/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Boutique brokerage led by ex-NY-real-estate owner Lia Hod, ranked in Madlan's top-3 brokers survey for Kfar Saba five years running (including a #1 year) — strong reputation and deal flow with no professional owned website, only an auto-generated directory microsite.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 18, "property_activity": 17, "marketing_brand": 10, "website_need": 15, "photo_opportunity_score": 10, "commercial_value": 7, "total": 77},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/liahomenadlan/",
+        "website_check": ["Web search for 'ליה נכסים כפר סבא אתר' — only Madlan agent/office pages, BizReviews, ProAgents, and an auto-generated microsite (atarsheli.com) surfaced; no custom professional domain found"],
+        "activity_evidence": "Ranked TOP-3 broker's office in Kfar Saba per Madlan's annual survey for 5 consecutive years (2020–2024), including one year ranked #1."
+      }
+    },
+    {
+      "agency": "יהלום נדל\"ן",
+      "owner_or_lead_agent": "Not publicly identified by individual name (office contact only)",
+      "role_classification": "Lead Agent",
+      "city": "כפר סבא",
+      "facebook_url": "https://www.facebook.com/YahalomNADLAN2021/",
+      "facebook_followers": "995 likes",
+      "description": "Boutique brokerage in downtown Kfar Saba specializing in luxury homes, currently marketing a project on Weizmann St, with a solid 995-like Facebook following and no dedicated website.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "High",
+      "score_breakdown": {"decision_authority": 15, "property_activity": 15, "marketing_brand": 11, "website_need": 18, "photo_opportunity_score": 10, "commercial_value": 8, "total": 77},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/YahalomNADLAN2021/",
+        "website_check": ["Web search for 'יהלום נדל\"ן כפר סבא' via DuckDuckGo — only Yad2, Easy.co.il, Ad.co.il, Findglocal, mynexthome.co.il, Mikumi.co.il surfaced; explicit note: no dedicated official website domain found"],
+        "activity_evidence": "Active on Yad2 agency page and multiple directories; marketing a luxury project at Weizmann 88 in downtown Kfar Saba; described by mynexthome.co.il as specializing in luxury homes ('בתי יוקרה')."
+      }
+    },
+    {
+      "agency": "שי נכסים – הראשון ברמת השרון",
+      "owner_or_lead_agent": "אלונה מיכאל (עם ילדיה יונתן ויעל)",
+      "role_classification": "Owner",
+      "city": "רמת השרון",
+      "facebook_url": "https://www.facebook.com/ShaiRamatHasharon/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Family-owned brokerage operating in Ramat Hasharon since 1967 — the city's first brokerage office — now run by second generation alongside founder Alona Michael, active in resale and new-project marketing, no owned website despite six decades of market presence.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "High",
+      "score_breakdown": {"decision_authority": 19, "property_activity": 17, "marketing_brand": 11, "website_need": 18, "photo_opportunity_score": 12, "commercial_value": 7, "total": 84},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/ShaiRamatHasharon/",
+        "website_check": ["Web search for 'שי נכסים הראשון ברמת השרון אתר' — surfaced Yad2, Madlan, b144, Instagram (@shairealestate), Facebook, Homely-MLS; no owned domain/custom website found"],
+        "activity_evidence": "Operating continuously since 1967 as 'the first in Ramat Hasharon,' now run by founder Alona Michael with next-generation agents Yonatan and Yael; active in both resale brokerage and new-project marketing/sales."
+      }
+    },
+    {
+      "agency": "זרקו נכסים",
+      "owner_or_lead_agent": "Zarco family (individual owner name not publicly verified)",
+      "role_classification": "Lead Agent",
+      "city": "רמת השרון",
+      "facebook_url": "https://www.facebook.com/ZarcoProperties/",
+      "facebook_followers": "Not publicly visible",
+      "description": "The oldest brokerage office in Ramat Hasharon (39–52 years in business per different sources), handling both commercial and residential property plus development consulting, with no owned website despite deep market legacy.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "High",
+      "score_breakdown": {"decision_authority": 14, "property_activity": 16, "marketing_brand": 7, "website_need": 18, "photo_opportunity_score": 12, "commercial_value": 7, "total": 74},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/ZarcoProperties/",
+        "website_check": ["Web search for 'זרקו נכסים רמת השרון אתר' — surfaced d.co.il, b144, homeless.co.il, Madlan, ad.co.il, easy.co.il, netpage.co.il, Facebook, Dun's Guide; no owned domain found"],
+        "activity_evidence": "Described across multiple directories as the longest-established brokerage office in Ramat Hasharon (up to 52 years), active in commercial leasing/sale, property management, and development consulting, tracking town-planning (Tabah) changes in the city."
+      }
+    },
+    {
+      "agency": "תיווך לילך רמת השרון (לילך ביטון)",
+      "owner_or_lead_agent": "לילך ביטון (עם יובל ביטון ועמית ביטון)",
+      "role_classification": "Owner",
+      "city": "רמת השרון",
+      "facebook_url": "https://www.facebook.com/tivuchlilach/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Family-run brokerage team (Keller Williams-affiliated) with 32 confirmed active listings (28 apartments for sale, 3 for rent, 1 commercial) — real, current deal flow, but only a franchise directory presence rather than a standalone professional website.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 14, "property_activity": 18, "marketing_brand": 10, "website_need": 14, "photo_opportunity_score": 10, "commercial_value": 6, "total": 72},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/tivuchlilach/",
+        "website_check": ["Web search for 'תיווך לילך רמת השרון לילך ביטון אתר' — surfaced t.co.il, Madlan, Dun's Guide, Yad2, Greenbook, ad.co.il (Keller Williams Ramat Hasharon affiliation), Homely-MLS; no standalone owned domain found, only KW franchise/directory pages"],
+        "activity_evidence": "Madlan/t.co.il listing confirms 32 active properties currently managed by the office (28 for sale, 3 for rent, 1 commercial), team includes Yuval Biton, Amit Biton and Lilach Biton."
+      }
+    },
+    {
+      "agency": "אייקון נדל\"ן (בתים למכירה ברמת השרון)",
+      "owner_or_lead_agent": "ליאת (שם משפחה לא אותר בפומבי)",
+      "role_classification": "Lead Agent",
+      "city": "רמת השרון",
+      "facebook_url": "https://www.facebook.com/RealEstateRamatHasharon/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Small brokerage (2–10 employees per LinkedIn, founded 2016) covering house sales/rentals across Ramat Hasharon and Herzliya, active on Facebook and LinkedIn but without a dedicated professional website.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 14, "property_activity": 14, "marketing_brand": 9, "website_need": 15, "photo_opportunity_score": 9, "commercial_value": 6, "total": 67},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/RealEstateRamatHasharon/",
+        "website_check": ["Web search for 'אייקון נדל\"ן רמת השרון אתר' plus LinkedIn company page (il.linkedin.com/company/icon-nadlan) — surfaced easy.co.il, d.co.il, b144, Dun's Guide, LinkedIn; no owned domain found. LinkedIn confirms 2–10 employees, founded 2016, no individual owner disclosed"],
+        "activity_evidence": "FB posts show active rental listings (e.g. Lamerchav St, Ramat Hasharon); contact person 'Liat' (0543070300) serves as the practical public face of the business."
+      }
+    },
+    {
+      "agency": "מירי אורון צאיג – תיווך ברמת השרון",
+      "owner_or_lead_agent": "מירי אורון (צאיג)",
+      "role_classification": "Owner",
+      "city": "רמת השרון",
+      "facebook_url": "https://www.facebook.com/MiriRealestate/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Independent broker licensed since 2012, running a personal-brand buy/sell brokerage ('הבתים של מירי ואייל') in Ramat Hasharon, self-representing with no owned website.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 16, "property_activity": 13, "marketing_brand": 8, "website_need": 15, "photo_opportunity_score": 8, "commercial_value": 5, "total": 65},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/MiriRealestate/",
+        "website_check": ["Web search for 'מירי אורון צאיג תיווך רמת השרון אתר' — surfaced Madlan agent page, d.co.il, Facebook; no owned domain found"],
+        "activity_evidence": "Licensed real estate broker since 2012 (license #312109804) operating under personal brand 'הבתים של מירי ואייל' (Miri and Eyal's Homes), active buy/sell brokerage in Ramat Hasharon."
+      }
+    },
+    {
+      "agency": "תיווך רמת השרון – יהודה אשכנזי",
+      "owner_or_lead_agent": "יהודה אשכנזי",
+      "role_classification": "Owner",
+      "city": "רמת השרון",
+      "facebook_url": "https://www.facebook.com/p/%D7%AA%D7%99%D7%95%D7%95%D7%9A-%D7%94%D7%A2%D7%AA%D7%99%D7%93-%D7%99%D7%94%D7%95%D7%93%D7%94-%D7%90%D7%A9%D7%9B%D7%A0%D7%96%D7%99-100057128183798/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Solo broker personally branding on the tagline 'brokerage is mainly people,' focused on rentals including higher-end homes in Ramat Hasharon's western neighborhoods; a domain associated with his name (futurland.co.il) is currently dead/unreachable, so effectively no functioning website.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 15, "property_activity": 12, "marketing_brand": 9, "website_need": 15, "photo_opportunity_score": 8, "commercial_value": 6, "total": 65},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/p/%D7%AA%D7%99%D7%95%D7%95%D7%9A-%D7%94%D7%A2%D7%AA%D7%99%D7%93-%D7%99%D7%94%D7%95%D7%93%D7%94-%D7%90%D7%A9%D7%9B%D7%A0%D7%96%D7%99-100057128183798/", "website_check": ["Web search listed website as futurland.co.il — attempted WebFetch/curl on https:// and http://futurland.co.il, both failed to resolve (domain does not currently respond), confirming no live functioning site"],
+        "activity_evidence": "Personal-brand FB business page 'תיווך רמת השרון – יהודה אשכנזי'; noted specialization in renting luxury/high-standard homes in Ramat Hasharon's western neighborhood."
+      }
+    },
+    {
+      "agency": "אלעד גורל – מר נדל\"ן",
+      "owner_or_lead_agent": "אלעד גורל",
+      "role_classification": "Owner",
+      "city": "רמת השרון",
+      "facebook_url": "Not found in research (site links to social icons but exact FB URL not confirmed)",
+      "facebook_followers": "Not publicly visible",
+      "description": "Solo broker ('מר נדל\"ן' personal brand) handling apartment/property sales and rentals in Ramat Hasharon and surrounding area; has an existing website but it shows broken/placeholder images throughout and a dated layout in need of a refresh — a concrete, visible photo-quality gap.",
+      "website_status": "Poor website",
+      "photo_opportunity": "High",
+      "score_breakdown": {"decision_authority": 17, "property_activity": 12, "marketing_brand": 10, "website_need": 12, "photo_opportunity_score": 12, "commercial_value": 6, "total": 69},
+      "priority": false,
+      "sources": {
+        "facebook": "Not confirmed",
+        "website_check": ["https://eladgoral.co.il/ — WebFetch confirms functioning site but with broken/placeholder SVG images throughout, duplicated navigation, and a dated feel despite modern framework; assessed as 'needs frontend maintenance to achieve truly modern presentation standards'"],
+        "activity_evidence": "Site includes property portfolio, client testimonials with 5-star ratings, blog, and service listings for Ramat Hasharon-area sales/rentals."
+      }
+    }
+  ],
+  "rejected": [
+    {"agency": "שלי בצר – נדל\"ן כפר סבא", "reason": "Already an existing client/demo site built for this business (sheli-betser-nadlan.vercel.app per internal records) — not a fresh prospect."},
+    {"agency": "עדי שכטר מתווכת עצמאית", "reason": "Already an existing client/demo site built for this business (adi-shechter-nadlan.vercel.app per internal records) — not a fresh prospect."},
+    {"agency": "Midtown – מידטאון שיווק נדל\"ן", "reason": "Has a professional, modern, functioning website (midtown-nadlan.co.il) with listings, testimonials, and blog — Good website, reject."},
+    {"agency": "פנינה בן גל נדל\"ן", "reason": "Has an owned professional website (ben-gal.co.il) with active property listings — reject."},
+    {"agency": "עמוס שטרית – נדל\"ן", "reason": "Has an owned professional website (amosnadlan.co.il) with listings and YouTube channel — reject."},
+    {"agency": "בני מיטוקו – יועץ נדל\"ן", "reason": "Has an owned website (bm-home.co.il) — reject."},
+    {"agency": "אבי סופר – מומחה לעסקאות נדל\"ן", "reason": "Keller Williams-affiliated agent with owned websites (avisoffer.co.il, soferavi.co.il) — reject."},
+    {"agency": "אור נדל\"ן רמת השרון", "reason": "Family-run office with an owned professional website (or-nadlan.co.il) — reject."},
+    {"agency": "מירי אופק בע\"מ", "reason": "Ranked #1 broker's office in Ramat Hasharon (Madlan, 4 years running) with owned website (miri-ofek.co.il) — too established/well-resourced digitally, reject."},
+    {"agency": "תיווך אבידן (אבי אבידן)", "reason": "Has an owned website (avi-avidan.com) with active listings — reject."},
+    {"agency": "שי שחר – תיווך ושיווק פרויקטים", "reason": "Has an owned professional website (shaishahar.co.il) — reject."},
+    {"agency": "ארץ קדושה – נכסים תיווך וייעוץ נדל\"ן", "reason": "Described as a multi-agent brokerage firm ('their agents specialize...') rather than a single identifiable owner/lead agent; website domain (eretzkdosha.co.il) indexed but no longer resolving — overall evidence too weak/ambiguous to confidently qualify."},
+    {"agency": "ליאור בר עוז תיווך נדל\"ן", "reason": "Insufficient verified evidence of established deal flow; risk of being a newer entrant to brokerage (young, law-degree background) and potential confusion with the much larger, well-resourced Bar-Oz development group of the same surname — skipped for data-integrity caution."},
+    {"agency": "ניר לוי – יזם ויועץ נדל\"ן (Real Capital)", "reason": "Operates under the Real Capital franchise brand; insufficient independent evidence of listing volume, and franchise affiliation raises unresolved risk that a Real Capital-hosted page could count as a website — insufficient confidence to qualify."},
+    {"agency": "ליז ורד – שיווק נכסים", "reason": "Only directory listings found (no dedicated site, consistent with candidacy) but no evidence of real estate activity volume, marketing presence, or FB engagement — too thin to score above threshold."},
+    {"agency": "הוד נכסים – תיווך נדל\"ן", "reason": "Based in Hod Hasharon, not Kfar Saba or Ramat Hasharon — out of scope city."},
+    {"agency": "Century 21 Ramat Hasharon (רוני רוקח)", "reason": "International franchise brand — certain to have a well-resourced professional website; not pursued further."},
+    {"agency": "דור הרליך / שחף נכסים / ערן נכסים / מיקי נכסים / איל-נכסים / גלובוס נדל\"ן (Kfar Saba directory names)", "reason": "Surfaced only as names on a Kfar Saba brokers directory listing; further web research was blocked by search CAPTCHA / rate limits before authority, activity, or website status could be verified — excluded rather than guessed."},
+    {"agency": "רחלי — יועצת אישית, נדל\"ן רמת השרון והסביבה", "reason": "Could not reliably distinguish this candidate from a similarly-named agent in a different city (Ramat Gan); insufficient verified location-specific evidence."},
+    {"agency": "שי אריאלי יועץ נדל\"ן / ליאת ענבר (RE/MAX Kfar Saba)", "reason": "RE/MAX-franchised agents; skipped due to unresolved ambiguity over whether RE/MAX-provided agent pages should count as an owned website, and lower likely independence/authority under a large franchise brand."}
+  ]
+}

@@ -1,0 +1,1371 @@
+[
+  {
+    "agency": "שלווה בארמנותייך (דנית כזז / דנית בוטבול)",
+    "owner_or_lead_agent": "דנית כזז (בוטבול)",
+    "role_classification": "Owner",
+    "city": "טבריה",
+    "facebook_url": "https://www.facebook.com/danit.butbul/",
+    "facebook_followers": "5,475 likes",
+    "description": "High-follower Tiberias real estate consultant operating under her own brand \"שלווה בארמנותייך\", posting frequent listings (Kinneret-view apartments, duplexes, garden apartments) in the ₪1.4M-2.8M range; professional presence limited to Yad2/Madlan agent profiles, no independent site.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 18,
+      "property_activity": 18,
+      "marketing_brand": 15,
+      "website_need": 20,
+      "photo_opportunity_score": 10,
+      "commercial_value": 9,
+      "total": 90
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "facebook.com/danit.butbul — 5,475 likes, 10 talking about this",
+      "website_check": [
+        "yad2.co.il/realestate/agency/4814751/broker/764580/forsale (agent profile, not a website)",
+        "madlan.co.il/agent/re_agent_hqo67yci7N0 (directory profile, not a website)",
+        "No independent domain found"
+      ],
+      "activity_evidence": "Multiple concurrent listings (5-room lake-view apartments, ~200sqm duplexes, garden apartments) with recent sale-closing posts; contact 052-8388291"
+    },
+    "rank": 1
+  },
+  {
+    "agency": "תיווך ניר דוד",
+    "owner_or_lead_agent": "ניר דוד אזולאי (עם שותף חנן פרץ)",
+    "role_classification": "Owner",
+    "city": "אילת",
+    "facebook_url": "https://www.facebook.com/search/top/?q=%D7%AA%D7%99%D7%95%D7%95%D7%9A%20%D7%A0%D7%99%D7%A8%20%D7%93%D7%95%D7%93%20%D7%90%D7%99%D7%9C%D7%AA",
+    "facebook_followers": "4,947 likes",
+    "description": "11-year-old Eilat brokerage co-owned by Nir David Azoulai and Chanan Peretz, with a small agent team (incl. Sapir Bar Kra) and a large, active Facebook following; described in listings as one of the leading brokerage offices in Eilat.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 19,
+      "property_activity": 17,
+      "marketing_brand": 14,
+      "website_need": 20,
+      "photo_opportunity_score": 10,
+      "commercial_value": 9,
+      "total": 89
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "facebook page \"תיווך ניר דוד\", Eilat — 4,947 likes, 32 were here",
+      "website_check": [
+        "DuckDuckGo/Bing search for independent domain — none found, presence limited to Facebook, Yad2, Easy.co.il, MyNextHome, RealtorsIndex, Eilat.city, FindGlocal"
+      ],
+      "activity_evidence": "Business address Sderot HaTamarim 21, Eilat; 11 years in operation; multi-agent team; active rental and sale listings across Yad2/Easy.co.il/directories"
+    },
+    "rank": 2
+  },
+  {
+    "agency": "תבל נכסים והשקעות (Tavel Nechasim)",
+    "owner_or_lead_agent": "שלמה אגאי (Shlomo Agay)",
+    "role_classification": "Owner",
+    "city": "ירושלים",
+    "facebook_url": "https://www.facebook.com/p/תבל-נכסים-והשקעות-100057160282255/",
+    "facebook_followers": "Not publicly visible",
+    "description": "Founded 2004 by Shlomo Agay in Pisgat Ze'ev and described in independent directory listings as one of the largest and leading real estate offices in Jerusalem, with multiple staff agents. No dedicated company website exists anywhere despite the scale of the operation.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 20,
+      "property_activity": 18,
+      "marketing_brand": 7,
+      "website_need": 20,
+      "photo_opportunity_score": 12,
+      "commercial_value": 8,
+      "total": 85
+    },
+    "priority": true,
+    "sources": {
+      "facebook": "https://www.facebook.com/p/תבל-נכסים-והשקעות-100057160282255/",
+      "website_check": [
+        "https://www.yad2.co.il/realestate/agency/5694740/forsale",
+        "https://pisgabiz.co.il/biz/תבל-נכסים-והשקעות/",
+        "Re-classified High confidence: existing recorded search evidence (agency-name / agent-name search) found no owned domain; no further site materialized."
+      ],
+      "activity_evidence": "Described as \"one of the largest and leading real estate offices in Jerusalem,\" founded 2004, with at least one additional staff broker (David Nisnov) working under the office; searches across Yad2, directories, Instagram and YouTube found no dedicated branded website — only directory and social profiles."
+    },
+    "rank": 4
+  },
+  {
+    "agency": "C נדל\"ן (C nadlan real estate)",
+    "owner_or_lead_agent": "אמיאל כהן (Amiel Cohen)",
+    "role_classification": "Owner",
+    "city": "רעננה",
+    "facebook_url": "https://www.facebook.com/CnadlanRaanana/",
+    "facebook_followers": "~292 likes / ~1.7K followers",
+    "description": "Owner-founded (2017) Ra'anana brokerage with an independently-verified claim of 200+ completed transactions in luxury and second-hand apartments, land and new projects — strong deal flow with no dedicated website at all.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "High",
+    "score_breakdown": {
+      "decision_authority": 18,
+      "property_activity": 18,
+      "marketing_brand": 10,
+      "website_need": 18,
+      "photo_opportunity_score": 12,
+      "commercial_value": 8,
+      "total": 84
+    },
+    "priority": true,
+    "sources": {
+      "facebook": "https://www.facebook.com/CnadlanRaanana/",
+      "website_check": [
+        "search: \"C נדל\\\"ן\" רעננה אתר",
+        "mynetraanana.co.il",
+        "madlan.co.il",
+        "nadlana.co.il directory"
+      ],
+      "activity_evidence": "Yad2 agency page independently states \"founded 2017 under Amiel Cohen's management, over 200 transactions\"; phone 054-204-3381 confirmed."
+    },
+    "rank": 5
+  },
+  {
+    "agency": "חוטר ישראל (Israel Choter Real Estate)",
+    "owner_or_lead_agent": "ישראל חוטר (Israel Choter)",
+    "role_classification": "Owner",
+    "city": "ראש העין",
+    "facebook_url": "https://www.facebook.com/israor/",
+    "facebook_followers": "4,343 likes",
+    "description": "Independent Rosh HaAyin broker with a large, highly engaged Facebook following (also self-tagged as a \"digital creator\"); no dedicated website found beyond a directory profile.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 18,
+      "property_activity": 16,
+      "marketing_brand": 14,
+      "website_need": 19,
+      "photo_opportunity_score": 9,
+      "commercial_value": 8,
+      "total": 84
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/israor/",
+      "website_check": [
+        "hon.co.il/professional/חוטר-ישראל/ is a third-party directory profile, not an owned website; no personal domain found"
+      ],
+      "activity_evidence": "Facebook page \"4,343 likes · 440 talking about this\"; address Shabazi 155, Rosh HaAyin, phone 050-6505093"
+    },
+    "rank": 7
+  },
+  {
+    "agency": "אריה הדס הלן (תיווך נדל\"ן)",
+    "owner_or_lead_agent": "אריה הדס הלן (Arie Hadash Helen)",
+    "role_classification": "Owner",
+    "city": "לוד (Lod)",
+    "facebook_url": "https://www.facebook.com/Ariehadashelen/",
+    "facebook_followers": "3,515 likes, 18 talking about this (per Facebook page snippet)",
+    "description": "Solo, individually-licensed real estate broker (license #30828171) based in Lod, registered with the Ministry of Justice broker registry. By far the strongest Facebook following found among Lod candidates, with active listing/video posts. No independent website found.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 20,
+      "property_activity": 14,
+      "marketing_brand": 13,
+      "website_need": 20,
+      "photo_opportunity_score": 9,
+      "commercial_value": 7,
+      "total": 83
+    },
+    "priority": true,
+    "sources": {
+      "facebook": "https://www.facebook.com/Ariehadashelen/",
+      "website_check": [
+        "nadlano.co.il/office/אריה-הדס-הלן",
+        "theagent.org.il/agents/אריה-הדס-הלן/ (Israeli broker registry, license #30828171)",
+        "DuckDuckGo web search — no independent domain found"
+      ],
+      "activity_evidence": "Facebook page actively posts individual property listings (with photos/video) and eviction-agreement/urban-renewal deals in Lod; licensed and registered broker confirmed via theagent.org.il."
+    },
+    "rank": 8
+  },
+  {
+    "agency": "קרמליס (Karmelis)",
+    "owner_or_lead_agent": "לימור כרמלי (Limor Carmeli)",
+    "role_classification": "Owner",
+    "city": "מודיעין",
+    "facebook_url": "https://www.facebook.com/limor.carmeli.modiin/",
+    "facebook_followers": "2,270 likes",
+    "description": "Veteran Modiin brokerage owned by licensed broker Limor Carmeli (license #32642), with an interior-design angle to its marketing and the strongest Facebook following found among Modiin candidates in this batch. No dedicated website exists despite the marketing investment already visible on Facebook.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 18,
+      "property_activity": 14,
+      "marketing_brand": 12,
+      "website_need": 20,
+      "photo_opportunity_score": 11,
+      "commercial_value": 7,
+      "total": 82
+    },
+    "priority": true,
+    "sources": {
+      "facebook": "https://www.facebook.com/limor.carmeli.modiin/",
+      "website_check": [
+        "https://www.nadlan-modiin.co.il/תיווך-במודיעין/כרמליס-מודיעין/",
+        "https://www.yad2.co.il"
+      ],
+      "activity_evidence": "Facebook business page carries 2,270 likes, by far the largest verified following among candidates in this research; directory listing describes it as \"an established brokerage firm in Modiin specializing in real estate consulting and marketing\"; no company website found."
+    },
+    "rank": 11
+  },
+  {
+    "agency": "Ohana & Valinsky נכסים (טל וולינסקי)",
+    "owner_or_lead_agent": "טל וולינסקי",
+    "role_classification": "Owner",
+    "city": "טבריה",
+    "facebook_url": "https://www.facebook.com/tal.valinsky/",
+    "facebook_followers": "3,210 likes",
+    "description": "Co-lead of boutique Tiberias brokerage Ohana & Valinsky; active across Facebook (3,210 likes), Instagram (~1,200 followers) and YouTube Shorts marketing lake-view and investment properties, with no independent website — only Yad2/Madlan agency pages.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 16,
+      "property_activity": 14,
+      "marketing_brand": 14,
+      "website_need": 20,
+      "photo_opportunity_score": 9,
+      "commercial_value": 8,
+      "total": 81
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "facebook.com/tal.valinsky — 3,210 likes, 429 talking about this",
+      "website_check": [
+        "yad2.co.il/realestate/agency/6594285 (agency profile, not a website)",
+        "madlan.co.il/agentsOffice/re_office_OxJXZ52vyq8fF (directory profile, not a website)",
+        "No independent domain found"
+      ],
+      "activity_evidence": "Instagram ~1,200-1,202 followers/32 posts; active YouTube Shorts channel; boutique brokerage marketed as leading Tiberias/Kinneret-area properties; contact 053-599-1814"
+    },
+    "rank": 14
+  },
+  {
+    "agency": "איזק נדל\"ן דירות פתח תקווה",
+    "owner_or_lead_agent": "Isaac (איזק)",
+    "role_classification": "Lead Agent",
+    "city": "פתח תקווה",
+    "facebook_url": "https://www.facebook.com/isaacnadlan/",
+    "facebook_followers": "Not publicly visible",
+    "description": "Runs both a branded agency FB page and an active local classifieds FB group for apartments/houses/land in Petah Tikva, giving strong ongoing visibility into deal flow, but no dedicated agency website exists.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 16,
+      "property_activity": 16,
+      "marketing_brand": 12,
+      "website_need": 20,
+      "photo_opportunity_score": 10,
+      "commercial_value": 6,
+      "total": 80
+    },
+    "priority": true,
+    "sources": {
+      "facebook": "https://www.facebook.com/isaacnadlan/",
+      "website_check": [
+        "Search surfaced only directory pages (findglocal, easy.co.il, d.co.il, ad.co.il/agency/2199, Yad2 agency 3452387) — no owned domain"
+      ],
+      "activity_evidence": "Operates a dedicated FB group (facebook.com/groups/isaacnadlan.petahtikva) for city-wide apartment/house/land listings alongside the business page, indicating regular deal flow and community reach."
+    },
+    "rank": 16
+  },
+  {
+    "agency": "נדל\"ן מצליח - עופרה שורק",
+    "owner_or_lead_agent": "עופרה שורק (Ofra Shorek)",
+    "role_classification": "Owner",
+    "city": "רמלה (Ramla)",
+    "facebook_url": "https://www.facebook.com/Ofra.Shorek.Nadlan.Matzliach/",
+    "facebook_followers": "Not publicly visible",
+    "description": "Owner-operated brokerage at a real street-front office (Uzi Hitman St 44, Ramla) with published business hours and licensed agents; self-describes as one of the leading firms in income-producing real estate in the area. No independent website found across five separate directory/association checks.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 19,
+      "property_activity": 14,
+      "marketing_brand": 9,
+      "website_need": 20,
+      "photo_opportunity_score": 9,
+      "commercial_value": 8,
+      "total": 79
+    },
+    "priority": true,
+    "sources": {
+      "facebook": "https://www.facebook.com/Ofra.Shorek.Nadlan.Matzliach/",
+      "website_check": [
+        "reba.org.il (REBA - Israel Real Estate Brokers Association listing)",
+        "easy.co.il/page/26507296",
+        "www.d.co.il/80153270/32970/",
+        "www.yad2.co.il/realestate/agency/3098938/broker/5598/forsale",
+        "DuckDuckGo web search — no independent domain found"
+      ],
+      "activity_evidence": "REBA association profile confirms real office, address, phone, fax, and posted weekly hours (Sun-Thu 9am-8pm); described as an established income-property specialist in Ramla."
+    },
+    "rank": 18
+  },
+  {
+    "agency": "תיווך הדרום",
+    "owner_or_lead_agent": "נחי אינדיק (סוכן בכיר; בעלות המשרד לא אומתה במלואה)",
+    "role_classification": "Lead Agent",
+    "city": "אילת",
+    "facebook_url": "https://www.facebook.com/thadarom/",
+    "facebook_followers": "2,596 likes",
+    "description": "Long-running Eilat brokerage ('leading brokerage office in Eilat' per its own listings) with a sizable Facebook following; Nachi Indik is a prominent listed agent, though sole ownership could not be confirmed from public sources.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 14,
+      "property_activity": 15,
+      "marketing_brand": 13,
+      "website_need": 20,
+      "photo_opportunity_score": 9,
+      "commercial_value": 8,
+      "total": 79
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "facebook.com/thadarom — 2,596 likes, 20 talking about this, 412 were here",
+      "website_check": [
+        "Search for independent domain — none found; only Facebook + directories (T.co.il, Madlan, B144, Mynexthome, Dapei Zahav)"
+      ],
+      "activity_evidence": "Address Merkaz Richter 9, Eilat; self-described as leading Eilat brokerage; resale + new-project listings referenced across multiple directories"
+    },
+    "rank": 19
+  },
+  {
+    "agency": "ג'ורנו נכסים והשקעות (Jorno Assets & Investments)",
+    "owner_or_lead_agent": "ערן מזרחי",
+    "role_classification": "Owner",
+    "city": "אילת",
+    "facebook_url": "https://www.facebook.com/jornoestate/",
+    "facebook_followers": "Not publicly visible",
+    "description": "Eilat brokerage owned/managed by Eran Mizrahi (listed as \"בעלים מנהל\"), actively cross-posting property listings (duplexes, apartments, private homes) into multiple Eilat community Facebook groups on a near-weekly cadence.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 19,
+      "property_activity": 14,
+      "marketing_brand": 10,
+      "website_need": 20,
+      "photo_opportunity_score": 9,
+      "commercial_value": 7,
+      "total": 79
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "facebook.com/jornoestate and facebook.com/100088934301265 (Eran Mizrahi) — page like count not visible via public fetch",
+      "website_check": [
+        "Only presence found: broadcust.co.il/business/0538821197 (generic free directory template page, not an independent domain)"
+      ],
+      "activity_evidence": "Recurring posts across 'Our Eilat', 'All Eilat Friends' and other local groups dated within recent months; consistent listings of 4-6+ room apartments/duplexes"
+    },
+    "rank": 20
+  },
+  {
+    "agency": "נדל\"ן אישי - מני טל",
+    "owner_or_lead_agent": "מני טל (Meni Tal)",
+    "role_classification": "Owner",
+    "city": "הרצליה",
+    "facebook_url": "https://www.facebook.com/Personal.co.il/",
+    "facebook_followers": "959 likes",
+    "description": "Solo personal-brand broker (\"Personal Real Estate\") focused on Herzliya apartment sales, with a genuinely engaged 959-like Facebook page and no website of any kind — relies entirely on Facebook and third-party directories.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 18,
+      "property_activity": 14,
+      "marketing_brand": 12,
+      "website_need": 18,
+      "photo_opportunity_score": 10,
+      "commercial_value": 7,
+      "total": 79
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/Personal.co.il/",
+      "website_check": [
+        "search: \"נדל\\\"ן אישי\" מני טל אתר",
+        "hakkolasakim.com listing",
+        "findglocal.com listing",
+        "bikorett.com (4.5★/8 reviews)"
+      ],
+      "activity_evidence": "Sokolov 90, Herzliya office address confirmed via directory listings; 8 independent reviews averaging 4.5 stars; no explicit transaction-count claim found but consistent multi-year directory presence."
+    },
+    "rank": 22
+  },
+  {
+    "agency": "לורן נכסים",
+    "owner_or_lead_agent": "לורן ישראל (Lauren Israel)",
+    "role_classification": "Owner",
+    "city": "רחובות",
+    "facebook_url": "https://www.facebook.com/loranisrael/",
+    "facebook_followers": "4,468 likes",
+    "description": "17-year veteran broker with her own team ('הצוות שלנו') specializing in second-hand and land-attached homes in Rehovot; among the stronger Facebook followings found in the city. No dedicated agency website — only directory/marketplace pages.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 18,
+      "property_activity": 15,
+      "marketing_brand": 13,
+      "website_need": 18,
+      "photo_opportunity_score": 9,
+      "commercial_value": 6,
+      "total": 79
+    },
+    "priority": true,
+    "sources": {
+      "facebook": "https://www.facebook.com/loranisrael/",
+      "website_check": [
+        "https://www.b144.co.il/b144_sip/4A1404134470655D4C10011640746C5949/",
+        "https://www.yad2.co.il/realestate/agency/9036081/forsale",
+        "https://www.madlan.co.il/agentsOffice/re_office_k2MzFGPvA3M",
+        "https://proagents.co.il/סוכן/לורן-ישראל-מתווכת-מומלצת-ברחובות/"
+      ],
+      "activity_evidence": "Facebook page shows 4,468 likes / 43 talking about this; self-describes 17 years in the field with a team ('הצוות שלנו מתמחה בדירות יד 2 וצמודי קרקע')."
+    },
+    "rank": 27
+  },
+  {
+    "agency": "ורד כהן שרותי נדל\"ן",
+    "owner_or_lead_agent": "ורד כהן",
+    "role_classification": "Owner",
+    "city": "טבריה",
+    "facebook_url": "https://www.facebook.com/search/top/?q=%D7%95%D7%A8%D7%93%20%D7%9B%D7%94%D7%9F%20%D7%A0%D7%93%D7%9C%D7%9F%20%D7%98%D7%91%D7%A8%D7%99%D7%94",
+    "facebook_followers": "662 likes",
+    "description": "20-year real estate broker/consultant covering Tiberias, with active Facebook (662 likes) and Instagram (926 followers) presence; only web footprint is a generic free directory template page, not a real website.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 17,
+      "property_activity": 13,
+      "marketing_brand": 11,
+      "website_need": 20,
+      "photo_opportunity_score": 9,
+      "commercial_value": 7,
+      "total": 77
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "facebook page \"ורד כהן נדל\"ן והשקעות\" — 662 likes, 3 talking about this, 175 were here; Instagram @veredcohennadlan — 926 followers, 249 posts",
+      "website_check": [
+        "broadcust.co.il/business/0506531252/pages — confirmed generic free business-directory template, not an independent website"
+      ],
+      "activity_evidence": "20 years' experience per Yad2 bio; recurring listings (e.g. 4-room 129sqm apartment) across Facebook/Instagram/Yad2; contact 050-6531252"
+    },
+    "rank": 33
+  },
+  {
+    "agency": "יהלום נדל\"ן",
+    "owner_or_lead_agent": "Not publicly identified by individual name (office contact only)",
+    "role_classification": "Lead Agent",
+    "city": "כפר סבא",
+    "facebook_url": "https://www.facebook.com/YahalomNADLAN2021/",
+    "facebook_followers": "995 likes",
+    "description": "Boutique brokerage in downtown Kfar Saba specializing in luxury homes, currently marketing a project on Weizmann St, with a solid 995-like Facebook following and no dedicated website.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "High",
+    "score_breakdown": {
+      "decision_authority": 15,
+      "property_activity": 15,
+      "marketing_brand": 11,
+      "website_need": 18,
+      "photo_opportunity_score": 10,
+      "commercial_value": 8,
+      "total": 77
+    },
+    "priority": true,
+    "sources": {
+      "facebook": "https://www.facebook.com/YahalomNADLAN2021/",
+      "website_check": [
+        "Web search for 'יהלום נדל\"ן כפר סבא' via DuckDuckGo — only Yad2, Easy.co.il, Ad.co.il, Findglocal, mynexthome.co.il, Mikumi.co.il surfaced; explicit note: no dedicated official website domain found"
+      ],
+      "activity_evidence": "Active on Yad2 agency page and multiple directories; marketing a luxury project at Weizmann 88 in downtown Kfar Saba; described by mynexthome.co.il as specializing in luxury homes ('בתי יוקרה')."
+    },
+    "rank": 36
+  },
+  {
+    "agency": "נכסים לעניין",
+    "owner_or_lead_agent": "אדם שמחיוב (Adam Simchayov)",
+    "role_classification": "Owner",
+    "city": "רעננה",
+    "facebook_url": "https://www.facebook.com/nehasimlainian/",
+    "facebook_followers": "29 likes",
+    "description": "Owner-run Ra'anana brokerage (founded 2016, Ahuza 115) independently confirmed on both Yad2 and Madlan as having completed 100+ sale transactions — genuinely strong deal flow paired with an almost dormant Facebook presence and clear marketing gap, no website.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "High",
+    "score_breakdown": {
+      "decision_authority": 17,
+      "property_activity": 17,
+      "marketing_brand": 5,
+      "website_need": 18,
+      "photo_opportunity_score": 12,
+      "commercial_value": 7,
+      "total": 76
+    },
+    "priority": true,
+    "sources": {
+      "facebook": "https://www.facebook.com/nehasimlainian/",
+      "website_check": [
+        "search: נכסים לעניין רעננה אתר",
+        "Yad2 agency page",
+        "Madlan agent profile"
+      ],
+      "activity_evidence": "Both Yad2's agency-page summary and Madlan's agent profile independently state \"100+ successful sale transactions in Ra'anana\" — two-source corroboration despite the thin (29-like) Facebook page."
+    },
+    "rank": 40
+  },
+  {
+    "agency": "תיווך לאון",
+    "owner_or_lead_agent": "לאון שיכמן (Leon Shichman)",
+    "role_classification": "Owner",
+    "city": "אשדוד",
+    "facebook_url": "https://www.facebook.com/leon.ashdod.realestate/",
+    "facebook_followers": "Not publicly visible",
+    "description": "Owner-operated brokerage active in Ashdod since 1995 (30 years). Long local tenure with no dedicated agency website — presence limited to Facebook and generic business directories (Gloopla, b144, ad.co.il, RealtorsIndex).",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 19,
+      "property_activity": 14,
+      "marketing_brand": 8,
+      "website_need": 19,
+      "photo_opportunity_score": 11,
+      "commercial_value": 5,
+      "total": 76
+    },
+    "priority": true,
+    "sources": {
+      "facebook": "https://www.facebook.com/leon.ashdod.realestate/",
+      "website_check": [
+        "https://www.gloopla.com/IL/Ashdod/300840824051526/",
+        "https://www.b144.co.il/b144_sip/4F1404134470675D4F150215/",
+        "https://www.yad2.co.il/realestate/agency/266140/forsale",
+        "https://realtorsindex.co.il/תיווך-לאון-אשדוד/"
+      ],
+      "activity_evidence": "Facebook page snippet confirms 'brokerage owned by Leon Shichman, active in Ashdod since 1995'; listed across 7+ independent business directories with no owned domain among them."
+    },
+    "rank": 41
+  },
+  {
+    "agency": "נדל\"ן יוקרה תל אביב - מיכל פוס",
+    "owner_or_lead_agent": "Michal Fuss",
+    "role_classification": "Lead Agent",
+    "city": "תל אביב",
+    "facebook_url": "https://www.facebook.com/Michalfussrealestate/",
+    "facebook_followers": "Not publicly visible",
+    "description": "Independent luxury-property broker covering Tel Aviv, Ramat Gan and Givatayim, personally branded Facebook page; no dedicated website surfaced despite the high-value niche.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 17,
+      "property_activity": 12,
+      "marketing_brand": 11,
+      "website_need": 17,
+      "photo_opportunity_score": 8,
+      "commercial_value": 10,
+      "total": 75
+    },
+    "priority": true,
+    "sources": {
+      "facebook": "https://www.facebook.com/Michalfussrealestate/",
+      "website_check": [
+        "WebSearch: \"מיכל פוס\" נדל\"ן יוקרה אתר — only FB and directory snippets returned, no owned domain found",
+        "Re-classified High confidence: existing recorded search evidence (agency-name / agent-name search) found no owned domain; no further site materialized."
+      ],
+      "activity_evidence": "Personally named luxury real estate page explicitly covering Tel Aviv/Ramat Gan/Givatayim; luxury segment implies higher-value transactions."
+    },
+    "rank": 43
+  },
+  {
+    "agency": "סגל יועצי נדל\"ן",
+    "owner_or_lead_agent": "ליז סגל (Liz Segal)",
+    "role_classification": "Lead Agent",
+    "city": "רמלה (Ramla)",
+    "facebook_url": "https://www.facebook.com/people/סגל-יועצי-נדלן/100063358755072/",
+    "facebook_followers": "12 (Facebook page likes, per search snippet)",
+    "description": "Office active since 2011 at Bar Ilan St 25, Ramla, self-described on Yad2 as ranking #1 in city transactions. Liz Segal (same surname as the office) is the named consultant/public face on Instagram. No independent website found. Facebook following is very low despite the strong transaction claim.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 14,
+      "property_activity": 18,
+      "marketing_brand": 6,
+      "website_need": 20,
+      "photo_opportunity_score": 9,
+      "commercial_value": 8,
+      "total": 75
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/people/סגל-יועצי-נדלן/100063358755072/",
+      "website_check": [
+        "www.yad2.co.il/realestate/agency/5166726/forsale",
+        "www.d.co.il/80149486/34590/",
+        "www.instagram.com/lizsegal987/",
+        "DuckDuckGo web search — no independent domain found"
+      ],
+      "activity_evidence": "Yad2 agency profile: \"active office since 2011... ranks #1 in city transactions\"; Instagram (@lizsegal987) shows an active consultant posting Ramla-Lod listings."
+    },
+    "rank": 45
+  },
+  {
+    "agency": "בן לגזיאל - תיווך נדל\"ן",
+    "owner_or_lead_agent": "בן לגזיאל (Ben Lagziel)",
+    "role_classification": "Lead Agent",
+    "city": "הרצליה",
+    "facebook_url": "Not confirmed — active Facebook listing activity (incl. luxury penthouse) referenced in secondary sources, exact page URL not captured during research",
+    "facebook_followers": "Not publicly visible (4.6★/7 reviews on Bikorett)",
+    "description": "Herzliya broker (Sokolov 11) with a well-reviewed local reputation (4.6★, 7 reviews) and active listings including a luxury penthouse, no dedicated website — possible loose affiliation with a separate \"Lagziel Group\" development company that should be clarified before outreach.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "High",
+    "score_breakdown": {
+      "decision_authority": 14,
+      "property_activity": 14,
+      "marketing_brand": 10,
+      "website_need": 17,
+      "photo_opportunity_score": 12,
+      "commercial_value": 8,
+      "total": 75
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "not confirmed",
+      "website_check": [
+        "search: בן לגזיאל תיווך הרצליה אתר",
+        "bikorett.com (4.6★/7 reviews)",
+        "phone 052-7312731 directory check",
+        "Re-classified High confidence: existing recorded search evidence (agency-name / agent-name search) found no owned domain; no further site materialized."
+      ],
+      "activity_evidence": "Active Facebook posts for a luxury 3-room/penthouse listing found in research; 7 independent customer reviews averaging 4.6 stars support real transaction history."
+    },
+    "rank": 46
+  },
+  {
+    "agency": "אדם וביתו (Adam VeBeito) — קמלי דוד",
+    "owner_or_lead_agent": "דוד (דודו) קמלי / David \"Dodo\" Kamli",
+    "role_classification": "Owner",
+    "city": "ירושלים",
+    "facebook_url": "https://www.facebook.com/adamubeito/",
+    "facebook_followers": "9 likes",
+    "description": "Licensed Jerusalem broker (license #3972253) who founded Adam VeBeito in 1986 and has operated continuously from Even Ezra St. in central Jerusalem for nearly 40 years. Madlan's public broker database credits him with 23 properties sold and 11 current exclusive listings — real, verifiable deal flow — despite an almost dormant Facebook page and no website at all.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 20,
+      "property_activity": 15,
+      "marketing_brand": 3,
+      "website_need": 20,
+      "photo_opportunity_score": 10,
+      "commercial_value": 6,
+      "total": 74
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/adamubeito/",
+      "website_check": [
+        "https://www.madlan.co.il/madad-search/ירושלים-ישראל",
+        "https://nadlano.co.il/office/קמלי-דוד-תיווך-נדלן",
+        "https://www.dunsguide.co.il"
+      ],
+      "activity_evidence": "Madlan's broker leaderboard for Jerusalem explicitly attributes \"23 properties sold, 11 exclusive listings\" to Kamli David; business founded 1986 (39 years); this is one of the strongest concrete deal-flow numbers found in this research, paired with an almost-inactive 9-like Facebook page and zero website — the classic under-marketed veteran profile."
+    },
+    "rank": 47
+  },
+  {
+    "agency": "אורית לובל - יועצת ומשווקת נדל\"ן בכירה",
+    "owner_or_lead_agent": "אורית לובל (Orit Lobel)",
+    "role_classification": "Lead Agent",
+    "city": "פתח תקווה",
+    "facebook_url": "https://www.facebook.com/oritlobel.realestate.agent",
+    "facebook_followers": "Not publicly visible",
+    "description": "Self-described senior real estate consultant/marketer operating solo in Petah Tikva, active on Yad2 and Instagram, with no dedicated agency website of her own.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 17,
+      "property_activity": 11,
+      "marketing_brand": 11,
+      "website_need": 20,
+      "photo_opportunity_score": 9,
+      "commercial_value": 6,
+      "total": 74
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/oritlobel.realestate.agent",
+      "website_check": [
+        "Search surfaced only Yad2 agency page (agency/6682593), Instagram, and directory listings (d.co.il, findglocal) — no owned domain"
+      ],
+      "activity_evidence": "Maintains an active Yad2 broker profile and posted at least one new-listing Instagram post; self-positions as a senior marketer."
+    },
+    "rank": 51
+  },
+  {
+    "agency": "תיווך הראשונים-אשקלון",
+    "owner_or_lead_agent": "יגאל (Yigal)",
+    "role_classification": "Owner",
+    "city": "אשקלון",
+    "facebook_url": "https://www.facebook.com/Ashkelon123/",
+    "facebook_followers": "119 likes",
+    "description": "Solo independent broker running \"תיווך הראשונים\" in Ashkelon, posting regular apartment sale/rental listings across the city; relies on Facebook and directories only.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 18,
+      "property_activity": 14,
+      "marketing_brand": 8,
+      "website_need": 18,
+      "photo_opportunity_score": 10,
+      "commercial_value": 6,
+      "total": 74
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/Ashkelon123/",
+      "website_check": [
+        "Searched multiple DuckDuckGo queries and the d.co.il Ashkelon broker directory — no dedicated domain found for this agency"
+      ],
+      "activity_evidence": "Facebook page snippet: \"תיווך הראשונים-אשקלון | Ashqelon\" with \"119 likes · 1 talking about this\"; regular property-listing posts noted for apartments across Ashkelon neighborhoods, contact 050-6278412 / Beit HaMishpat 4"
+    },
+    "rank": 52
+  },
+  {
+    "agency": "סאם לי נדל\"ן",
+    "owner_or_lead_agent": "Sam Lee",
+    "role_classification": "Lead Agent",
+    "city": "תל אביב",
+    "facebook_url": "https://www.facebook.com/samleetlv/",
+    "facebook_followers": "Not publicly visible",
+    "description": "Boutique one-person advisory brokerage in north/central Tel Aviv handling buy/sell/rent transactions; no dedicated website found across multiple searches, only a Facebook presence.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 16,
+      "property_activity": 12,
+      "marketing_brand": 10,
+      "website_need": 18,
+      "photo_opportunity_score": 9,
+      "commercial_value": 8,
+      "total": 73
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/samleetlv/",
+      "website_check": [
+        "WebSearch: \"סאם לי\" נדל\"ן תל אביב אתר website — no owned domain surfaced"
+      ],
+      "activity_evidence": "Described in search snippets as an active boutique consultant for purchase/sale/rental in north-central Tel Aviv."
+    },
+    "rank": 53
+  },
+  {
+    "agency": "All in נדל\"ן",
+    "owner_or_lead_agent": "יאיר זערור (Yair Zaarur)",
+    "role_classification": "Lead Agent",
+    "city": "רעננה",
+    "facebook_url": "https://www.facebook.com/p/All-in-%D7%A0%D7%93%D7%9C%D7%9F-%D7%9E%D7%A9%D7%A8%D7%93-%D7%AA%D7%99%D7%95%D7%95%D7%9A-%D7%91%D7%A8%D7%A2%D7%A0%D7%A0%D7%94-%D7%95%D7%94%D7%A1%D7%91%D7%99%D7%91%D7%94-100069084762976/",
+    "facebook_followers": "1,059 likes",
+    "description": "Ra'anana \"full-service\" brokerage (HaYetzira 3) with a strong 1,059-like Facebook following and financial/mortgage-adjacent positioning, led publicly by Yair Zaarur (listed with several co-admins so full ownership isn't fully provable), no dedicated website.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 15,
+      "property_activity": 12,
+      "marketing_brand": 12,
+      "website_need": 18,
+      "photo_opportunity_score": 9,
+      "commercial_value": 6,
+      "total": 72
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/p/All-in-%D7%A0%D7%93%D7%9C%D7%9F-%D7%9E%D7%A9%D7%A8%D7%93-%D7%AA%D7%99%D7%95%D7%95%D7%9A-%D7%91%D7%A8%D7%A2%D7%A0%D7%A0%D7%94-%D7%95%D7%94%D7%A1%D7%91%D7%99%D7%91%D7%94-100069084762976/",
+      "website_check": [
+        "search: All in נדל\"ן רעננה אתר",
+        "findglocal.com",
+        "easy.co.il",
+        "bikorett.com (4.7★)"
+      ],
+      "activity_evidence": "1,059 Facebook likes and 4.7-star review average across directories; no explicit transaction-count claim found."
+    },
+    "rank": 57
+  },
+  {
+    "agency": "עמי רוזן - סוכן נדל\"ן",
+    "owner_or_lead_agent": "עמי רוזן (Ami Rozen)",
+    "role_classification": "Lead Agent",
+    "city": "פתח תקווה",
+    "facebook_url": "https://www.facebook.com/amirozen09/",
+    "facebook_followers": "Not publicly visible",
+    "description": "Independent PT-native agent with 7+ years' experience and licensed brokerage number, running a personally branded FB page with no dedicated website — a growth-oriented solo operator who would benefit from consistent professional photo output.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 18,
+      "property_activity": 10,
+      "marketing_brand": 10,
+      "website_need": 20,
+      "photo_opportunity_score": 8,
+      "commercial_value": 6,
+      "total": 72
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/amirozen09/",
+      "website_check": [
+        "https://html.duckduckgo.com/html/?q=עמי רוזן סוכן נדל\"ן פתח תקווה (only directory/B144/easy.co.il listings surfaced, no dedicated agency domain)"
+      ],
+      "activity_evidence": "Licensed broker (license #321382 per directory bios), 7+ years in the PT market, self-described as helping clients through the full sale process; no confirmed live listing count found."
+    },
+    "rank": 59
+  },
+  {
+    "agency": "תיווך גדעוני",
+    "owner_or_lead_agent": "גדעוני (Gidoni) — first name not confirmed publicly",
+    "role_classification": "Owner",
+    "city": "חולון",
+    "facebook_url": "https://www.facebook.com/gidonirealestate/",
+    "facebook_followers": "Not publicly visible",
+    "description": "Family-run brokerage on Sokolov St, Holon, operating over 40 years, handling apartments, shops, managed projects and TAMA 38/urban-renewal deals. Digital footprint is essentially old-school: a Walla email address and directory-only listings, no website, minimal social presence.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 15,
+      "property_activity": 15,
+      "marketing_brand": 6,
+      "website_need": 19,
+      "photo_opportunity_score": 9,
+      "commercial_value": 8,
+      "total": 72
+    },
+    "priority": true,
+    "sources": {
+      "facebook": "https://www.facebook.com/gidonirealestate/",
+      "website_check": [
+        "WebSearch: תיווך גדעוני חולון סוקולוב אתר",
+        "easy.co.il/page/25808049",
+        "d.co.il/17853850/32970/",
+        "ad.co.il/agency/1288",
+        "d.co.il Holon directory (city6600)"
+      ],
+      "activity_evidence": "40+ years in business at same physical address (Sokolov 33, Holon); handles TAMA 38/urban renewal projects and shop sales in addition to apartments — evidence of ongoing deal flow over decades; contact email is a Walla address (gidony33@walla.com), a strong obsolescence signal."
+    },
+    "rank": 60
+  },
+  {
+    "agency": "HT שירותי נדל\"ן",
+    "owner_or_lead_agent": "רחלי כהן (Racheli Cohen)",
+    "role_classification": "Owner",
+    "city": "רמלה (Ramla)",
+    "facebook_url": "https://www.facebook.com/61585723238136/",
+    "facebook_followers": "Not publicly visible",
+    "description": "Boutique one-owner brokerage in Ramla; a B144 directory listing quotes the owner directly (\"boutique office owned by me - Racheli Cohen, an experienced broker with 5 years' experience\"). No independent website found.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 19,
+      "property_activity": 10,
+      "marketing_brand": 7,
+      "website_need": 20,
+      "photo_opportunity_score": 9,
+      "commercial_value": 6,
+      "total": 71
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/61585723238136/",
+      "website_check": [
+        "www.b144.co.il (owner self-description found here)",
+        "www.yad2.co.il/realestate/agency/8780204/forsale",
+        "DuckDuckGo web search — no independent domain found"
+      ],
+      "activity_evidence": "B144 listing with owner-authored description and 5.0 rating; positions the firm as a boutique specialist in buying, selling and investment in Ramla."
+    },
+    "rank": 63
+  },
+  {
+    "agency": "רון שינהולץ - תיווך נדל\"ן",
+    "owner_or_lead_agent": "רון שינהולץ (Ron Shinholtz)",
+    "role_classification": "Lead Agent",
+    "city": "הרצליה",
+    "facebook_url": "Not confirmed — found via Madlan agent profile and phone directory; exact Facebook page URL not captured during research",
+    "facebook_followers": "Not publicly visible",
+    "description": "Independent Herzliya broker (office at Tur HaZahav 2 / Migdalei Zerubbabel) whose Madlan profile shows a live pipeline of 7 exclusive listings and a recent closed sale, with no dedicated website.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 15,
+      "property_activity": 13,
+      "marketing_brand": 8,
+      "website_need": 18,
+      "photo_opportunity_score": 10,
+      "commercial_value": 7,
+      "total": 71
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "not confirmed",
+      "website_check": [
+        "search: רון שינהולץ תיווך הרצליה אתר",
+        "Madlan agent profile",
+        "Re-classified High confidence: existing recorded search evidence (agency-name / agent-name search) found no owned domain; no further site materialized."
+      ],
+      "activity_evidence": "Madlan profile lists \"1 property sold, 7 exclusive listings\" — concrete recent deal-flow signal; phone 058-4444009 confirmed via directory."
+    },
+    "rank": 66
+  },
+  {
+    "agency": "Royalty נדל\"ן והשקעות",
+    "owner_or_lead_agent": "גיה טוויטו (Giyya Tuito)",
+    "role_classification": "Owner",
+    "city": "ראש העין",
+    "facebook_url": "https://www.facebook.com/royaltynadlan/",
+    "facebook_followers": "201 likes",
+    "description": "20+ year veteran Rosh HaAyin broker running a small team (with marketing/consultant staff) from a Matzrif Oved Street office; no dedicated website could be confirmed for this specific local office.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 17,
+      "property_activity": 15,
+      "marketing_brand": 8,
+      "website_need": 16,
+      "photo_opportunity_score": 9,
+      "commercial_value": 6,
+      "total": 71
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/royaltynadlan/",
+      "website_check": [
+        "royaltyrealestate.co.il was investigated and confirmed to be a DIFFERENT, unrelated company (different phone number and address, multi-city Tel Aviv/Ramat Gan/Herzliya offices) — deliberately not attributed to this agency to avoid a data mix-up; no site specific to the Rosh HaAyin office was found",
+        "Re-classified High confidence: existing recorded search evidence (agency-name / agent-name search) found no owned domain; no further site materialized."
+      ],
+      "activity_evidence": "Facebook page \"201 likes\"; team includes Dalia Rabikovich and Sarah Janet Alter; active exclusive listings in Neve Afek/Psagot Afek per search snippets; office at Matzrif Oved 9, Rosh HaAyin, phone 052-5341494"
+    },
+    "rank": 70
+  },
+  {
+    "agency": "יאיר סינה נדל\"ן (Yair Sina Real Estate)",
+    "owner_or_lead_agent": "יאיר סינה (Yair Sina)",
+    "role_classification": "Owner",
+    "city": "ירושלים",
+    "facebook_url": "https://www.facebook.com/profile.php?id=61558329035776",
+    "facebook_followers": "48 likes",
+    "description": "Self-described veteran Jerusalem brokerage (\"established brokerage with extensive experience\") covering sales, rentals, mortgages, Tama 38 renewal and overseas property, licensed under Yair Sina. Facebook presence exists but is thin (48 likes), and no dedicated website was found — a clear marketing/web gap for an established, licensed operator.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 18,
+      "property_activity": 10,
+      "marketing_brand": 5,
+      "website_need": 20,
+      "photo_opportunity_score": 10,
+      "commercial_value": 6,
+      "total": 69
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/profile.php?id=61558329035776",
+      "website_check": [
+        "https://www.b144.co.il/b144_sip/4A1404134470655D4C1703144D79645D48/",
+        "https://nadlano.co.il/office/סינה-יאיר-תיווך-נדלן"
+      ],
+      "activity_evidence": "B144 lists him as \"an established brokerage in Jerusalem with many years of experience\"; licensed broker (license #3174181); no property/listing counts confirmed and current Facebook engagement is low, which is why this candidate scores near the qualification floor."
+    },
+    "rank": 74
+  },
+  {
+    "agency": "TWO - תיווך ויזמות נדל\"ן (Shiri & Maya)",
+    "owner_or_lead_agent": "שירי ומאיה (Shiri & Maya)",
+    "role_classification": "Owner",
+    "city": "רעננה",
+    "facebook_url": "https://www.facebook.com/ShiriRaananaRealestates",
+    "facebook_followers": "Not publicly visible",
+    "description": "Two-partner Ra'anana brokerage actively posting luxury listings (incl. a 130 sqm apartment and a mini-penthouse) into Anglo-focused local Facebook groups, with only a bare Yad2 agency page and no independent website.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 13,
+      "property_activity": 12,
+      "marketing_brand": 9,
+      "website_need": 18,
+      "photo_opportunity_score": 10,
+      "commercial_value": 7,
+      "total": 69
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/ShiriRaananaRealestates",
+      "website_check": [
+        "search: TWO תיווך רעננה שירי מאיה אתר",
+        "Yad2 agency page"
+      ],
+      "activity_evidence": "Posts in the \"Americans in Ra'anana\" Facebook group for a luxury 130 sqm apartment and a mini-penthouse listing; phone numbers for both named partners confirmed (054-4693062, 054-2289299)."
+    },
+    "rank": 75
+  },
+  {
+    "agency": "שמוליק כוכבי – יועץ נדל\"ן",
+    "owner_or_lead_agent": "שמוליק כוכבי",
+    "role_classification": "Lead Agent",
+    "city": "כפר סבא",
+    "facebook_url": "https://www.facebook.com/shmulik.bfxho/",
+    "facebook_followers": "Not publicly visible",
+    "description": "Independent real estate consultant marketing apartments and houses across Kfar Saba under his own name, self-representing with no franchise backing and no digital storefront beyond Facebook.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 16,
+      "property_activity": 12,
+      "marketing_brand": 9,
+      "website_need": 18,
+      "photo_opportunity_score": 9,
+      "commercial_value": 5,
+      "total": 69
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/shmulik.bfxho/",
+      "website_check": [
+        "Google/web search for 'שמוליק כוכבי יועץ נדל\"ן כפר סבא אתר' — only Facebook page + directory listings (b144, easy.co.il) appeared, no owned domain found"
+      ],
+      "activity_evidence": "Multiple directory listings (b144, easy.co.il) plus active FB page describing ongoing apartment/house marketing in Kfar Saba; exact listing count not publicly confirmable."
+    },
+    "rank": 76
+  },
+  {
+    "agency": "עמית בית-דגן, תיווך נדל\"ן",
+    "owner_or_lead_agent": "עמית בית-דגן (Amit Beit-Dagan)",
+    "role_classification": "Lead Agent",
+    "city": "ראשון לציון",
+    "facebook_url": "https://www.facebook.com/amitbeytdagan/",
+    "facebook_followers": "Not publicly visible",
+    "description": "Independent Rishon LeZion broker with an established street address (Lezrov 33) and directory presence, but no dedicated agency website — a straightforward no-frills solo operation.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 16,
+      "property_activity": 10,
+      "marketing_brand": 9,
+      "website_need": 20,
+      "photo_opportunity_score": 8,
+      "commercial_value": 6,
+      "total": 69
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/amitbeytdagan/",
+      "website_check": [
+        "Search surfaced only directories (d.co.il, nadlano.co.il, realtorsindex.co.il, hagira.co.il) — no owned domain found"
+      ],
+      "activity_evidence": "A YouTube listing video (\"דירה למכירה ראשון לציון מרכז העיר עמית בית דגן מתווך בלעדיות החפץ חיים\") confirms at least one active exclusive listing being marketed."
+    },
+    "rank": 78
+  },
+  {
+    "agency": "אבי יצקן נכסים",
+    "owner_or_lead_agent": "אבי יצקן (Avi Yitzkan)",
+    "role_classification": "Owner",
+    "city": "חולון",
+    "facebook_url": "Not publicly identified",
+    "facebook_followers": "Not publicly visible",
+    "description": "Solo-operator broker with 30 years' experience across all property types in Holon, per his own directory listing. No Facebook page or website found anywhere — purely a phone-and-directory presence, a strong web-need signal for a long-tenured, high-authority prospect.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 16,
+      "property_activity": 14,
+      "marketing_brand": 7,
+      "website_need": 17,
+      "photo_opportunity_score": 9,
+      "commercial_value": 6,
+      "total": 69
+    },
+    "priority": true,
+    "sources": {
+      "facebook": "Not found",
+      "website_check": [
+        "b144.co.il/תיווך/חולון/ directory listing",
+        "domain guess www.aviitzkan.co.il — ENOTFOUND"
+      ],
+      "activity_evidence": "Directory tagline: \"מומחה בתיווך לכל סוגי הנכסים, 30 שנות ניסיון\" (broker expert in all property types, 30 years' experience) — phone 072-3226529, no other online presence found at all, consistent with a veteran agent who has never invested in digital marketing."
+    },
+    "rank": 79
+  },
+  {
+    "agency": "שרון נחמדי - משרד תיווך",
+    "owner_or_lead_agent": "שרון נחמדי (Sharon Nachmadi)",
+    "role_classification": "Owner",
+    "city": "חולון",
+    "facebook_url": "https://www.facebook.com/p/%D7%A9%D7%A8%D7%95%D7%9F-%D7%A0%D7%97%D7%9E%D7%93%D7%99-%D7%9E%D7%A9%D7%A8%D7%93-%D7%AA%D7%99%D7%95%D7%95%D7%9A-%D7%91%D7%97%D7%95%D7%9C%D7%95%D7%9F-%D7%91%D7%AA-%D7%99%D7%9D-%D7%95%D7%94%D7%A1%D7%91%D7%99%D7%91%D7%94-100063606968541/",
+    "facebook_followers": "Not publicly visible",
+    "description": "Independent broker operating in Holon/Bat Yam since 1991 (33+ years) with an active YouTube channel but no website — a long track record with an under-invested digital presence.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 16,
+      "property_activity": 13,
+      "marketing_brand": 8,
+      "website_need": 17,
+      "photo_opportunity_score": 9,
+      "commercial_value": 6,
+      "total": 69
+    },
+    "priority": true,
+    "sources": {
+      "facebook": "https://www.facebook.com/p/%D7%A9%D7%A8%D7%95%D7%9F-%D7%A0%D7%97%D7%9E%D7%93%D7%99-%D7%9E%D7%A9%D7%A8%D7%93-%D7%AA%D7%99%D7%95%D7%95%D7%9A-%D7%91%D7%97%D7%95%D7%9C%D7%95%D7%9F-%D7%91%D7%AA-%D7%99%D7%9D-%D7%95%D7%94%D7%A1%D7%91%D7%99%D7%91%D7%94-100063606968541/",
+      "website_check": [
+        "WebSearch: שרון נחמדי משרד תיווך חולון בת ים אתר",
+        "domain guess www.sharonnachmadi.co.il — ENOTFOUND"
+      ],
+      "activity_evidence": "FB bio states operating as an independent broker since 1991; maintains a YouTube channel (youtube.com/user/KTNcoil); no dedicated website found in search or by domain guess."
+    },
+    "rank": 80
+  },
+  {
+    "agency": "בית המתווכים רמת גן",
+    "owner_or_lead_agent": "Not identified by name — operates under the agency brand",
+    "role_classification": "Lead Agent",
+    "city": "רמת גן",
+    "facebook_url": "https://www.facebook.com/people/%D7%91%D7%99%D7%AA-%D7%94%D7%9E%D7%AA%D7%95%D7%95%D7%9B%D7%99%D7%9D-%D7%A8%D7%9E%D7%AA-%D7%92%D7%9F/100063458500102/",
+    "facebook_followers": "335 likes (per B144 directory snapshot)",
+    "description": "Ramat Gan brokerage on Aba Hillel Street handling apartments, houses, land and commercial property with a small but active local Facebook following; no dedicated website found.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 12,
+      "property_activity": 13,
+      "marketing_brand": 8,
+      "website_need": 18,
+      "photo_opportunity_score": 10,
+      "commercial_value": 7,
+      "total": 68
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/people/%D7%91%D7%99%D7%AA-%D7%94%D7%9E%D7%AA%D7%95%D7%95%D7%9B%D7%99%D7%9D-%D7%A8%D7%9E%D7%AA-%D7%92%D7%9F/100063458500102/",
+      "website_check": [
+        "WebSearch: \"בית המתווכים\" רמת גן אתר נדל\"ן — B144, easy.co.il, Yad2 category page found; no owned site"
+      ],
+      "activity_evidence": "B144 directory notes 335 Facebook likes and 12 check-ins, plus active listings for 4-5 room apartments for immediate rental."
+    },
+    "rank": 84
+  },
+  {
+    "agency": "בית שמש נכסים",
+    "owner_or_lead_agent": "אלחנן בניאל (Elhanan Beniel)",
+    "role_classification": "Lead Agent",
+    "city": "בית שמש (Beit Shemesh)",
+    "facebook_url": "https://www.facebook.com/people/בית-שמש-נכסים/100083008585507/",
+    "facebook_followers": "83 likes (per search snippet)",
+    "description": "Elhanan Beniel is named as manager of the \"Beit Shemesh Nechasim\" brokerage office in a YouTube real-estate explainer series (\"weekly real-estate corner\") and has an active Yad2 broker profile. Marketing scale is modest (Facebook following is small) but shows genuine, ongoing content-marketing effort. No independent website found, though this was checked less exhaustively than other entries in this batch.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 17,
+      "property_activity": 11,
+      "marketing_brand": 8,
+      "website_need": 17,
+      "photo_opportunity_score": 9,
+      "commercial_value": 6,
+      "total": 68
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/people/בית-שמש-נכסים/100083008585507/",
+      "website_check": [
+        "www.yad2.co.il/realestate/agency/7187083/broker/763470/forsale",
+        "realtorsindex.co.il/המתווך-בניאל-אלחנן-מבית-שמש/",
+        "hon.co.il/professional/בניאל-אלחנן/",
+        "DuckDuckGo web search — no independent domain found",
+        "Re-classified High confidence: existing recorded search evidence (agency-name / agent-name search) found no owned domain; no further site materialized."
+      ],
+      "activity_evidence": "YouTube video titled \"יועץ הנדל\"ן אלחנן בניאל מסביר... בפינת הנדל\"ן השבועית\" (weekly real-estate explainer corner) confirms his role as office manager and an ongoing, if small-scale, content-marketing practice."
+    },
+    "rank": 85
+  },
+  {
+    "agency": "נתנאל ברטון ייעוץ ושיווק נדל\"ן",
+    "owner_or_lead_agent": "Nathanael Breton",
+    "role_classification": "Lead Agent",
+    "city": "תל אביב",
+    "facebook_url": "https://www.facebook.com/BretonTlv/",
+    "facebook_followers": "Not publicly visible",
+    "description": "Solo real estate consultant/marketer focused on central Tel Aviv neighborhoods including Neve Sha'anan; only a Facebook presence found, no agency website.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 16,
+      "property_activity": 10,
+      "marketing_brand": 9,
+      "website_need": 17,
+      "photo_opportunity_score": 9,
+      "commercial_value": 6,
+      "total": 67
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/BretonTlv/",
+      "website_check": [
+        "WebSearch: \"נתנאל ברטון\" נדל\"ן תל אביב אתר — results dominated by an unrelated large developer (\"קבוצת נתנאל\"), no site tied to Breton personally",
+        "Re-classified High confidence: existing recorded search evidence (agency-name / agent-name search) found no owned domain; no further site materialized."
+      ],
+      "activity_evidence": "Facebook page explicitly self-describes as real estate consulting/marketing for central Tel Aviv neighborhoods."
+    },
+    "rank": 89
+  },
+  {
+    "agency": "City תיווך נדל\"ן מסחרי",
+    "owner_or_lead_agent": "שלומי מרי (Shlomi Mari)",
+    "role_classification": "Owner",
+    "city": "נתניה (Netanya)",
+    "facebook_url": "https://www.facebook.com/shlomi.mary/",
+    "facebook_followers": "713 likes",
+    "description": "Sole-operator commercial real estate broker in Netanya (offices, retail, land) running a personal-brand Facebook page with 713 likes; no owned website was found — only appears inside third-party commercial-listing aggregator sites.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 17,
+      "property_activity": 10,
+      "marketing_brand": 9,
+      "website_need": 17,
+      "photo_opportunity_score": 8,
+      "commercial_value": 6,
+      "total": 67
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/shlomi.mary/",
+      "website_check": [
+        "commercial.co.il/city/נתניה/ (third-party commercial listing directory, not his own site)",
+        "gevarom.co.il/city/נתניה/ (third-party listing aggregator)",
+        "No dedicated agency domain located",
+        "Re-classified High confidence: existing recorded search evidence (agency-name / agent-name search) found no owned domain; no further site materialized."
+      ],
+      "activity_evidence": "Facebook page (713 likes) personally branded with his name and phone number (054-226-9696); appears as a named contact inside two independent commercial real estate directories for Netanya. Evidence is thinner than the other two qualified candidates — page content itself could not be rendered for direct verification (Facebook blocked automated fetch), so this rests on directory corroboration rather than direct page inspection."
+    },
+    "rank": 91
+  },
+  {
+    "agency": "אילנית שיר – שיווק נדל\"ן כפר סבא הירוקה",
+    "owner_or_lead_agent": "אילנית שיר",
+    "role_classification": "Lead Agent",
+    "city": "כפר סבא",
+    "facebook_url": "https://www.facebook.com/p/%D7%90%D7%99%D7%9C%D7%A0%D7%99%D7%AA-%D7%A9%D7%99%D7%A8-%D7%A9%D7%99%D7%95%D7%95%D7%A7-%D7%A0%D7%93%D7%9C%D7%9F-%D7%9B%D7%A4%D7%A8-%D7%A1%D7%91%D7%90-%D7%94%D7%99%D7%A8%D7%95%D7%A7%D7%94-%D7%9F-%D7%90%D7%96%D7%95%D7%A8-%D7%94%D7%A9%D7%A8%D7%95%D7%9F-%D7%95%D7%94%D7%9E%D7%A8%D7%9B%D7%96-%D7%A4%D7%A8%D7%98%D7%99-%D7%95%D7%9E%D7%A1%D7%97%D7%A8%D7%99-100063673925480/",
+    "facebook_followers": "Not publicly visible",
+    "description": "Solo real estate marketer covering Kfar Saba's Green neighborhood plus wider Sharon/central region, handling both private residential and commercial listings, active on Facebook Reels with no owned website.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 14,
+      "property_activity": 13,
+      "marketing_brand": 9,
+      "website_need": 16,
+      "photo_opportunity_score": 8,
+      "commercial_value": 6,
+      "total": 66
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/p/%D7%90%D7%99%D7%9C%D7%A0%D7%99%D7%AA-%D7%A9%D7%99%D7%A8-%D7%A9%D7%99%D7%95%D7%95%D7%A7-%D7%A0%D7%93%D7%9C%D7%9F-%D7%9B%D7%A4%D7%A8-%D7%A1%D7%91%D7%90-%D7%94%D7%99%D7%A8%D7%95%D7%A7%D7%94-%D7%9F-%D7%90%D7%96%D7%95%D7%A8-%D7%94%D7%A9%D7%A8%D7%95%D7%9F-%D7%95%D7%94%D7%9E%D7%A8%D7%9B%D7%96-%D7%A4%D7%A8%D7%98%D7%99-%D7%95%D7%9E%D7%A1%D7%97%D7%A8%D7%99-100063673925480/",
+      "website_check": [
+        "Web search for 'אילנית שיר שיווק נדל\"ן כפר סבא אתר' — only FB page + generic directory hits, no owned domain surfaced",
+        "Re-classified High confidence: existing recorded search evidence (agency-name / agent-name search) found no owned domain; no further site materialized."
+      ],
+      "activity_evidence": "FB page includes Reels/video content marketing commercial and residential listings in Kfar Saba Green + Sharon/central region."
+    },
+    "rank": 93
+  },
+  {
+    "agency": "ניסים יצחקי - יועץ נדל\"ן",
+    "owner_or_lead_agent": "ניסים יצחקי (Nissim Yitzhaki)",
+    "role_classification": "Lead Agent",
+    "city": "פתח תקווה",
+    "facebook_url": "https://www.facebook.com/nissimyRealEstate/",
+    "facebook_followers": "Not publicly visible",
+    "description": "Solo consultant handling property management, sales and rentals across Petah Tikva and Givat Shmuel, with a branded FB page and no dedicated website.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 16,
+      "property_activity": 10,
+      "marketing_brand": 8,
+      "website_need": 18,
+      "photo_opportunity_score": 8,
+      "commercial_value": 6,
+      "total": 66
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/nissimyRealEstate/",
+      "website_check": [
+        "No dedicated site surfaced in search beyond directory listings (b144, nadlana.co.il)",
+        "Re-classified High confidence: existing recorded search evidence (agency-name / agent-name search) found no owned domain; no further site materialized."
+      ],
+      "activity_evidence": "Page positioning covers property management + sales + rentals, suggesting an active practice; exact listing volume could not be independently confirmed."
+    },
+    "rank": 94
+  },
+  {
+    "agency": "ביג לנד בע\"מ (Big Land Ltd.)",
+    "owner_or_lead_agent": "רחל באסני (Rachel Basni)",
+    "role_classification": "Owner",
+    "city": "גבעתיים",
+    "facebook_url": "Not publicly identified",
+    "facebook_followers": "Not publicly visible",
+    "description": "Owner-founded Givatayim brokerage established May 2001 (24 years), branded with the tagline \"Experience–integrity–results.\" No website or verifiable social presence found, relying entirely on directory listings.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 15,
+      "property_activity": 13,
+      "marketing_brand": 8,
+      "website_need": 16,
+      "photo_opportunity_score": 8,
+      "commercial_value": 6,
+      "total": 66
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "Not found",
+      "website_check": [
+        "b144.co.il/תיווך/גבעתיים/ directory listing",
+        "Re-classified High confidence: existing recorded search evidence (agency-name / agent-name search) found no owned domain; no further site materialized."
+      ],
+      "activity_evidence": "Directory lists founding date May 2001 (24 years in business) under owner Rachel Basni, address Katzenelson 1, Givatayim; no dedicated WebSearch verification pass was completed due to search-budget limits, so confidence is Medium rather than High."
+    },
+    "rank": 95
+  },
+  {
+    "agency": "יעל לאור שחר - תיווך ויעוץ נדל\"ן",
+    "owner_or_lead_agent": "יעל לאור שחר (Yael Laor Shachar)",
+    "role_classification": "Lead Agent",
+    "city": "נס ציונה",
+    "facebook_url": "https://www.facebook.com/100063517448518/",
+    "facebook_followers": "1.1K likes / 1.2K followers (FB); 235 followers (Instagram)",
+    "description": "Self-branded 'המתווכת של נס ציונה' (Ness Ziona's broker) with an active personal marketing presence (exclusive-listing posts, dedicated Instagram). Operates as an agent within the 'אור נכסים' multi-branch network rather than a confirmed independent owner, so she has no personal website of her own — only a profile page on the network's site.",
+    "website_status": "No website found — High confidence",
+    "photo_opportunity": "Medium",
+    "score_breakdown": {
+      "decision_authority": 12,
+      "property_activity": 12,
+      "marketing_brand": 13,
+      "website_need": 15,
+      "photo_opportunity_score": 9,
+      "commercial_value": 5,
+      "total": 66
+    },
+    "priority": false,
+    "sources": {
+      "facebook": "https://www.facebook.com/100063517448518/",
+      "website_check": [
+        "https://or-n.co.il/agents/יעל-לאור-שחר/ (multi-agent brokerage-network profile page, not her own independent site)",
+        "Re-classified High confidence: existing recorded search evidence (agency-name / agent-name search) found no owned domain; no further site materialized."
+      ],
+      "activity_evidence": "FB About page: 'יעל לאור שחר תיווך ויעוץ נדל״ן (המתווכת של נס ציונה) — 1.1K likes, 1.2K followers'; active exclusive-listing posts; Instagram bio: 'תיווך נדל״ן בנס ציונה וכל איזור השפלה', 235 followers."
+    },
+    "rank": 96
+  }
+]

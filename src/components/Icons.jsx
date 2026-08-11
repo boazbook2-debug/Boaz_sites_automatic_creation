@@ -153,6 +153,14 @@ export function MapPinIcon(props) {
   );
 }
 
+export function ExternalLinkIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} {...props}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5h5v5M19 5l-8 8M9 5H6a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3" />
+    </svg>
+  );
+}
+
 export function StarIcon(props) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>

@@ -1,0 +1,256 @@
+{
+  "qualified": [
+    {
+      "agency": "מיקי גולן נכסים",
+      "owner_or_lead_agent": "Michael (Miki) Golan",
+      "role_classification": "Owner",
+      "city": "תל אביב",
+      "facebook_url": "https://www.facebook.com/MichaelGolanRealEstate/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Long-established (broker's license since 1997) independent Tel Aviv brokerage handling both sales and rentals; active on Yad2/Madlan but no dedicated agency website found after multiple targeted searches.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 18, "property_activity": 14, "marketing_brand": 10, "website_need": 18, "photo_opportunity_score": 10, "commercial_value": 8, "total": 78},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/MichaelGolanRealEstate/",
+        "website_check": ["WebSearch: \"מיקי גולן\" נכסים תיווך נדל\"ן תל אביב", "madlan.co.il/agent/re_agent_kLN3boTeNdk (agent profile, no independent site linked)"],
+        "activity_evidence": "Madlan agent profile and Yad2 rental/sale listings confirm ongoing brokerage activity; license held since 1997 (30 yrs operating), phone 077-729-6293 published on directories."
+      }
+    },
+    {
+      "agency": "תיווך שכונת התקווה - תומר שרעבי",
+      "owner_or_lead_agent": "Tomer Sharabi",
+      "role_classification": "Lead Agent",
+      "city": "תל אביב",
+      "facebook_url": "https://www.facebook.com/100064805103511/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Solo neighborhood specialist covering the Hatikva quarter of Tel Aviv, runs several dedicated Facebook pages (listings, parcellation posts, video content) but only a bare auto-generated Google Business placeholder page instead of a real website.",
+      "website_status": "Poor website",
+      "photo_opportunity": "High",
+      "score_breakdown": {"decision_authority": 17, "property_activity": 15, "marketing_brand": 12, "website_need": 14, "photo_opportunity_score": 12, "commercial_value": 5, "total": 75},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/100064805103511/",
+        "website_check": ["WebSearch: תומר שרעבי דירות התקווה תל אביב אתר", "real-estate-agency-17060.business.site (bare Google Business auto-page, not a built site)"],
+        "activity_evidence": "Multiple active FB pages/videos dedicated solely to Hatikva-neighborhood listings and parcellation posts, phone 050-5343432 consistent across all of them, indicating frequent, ongoing deal flow in a single niche neighborhood."
+      }
+    },
+    {
+      "agency": "נדל\"ן יוקרה תל אביב - מיכל פוס",
+      "owner_or_lead_agent": "Michal Fuss",
+      "role_classification": "Lead Agent",
+      "city": "תל אביב",
+      "facebook_url": "https://www.facebook.com/Michalfussrealestate/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Independent luxury-property broker covering Tel Aviv, Ramat Gan and Givatayim, personally branded Facebook page; no dedicated website surfaced despite the high-value niche.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 17, "property_activity": 12, "marketing_brand": 11, "website_need": 17, "photo_opportunity_score": 8, "commercial_value": 10, "total": 75},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/Michalfussrealestate/",
+        "website_check": ["WebSearch: \"מיכל פוס\" נדל\"ן יוקרה אתר — only FB and directory snippets returned, no owned domain found"],
+        "activity_evidence": "Personally named luxury real estate page explicitly covering Tel Aviv/Ramat Gan/Givatayim; luxury segment implies higher-value transactions."
+      }
+    },
+    {
+      "agency": "סאם לי נדל\"ן",
+      "owner_or_lead_agent": "Sam Lee",
+      "role_classification": "Lead Agent",
+      "city": "תל אביב",
+      "facebook_url": "https://www.facebook.com/samleetlv/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Boutique one-person advisory brokerage in north/central Tel Aviv handling buy/sell/rent transactions; no dedicated website found across multiple searches, only a Facebook presence.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 16, "property_activity": 12, "marketing_brand": 10, "website_need": 18, "photo_opportunity_score": 9, "commercial_value": 8, "total": 73},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/samleetlv/",
+        "website_check": ["WebSearch: \"סאם לי\" נדל\"ן תל אביב אתר website — no owned domain surfaced"],
+        "activity_evidence": "Described in search snippets as an active boutique consultant for purchase/sale/rental in north-central Tel Aviv."
+      }
+    },
+    {
+      "agency": "אפיקי מרום שירותי נדל\"ן",
+      "owner_or_lead_agent": "Aviran (per Facebook handle \"avirannadlan\")",
+      "role_classification": "Lead Agent",
+      "city": "רמת גן",
+      "facebook_url": "https://www.facebook.com/avirannadlan/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Established Ramat Gan brokerage covering several neighborhoods (HaBursa, Shankar, Rishonim, Borochov-Givatayim) with an 8-review 5-star rating on directories; no dedicated agency website located.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 14, "property_activity": 14, "marketing_brand": 9, "website_need": 18, "photo_opportunity_score": 10, "commercial_value": 7, "total": 72},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/avirannadlan/",
+        "website_check": ["WebSearch: \"אפיקי מרום\" רמת גן נדל\"ן אביר אתר — only directory listings (d.co.il, b144, Madlan, homeless.co.il) surfaced, no owned domain"],
+        "activity_evidence": "Listed on multiple directories with 8 reviews and 5-star average; office covers 4 distinct Ramat Gan/Givatayim neighborhoods, phone 03-613-2666 consistent across listings, indicating an active multi-neighborhood practice."
+      }
+    },
+    {
+      "agency": "עופר נדל\"ן",
+      "owner_or_lead_agent": "Ofer (owner name inferred from agency branding, not independently confirmed)",
+      "role_classification": "Lead Agent",
+      "city": "רמת גן",
+      "facebook_url": "https://www.facebook.com/p/Offer-%D7%A2%D7%95%D7%A4%D7%A8-%D7%A0%D7%93%D7%9C%D7%9F-100071364433671/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Ramat Gan brokerage specializing in the Charozim and HaGafen neighborhoods, with listings on Yad2/Madlan; no dedicated website found.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 15, "property_activity": 13, "marketing_brand": 8, "website_need": 18, "photo_opportunity_score": 10, "commercial_value": 7, "total": 71},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/p/Offer-%D7%A2%D7%95%D7%A4%D7%A8-%D7%A0%D7%93%D7%9C%D7%9F-100071364433671/",
+        "website_check": ["WebSearch: \"עופר נדל\\\"ן\" רמת גן חרוזים הגפן אתר — only Yad2 (agency/555709) and Madlan agentsOffice found, both third-party portals, no owned site"],
+        "activity_evidence": "Active Yad2 agency profile (agency/555709) and Madlan brokers directory listing for the Charozim/HaGafen submarket."
+      }
+    },
+    {
+      "agency": "גלית סעדון - שיווק, תיווך נכסים ופרויקטים",
+      "owner_or_lead_agent": "Galit Saadon",
+      "role_classification": "Lead Agent",
+      "city": "רמת גן",
+      "facebook_url": "https://www.facebook.com/100088279532262",
+      "facebook_followers": "Not publicly visible",
+      "description": "Ramat Gan/Givatayim broker active since 2013, Madlan Gold Club member, CRS-certified, also manages properties for owners living abroad; no personal agency website found (note: her Facebook URL slug \"galitremax\" suggests a possible past RE/MAX affiliation, flagged for follow-up verification).",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 14, "property_activity": 13, "marketing_brand": 10, "website_need": 15, "photo_opportunity_score": 9, "commercial_value": 8, "total": 69},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/100088279532262",
+        "website_check": ["WebSearch: \"גלית סעדון\" נדל\"ן רמת גן אתר — Madlan agent profile, get-marketing.co.il landing bio, Instagram and FB found; no owned domain"],
+        "activity_evidence": "Madlan Gold Club (top-agent tier) member with over a decade of buy/sell/rental transactions and remote property management for overseas owners."
+      }
+    },
+    {
+      "agency": "בית המתווכים רמת גן",
+      "owner_or_lead_agent": "Not identified by name — operates under the agency brand",
+      "role_classification": "Lead Agent",
+      "city": "רמת גן",
+      "facebook_url": "https://www.facebook.com/people/%D7%91%D7%99%D7%AA-%D7%94%D7%9E%D7%AA%D7%95%D7%95%D7%9B%D7%99%D7%9D-%D7%A8%D7%9E%D7%AA-%D7%92%D7%9F/100063458500102/",
+      "facebook_followers": "335 likes (per B144 directory snapshot)",
+      "description": "Ramat Gan brokerage on Aba Hillel Street handling apartments, houses, land and commercial property with a small but active local Facebook following; no dedicated website found.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 12, "property_activity": 13, "marketing_brand": 8, "website_need": 18, "photo_opportunity_score": 10, "commercial_value": 7, "total": 68},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/people/%D7%91%D7%99%D7%AA-%D7%94%D7%9E%D7%AA%D7%95%D7%95%D7%9B%D7%99%D7%9D-%D7%A8%D7%9E%D7%AA-%D7%92%D7%9F/100063458500102/",
+        "website_check": ["WebSearch: \"בית המתווכים\" רמת גן אתר נדל\"ן — B144, easy.co.il, Yad2 category page found; no owned site"],
+        "activity_evidence": "B144 directory notes 335 Facebook likes and 12 check-ins, plus active listings for 4-5 room apartments for immediate rental."
+      }
+    },
+    {
+      "agency": "נתנאל ברטון ייעוץ ושיווק נדל\"ן",
+      "owner_or_lead_agent": "Nathanael Breton",
+      "role_classification": "Lead Agent",
+      "city": "תל אביב",
+      "facebook_url": "https://www.facebook.com/BretonTlv/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Solo real estate consultant/marketer focused on central Tel Aviv neighborhoods including Neve Sha'anan; only a Facebook presence found, no agency website.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 16, "property_activity": 10, "marketing_brand": 9, "website_need": 17, "photo_opportunity_score": 9, "commercial_value": 6, "total": 67},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/BretonTlv/",
+        "website_check": ["WebSearch: \"נתנאל ברטון\" נדל\"ן תל אביב אתר — results dominated by an unrelated large developer (\"קבוצת נתנאל\"), no site tied to Breton personally"],
+        "activity_evidence": "Facebook page explicitly self-describes as real estate consulting/marketing for central Tel Aviv neighborhoods."
+      }
+    },
+    {
+      "agency": "נדלן משתלם",
+      "owner_or_lead_agent": "Likely Aviv Limor (inferred from published contact email avivlimor@gmail.com)",
+      "role_classification": "Lead Agent",
+      "city": "רמת גן",
+      "facebook_url": "https://www.facebook.com/nadlanmishtalem/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Givatayim/Ramat Gan apartment brokerage with a 100%-positive review record on a local directory (6 reviews); no dedicated website found.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 13, "property_activity": 11, "marketing_brand": 8, "website_need": 18, "photo_opportunity_score": 10, "commercial_value": 6, "total": 66},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/nadlanmishtalem/",
+        "website_check": ["WebSearch: \"נדלן משתלם\" גבעתיים רמת גן אתר — only Madlan/Yad2 city-wide portals and the FB page found, no owned domain"],
+        "activity_evidence": "Local directory lists phone +972-54-266-2622, email, and 6 reviews at 100% positive for brokerage services in Givatayim/Ramat Gan."
+      }
+    },
+    {
+      "agency": "תיווך נכסים בתל אביב - שי שחק",
+      "owner_or_lead_agent": "Shai Shachak",
+      "role_classification": "Lead Agent",
+      "city": "תל אביב",
+      "facebook_url": "https://www.facebook.com/p/%D7%AA%D7%99%D7%95%D7%95%D7%9A-%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-%D7%91%D7%AA%D7%9C-%D7%90%D7%91%D7%99%D7%91-%D7%A9-%D7%A9%D7%97%D7%A7-100063709703620/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Solo Tel Aviv broker/advisor operating multiple branded Facebook presences; only a lead-capture landing-page funnel found (no built website), which functions as a substitute for a real site.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 15, "property_activity": 10, "marketing_brand": 8, "website_need": 16, "photo_opportunity_score": 9, "commercial_value": 7, "total": 65},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/p/%D7%AA%D7%99%D7%95%D7%95%D7%9A-%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-%D7%91%D7%AA%D7%9C-%D7%90%D7%91%D7%99%D7%91-%D7%A9-%D7%A9%D7%97%D7%A7-100063709703620/",
+        "website_check": ["WebSearch: \"ש שחק\" תיווך נכסים תל אביב אתר — found only a lp.vp4.me lead-funnel link (not a built website) and a second FB page (\"יועץ הנדל\\\"ן שלך\") for the same person, no real site"],
+        "activity_evidence": "Two separate Facebook business presences under the same person's name/brand, consistent with an actively marketing solo broker."
+      }
+    },
+    {
+      "agency": "חיימוב נכסים",
+      "owner_or_lead_agent": "Chaimov (surname-branded agency, first name not confirmed)",
+      "role_classification": "Lead Agent",
+      "city": "רמת גן",
+      "facebook_url": "https://www.facebook.com/profile.php?id=100054603692681",
+      "facebook_followers": "Not publicly visible",
+      "description": "Surname-branded independent brokerage covering Ramat Gan, Givatayim and Tel Aviv sales/rentals; Facebook-only presence, no website located.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 15, "property_activity": 11, "marketing_brand": 7, "website_need": 16, "photo_opportunity_score": 9, "commercial_value": 7, "total": 65},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/profile.php?id=100054603692681",
+        "website_check": ["WebSearch: משרד תיווך גבעתיים רמת גן נכסים למכירה — surfaced the FB page \"חיימוב נכסים: נדל\\\"ן דירות למכירה/השכרה רמת גן גבעתיים תל אביב\"; no dedicated site search run due to session search-budget limit, so confidence is Medium rather than High"],
+        "activity_evidence": "Page name/description explicitly covers active sale and rental listings across Ramat Gan, Givatayim and Tel Aviv."
+      }
+    }
+  ],
+  "rejected": [
+    {"agency": "יש נדל\"ן (Yesh Nadlan)", "reason": "Has a fully built, modern professional website (yeshnadlan.co.il) with listings, about page, sold-price data — Good website, reject."},
+    {"agency": "Nadlan TLV (נדל\"ן TLV)", "reason": "Has an active professional website (nadlantlv.co.il) plus an X/Twitter presence — Good website, reject."},
+    {"agency": "ג'וזף תיווך יפו תל אביב", "reason": "Has an official website (joseph-real.co.il) with property listings, Instagram, and business email — Good website, reject."},
+    {"agency": "תיווך לב תל אביב / Lev TLV", "reason": "Operates under levtlv.co.il, a polished boutique luxury-brokerage website — Good website, reject."},
+    {"agency": "אלטשולר ניהול נכסים", "reason": "30-year-old firm with an established website (telavivit.co.il / altlv.co.il) — Good website, reject."},
+    {"agency": "סורלה קטורזה נדל\"ן / נכסים", "reason": "Has a dedicated boutique-agency website (sorelakatorza.com) — Good website, reject."},
+    {"agency": "ישראהום נדל\"ן (Sarit Yaakovi)", "reason": "30-year family agency with an active website (israhome.co.il) — Good website, reject."},
+    {"agency": "זמיר נדל\"ן", "reason": "Has a full website (zamirnadlan.co.il) and is actually headquartered/focused on Holon, not primarily Tel Aviv or Ramat Gan — Good website + wrong core city, reject."},
+    {"agency": "Nehasim - נכסים (Givatayim)", "reason": "Has an active website (nehasim.net) with blog content and listings — Good website, reject."},
+    {"agency": "אופק נדל\"ן (Tel Baruch)", "reason": "18-year-old agency with a full website (ofeknadlan.co.il) — Good website, reject."},
+    {"agency": "חגית סוכנות נדל\"ן", "reason": "Actually headquartered in Petach Tikva, not Tel Aviv/Ramat Gan as the name implied — wrong city, reject."},
+    {"agency": "Real4U (שירה פרנקל)", "reason": "Has an established website (real4u.co.il) with active project pages — Good website, reject."},
+    {"agency": "Open House (בית פתוח) Tel Aviv", "reason": "Full professional website (open-house.co.il) with team page, testimonials, blog — Good website, reject."},
+    {"agency": "טינר בן דוד (Ramat Gan/Givatayim)", "reason": "Has a professional personal-brand website (tinar.co.il) plus YouTube/Instagram — Good website, reject."},
+    {"agency": "טלי עמית / LIVIN (Ramat Gan)", "reason": "Profile is hosted and marketed on a professional agency website (livin.co.il) with testimonials — Good website, reject."},
+    {"agency": "רובין נכסים (Yaki Rubin, Ramat Gan/Givatayim)", "reason": "Has an active company website (rubinholdings.com) — Good website, reject."},
+    {"agency": "ירדני נדל\"ן מרום נווה (Ramat Gan)", "reason": "35-year agency with a full multi-page website (yardeninadlan.com) — Good website, reject."},
+    {"agency": "לידרס נדלן", "reason": "Actually headquartered and focused on Herzliya, not Ramat Gan/Tel Aviv, and has a professional website (a-leaders.co.il) — wrong city + good website, reject."},
+    {"agency": "אדוה תיווך עם חיוך (Givatayim)", "reason": "Has a dedicated website (adva-koren.com) — Good website, reject."},
+    {"agency": "רומנו מזרחי תיווך ושיווק נדל\"ן (Givatayim)", "reason": "Has a dedicated company website (romanomizrahi.com) — Good website, reject."},
+    {"agency": "Expert שיווק נדל\"ן (Barak Brenner, Ramat Gan)", "reason": "Has an active project-marketing website (barak-nadlan.com) — Good website, reject; also primarily a project-marketing firm rather than a residential brokerage with an owner's own listing flow."},
+    {"agency": "RE/MAX Win Tel Aviv", "reason": "National RE/MAX franchise — has corporate website and brand infrastructure; also decision authority sits with franchise/corporate, not an accessible independent owner."},
+    {"agency": "אנגלו סכסון רמת גן וגבעתיים", "reason": "National Anglo-Saxon franchise with an established corporate website and brand — not an independent prospect fitting the ICP."},
+    {"agency": "Yokra Estate (יוקרה אסטייט)", "reason": "Nationwide luxury brokerage brand/network rather than a single accessible independent owner in Tel Aviv/Ramat Gan; insufficient evidence of a single decision-maker to approach."},
+    {"agency": "IamHome TLV", "reason": "No individual owner/lead-agent name could be verified after available research; scored below the 65-point qualification threshold on decision-authority evidence."},
+    {"agency": "T.A נכסים ויזמות נדל\"ן (Ramat Gan/Givatayim/Tel Aviv)", "reason": "Facebook page confirms active listings across all three cities, but no individual owner/lead-agent name surfaced and remaining research budget was exhausted before deeper verification was possible; scored below the 65-point threshold on decision-authority evidence."},
+    {"agency": "רפי נכסים (Ramat Gan)", "reason": "Has an active website (rafinadlan.com) — Good website, reject."},
+    {"agency": "L&D נכסים", "reason": "Based in Bnei Brak, not Tel Aviv or Ramat Gan — wrong city, reject."},
+    {"agency": "סטוקהאוס נכסים (Ramat Gan)", "reason": "Facebook page located but returned no usable About/website/activity data before the session's web-search budget was exhausted — insufficient public info to verify against the ICP criteria."},
+    {"agency": "המתווכים • תיווך • דרום תל אביב", "reason": "Facebook page located but content was inaccessible (truncated) and no independent verification of ownership, activity or website status could be completed — insufficient public info to verify."},
+    {"agency": "גלובל נכסים - גבעתיים - רמת גן", "reason": "Facebook page could not be loaded/verified (mobile link returned an error page) — insufficient public info to verify."},
+    {"agency": "מאגרי - סוכן נדל\"ן", "reason": "Appears to be an individual post/photo rather than an active business Page; insufficient evidence of an ongoing independent agency to qualify."},
+    {"agency": "דירות בתל אביב ללא תיווך / RentinTLV / tlvrent (Facebook groups)", "reason": "These are public discussion/classifieds groups, not real estate agency business pages — not a prospect."},
+    {"agency": "קהילת מתווכי הנדל\"ן, מתווכים עם דרך ארץ", "reason": "A professional community/discussion group, not a single agency or agent to approach."}
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "qualified": [
+    {
+      "agency": "נדל\"ן מצליח - עופרה שורק",
+      "owner_or_lead_agent": "עופרה שורק (Ofra Shorek)",
+      "role_classification": "Owner",
+      "city": "רמלה (Ramla)",
+      "facebook_url": "https://www.facebook.com/Ofra.Shorek.Nadlan.Matzliach/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Owner-operated brokerage at a real street-front office (Uzi Hitman St 44, Ramla) with published business hours and licensed agents; self-describes as one of the leading firms in income-producing real estate in the area. No independent website found across five separate directory/association checks.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 19,
+        "property_activity": 14,
+        "marketing_brand": 9,
+        "website_need": 20,
+        "photo_opportunity_score": 9,
+        "commercial_value": 8,
+        "total": 79
+      },
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/Ofra.Shorek.Nadlan.Matzliach/",
+        "website_check": ["reba.org.il (REBA - Israel Real Estate Brokers Association listing)", "easy.co.il/page/26507296", "www.d.co.il/80153270/32970/", "www.yad2.co.il/realestate/agency/3098938/broker/5598/forsale", "DuckDuckGo web search — no independent domain found"],
+        "activity_evidence": "REBA association profile confirms real office, address, phone, fax, and posted weekly hours (Sun-Thu 9am-8pm); described as an established income-property specialist in Ramla."
+      }
+    },
+    {
+      "agency": "צעדים - נדל\"ן ופיננסים",
+      "owner_or_lead_agent": "אפי תייר (Efi Tayir)",
+      "role_classification": "Owner",
+      "city": "רמלה (Ramla)",
+      "facebook_url": "https://www.facebook.com/tseadim2019/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Founder/CEO-owned brokerage and mortgage-advisory firm established 2017, with a 4-person team and 30+ live listings across Ramla and Lod. Has a website (tseadim.com) but it is dated and unpolished — the English mirror shows unfinished translation placeholders and a duplicated, cluttered menu structure typical of an early-2000s template.",
+      "website_status": "Poor website",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 19,
+        "property_activity": 16,
+        "marketing_brand": 9,
+        "website_need": 14,
+        "photo_opportunity_score": 9,
+        "commercial_value": 8,
+        "total": 75
+      },
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/tseadim2019/",
+        "website_check": ["https://tseadim.com (Hebrew site, functional but dated)", "https://tseadim.com/t-en/ (English mirror shows unfinished {{trans:...}} placeholders and broken template hallmarks)"],
+        "activity_evidence": "Site shows 30+ active listings (rentals ₪4,100-6,800/mo, sales to ₪1.05M+), a 4-person named team, and pre-sale project marketing (incl. an international Dubai project), indicating real, ongoing deal flow since 2017."
+      }
+    },
+    {
+      "agency": "HT שירותי נדל\"ן",
+      "owner_or_lead_agent": "רחלי כהן (Racheli Cohen)",
+      "role_classification": "Owner",
+      "city": "רמלה (Ramla)",
+      "facebook_url": "https://www.facebook.com/61585723238136/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Boutique one-owner brokerage in Ramla; a B144 directory listing quotes the owner directly (\"boutique office owned by me - Racheli Cohen, an experienced broker with 5 years' experience\"). No independent website found.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 19,
+        "property_activity": 10,
+        "marketing_brand": 7,
+        "website_need": 20,
+        "photo_opportunity_score": 9,
+        "commercial_value": 6,
+        "total": 71
+      },
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/61585723238136/",
+        "website_check": ["www.b144.co.il (owner self-description found here)", "www.yad2.co.il/realestate/agency/8780204/forsale", "DuckDuckGo web search — no independent domain found"],
+        "activity_evidence": "B144 listing with owner-authored description and 5.0 rating; positions the firm as a boutique specialist in buying, selling and investment in Ramla."
+      }
+    },
+    {
+      "agency": "סגל יועצי נדל\"ן",
+      "owner_or_lead_agent": "ליז סגל (Liz Segal)",
+      "role_classification": "Lead Agent",
+      "city": "רמלה (Ramla)",
+      "facebook_url": "https://www.facebook.com/people/סגל-יועצי-נדלן/100063358755072/",
+      "facebook_followers": "12 (Facebook page likes, per search snippet)",
+      "description": "Office active since 2011 at Bar Ilan St 25, Ramla, self-described on Yad2 as ranking #1 in city transactions. Liz Segal (same surname as the office) is the named consultant/public face on Instagram. No independent website found. Facebook following is very low despite the strong transaction claim.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 14,
+        "property_activity": 18,
+        "marketing_brand": 6,
+        "website_need": 20,
+        "photo_opportunity_score": 9,
+        "commercial_value": 8,
+        "total": 75
+      },
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/people/סגל-יועצי-נדלן/100063358755072/",
+        "website_check": ["www.yad2.co.il/realestate/agency/5166726/forsale", "www.d.co.il/80149486/34590/", "www.instagram.com/lizsegal987/", "DuckDuckGo web search — no independent domain found"],
+        "activity_evidence": "Yad2 agency profile: \"active office since 2011... ranks #1 in city transactions\"; Instagram (@lizsegal987) shows an active consultant posting Ramla-Lod listings."
+      }
+    },
+    {
+      "agency": "סימה בתים יפים",
+      "owner_or_lead_agent": "סימה בסון (Sima Bason)",
+      "role_classification": "Owner",
+      "city": "רמלה (Ramla)",
+      "facebook_url": "https://www.facebook.com/sima.bason/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Owner-named brokerage (\"Sima Bason, owner with many years of experience in the brokerage industry\") covering Ramla and the surrounding moshavim in the Shfela region. Active Facebook posting of real listings. No independent website found.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 19,
+        "property_activity": 14,
+        "marketing_brand": 9,
+        "website_need": 20,
+        "photo_opportunity_score": 9,
+        "commercial_value": 7,
+        "total": 78
+      },
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/sima.bason/",
+        "website_check": ["nons.co.il/provider/סימה_בתים_יפים", "www.d.co.il/80072957/32970/", "DuckDuckGo web search — no independent domain found"],
+        "activity_evidence": "nons.co.il directory explicitly names Sima Bason as owner with many years' experience; Facebook posts show live listings in Ramla (e.g., a Ben Zvi St apartment in a pinui-binui zone)."
+      }
+    },
+    {
+      "agency": "תיווך אבי נכסים",
+      "owner_or_lead_agent": "אבי (Avi) — full surname not publicly found; business is named for him",
+      "role_classification": "Owner",
+      "city": "לוד (Lod)",
+      "facebook_url": "https://www.facebook.com/100046445078203/",
+      "facebook_followers": "243 likes (per search snippet)",
+      "description": "Long-established brokerage founded in 1993 (32 years / \"22 years of reputation\" per its own listings) operating from the Four Seasons commercial center in the Gani Aviv neighborhood of Lod — one of the neighborhood's veteran brokers. No independent website found despite checking multiple directories.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 17,
+        "property_activity": 15,
+        "marketing_brand": 10,
+        "website_need": 20,
+        "photo_opportunity_score": 9,
+        "commercial_value": 7,
+        "total": 78
+      },
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/100046445078203/",
+        "website_check": ["www.yad2.co.il/realestate/agency/166859/forsale", "easy.co.il/page/24560521", "nons.co.il/provider/תיווך_אבי_נכסים", "www.netpage.co.il/תיווך/תיווך-אבי-נכסים.htm", "ad.co.il/agency/823", "bikorett.com — no independent domain found across any listing"],
+        "activity_evidence": "Yad2: \"founded in 1993, a long tradition of reliable service at the highest level\"; multiple directories independently confirm 22+ years of reputation and the same Gani Aviv storefront address."
+      }
+    },
+    {
+      "agency": "אריה הדס הלן (תיווך נדל\"ן)",
+      "owner_or_lead_agent": "אריה הדס הלן (Arie Hadash Helen)",
+      "role_classification": "Owner",
+      "city": "לוד (Lod)",
+      "facebook_url": "https://www.facebook.com/Ariehadashelen/",
+      "facebook_followers": "3,515 likes, 18 talking about this (per Facebook page snippet)",
+      "description": "Solo, individually-licensed real estate broker (license #30828171) based in Lod, registered with the Ministry of Justice broker registry. By far the strongest Facebook following found among Lod candidates, with active listing/video posts. No independent website found.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 20,
+        "property_activity": 14,
+        "marketing_brand": 13,
+        "website_need": 20,
+        "photo_opportunity_score": 9,
+        "commercial_value": 7,
+        "total": 83
+      },
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/Ariehadashelen/",
+        "website_check": ["nadlano.co.il/office/אריה-הדס-הלן", "theagent.org.il/agents/אריה-הדס-הלן/ (Israeli broker registry, license #30828171)", "DuckDuckGo web search — no independent domain found"],
+        "activity_evidence": "Facebook page actively posts individual property listings (with photos/video) and eviction-agreement/urban-renewal deals in Lod; licensed and registered broker confirmed via theagent.org.il."
+      }
+    },
+    {
+      "agency": "בית שמש נכסים",
+      "owner_or_lead_agent": "אלחנן בניאל (Elhanan Beniel)",
+      "role_classification": "Lead Agent",
+      "city": "בית שמש (Beit Shemesh)",
+      "facebook_url": "https://www.facebook.com/people/בית-שמש-נכסים/100083008585507/",
+      "facebook_followers": "83 likes (per search snippet)",
+      "description": "Elhanan Beniel is named as manager of the \"Beit Shemesh Nechasim\" brokerage office in a YouTube real-estate explainer series (\"weekly real-estate corner\") and has an active Yad2 broker profile. Marketing scale is modest (Facebook following is small) but shows genuine, ongoing content-marketing effort. No independent website found, though this was checked less exhaustively than other entries in this batch.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 17,
+        "property_activity": 11,
+        "marketing_brand": 8,
+        "website_need": 17,
+        "photo_opportunity_score": 9,
+        "commercial_value": 6,
+        "total": 68
+      },
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/people/בית-שמש-נכסים/100083008585507/",
+        "website_check": ["www.yad2.co.il/realestate/agency/7187083/broker/763470/forsale", "realtorsindex.co.il/המתווך-בניאל-אלחנן-מבית-שמש/", "hon.co.il/professional/בניאל-אלחנן/", "DuckDuckGo web search — no independent domain found"],
+        "activity_evidence": "YouTube video titled \"יועץ הנדל\"ן אלחנן בניאל מסביר... בפינת הנדל\"ן השבועית\" (weekly real-estate explainer corner) confirms his role as office manager and an ongoing, if small-scale, content-marketing practice."
+      }
+    }
+  ],
+  "rejected": [
+    { "agency": "אליעזר נכסים (Eliezer Nechasim) - Beit Shemesh", "reason": "Good website — REJECT (modern, professional, eliezer-nechasim.co.il)" },
+    { "agency": "פיור נדל\"ן (Pure Nadlan) - Lod/Ramla", "reason": "Good website — REJECT (modern, professional, purenadlan.co.il; also covers Amir Levi, an agent under this agency)" },
+    { "agency": "פסגות נדל\"ן (Psagot) - Beit Shemesh", "reason": "Good website — REJECT (modern, professional, psagotreal-estate.co.il)" },
+    { "agency": "אור נכסים (Or Nechasim) - Ramla", "reason": "Good website — REJECT (or-n.co.il, 452 listings, multi-branch Shfela network)" },
+    { "agency": "H נדל\"ן (H Nadlan) - Beit Shemesh", "reason": "Good website — REJECT (hnadlan.co.il, 4-branch growing network)" },
+    { "agency": "נדל\"ן פלוס (Nadlan Plus / RBS Realty) - Beit Shemesh", "reason": "Good website — REJECT (nadlan-p.com, ~20-agent leading Beit Shemesh brokerage)" },
+    { "agency": "Lemkin Realty - Beit Shemesh", "reason": "Good website — REJECT (aliyahrealty.com, 24+ year Anglo agency, 1,847 FB likes)" },
+    { "agency": "נדל\"ן פרו (Nadlan Pro / אליה נזרי) - Lod-adjacent", "reason": "Good website — REJECT (nadlan-pro.co.il); also actually headquartered in Tel Aviv, not a Lod-based operation" },
+    { "agency": "Legacy Nadlan - Ramla", "reason": "No identifiable owner/decision-maker name found after multiple searches (Facebook, Yad2, Instagram all anonymous business-only) — cannot verify decision authority" },
+    { "agency": "W נדל\"ן - Beit Shemesh", "reason": "Strong activity signal (23+ reviews across 5 platforms, 4.5-5 star ratings, team of agents, no website) but no identifiable owner/manager name found anywhere — dropped rather than invent a contact name" },
+    { "agency": "Nadlan2me - Beit Shemesh", "reason": "Address/phone consistently point to Beit Shemesh across several directories, but one Facebook search result tied the same brand name to a Rehovot page — dropped for city-attribution/data-mixing risk" },
+    { "agency": "פלא נדלן (Pele Nadlan) - Lod", "reason": "Facebook page has only 4 likes / 1 talking about this — inactive, too small" },
+    { "agency": "נדלנה (Nadlana) - Lod", "reason": "Facebook page has only 2 likes / 1 talking about this — essentially inactive marketing presence" },
+    { "agency": "תיווך פנחס (Tivuch Pinhas) - Lod", "reason": "Facebook posts stale since 2023 — inactive" },
+    { "agency": "שבי שניאורסון - נדל\"ן (Shevi Shneorson) - Lod", "reason": "Conflicting sources: one describes her as a \"former\" Anglo-Saxon Lod franchisee, another (appcardpro.co.il) describes her as a current Anglo-Saxon franchise partner since 2012 — could not verify independent (non-franchise) status with confidence" },
+    { "agency": "רון אלגרבלי (Ron Elgrably) - Lod", "reason": "Operates under the Anglo-Saxon franchise network, which maintains an established website" },
+    { "agency": "מנחם אלתר (Menachem Alter) - Beit Shemesh", "reason": "Insufficient verifiable evidence of listing volume, agency scale, or branded Facebook marketing presence" },
+    { "agency": "יוסי ליפש נכסים (Yossi Lipsh) - Beit Shemesh", "reason": "20+ years tenure and 5.0 rating, but no dedicated Facebook/social page could be found — fails the marketing/branding ICP criterion" },
+    { "agency": "Century 21 Sunrise - Beit Shemesh", "reason": "Franchise branch operating via the century21.co.il portal; no individual branch owner/manager could be identified" },
+    { "agency": "אל הנכס בית שמש (Al HaNeches) - Beit Shemesh", "reason": "Branch of a national franchise network (18+ branches) with an established website (el-haneches.co.il)" },
+    { "agency": "אילן יועצי נדל\"ן והשקעות (Ilan Real Estate) - Beit Shemesh", "reason": "Has an established website (ilanrealestate.com), established 2000" },
+    { "agency": "יגאל נכסים (Yigal Realty) - Beit Shemesh", "reason": "Self-described \"largest brokerage in Beit Shemesh\" with a modern, professional website (yigalrealty.com)" },
+    { "agency": "לירון קטן / צוות לירון קטן (Liron Katan) - Beit Shemesh", "reason": "RE/MAX franchise affiliate with an existing global.remax.com agent profile page" },
+    { "agency": "Asfaw Getu / AG נדל\"ן - Beit Shemesh", "reason": "Went independent only in April 2024 (previously 2 years at RE/MAX); Facebook page has just 23 likes — too new/junior" },
+    { "agency": "אבי אביזוב (Avi Abizov) - Ramla", "reason": "Only a personal Facebook profile found (no business page with engagement); insufficient verifiable marketing/activity evidence" },
+    { "agency": "דיפסי אחמד (Dipsy Ahmad) - Lod", "reason": "No Facebook page or independent activity evidence found beyond a single Yellow Pages listing" },
+    { "agency": "ס.ב.תיווך נדל\"ן - Lod", "reason": "No owner name, no Facebook business page, and no reviews found — insufficient verifiable activity" },
+    { "agency": "צבי לזר נכסים (Tzvi Lazer) - Beit Shemesh", "reason": "Company registration dated 2024 — too new to verify established deal flow, despite an owner name being available" },
+    { "agency": "תיווך לילך יוסף יחזקאל - Ramla", "reason": "Thin evidence (small Facebook page, no follower/activity data); risk of confusion with an unrelated same-first-name \"Lilach\" brokerage in a different city" },
+    { "agency": "יוסי תיווך (Yossi Tivuch) - Ramla", "reason": "Owner's full name could not be identified; thin activity evidence" },
+    { "agency": "מניבים ישראל (Menivim) - Beit Shemesh", "reason": "Not a local agency — a national commercial real-estate listings platform" }
+  ]
+}

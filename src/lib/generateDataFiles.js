@@ -61,6 +61,8 @@ const agency = {
   address: ${jsString(form.address)},
   facebookUrl: ${jsString(form.facebookUrl)},
   instagramUrl: ${jsString(form.instagramUrl)},
+  madlanUrl: ${jsString(form.madlanUrl)},
+  yad2Url: ${jsString(form.yad2Url)},
   customSeoTerms: ${jsArray(form.customSeoTerms ?? [])},
   colors: {
     background: ${jsString(form.colors.background)},
@@ -68,6 +70,8 @@ const agency = {
     main: ${jsString(form.colors.main)},
     accent1: ${jsString(form.colors.accent1)},
     accent2: ${jsString(form.colors.accent2)},
+    headerBg: ${form.colors.headerBg ? jsString(form.colors.headerBg) : "null"},
+    headerText: ${form.colors.headerText ? jsString(form.colors.headerText) : "null"},
   },
   heroImages: [
 ${form.heroImageFilenames.map((f) => `    ${jsString(`/uploads/${f}`)},`).join("\n")}
@@ -89,7 +93,7 @@ ${agents
     id: ${jsString(a.id)},
     name: ${jsString(a.name)},
     role: ${jsString(a.role)},
-    photo: ${jsString(a.photoFilename ? `/uploads/${a.photoFilename}` : a.photo || "")},
+    photo: ${jsString(a.photoFilename ? `/uploads/${a.photoFilename}` : a.photo || "/default-agent.png")},
     phone: ${jsString(a.phone)},
     whatsapp: ${jsString(a.whatsapp)},
     email: ${jsString(a.email)},

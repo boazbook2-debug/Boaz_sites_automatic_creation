@@ -131,6 +131,8 @@ export default function Footer() {
             <SocialIcons
               facebookUrl={agency.facebookUrl}
               instagramUrl={agency.instagramUrl}
+              madlanUrl={agency.madlanUrl}
+              yad2Url={agency.yad2Url}
               className="mt-4"
             />
           </div>

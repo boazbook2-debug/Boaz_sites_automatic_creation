@@ -38,9 +38,13 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-40 bg-black text-white transition-shadow duration-300 ${
+      className={`sticky top-0 z-40 transition-shadow duration-300 ${
         scrolled ? "shadow-[0_4px_20px_rgba(0,0,0,0.35)]" : ""
       }`}
+      style={{
+        backgroundColor: "var(--color-header-bg, #000000)",
+        color: "var(--color-header-text, #ffffff)",
+      }}
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
         <Logo className="shrink-0" />
@@ -53,7 +57,7 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 className={`text-base font-bold transition-colors ${
-                  isActive(item.href) ? "text-[var(--color-accent2)]" : "text-white/75 hover:text-white"
+                  isActive(item.href) ? "text-[var(--color-accent2)]" : "opacity-75 hover:opacity-100"
                 }`}
               >
                 {item.label}
@@ -69,7 +73,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="וואטסאפ"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-[#25D366] transition hover:bg-white/10"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-current/20 text-[#25D366] transition hover:bg-current/10"
             >
               <WhatsAppIcon className="h-4 w-4" />
             </a>
@@ -78,7 +82,7 @@ export default function Header() {
           <a
             href={`tel:${agency.phone}`}
             aria-label="חייגו אלינו"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white transition hover:bg-white/10"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-current/20 transition hover:bg-current/10"
           >
             <PhoneIcon className="h-4 w-4" />
           </a>
@@ -93,7 +97,7 @@ export default function Header() {
             type="button"
             aria-label="פתח תפריט"
             onClick={() => setMobileOpen((v) => !v)}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white lg:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-current/20 lg:hidden"
           >
             {mobileOpen ? <CloseIcon className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
           </button>
@@ -101,13 +105,13 @@ export default function Header() {
       </div>
 
       {mobileOpen && (
-        <nav className="flex flex-col gap-1 border-t border-white/10 bg-black px-6 py-4 lg:hidden">
+        <nav className="flex flex-col gap-1 border-t border-current/10 px-6 py-4 lg:hidden">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={`rounded-lg px-3 py-2.5 text-base font-bold ${
-                isActive(item.href) ? "bg-white/10 text-[var(--color-accent2)]" : "text-white/80"
+                isActive(item.href) ? "bg-current/10 text-[var(--color-accent2)]" : "opacity-80"
               }`}
             >
               {item.label}

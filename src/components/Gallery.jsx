@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import SampleImage from "./SampleImage";
 import { ChevronLeftIcon, ChevronRightIcon, CloseIcon } from "./Icons";
 
@@ -130,7 +131,7 @@ export default function Gallery({ images, alt }) {
         </div>
       )}
 
-      {lightboxOpen && (
+      {lightboxOpen && createPortal(
         <div
           className="fixed inset-0 z-50 flex touch-none items-center justify-center overflow-hidden overscroll-none bg-black/90 p-2 sm:p-4"
           onClick={() => setLightboxOpen(false)}
@@ -199,7 +200,8 @@ export default function Gallery({ images, alt }) {
               </div>
             ))}
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );

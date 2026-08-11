@@ -1,0 +1,95 @@
+{
+  "qualified": [
+    {
+      "agency": "סינתיה נכסים (Cinzia Nechasim)",
+      "owner_or_lead_agent": "סינתיה גלטשטיין (Cinzia Glatstein)",
+      "role_classification": "Owner",
+      "city": "הוד השרון (Hod Hasharon)",
+      "facebook_url": "https://www.facebook.com/cinzia.realestate/",
+      "facebook_followers": "Not publicly visible on Facebook (Instagram @cinzia.realestate shows 491 followers, 926 posts)",
+      "description": "Independent owner-operator with 15-16 years in Hod Hasharon real estate brokerage, marketing and development (CRS-certified, construction college graduate); very active content poster (926 IG posts) but no owned website, only third-party listing/directory presence.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 20, "property_activity": 13, "marketing_brand": 12, "website_need": 20, "photo_opportunity_score": 10, "commercial_value": 6, "total": 81},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/cinzia.realestate/",
+        "website_check": [
+          "https://www.instagram.com/cinzia.realestate/ (bio only, no website link)",
+          "get-marketing.co.il/cinzia/ (third-party marketing portfolio page, not her own site)",
+          "cally.co.il business directory listing",
+          "www.yad2.co.il/realestate/agency/5820568/forsale (agency profile, not a self-hosted site)",
+          "www.madlan.co.il/agent/re_agent_ehrujs258p0 (marketplace agent profile)",
+          "No dedicated agency domain found across any of the above"
+        ],
+        "activity_evidence": "16 years of stated brokerage/marketing/development experience, CRS course completion, active Yad2 and Madlan agency profiles, and a high-volume (926-post) Instagram account maintained under her name — consistent, name-matched across 5+ independent sources."
+      }
+    },
+    {
+      "agency": "הוד נכסים (Hod Nechasim)",
+      "owner_or_lead_agent": "בני רענן (Beni Raanan)",
+      "role_classification": "Owner",
+      "city": "הוד השרון (Hod Hasharon)",
+      "facebook_url": "https://www.facebook.com/hod.realestate/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Long-established brokerage (founded 1972, now run by owner/broker-entrepreneur Beni Raanan, MBA, also principal of P.R.P. Projects) with real listings across residential, commercial and land — but its own website (hod.co.il) is functional and content-rich yet visibly dated in design, a clear upgrade opportunity.",
+      "website_status": "Poor website",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 18, "property_activity": 17, "marketing_brand": 10, "website_need": 11, "photo_opportunity_score": 10, "commercial_value": 7, "total": 73},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/hod.realestate/",
+        "website_check": ["https://www.hod.co.il — real, functioning site with property search, agent profiles, and an about page describing it as the oldest real-estate office in Hod HaSharon; design and typography assessed as moderately outdated versus modern competitors"],
+        "activity_evidence": "Site lists property categories (residential/commercial/land) with search filters and agent profiles; independently corroborated as owned/managed by Beni Raanan via a Yad2 agency-profile snippet describing him as 'a known broker and entrepreneur' running the long-established Hod HaSharon office."
+      }
+    },
+    {
+      "agency": "City תיווך נדל\"ן מסחרי",
+      "owner_or_lead_agent": "שלומי מרי (Shlomi Mari)",
+      "role_classification": "Owner",
+      "city": "נתניה (Netanya)",
+      "facebook_url": "https://www.facebook.com/shlomi.mary/",
+      "facebook_followers": "713 likes",
+      "description": "Sole-operator commercial real estate broker in Netanya (offices, retail, land) running a personal-brand Facebook page with 713 likes; no owned website was found — only appears inside third-party commercial-listing aggregator sites.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 17, "property_activity": 10, "marketing_brand": 9, "website_need": 17, "photo_opportunity_score": 8, "commercial_value": 6, "total": 67},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/shlomi.mary/",
+        "website_check": [
+          "commercial.co.il/city/נתניה/ (third-party commercial listing directory, not his own site)",
+          "gevarom.co.il/city/נתניה/ (third-party listing aggregator)",
+          "No dedicated agency domain located"
+        ],
+        "activity_evidence": "Facebook page (713 likes) personally branded with his name and phone number (054-226-9696); appears as a named contact inside two independent commercial real estate directories for Netanya. Evidence is thinner than the other two qualified candidates — page content itself could not be rendered for direct verification (Facebook blocked automated fetch), so this rests on directory corroboration rather than direct page inspection."
+      }
+    }
+  ],
+  "rejected": [
+    {"agency": "BuyHome ביי הום שיווק נדל\"ן (נתניה)", "reason": "Good website — buy-home.co.il is a real, functioning, professional agency site (REJECT per website-need criteria)."},
+    {"agency": "אורייה ישראל – דירות למכירה בנתניה", "reason": "Good website — oriya-realestate.co.il is a real, functioning agency site (REJECT)."},
+    {"agency": "Landsman – לנדסמן נתניה סוכנות נדל\"ן", "reason": "Insufficient public info to verify decision authority or deal-flow activity; the domain implied by the page's Facebook username (maxhome.co.il) failed to resolve/connect, which is inconclusive rather than confirmatory. Could not verify before search tools became unavailable."},
+    {"agency": "RealEstate4U נדל\"ן בנתניה", "reason": "Insufficient public info to verify — page found but no About text, follower count, owner name, or activity evidence could be retrieved."},
+    {"agency": "G.O תיווך נדל\"ן (נתניה)", "reason": "Insufficient public info to verify — no corroborating detail found beyond the page title."},
+    {"agency": "משרד תיווך נדל\"ן M.Y (נתניה)", "reason": "Page returned a server error on every fetch attempt; could not verify identity, authority, or activity."},
+    {"agency": "Gabi Shushan – Re/max Blue White Netanya", "reason": "Franchise agent under Re/max; no independent decision authority confirmed and the franchise brand likely has its own professional website."},
+    {"agency": "Viki Ben Haim – Re/max Blue White Netanya", "reason": "Franchise agent under Re/max; same reasoning as above."},
+    {"agency": "בראשית נדל\"ן נתניה (Bereshit)", "reason": "No individual owner or lead-agent name could be identified in any public source checked (only a generic office phone/email); the page appears to be one branch of a larger multi-city 'Bereshit Group,' so decision authority could not be established."},
+    {"agency": "אנגלו סכסון הוד השרון", "reason": "National real-estate franchise (Anglo-Saxon); presumed to have a professional corporate website and no independently-verifiable local owner authority."},
+    {"agency": "מנדי טל – Re/max הוד השרון", "reason": "Franchise agent under Re/max; no independent decision authority confirmed."},
+    {"agency": "טופ נכסים (הוד השרון)", "reason": "Insufficient public info to verify — could not complete research before search tools became unavailable mid-session."},
+    {"agency": "נדב נגה – תיווך נדל\"ן", "reason": "Insufficient public info to verify — only a page title was found, no About text, follower count, or activity evidence."},
+    {"agency": "יפית נדל\"ן (הוד השרון)", "reason": "Insufficient public info to verify — only a page title was found, no corroborating detail."},
+    {"agency": "קבוצת נדל\"ן בשרון (KNB)", "reason": "Appears to be a multi-agent network/group brand rather than a single owner-operator; no individual decision-maker identified."},
+    {"agency": "Yokra Estate תיווך יוקרה אסטייט", "reason": "Nationwide luxury brokerage network ('בכל הארץ'), not a Caesarea-specific single owner-operator; no local individual authority identified."},
+    {"agency": "פרץ נכסי נדל\"ן (קיסריה)", "reason": "Insufficient public info to verify — Facebook page and prospective website could not be rendered/resolved; no owner name, follower count, or activity evidence obtained."},
+    {"agency": "נאות גולף קיסריה – איריס נדל\"ן בע\"מ", "reason": "Insufficient public info to verify — page found (villas/homes in Golf Estates Caesarea) but no owner name, follower count, website check, or activity evidence could be confirmed."},
+    {"agency": "Tova Bar Luxury Real Estate (קיסריה)", "reason": "Insufficient public info to verify — personal-brand page name found but no About text, follower count, or activity evidence obtainable."},
+    {"agency": "דני דר-אל קיסריה נכסים", "reason": "Rejected for a data-integrity concern: the Facebook page is titled 'דני דר-אל' but a search snippet described the same page as belonging to a differently-named person ('Dani Aviton'); the discrepancy could not be resolved with available tools, so no reliable facts could be confirmed about this candidate."},
+    {"agency": "Caesarea Real Estate Company", "reason": "Confirmed active luxury-villa marketing content (sea-view villa post with pool/outdoor kitchen) but no owner or lead-agent name could be identified anywhere in public sources checked, so decision authority could not be established."},
+    {"agency": "נכסי קיסריה – Caesarea Estates Realty", "reason": "Insufficient public info to verify — only a page title was found, no owner name, follower count, or activity evidence."},
+    {"agency": "וילות ובתי יוקרה בקיסריה / בתים למכירה בקיסריה / וילות למכירה בקיסריה / וילות להשכרה בקיסריה", "reason": "Generic property-marketplace/listing page names, not an identifiable single agency owner — do not match the ICP of a named owner-operator."},
+    {"agency": "נדל״ן בקיסריה (מכירה קניה והשכרה) / קיסריה שלי נדל\"ן", "reason": "Facebook groups, not business/agency pages — not applicable to the ICP."}
+  ]
+}

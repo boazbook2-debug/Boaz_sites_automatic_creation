@@ -1,0 +1,242 @@
+{
+  "qualified": [
+    {
+      "agency": "עמי רוזן - סוכן נדל\"ן",
+      "owner_or_lead_agent": "עמי רוזן (Ami Rozen)",
+      "role_classification": "Lead Agent",
+      "city": "פתח תקווה",
+      "facebook_url": "https://www.facebook.com/amirozen09/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Independent PT-native agent with 7+ years' experience and licensed brokerage number, running a personally branded FB page with no dedicated website — a growth-oriented solo operator who would benefit from consistent professional photo output.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 18, "property_activity": 10, "marketing_brand": 10, "website_need": 20, "photo_opportunity_score": 8, "commercial_value": 6, "total": 72},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/amirozen09/",
+        "website_check": ["https://html.duckduckgo.com/html/?q=עמי רוזן סוכן נדל\"ן פתח תקווה (only directory/B144/easy.co.il listings surfaced, no dedicated agency domain)"],
+        "activity_evidence": "Licensed broker (license #321382 per directory bios), 7+ years in the PT market, self-described as helping clients through the full sale process; no confirmed live listing count found."
+      }
+    },
+    {
+      "agency": "דרור אוזן - יועץ נדל\"ן",
+      "owner_or_lead_agent": "דרור אוזן (Dror Ozen)",
+      "role_classification": "Lead Agent",
+      "city": "פתח תקווה",
+      "facebook_url": "https://www.facebook.com/redroruzan/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Independent broker licensed since 2012, actively posting property reels on Instagram (e.g. a Kfar Ganim B apartment) and running a Yad2 agency page, but no dedicated agency website — a marketing-active solo agent who'd benefit most from upgraded photo/video assets.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 18, "property_activity": 14, "marketing_brand": 12, "website_need": 20, "photo_opportunity_score": 10, "commercial_value": 7, "total": 81},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/redroruzan/",
+        "website_check": ["Yad2 agency page yad2.co.il/realestate/agency/4426907 (blocked by bot-check on fetch, confirmed to exist via search)", "no arik-style dedicated .co.il domain found in search"],
+        "activity_evidence": "Instagram reel for a specific active listing (Kfar Ganim B, PT) found via search; licensed real estate consultant since 2012 per multiple directory bios."
+      }
+    },
+    {
+      "agency": "ניסים יצחקי - יועץ נדל\"ן",
+      "owner_or_lead_agent": "ניסים יצחקי (Nissim Yitzhaki)",
+      "role_classification": "Lead Agent",
+      "city": "פתח תקווה",
+      "facebook_url": "https://www.facebook.com/nissimyRealEstate/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Solo consultant handling property management, sales and rentals across Petah Tikva and Givat Shmuel, with a branded FB page and no dedicated website.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 16, "property_activity": 10, "marketing_brand": 8, "website_need": 18, "photo_opportunity_score": 8, "commercial_value": 6, "total": 66},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/nissimyRealEstate/",
+        "website_check": ["No dedicated site surfaced in search beyond directory listings (b144, nadlana.co.il)"],
+        "activity_evidence": "Page positioning covers property management + sales + rentals, suggesting an active practice; exact listing volume could not be independently confirmed."
+      }
+    },
+    {
+      "agency": "איזק נדל\"ן דירות פתח תקווה",
+      "owner_or_lead_agent": "Isaac (איזק)",
+      "role_classification": "Lead Agent",
+      "city": "פתח תקווה",
+      "facebook_url": "https://www.facebook.com/isaacnadlan/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Runs both a branded agency FB page and an active local classifieds FB group for apartments/houses/land in Petah Tikva, giving strong ongoing visibility into deal flow, but no dedicated agency website exists.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 16, "property_activity": 16, "marketing_brand": 12, "website_need": 20, "photo_opportunity_score": 10, "commercial_value": 6, "total": 80},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/isaacnadlan/",
+        "website_check": ["Search surfaced only directory pages (findglocal, easy.co.il, d.co.il, ad.co.il/agency/2199, Yad2 agency 3452387) — no owned domain"],
+        "activity_evidence": "Operates a dedicated FB group (facebook.com/groups/isaacnadlan.petahtikva) for city-wide apartment/house/land listings alongside the business page, indicating regular deal flow and community reach."
+      }
+    },
+    {
+      "agency": "ענר נדל\"ן (אלעד ביטון נדל\"ן)",
+      "owner_or_lead_agent": "אלעד ביטון (Elad Bitton)",
+      "role_classification": "Owner",
+      "city": "פתח תקווה",
+      "facebook_url": "https://www.facebook.com/1anerrealestate/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Owner-operator marketing new-build and secondhand apartments in Petah Tikva across two Instagram accounts and a YouTube channel; his registered domain anernadlan.com currently returns a 404 (broken/non-functional), leaving him effectively without a working website despite clear marketing ambition.",
+      "website_status": "Poor website",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 18, "property_activity": 14, "marketing_brand": 13, "website_need": 18, "photo_opportunity_score": 10, "commercial_value": 7, "total": 80},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/1anerrealestate/",
+        "website_check": ["https://www.anernadlan.com (HTTP 404, confirmed broken)", "https://anernadlan.com (HTTP 404, confirmed broken)"],
+        "activity_evidence": "Active on two Instagram accounts (instagram.com/EladAnerNadlan, instagram.com/anerrealestate) plus a YouTube channel (@ענרנדלן) posting new-project and secondhand listings for PT and surroundings."
+      }
+    },
+    {
+      "agency": "פריים נדל\"ן",
+      "owner_or_lead_agent": "רונן ניסן (Ronen Nissan)",
+      "role_classification": "Owner",
+      "city": "פתח תקווה",
+      "facebook_url": "https://www.facebook.com/primenadlan1/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Office manager Ronen Nissan (ex-security-sector, licensed mediator) leads a team of roughly nine agents marketing PT apartments; the office's own website (prime-nadlan.co.il) is confirmed outdated and disorganized, undercutting a business with real multi-agent deal flow.",
+      "website_status": "Poor website",
+      "photo_opportunity": "High",
+      "score_breakdown": {"decision_authority": 19, "property_activity": 16, "marketing_brand": 10, "website_need": 15, "photo_opportunity_score": 12, "commercial_value": 7, "total": 79},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/primenadlan1/",
+        "website_check": ["https://www.prime-nadlan.co.il (confirmed: dated design, duplicated/broken navigation menus, inconsistent image loading)", "https://www.prime-nadlan.co.il/אודות/ (confirmed owner Ronen Nissan, ~9-agent team)"],
+        "activity_evidence": "Nine-agent team structure under one office implies materially higher listing volume than a solo agent; office positions itself around free buy/sell consultations."
+      }
+    },
+    {
+      "agency": "אורית לובל - יועצת ומשווקת נדל\"ן בכירה",
+      "owner_or_lead_agent": "אורית לובל (Orit Lobel)",
+      "role_classification": "Lead Agent",
+      "city": "פתח תקווה",
+      "facebook_url": "https://www.facebook.com/oritlobel.realestate.agent",
+      "facebook_followers": "Not publicly visible",
+      "description": "Self-described senior real estate consultant/marketer operating solo in Petah Tikva, active on Yad2 and Instagram, with no dedicated agency website of her own.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 17, "property_activity": 11, "marketing_brand": 11, "website_need": 20, "photo_opportunity_score": 9, "commercial_value": 6, "total": 74},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/oritlobel.realestate.agent",
+        "website_check": ["Search surfaced only Yad2 agency page (agency/6682593), Instagram, and directory listings (d.co.il, findglocal) — no owned domain"],
+        "activity_evidence": "Maintains an active Yad2 broker profile and posted at least one new-listing Instagram post; self-positions as a senior marketer."
+      }
+    },
+    {
+      "agency": "עמית בית-דגן, תיווך נדל\"ן",
+      "owner_or_lead_agent": "עמית בית-דגן (Amit Beit-Dagan)",
+      "role_classification": "Lead Agent",
+      "city": "ראשון לציון",
+      "facebook_url": "https://www.facebook.com/amitbeytdagan/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Independent Rishon LeZion broker with an established street address (Lezrov 33) and directory presence, but no dedicated agency website — a straightforward no-frills solo operation.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 16, "property_activity": 10, "marketing_brand": 9, "website_need": 20, "photo_opportunity_score": 8, "commercial_value": 6, "total": 69},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/amitbeytdagan/",
+        "website_check": ["Search surfaced only directories (d.co.il, nadlano.co.il, realtorsindex.co.il, hagira.co.il) — no owned domain found"],
+        "activity_evidence": "A YouTube listing video (\"דירה למכירה ראשון לציון מרכז העיר עמית בית דגן מתווך בלעדיות החפץ חיים\") confirms at least one active exclusive listing being marketed."
+      }
+    },
+    {
+      "agency": "דירות למכירה בראשון לציון והסביבה - אריאל רוזנטל",
+      "owner_or_lead_agent": "אריאל רוזנטל (Ariel Rosenthal)",
+      "role_classification": "Lead Agent",
+      "city": "ראשון לציון",
+      "facebook_url": "https://www.facebook.com/100063530860553/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Independent broker/consultant in Rishon LeZion with only a digital business card (linktree-style) and directory listings — no real website (a same-named 'reariel.co.il' site was confirmed to belong to an unrelated Ariel-city agency, not this agent).",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 16, "property_activity": 10, "marketing_brand": 8, "website_need": 20, "photo_opportunity_score": 8, "commercial_value": 6, "total": 68},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/100063530860553/",
+        "website_check": ["https://reariel.co.il (verified to be an unrelated agency in the city of Ariel/Samaria, not this broker)", "appcardpro.co.il digital card only — not a real website"],
+        "activity_evidence": "Consistently listed across Rishon LeZion real-estate directories (b144, hon.co.il) as an active local consultant/broker; exact current listing count not independently verified."
+      }
+    },
+    {
+      "agency": "אופיר אלבז - דירות למכירה בראשון לציון",
+      "owner_or_lead_agent": "אופיר אלבז (Ofir Albaz)",
+      "role_classification": "Lead Agent",
+      "city": "ראשון לציון",
+      "facebook_url": "https://www.facebook.com/ofirelbaz28/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Solo broker with a notably multi-channel presence — dedicated FB page, Instagram, and his own YouTube channel branded as a real-estate broker — yet no agency website exists, a clear gap for someone already investing in content.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 17, "property_activity": 12, "marketing_brand": 13, "website_need": 20, "photo_opportunity_score": 10, "commercial_value": 7, "total": 79},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/ofirelbaz28/",
+        "website_check": ["Search surfaced only directories, Instagram, and a personal YouTube channel (youtube.com/@ofirelbazRealestatebroker) — no owned domain"],
+        "activity_evidence": "Maintains a dedicated YouTube channel as 'Real Estate Broker' plus active Instagram account, indicating regular content/marketing effort without a matching website."
+      }
+    },
+    {
+      "agency": "אריק פישר - תיווך ושיווק נדל\"ן",
+      "owner_or_lead_agent": "אריק פישר (Arik Fisher)",
+      "role_classification": "Owner",
+      "city": "ראשון לציון",
+      "facebook_url": "https://www.facebook.com/profile.php?id=100054402646049",
+      "facebook_followers": "Not publicly visible",
+      "description": "Owner-operator broker established since 2004 (license #30513805) covering Rishon LeZion, Rehovot and Nes Ziona with genuinely diverse live inventory (apartments, duplexes, penthouses, commercial, land); his own site (arik-nadlan.co.il) is real and functioning but dated, text-heavy, and lacks modern photography or search/filter tools.",
+      "website_status": "Poor website",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 19, "property_activity": 17, "marketing_brand": 10, "website_need": 12, "photo_opportunity_score": 11, "commercial_value": 8, "total": 77},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/profile.php?id=100054402646049",
+        "website_check": ["https://www.arik-nadlan.co.il (confirmed real/functioning but dated template design, heavy text, limited professional photography, no listing filters)"],
+        "activity_evidence": "Site itself lists multiple concrete active properties across three cities with room counts, floors and amenities — strongest confirmed deal-flow evidence among Rishon candidates."
+      }
+    },
+    {
+      "agency": "הראשונים בנדל\"ן - M&E Group",
+      "owner_or_lead_agent": "אלעד ומירי (Elad & Miri, incl. מירי דוד-בן ברוך)",
+      "role_classification": "Owner",
+      "city": "ראשון לציון",
+      "facebook_url": "https://www.facebook.com/harishonimbanadlan/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Co-owned brokerage marketed as a leading Rishon LeZion office (brokerage + development + project marketing); its site (nadlanrishonim.co.il) is confirmed outdated with broken image loading, duplicated navigation, and off-topic filler content, undermining an otherwise established local brand.",
+      "website_status": "Poor website",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 17, "property_activity": 13, "marketing_brand": 9, "website_need": 14, "photo_opportunity_score": 10, "commercial_value": 7, "total": 70},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/harishonimbanadlan/",
+        "website_check": ["https://nadlanrishonim.co.il (confirmed: repetitive nav menus, broken/lazy-load image placeholders, mismatched unrelated content, sold listings dominating over active ones)"],
+        "activity_evidence": "Also listed as a commercial agency on Yad2 (agency/7694089) and appears in TheMarker real-estate coverage, indicating an established, recognized local office."
+      }
+    }
+  ],
+  "rejected": [
+    {"agency": "גיא פלד / GP Realty (gprealty.co.il), פתח תקווה", "reason": "Good website — modern, professional agency site with active blog and multi-neighborhood coverage."},
+    {"agency": "הום נדל\"ן (Naor Adri), פתח תקווה", "reason": "Good website — modern homenadlan.co.il with search filters, calculators, active social channels."},
+    {"agency": "נקסט האוס נדל\"ן (אביעד ממן), פתח תקווה", "reason": "Good website — modern, professional nexthouse.co.il with clear navigation, testimonials, educational content."},
+    {"agency": "נדל\"ן חכם (ג.ע. ייזום בע\"מ)", "reason": "Has a real website (multiple domains: nadlanhaham.com, eng.nadlan-haham.co.il) and FB page geolocated to Tel Aviv, not Petah Tikva/Rishon LeZion."},
+    {"agency": "מרום טים נדל\"ן, ראשון לציון", "reason": "Good website — modern marom-team.co.il with active blog, testimonials, ~20 years positioning."},
+    {"agency": "אוונטורין נדל\"ן, ראשון לציון", "reason": "Good website — modern aventurine.co.il with property search filters, neighborhood guides, 4.8-rated listing."},
+    {"agency": "לידרס נדל\"ן", "reason": "Good website (a-leaders.co.il) and actually based in Herzliya/Ra'anana, not Rishon LeZion — location mismatch plus strong site."},
+    {"agency": "הבלוק סוכנות לנדל\"ן (Ha'Block), ראשון לציון", "reason": "Good website — modern nadlanhablock.com; self-described top-3 brokerage in the city."},
+    {"agency": "יאן שובייב נדל\"ן (RE/MAX), פתח תקווה", "reason": "Good website (yanadlan.co.il) and operates under the RE/MAX franchise brand."},
+    {"agency": "אתי יצחק - יועצת ומשווקת נדל\"ן, פתח תקווה", "reason": "Good website — modern etiizhak.co.il with testimonials and clear service list."},
+    {"agency": "ניסן אילון - מתווך בפתח תקווה", "reason": "Good website — modern nisan-ayallon.com, professional branding and boutique positioning."},
+    {"agency": "צ'ארלי חן, RE/MAX עוצמה, ראשון לציון", "reason": "Franchise agent (RE/MAX) with a corporate profile website — no independent decision authority for this purpose."},
+    {"agency": "חמישה יועצי נדל\"ן, ראשון לציון", "reason": "Multi-agent network (2 branches, several consultants) with no single clearly provable owner/decision-maker, and an existing (bot-protected but apparently live) website at 5nadlan.co.il."},
+    {"agency": "הר-אל נדל\"ן (שי ישועה), פתח תקווה", "reason": "No website found, but the agency's ad.co.il listing showed zero active properties and no other deal-flow evidence could be confirmed — insufficient evidence of real activity."},
+    {"agency": "אסף רייכר, פתח תקווה", "reason": "Insufficient public information to verify current deal flow, marketing activity, or follower engagement beyond a bare FB page title."},
+    {"agency": "איציק סמגין - יועץ נדל\"ן, פתח תקווה", "reason": "Appears to operate as an advisor within the 'מרכז הנדל\"ן' (Nadlan Center) network/franchise rather than as an independent owner — decision authority unclear."},
+    {"agency": "ענק הנדל\"ן, ראשון לציון", "reason": "Business is focused on urban-renewal/pinuy-binuy project marketing and construction, not residential listing brokerage — off-ICP for photo-enhancement use case; also has an existing (if dated) website."},
+    {"agency": "דור כהן, סוכן נדל\"ן, ראשון לציון", "reason": "Facebook page appears very newly created with minimal content/history — insufficient evidence of established deal flow (anti-ICP: too new)."},
+    {"agency": "רועי רינט נדל\"ן, ראשון לציון", "reason": "Owns a dedicated domain (rint-nadlan.com) but repeated fetch attempts could not reliably render page content to confirm website quality — excluded rather than guess."},
+    {"agency": "נדל\"ן עסקי מסחרי (שחף), פתח תקווה", "reason": "Commercial real estate investment/trade business, not residential brokerage — off-ICP."}
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "qualified": [
+    {
+      "agency": "תיווך ת.ק.מ ירושלים (T.K.M)",
+      "owner_or_lead_agent": "חיים מדיצקי (Chaim Meditzki)",
+      "role_classification": "Owner",
+      "city": "ירושלים",
+      "facebook_url": "https://www.facebook.com/takam.jerusalem/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Veteran Jerusalem brokerage founded 1985 by Chaim Meditzki, now operating a network of five branches across the city with a stated specialization in Kiryat Moshe / Givat Shaul. Forty years of continuous operation is a strong deal-flow signal, but the office's only web presence is a generic Bezeq/B144 template page.",
+      "website_status": "Poor website",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 20, "property_activity": 17, "marketing_brand": 8, "website_need": 15, "photo_opportunity_score": 12, "commercial_value": 7, "total": 79},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/takam.jerusalem/",
+        "website_check": ["https://tkm.b144websites.co.il/", "https://www.madlan.co.il/agentsOffice/re_office_iG6CJu2TnnA"],
+        "activity_evidence": "Directory/Madlan profiles describe a network of 5 branches across Jerusalem and 38-40 years of continuous operation in the Givat Shaul/Kiryat Moshe area; only web presence found is a generic B144 template site (076-8881881), not a custom professional site."
+      }
+    },
+    {
+      "agency": "תבל נכסים והשקעות (Tavel Nechasim)",
+      "owner_or_lead_agent": "שלמה אגאי (Shlomo Agay)",
+      "role_classification": "Owner",
+      "city": "ירושלים",
+      "facebook_url": "https://www.facebook.com/p/תבל-נכסים-והשקעות-100057160282255/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Founded 2004 by Shlomo Agay in Pisgat Ze'ev and described in independent directory listings as one of the largest and leading real estate offices in Jerusalem, with multiple staff agents. No dedicated company website exists anywhere despite the scale of the operation.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 20, "property_activity": 18, "marketing_brand": 7, "website_need": 20, "photo_opportunity_score": 12, "commercial_value": 8, "total": 85},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/p/תבל-נכסים-והשקעות-100057160282255/",
+        "website_check": ["https://www.yad2.co.il/realestate/agency/5694740/forsale", "https://pisgabiz.co.il/biz/תבל-נכסים-והשקעות/"],
+        "activity_evidence": "Described as \"one of the largest and leading real estate offices in Jerusalem,\" founded 2004, with at least one additional staff broker (David Nisnov) working under the office; searches across Yad2, directories, Instagram and YouTube found no dedicated branded website — only directory and social profiles."
+      }
+    },
+    {
+      "agency": "נדלן IN ניהול בע\"מ",
+      "owner_or_lead_agent": "מני מזרחי (Meni Mizrahi)",
+      "role_classification": "Owner",
+      "city": "ירושלים",
+      "facebook_url": "https://www.facebook.com/nadlanin123",
+      "facebook_followers": "Not publicly visible",
+      "description": "Meni Mizrahi is the stated \"manager and owner\" of Nadlan IN in Jerusalem, an office covering sales, rentals and short/long-term property management, with a Yad2 profile describing it among the office as having leading Jerusalem sales metrics. No independent website was found across an extensive search.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 20, "property_activity": 16, "marketing_brand": 8, "website_need": 20, "photo_opportunity_score": 12, "commercial_value": 6, "total": 82},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/nadlanin123",
+        "website_check": ["https://www.yad2.co.il/realestate/agency/626032", "https://www.facebook.com/nadlan.in"],
+        "activity_evidence": "Owner explicitly self-describes as \"manager and owner of the Nadlan IN office in Jerusalem, with proven extensive experience\"; Yad2 agency listing references leading sales metrics; a Kol Ha'ir press interview with Mizrahi about the Jerusalem market was also found, indicating a public-facing, active business with no dedicated site."
+      }
+    },
+    {
+      "agency": "גולד קי נדל\"ן (Gold Key Real Estate)",
+      "owner_or_lead_agent": "מנחם כהן (Menachem Cohen)",
+      "role_classification": "Owner",
+      "city": "ירושלים",
+      "facebook_url": "No confirmed dedicated Facebook business page found",
+      "facebook_followers": "Not publicly visible",
+      "description": "Ramat Shlomo-based brokerage carrying the owner's name, described on an independent directory as the leading office in its neighborhood, with a perfect review rating on B144. No dedicated website or confirmed business Facebook page could be found — digital presence is limited to third-party directories.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 18, "property_activity": 12, "marketing_brand": 5, "website_need": 20, "photo_opportunity_score": 10, "commercial_value": 6, "total": 71},
+      "priority": false,
+      "sources": {
+        "facebook": "Not found",
+        "website_check": ["https://www.b144.co.il/b144_sip/4A1404134470655D4C1707124277635A4E/", "https://www.madlan.co.il/agentsOffice/re_office_hQ9uhc5uvY8", "https://hagira.co.il/b/גולד-קי-נדלן-מנחם-כהן-066e6e2e/"],
+        "activity_evidence": "Hagira business directory describes it as \"the leading office in the neighborhood specializing in real estate brokerage services\" in Ramat Shlomo, Jerusalem; B144 shows a 5.0 rating from verified reviewers. No dedicated site or confirmed FB business page located despite multiple searches — weaker verification than other candidates, included cautiously."
+      }
+    },
+    {
+      "agency": "יאיר סינה נדל\"ן (Yair Sina Real Estate)",
+      "owner_or_lead_agent": "יאיר סינה (Yair Sina)",
+      "role_classification": "Owner",
+      "city": "ירושלים",
+      "facebook_url": "https://www.facebook.com/profile.php?id=61558329035776",
+      "facebook_followers": "48 likes",
+      "description": "Self-described veteran Jerusalem brokerage (\"established brokerage with extensive experience\") covering sales, rentals, mortgages, Tama 38 renewal and overseas property, licensed under Yair Sina. Facebook presence exists but is thin (48 likes), and no dedicated website was found — a clear marketing/web gap for an established, licensed operator.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 18, "property_activity": 10, "marketing_brand": 5, "website_need": 20, "photo_opportunity_score": 10, "commercial_value": 6, "total": 69},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/profile.php?id=61558329035776",
+        "website_check": ["https://www.b144.co.il/b144_sip/4A1404134470655D4C1703144D79645D48/", "https://nadlano.co.il/office/סינה-יאיר-תיווך-נדלן"],
+        "activity_evidence": "B144 lists him as \"an established brokerage in Jerusalem with many years of experience\"; licensed broker (license #3174181); no property/listing counts confirmed and current Facebook engagement is low, which is why this candidate scores near the qualification floor."
+      }
+    },
+    {
+      "agency": "אדם וביתו (Adam VeBeito) — קמלי דוד",
+      "owner_or_lead_agent": "דוד (דודו) קמלי / David \"Dodo\" Kamli",
+      "role_classification": "Owner",
+      "city": "ירושלים",
+      "facebook_url": "https://www.facebook.com/adamubeito/",
+      "facebook_followers": "9 likes",
+      "description": "Licensed Jerusalem broker (license #3972253) who founded Adam VeBeito in 1986 and has operated continuously from Even Ezra St. in central Jerusalem for nearly 40 years. Madlan's public broker database credits him with 23 properties sold and 11 current exclusive listings — real, verifiable deal flow — despite an almost dormant Facebook page and no website at all.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 20, "property_activity": 15, "marketing_brand": 3, "website_need": 20, "photo_opportunity_score": 10, "commercial_value": 6, "total": 74},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/adamubeito/",
+        "website_check": ["https://www.madlan.co.il/madad-search/ירושלים-ישראל", "https://nadlano.co.il/office/קמלי-דוד-תיווך-נדלן", "https://www.dunsguide.co.il"],
+        "activity_evidence": "Madlan's broker leaderboard for Jerusalem explicitly attributes \"23 properties sold, 11 exclusive listings\" to Kamli David; business founded 1986 (39 years); this is one of the strongest concrete deal-flow numbers found in this research, paired with an almost-inactive 9-like Facebook page and zero website — the classic under-marketed veteran profile."
+      }
+    },
+    {
+      "agency": "שומכר נדל\"ן (Shumacher Real Estate)",
+      "owner_or_lead_agent": "זאב שומכר (Zev Shumacher)",
+      "role_classification": "Owner",
+      "city": "מודיעין",
+      "facebook_url": "https://www.facebook.com/shumacher.nadlan/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Founded January 2006 by Zev Shumacher, founder and CEO; a four-person office (Shumacher plus three named agents) handling project marketing, second-hand sales and buyer-group formation in Modiin. No independent company website — the office's own email address runs on a third-party directory domain.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 20, "property_activity": 15, "marketing_brand": 8, "website_need": 20, "photo_opportunity_score": 12, "commercial_value": 8, "total": 83},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/shumacher.nadlan/",
+        "website_check": ["https://www.nadlan-modiin.co.il/תיווך-במודיעין/שומכר-מודיעין", "https://easy.co.il/page/26050492"],
+        "activity_evidence": "nadlan-modiin.co.il directory profile lists Shumacher as founder/CEO since Jan 2006 with three additional named staff agents (Penina Rosenberg, Alex Vinreb, Nili Vinreb) and a business email on the directory's own domain (info@nadlan-modiin.co.il) rather than a company domain — confirms no independent website."
+      }
+    },
+    {
+      "agency": "דירות למכירה במודיעין — צוות חן ורועי",
+      "owner_or_lead_agent": "רועי אברהניאן וחן (Roey Abrahanian & Chen)",
+      "role_classification": "Lead Agent",
+      "city": "מודיעין",
+      "facebook_url": "https://www.facebook.com/Apartmentsforsaleimodiin/",
+      "facebook_followers": "533 likes",
+      "description": "A two-person Modiin sales team with over a decade of experience, describing itself as having guided \"hundreds of families, couples and investors\" through transactions, active mainly in the Nof/Neviim area. Solid, active Facebook following but no dedicated website found anywhere.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 16, "property_activity": 17, "marketing_brand": 10, "website_need": 20, "photo_opportunity_score": 12, "commercial_value": 7, "total": 82},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/Apartmentsforsaleimodiin/",
+        "website_check": ["https://www.madlan.co.il/for-sale/שכונה-אבני-חן-קייזר-מודיעין-מכבים-רעות-ישראל"],
+        "activity_evidence": "Facebook page (533 likes) self-describes \"over a decade of experience\" and having guided \"hundreds of families, couples, and investors\"; posts cover multiple Modiin neighborhoods (Nof Modiin, Neviim); no company website found despite the page's real activity."
+      }
+    },
+    {
+      "agency": "קרמליס (Karmelis)",
+      "owner_or_lead_agent": "לימור כרמלי (Limor Carmeli)",
+      "role_classification": "Owner",
+      "city": "מודיעין",
+      "facebook_url": "https://www.facebook.com/limor.carmeli.modiin/",
+      "facebook_followers": "2,270 likes",
+      "description": "Veteran Modiin brokerage owned by licensed broker Limor Carmeli (license #32642), with an interior-design angle to its marketing and the strongest Facebook following found among Modiin candidates in this batch. No dedicated website exists despite the marketing investment already visible on Facebook.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 18, "property_activity": 14, "marketing_brand": 12, "website_need": 20, "photo_opportunity_score": 11, "commercial_value": 7, "total": 82},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/limor.carmeli.modiin/",
+        "website_check": ["https://www.nadlan-modiin.co.il/תיווך-במודיעין/כרמליס-מודיעין/", "https://www.yad2.co.il"],
+        "activity_evidence": "Facebook business page carries 2,270 likes, by far the largest verified following among candidates in this research; directory listing describes it as \"an established brokerage firm in Modiin specializing in real estate consulting and marketing\"; no company website found."
+      }
+    },
+    {
+      "agency": "סנטרל לוקיישן — שימי חובב (Central Location)",
+      "owner_or_lead_agent": "שימי חובב (Shimi Chovav)",
+      "role_classification": "Owner",
+      "city": "מודיעין",
+      "facebook_url": "https://www.facebook.com/shimi.modiin/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Individually branded Modiin broker handling second-hand residential, commercial and cross-border investment (including Hungary) property, operating solely through directory listings and Facebook with no dedicated website.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 18, "property_activity": 12, "marketing_brand": 7, "website_need": 20, "photo_opportunity_score": 10, "commercial_value": 7, "total": 74},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/shimi.modiin/",
+        "website_check": ["https://www.b144.co.il/b144_sip/401C041341756754481D0411/", "https://www.rkn.co.il/office.asp?OfficeID=2361&AgentID=13571"],
+        "activity_evidence": "RKN real estate portal and B144 both list Shimi Chovav as an individual broker at \"Central Location\" in Modiin, covering second-hand residential, commercial, and investment property (including in Hungary); no dedicated website found."
+      }
+    },
+    {
+      "agency": "עוצמה — ייעוץ משכנתאות ונדל\"ן",
+      "owner_or_lead_agent": "אליהו לוי (Eliahu Levi)",
+      "role_classification": "Owner",
+      "city": "מודיעין",
+      "facebook_url": "https://www.facebook.com/otzmanadlan/",
+      "facebook_followers": "Not publicly visible",
+      "description": "One of the longest-running brokerages found in this research: founded in 1994 by Eliahu Levi, a Modiin resident \"since the city's founding,\" with 21+ years of stated real estate experience covering residential, commercial and mortgage consulting. No dedicated company website was found.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 20, "property_activity": 14, "marketing_brand": 6, "website_need": 20, "photo_opportunity_score": 10, "commercial_value": 6, "total": 76},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/otzmanadlan/",
+        "website_check": ["https://www.ad.co.il/agency/2038"],
+        "activity_evidence": "Self-described as \"a Modiin resident since its founding\" with \"over 21 years of experience in real estate\"; business founded 1994 per directory listings; covers residential, commercial and mortgage consulting; no company website located."
+      }
+    },
+    {
+      "agency": "אור בבית — תיווך עם חיוך",
+      "owner_or_lead_agent": "אורית ששון (Orit Sashon)",
+      "role_classification": "Owner",
+      "city": "מודיעין",
+      "facebook_url": "https://www.facebook.com/people/אורית-ששון-מתווכת-במודיעין/100001494243064/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Solo Modiin broker with roughly 14 years of experience, licensed and a member of the national brokers' chamber, marketing herself personally across Facebook, Instagram and TikTok. No dedicated company website was found despite the multi-channel personal marketing effort — a good case of a broker who clearly tries to market herself but lacks a real web presence.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 18, "property_activity": 13, "marketing_brand": 9, "website_need": 20, "photo_opportunity_score": 11, "commercial_value": 6, "total": 77},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/people/אורית-ששון-מתווכת-במודיעין/100001494243064/",
+        "website_check": ["https://www.madlan.co.il/agentsOffice/re_office_e6F1VbPZEt", "https://modiinapp.com/he/page/7963/תיווך-עם-חיוך-בניהולה-של-אורית-ששון"],
+        "activity_evidence": "Personal Facebook profile states 14 years of experience and membership in the national brokers' chamber (\"לשכת המתווכים\"); also active on Instagram (@oritsassonrealestate) and TikTok; no dedicated company website found across an extensive search."
+      }
+    }
+  ],
+  "rejected": [
+    {"agency": "101 נכסים (Tomer Abergil), ירושלים", "reason": "Has a real, modern, professional dedicated website (101nehasim.co.il) — Good website, disqualifies under website-need criteria."},
+    {"agency": "יוריקה נכסים / Uricka Properties, ירושלים", "reason": "Has a dedicated professional website (uricka.com) serving the Nachlaot area for 20+ years — Good website, reject."},
+    {"agency": "מרכז הנכסים — סניף קטמון, ירושלים", "reason": "Part of a technologically advanced multi-branch franchise network with its own dedicated modern website (merkaz-h.co.il/office/katamon) — Good website via network, reject."},
+    {"agency": "אנגלו סכסון ירושלים (Anglo Saxon Realty Jerusalem)", "reason": "Large, long-established international franchise (~25 consultants) with an established corporate web presence — not an under-marketed independent prospect."},
+    {"agency": "קשת נדל\"ן (Keshet Nadlan), ירושלים", "reason": "Confirmed to be a boutique urban-renewal (pinuy-binuy) project developer advancing ~5,000 housing units, not a residential listings brokerage — poor fit for photo-enhancement-of-listings pitch, does not match ICP business type."},
+    {"agency": "מנחם אוריאל, ירושלים", "reason": "Cross-referenced search shows he is affiliated with / operates under Oren Cohen Prime Real Estate Group, a larger multi-agent firm — insufficient evidence of independent decision authority (anti-ICP: franchise/group-affiliated agent)."},
+    {"agency": "יוזמה שיווק וניהול נדל\"ן, ירושלים", "reason": "Active office with directory presence (4.5★/8 reviews) but no owner name could be verified after extensive research — insufficient public information to confirm decision authority, per anti-ICP guidance."},
+    {"agency": "בן זמרה (סוניה ואילן), ירושלים", "reason": "Has a real dedicated professional website (ben-zimra.com) — Good website, reject."},
+    {"agency": "פנינה נבנצל, ירושלים", "reason": "Found to be affiliated with RE/MAX Momentum Israel (a post referenced her closing deals \"for RE/MAX Momentum\") — franchise agent likely covered by the RE/MAX corporate web presence rather than an independent, under-marketed owner."},
+    {"agency": "אליענה שיר, מודיעין", "reason": "RE/MAX Gold Modiin franchise agent with an active corporate agent-profile page (remax-gold.co.il) — Good website via franchise, reject."},
+    {"agency": "ענת סביר, מודיעין (Anat Savir)", "reason": "RE/MAX Gold Modiin franchise agent — franchise brand carries its own professional website presence, reject."},
+    {"agency": "אלפא נכסים מודיעין (Gil Chen)", "reason": "Has a modern, professional dedicated website (alfa-modiin.com), 6 consecutive years ranked a top Modiin office — Good website, reject."},
+    {"agency": "אלמוג נכסים, מודיעין (Irit Almog)", "reason": "Has a modern, professional dedicated website (almog-nadlan.com) with listings, testimonials and agent bio — Good website, reject."},
+    {"agency": "Down-Town מודיעין (דאון טאון)", "reason": "Has a modern, professional dedicated website (dtmodiin.co.il) with full listing categories — Good website, reject."},
+    {"agency": "נחלת בנימין, מודיעין", "reason": "Confirmed via press coverage that this office became the Keller Williams Modiin franchise in 2017 — now part of the international KW network with its own corporate web presence (kwisrael.kw.com); the old Nahalat Binyamin branding/Facebook page appears to be legacy. Reject as franchise-covered."},
+    {"agency": "אל הנכס מודיעין (El Haneches Modiin) — Julie Argamani", "reason": "Franchisee of the El Haneches national real estate network, which operates its own corporate website (el-haneches.co.il) — franchise-covered web presence, reject."},
+    {"agency": "נדלן פרו, מודיעין (Nadlan Pro)", "reason": "Has a dedicated professional website (nadlan-pro.co.il) — Good website, reject."},
+    {"agency": "דויד ניסנוב, פסגת זאב/נווה יעקב, ירושלים", "reason": "Confirmed via Yad2 agency ID to be a staff broker working under Tavel Nechasim (already included as a qualified prospect via its owner Shlomo Agay), not an independent decision-maker; own Facebook page has only 53 likes — redundant and low authority."},
+    {"agency": "נדל\"ן תורג'מן (Turgman Real Estate), טלפיות ירושלים", "reason": "Has a dedicated professional website (nadlan-turgeman.co.il) — Good website, reject."},
+    {"agency": "מגן נדל\"ן, ירושלים (Magen Real Estate)", "reason": "Operates a dedicated professional website (magennadlan.co.il) — Good website, reject."},
+    {"agency": "ים נדלן ירושלים (Yam Nadlan Jerusalem)", "reason": "Operates a dedicated professional website (yamnadlan.com) — Good website, reject."},
+    {"agency": "YBDI יזמות נדל\"ן, מודיעין", "reason": "Real estate entrepreneurship/development company, not a residential listings brokerage — poor fit for the photo-enhancement-of-listings ICP."},
+    {"agency": "מניב 360, מודיעין", "reason": "Real estate investment consulting/education business, not an active residential listings brokerage — poor fit for the ICP."},
+    {"agency": "תיווך תמרה יהודה, פסגת זאב ירושלים", "reason": "Only a bare directory listing found (address + generic description); no owner name, Facebook page, or deal-flow evidence could be verified — insufficient public information."},
+    {"agency": "תיווך כל הפסגה — עטדגי דוד, פסגת זאב ירושלים", "reason": "Only bare directory listings found across multiple sources; no Facebook page, owner confirmation beyond a surname, or deal-flow evidence — insufficient public information to verify."}
+  ]
+}

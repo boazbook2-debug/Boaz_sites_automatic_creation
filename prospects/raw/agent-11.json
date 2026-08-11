@@ -1,0 +1,271 @@
+{
+  "qualified": [
+    {
+      "agency": "תיווך ניר דוד",
+      "owner_or_lead_agent": "ניר דוד אזולאי (עם שותף חנן פרץ)",
+      "role_classification": "Owner",
+      "city": "אילת",
+      "facebook_url": "https://www.facebook.com/search/top/?q=%D7%AA%D7%99%D7%95%D7%95%D7%9A%20%D7%A0%D7%99%D7%A8%20%D7%93%D7%95%D7%93%20%D7%90%D7%99%D7%9C%D7%AA",
+      "facebook_followers": "4,947 likes",
+      "description": "11-year-old Eilat brokerage co-owned by Nir David Azoulai and Chanan Peretz, with a small agent team (incl. Sapir Bar Kra) and a large, active Facebook following; described in listings as one of the leading brokerage offices in Eilat.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 19,
+        "property_activity": 17,
+        "marketing_brand": 14,
+        "website_need": 20,
+        "photo_opportunity_score": 10,
+        "commercial_value": 9,
+        "total": 89
+      },
+      "priority": false,
+      "sources": {
+        "facebook": "facebook page \"תיווך ניר דוד\", Eilat — 4,947 likes, 32 were here",
+        "website_check": [
+          "DuckDuckGo/Bing search for independent domain — none found, presence limited to Facebook, Yad2, Easy.co.il, MyNextHome, RealtorsIndex, Eilat.city, FindGlocal"
+        ],
+        "activity_evidence": "Business address Sderot HaTamarim 21, Eilat; 11 years in operation; multi-agent team; active rental and sale listings across Yad2/Easy.co.il/directories"
+      }
+    },
+    {
+      "agency": "תיווך הדרום",
+      "owner_or_lead_agent": "נחי אינדיק (סוכן בכיר; בעלות המשרד לא אומתה במלואה)",
+      "role_classification": "Lead Agent",
+      "city": "אילת",
+      "facebook_url": "https://www.facebook.com/thadarom/",
+      "facebook_followers": "2,596 likes",
+      "description": "Long-running Eilat brokerage ('leading brokerage office in Eilat' per its own listings) with a sizable Facebook following; Nachi Indik is a prominent listed agent, though sole ownership could not be confirmed from public sources.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 14,
+        "property_activity": 15,
+        "marketing_brand": 13,
+        "website_need": 20,
+        "photo_opportunity_score": 9,
+        "commercial_value": 8,
+        "total": 79
+      },
+      "priority": false,
+      "sources": {
+        "facebook": "facebook.com/thadarom — 2,596 likes, 20 talking about this, 412 were here",
+        "website_check": [
+          "Search for independent domain — none found; only Facebook + directories (T.co.il, Madlan, B144, Mynexthome, Dapei Zahav)"
+        ],
+        "activity_evidence": "Address Merkaz Richter 9, Eilat; self-described as leading Eilat brokerage; resale + new-project listings referenced across multiple directories"
+      }
+    },
+    {
+      "agency": "ג'ורנו נכסים והשקעות (Jorno Assets & Investments)",
+      "owner_or_lead_agent": "ערן מזרחי",
+      "role_classification": "Owner",
+      "city": "אילת",
+      "facebook_url": "https://www.facebook.com/jornoestate/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Eilat brokerage owned/managed by Eran Mizrahi (listed as \"בעלים מנהל\"), actively cross-posting property listings (duplexes, apartments, private homes) into multiple Eilat community Facebook groups on a near-weekly cadence.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 19,
+        "property_activity": 14,
+        "marketing_brand": 10,
+        "website_need": 20,
+        "photo_opportunity_score": 9,
+        "commercial_value": 7,
+        "total": 79
+      },
+      "priority": false,
+      "sources": {
+        "facebook": "facebook.com/jornoestate and facebook.com/100088934301265 (Eran Mizrahi) — page like count not visible via public fetch",
+        "website_check": [
+          "Only presence found: broadcust.co.il/business/0538821197 (generic free directory template page, not an independent domain)"
+        ],
+        "activity_evidence": "Recurring posts across 'Our Eilat', 'All Eilat Friends' and other local groups dated within recent months; consistent listings of 4-6+ room apartments/duplexes"
+      }
+    },
+    {
+      "agency": "שי תיווך נדל\"ן ויזמות (Shai Toyzer)",
+      "owner_or_lead_agent": "שי טויזר",
+      "role_classification": "Owner",
+      "city": "אילת",
+      "facebook_url": "https://www.facebook.com/shairealestateeilat/",
+      "facebook_followers": "572 likes",
+      "description": "Owner-operator with 10+ years in Eilat real estate investment/luxury sales; runs a dated, low-effort Wix website with minimal listing presentation alongside an active, engaged Facebook page.",
+      "website_status": "Poor website",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 18,
+        "property_activity": 12,
+        "marketing_brand": 10,
+        "website_need": 14,
+        "photo_opportunity_score": 10,
+        "commercial_value": 7,
+        "total": 71
+      },
+      "priority": false,
+      "sources": {
+        "facebook": "facebook.com/shairealestateeilat — 572 likes, 239 talking about this",
+        "website_check": [
+          "shairealestate.com — confirmed live: basic dated Wix template, underdeveloped listings section, only 3 testimonials, lacks modern search/listing database"
+        ],
+        "activity_evidence": "10+ years experience per directory bios (nadlano, Easy.co.il, B144); active promotional posts on Facebook; handles villas/apartments/land/commercial in Eilat"
+      }
+    },
+    {
+      "agency": "שלווה בארמנותייך (דנית כזז / דנית בוטבול)",
+      "owner_or_lead_agent": "דנית כזז (בוטבול)",
+      "role_classification": "Owner",
+      "city": "טבריה",
+      "facebook_url": "https://www.facebook.com/danit.butbul/",
+      "facebook_followers": "5,475 likes",
+      "description": "High-follower Tiberias real estate consultant operating under her own brand \"שלווה בארמנותייך\", posting frequent listings (Kinneret-view apartments, duplexes, garden apartments) in the ₪1.4M-2.8M range; professional presence limited to Yad2/Madlan agent profiles, no independent site.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 18,
+        "property_activity": 18,
+        "marketing_brand": 15,
+        "website_need": 20,
+        "photo_opportunity_score": 10,
+        "commercial_value": 9,
+        "total": 90
+      },
+      "priority": false,
+      "sources": {
+        "facebook": "facebook.com/danit.butbul — 5,475 likes, 10 talking about this",
+        "website_check": [
+          "yad2.co.il/realestate/agency/4814751/broker/764580/forsale (agent profile, not a website)",
+          "madlan.co.il/agent/re_agent_hqo67yci7N0 (directory profile, not a website)",
+          "No independent domain found"
+        ],
+        "activity_evidence": "Multiple concurrent listings (5-room lake-view apartments, ~200sqm duplexes, garden apartments) with recent sale-closing posts; contact 052-8388291"
+      }
+    },
+    {
+      "agency": "Ohana & Valinsky נכסים (טל וולינסקי)",
+      "owner_or_lead_agent": "טל וולינסקי",
+      "role_classification": "Owner",
+      "city": "טבריה",
+      "facebook_url": "https://www.facebook.com/tal.valinsky/",
+      "facebook_followers": "3,210 likes",
+      "description": "Co-lead of boutique Tiberias brokerage Ohana & Valinsky; active across Facebook (3,210 likes), Instagram (~1,200 followers) and YouTube Shorts marketing lake-view and investment properties, with no independent website — only Yad2/Madlan agency pages.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 16,
+        "property_activity": 14,
+        "marketing_brand": 14,
+        "website_need": 20,
+        "photo_opportunity_score": 9,
+        "commercial_value": 8,
+        "total": 81
+      },
+      "priority": false,
+      "sources": {
+        "facebook": "facebook.com/tal.valinsky — 3,210 likes, 429 talking about this",
+        "website_check": [
+          "yad2.co.il/realestate/agency/6594285 (agency profile, not a website)",
+          "madlan.co.il/agentsOffice/re_office_OxJXZ52vyq8fF (directory profile, not a website)",
+          "No independent domain found"
+        ],
+        "activity_evidence": "Instagram ~1,200-1,202 followers/32 posts; active YouTube Shorts channel; boutique brokerage marketed as leading Tiberias/Kinneret-area properties; contact 053-599-1814"
+      }
+    },
+    {
+      "agency": "ורד כהן שרותי נדל\"ן",
+      "owner_or_lead_agent": "ורד כהן",
+      "role_classification": "Owner",
+      "city": "טבריה",
+      "facebook_url": "https://www.facebook.com/search/top/?q=%D7%95%D7%A8%D7%93%20%D7%9B%D7%94%D7%9F%20%D7%A0%D7%93%D7%9C%D7%9F%20%D7%98%D7%91%D7%A8%D7%99%D7%94",
+      "facebook_followers": "662 likes",
+      "description": "20-year real estate broker/consultant covering Tiberias, with active Facebook (662 likes) and Instagram (926 followers) presence; only web footprint is a generic free directory template page, not a real website.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 17,
+        "property_activity": 13,
+        "marketing_brand": 11,
+        "website_need": 20,
+        "photo_opportunity_score": 9,
+        "commercial_value": 7,
+        "total": 77
+      },
+      "priority": false,
+      "sources": {
+        "facebook": "facebook page \"ורד כהן נדל\"ן והשקעות\" — 662 likes, 3 talking about this, 175 were here; Instagram @veredcohennadlan — 926 followers, 249 posts",
+        "website_check": [
+          "broadcust.co.il/business/0506531252/pages — confirmed generic free business-directory template, not an independent website"
+        ],
+        "activity_evidence": "20 years' experience per Yad2 bio; recurring listings (e.g. 4-room 129sqm apartment) across Facebook/Instagram/Yad2; contact 050-6531252"
+      }
+    },
+    {
+      "agency": "תיווך הכהנים",
+      "owner_or_lead_agent": "יוסף (ומשפחת הכהנים)",
+      "role_classification": "Owner",
+      "city": "טבריה",
+      "facebook_url": "https://www.facebook.com/search/top/?q=%D7%AA%D7%99%D7%95%D7%95%D7%9A%20%D7%94%D7%9B%D7%94%D7%A0%D7%99%D7%9D%20%D7%98%D7%91%D7%A8%D7%99%D7%94",
+      "facebook_followers": "270 likes",
+      "description": "Shabbat-observant family brokerage covering Tiberias and northern Israel (homes, land, commercial, tourism/vacation lettings); runs a dated but functioning self-built website with working search/filters and image quality described as inconsistent across listings.",
+      "website_status": "Poor website",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {
+        "decision_authority": 15,
+        "property_activity": 16,
+        "marketing_brand": 9,
+        "website_need": 12,
+        "photo_opportunity_score": 11,
+        "commercial_value": 7,
+        "total": 70
+      },
+      "priority": false,
+      "sources": {
+        "facebook": "270 likes reported across their Facebook presence (business directory aggregation, page URL not independently confirmed)",
+        "website_check": [
+          "cohensrealestate.com — confirmed live: dated design/clunky navigation, but functioning property search with filters, multiple active 2024-2025 listings, image quality noted as varying",
+          "realestatenorthisrael.com — 301 redirects to cohensrealestate.com"
+        ],
+        "activity_evidence": "Active listings dated into 2025 with working search tool; address Kkar Rasco 1 / Hagalboa St 4, Tiberias; contacts Yosef 050-6733375, Eliyahu 050-4770020"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "agency": "KEY HOUSE (Eilat)",
+      "reason": "Good website — REJECT (do not include these): keyhouseeilat.co.il is a modern, professionally designed, fully functional site with testimonials, catalog, and branding."
+    },
+    {
+      "agency": "תיווך נשיא נדלן (Eilat)",
+      "reason": "Score 67, below the 68 floor — small Facebook following (665 likes) and IG (47 followers), no verifiable listing-volume evidence beyond a couple of posts."
+    },
+    {
+      "agency": "A.M נכסים והשקעות (Tiberias)",
+      "reason": "Score ~66, below the 68 floor — modest Facebook presence (119-165 likes across page variants), limited verifiable activity evidence beyond directory boilerplate."
+    },
+    {
+      "agency": "רותם מנשה שמאות מקרקעין ושירותי נדל\"ן (Tiberias)",
+      "reason": "Primarily a land appraiser (שמאי מקרקעין), not an active listing agent with a property photo portfolio — poor fit for photo-enhancement/marketing-site ICP."
+    },
+    {
+      "agency": "דן סיגלוביץ תיווך נדל\"ן (Tiberias)",
+      "reason": "No discoverable Facebook page, follower count, or independent activity evidence beyond a bare license registry entry — unverifiable marketing/business activity."
+    },
+    {
+      "agency": "תיווך טבריה (generic FB page, id 100030759196910)",
+      "reason": "Page is labeled 'Digital creator' with no identifiable owner/agent name or confirmable business registration — unverifiable authority and legitimacy."
+    },
+    {
+      "agency": "תיווך נדל\"ן בית באילת (Bait Eilat)",
+      "reason": "Very small Facebook following (140 likes, 184 discussing) — insufficient marketing/brand and activity evidence to clear the floor."
+    },
+    {
+      "agency": "תיווך קידר (Eilat)",
+      "reason": "No dedicated Facebook page found despite targeted search — cannot verify marketing presence or activity level; directory-only footprint."
+    },
+    {
+      "agency": "Daniel Real Estate / דניאל נדל\"ן (Tiberias)",
+      "reason": "Only presence found was an easy.co.il directory listing (not an independent site) with no Facebook page or activity evidence located — unverifiable business activity."
+    }
+  ]
+}

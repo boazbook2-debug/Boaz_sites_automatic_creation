@@ -24,19 +24,21 @@ const description = agency.aboutText.slice(0, 160);
 const locations = uniqueSorted(properties.map((p) => p.location));
 const keywords = [...buildDefaultSeoTerms(properties), ...(agency.customSeoTerms ?? [])].join(", ");
 
-// A password-gated demo shouldn't leak the agency's identity in metadata that
-// renders before the gate ever checks the code (page <title>, OG tags) —
-// keep those generic for these builds instead of the real name/tagline.
+// Gated demos still keep the real branding in title/OG tags — link previews
+// (WhatsApp, etc.) are how these get shared privately with the agent, so a
+// generic "password protected" card reads as broken/untrustworthy. The gate
+// itself (password check) and `robots: noindex` below are what actually keep
+// these private — they don't depend on the metadata being generic.
 const isGatedDemo = Boolean(agency.demoAccessCode);
-const publicTitle = isGatedDemo ? "תצוגה מוגנת בסיסמה" : `${agency.name} | ${agency.tagline}`;
-const publicDescription = isGatedDemo ? "עמוד זה דורש קוד גישה לצפייה." : description;
+const publicTitle = `${agency.name} | ${agency.tagline}`;
+const publicDescription = description;
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: publicTitle, template: isGatedDemo ? "%s" : `%s | ${agency.name}` },
+  title: { default: publicTitle, template: `%s | ${agency.name}` },
   description: publicDescription,
-  keywords: isGatedDemo ? undefined : keywords,
-  applicationName: isGatedDemo ? undefined : agency.name,
+  keywords,
+  applicationName: agency.name,
   robots: agency.noIndex ? { index: false, follow: false } : { index: true, follow: true },
   alternates: { canonical: SITE_URL },
   verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
@@ -49,13 +51,13 @@ export const metadata = {
     title: publicTitle,
     description: publicDescription,
     url: SITE_URL,
-    images: isGatedDemo ? [] : agency.heroImages?.[0] ? [{ url: agency.heroImages[0] }] : [],
+    images: agency.heroImages?.[0] ? [{ url: agency.heroImages[0] }] : [],
   },
   twitter: {
     card: "summary_large_image",
     title: publicTitle,
     description: publicDescription,
-    images: isGatedDemo ? [] : agency.heroImages?.[0] ? [agency.heroImages[0]] : [],
+    images: agency.heroImages?.[0] ? [agency.heroImages[0]] : [],
   },
 };
 
@@ -95,6 +97,8 @@ export default function RootLayout({ children }) {
         "--color-main": colors.main,
         "--color-accent1": colors.accent1,
         "--color-accent2": colors.accent2,
+        ...(colors.headerBg ? { "--color-header-bg": colors.headerBg } : {}),
+        ...(colors.headerText ? { "--color-header-text": colors.headerText } : {}),
       }}
     >
       <body className="min-h-full flex flex-col bg-[var(--color-background)] text-[var(--color-main)] font-sans">

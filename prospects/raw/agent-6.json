@@ -1,0 +1,254 @@
+{
+  "qualified": [
+    {
+      "agency": "אלון נכסים",
+      "owner_or_lead_agent": "אלון משה (Alon Moshe)",
+      "role_classification": "Owner",
+      "city": "חולון",
+      "facebook_url": "https://www.facebook.com/alonmoshereal/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Owner-operated brokerage covering Holon/Bat Yam/Rishon LeZion; Alon holds a business degree, a broker license and a mediation license, and posts videos/reels on Facebook. Only presence found is Facebook + directory/aggregator listings (b144, Madlan, Yad2) — no dedicated website.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 17, "property_activity": 14, "marketing_brand": 12, "website_need": 18, "photo_opportunity_score": 10, "commercial_value": 7, "total": 78},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/alonmoshereal/",
+        "website_check": ["WebSearch: אלון נכסים תיווך נדל\"ן חולון בת ים אתר", "b144.co.il/תיווך/בת-ים/", "madlan.co.il/agentsOffice/re_office_g2lh2rANHBk", "yad2.co.il/realestate/agency/5920222"],
+        "activity_evidence": "Owner has business degree + broker + mediation licenses; active FB videos/reels; listed as broker of record on b144, Madlan and Yad2 agency pages (implies real transaction history); no dedicated site found across 3 separate searches."
+      }
+    },
+    {
+      "agency": "תיווך גדעוני",
+      "owner_or_lead_agent": "גדעוני (Gidoni) — first name not confirmed publicly",
+      "role_classification": "Owner",
+      "city": "חולון",
+      "facebook_url": "https://www.facebook.com/gidonirealestate/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Family-run brokerage on Sokolov St, Holon, operating over 40 years, handling apartments, shops, managed projects and TAMA 38/urban-renewal deals. Digital footprint is essentially old-school: a Walla email address and directory-only listings, no website, minimal social presence.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 15, "property_activity": 15, "marketing_brand": 6, "website_need": 19, "photo_opportunity_score": 9, "commercial_value": 8, "total": 72},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/gidonirealestate/",
+        "website_check": ["WebSearch: תיווך גדעוני חולון סוקולוב אתר", "easy.co.il/page/25808049", "d.co.il/17853850/32970/", "ad.co.il/agency/1288", "d.co.il Holon directory (city6600)"],
+        "activity_evidence": "40+ years in business at same physical address (Sokolov 33, Holon); handles TAMA 38/urban renewal projects and shop sales in addition to apartments — evidence of ongoing deal flow over decades; contact email is a Walla address (gidony33@walla.com), a strong obsolescence signal."
+      }
+    },
+    {
+      "agency": "אבי יצקן נכסים",
+      "owner_or_lead_agent": "אבי יצקן (Avi Yitzkan)",
+      "role_classification": "Owner",
+      "city": "חולון",
+      "facebook_url": "Not publicly identified",
+      "facebook_followers": "Not publicly visible",
+      "description": "Solo-operator broker with 30 years' experience across all property types in Holon, per his own directory listing. No Facebook page or website found anywhere — purely a phone-and-directory presence, a strong web-need signal for a long-tenured, high-authority prospect.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 16, "property_activity": 14, "marketing_brand": 7, "website_need": 17, "photo_opportunity_score": 9, "commercial_value": 6, "total": 69},
+      "priority": true,
+      "sources": {
+        "facebook": "Not found",
+        "website_check": ["b144.co.il/תיווך/חולון/ directory listing", "domain guess www.aviitzkan.co.il — ENOTFOUND"],
+        "activity_evidence": "Directory tagline: \"מומחה בתיווך לכל סוגי הנכסים, 30 שנות ניסיון\" (broker expert in all property types, 30 years' experience) — phone 072-3226529, no other online presence found at all, consistent with a veteran agent who has never invested in digital marketing."
+      }
+    },
+    {
+      "agency": "שרון נחמדי - משרד תיווך",
+      "owner_or_lead_agent": "שרון נחמדי (Sharon Nachmadi)",
+      "role_classification": "Owner",
+      "city": "חולון",
+      "facebook_url": "https://www.facebook.com/p/%D7%A9%D7%A8%D7%95%D7%9F-%D7%A0%D7%97%D7%9E%D7%93%D7%99-%D7%9E%D7%A9%D7%A8%D7%93-%D7%AA%D7%99%D7%95%D7%95%D7%9A-%D7%91%D7%97%D7%95%D7%9C%D7%95%D7%9F-%D7%91%D7%AA-%D7%99%D7%9D-%D7%95%D7%94%D7%A1%D7%91%D7%99%D7%91%D7%94-100063606968541/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Independent broker operating in Holon/Bat Yam since 1991 (33+ years) with an active YouTube channel but no website — a long track record with an under-invested digital presence.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 16, "property_activity": 13, "marketing_brand": 8, "website_need": 17, "photo_opportunity_score": 9, "commercial_value": 6, "total": 69},
+      "priority": true,
+      "sources": {
+        "facebook": "https://www.facebook.com/p/%D7%A9%D7%A8%D7%95%D7%9F-%D7%A0%D7%97%D7%9E%D7%93%D7%99-%D7%9E%D7%A9%D7%A8%D7%93-%D7%AA%D7%99%D7%95%D7%95%D7%9A-%D7%91%D7%97%D7%95%D7%9C%D7%95%D7%9F-%D7%91%D7%AA-%D7%99%D7%9D-%D7%95%D7%94%D7%A1%D7%91%D7%99%D7%91%D7%94-100063606968541/",
+        "website_check": ["WebSearch: שרון נחמדי משרד תיווך חולון בת ים אתר", "domain guess www.sharonnachmadi.co.il — ENOTFOUND"],
+        "activity_evidence": "FB bio states operating as an independent broker since 1991; maintains a YouTube channel (youtube.com/user/KTNcoil); no dedicated website found in search or by domain guess."
+      }
+    },
+    {
+      "agency": "ביג לנד בע\"מ (Big Land Ltd.)",
+      "owner_or_lead_agent": "רחל באסני (Rachel Basni)",
+      "role_classification": "Owner",
+      "city": "גבעתיים",
+      "facebook_url": "Not publicly identified",
+      "facebook_followers": "Not publicly visible",
+      "description": "Owner-founded Givatayim brokerage established May 2001 (24 years), branded with the tagline \"Experience–integrity–results.\" No website or verifiable social presence found, relying entirely on directory listings.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 15, "property_activity": 13, "marketing_brand": 8, "website_need": 16, "photo_opportunity_score": 8, "commercial_value": 6, "total": 66},
+      "priority": false,
+      "sources": {
+        "facebook": "Not found",
+        "website_check": ["b144.co.il/תיווך/גבעתיים/ directory listing"],
+        "activity_evidence": "Directory lists founding date May 2001 (24 years in business) under owner Rachel Basni, address Katzenelson 1, Givatayim; no dedicated WebSearch verification pass was completed due to search-budget limits, so confidence is Medium rather than High."
+      }
+    },
+    {
+      "agency": "רפי כהן - יועץ נדל\"ן",
+      "owner_or_lead_agent": "רפי כהן (Rafi Cohen)",
+      "role_classification": "Lead Agent",
+      "city": "גבעתיים",
+      "facebook_url": "https://www.facebook.com/raficohen.co.il/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Independent real estate advisor covering sales, rentals and property management in Ramat Gan/Givatayim, operating solely under his personal Facebook brand. His FB vanity URL mimics a domain (raficohen.co.il) but no such site actually exists.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 14, "property_activity": 11, "marketing_brand": 8, "website_need": 18, "photo_opportunity_score": 8, "commercial_value": 6, "total": 65},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/raficohen.co.il/",
+        "website_check": ["WebSearch: יועץ נדל\"ן גבעתיים סוכן", "domain check https://raficohen.co.il — ENOTFOUND (confirms the FB vanity URL is not a real website)"],
+        "activity_evidence": "Described in search results as a real estate advisor handling sales, rentals and property management specifically in Ramat Gan/Givatayim; offers a broader service mix than pure brokerage, suggesting an established local practice."
+      }
+    },
+    {
+      "agency": "אילון דרעי - סוכן נדל\"ן",
+      "owner_or_lead_agent": "אילון דרעי (Eilon Darai)",
+      "role_classification": "Lead Agent",
+      "city": "בת ים",
+      "facebook_url": "https://www.facebook.com/eilonrealestate/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Self-branded \"leading agent\" (\"סוכן נדלן מוביל\") covering apartment sales/rentals across Bat Yam, Holon and Jaffa, with the personal slogan \"the real estate agent focused on you.\" Confirmed in two independent local directories with no website listed.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 14, "property_activity": 13, "marketing_brand": 9, "website_need": 15, "photo_opportunity_score": 8, "commercial_value": 6, "total": 65},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/eilonrealestate/",
+        "website_check": ["WebSearch: מתווך דירות בת ים סוכן נדל\"ן", "d.co.il Bat Yam directory (city6200) — phone 052-4349008, no website column populated"],
+        "activity_evidence": "Directory tagline \"סוכן הנדל\"ן שמתמקד בך\" plus a 3-city service area (Bat Yam/Holon/Jaffa) branded under his own name; no dedicated site surfaced in either source."
+      }
+    },
+    {
+      "agency": "אדוה תיווך עם חיוך",
+      "owner_or_lead_agent": "אדוה קורן (Adva Koren)",
+      "role_classification": "Owner",
+      "city": "גבעתיים",
+      "facebook_url": "https://www.facebook.com/Adva.realestate.with.a.smile/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Solo, personally-branded broker (\"brokerage with a smile\") selling apartments in Givatayim and Ramat Gan. Full name confirmed via directory listing; runs an active Facebook page but no dedicated website.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 15, "property_activity": 10, "marketing_brand": 9, "website_need": 16, "photo_opportunity_score": 8, "commercial_value": 5, "total": 63},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/Adva.realestate.with.a.smile/",
+        "website_check": ["WebSearch: משרד תיווך גבעתיים מתווך", "b144.co.il/תיווך/גבעתיים/ (owner: אדוה קורן, Hatzanchanim 6, Givatayim)"],
+        "activity_evidence": "Personally-branded FB page with a friendly tagline confirms active self-marketing; directory confirms real name and office address; no website found in either source."
+      }
+    },
+    {
+      "agency": "בוטיק נדל\"ן - חולון, ראשל\"צ והסביבה",
+      "owner_or_lead_agent": "Not publicly disclosed (small boutique/solo-operator brand — owner's personal name not surfaced in public sources)",
+      "role_classification": "Lead Agent",
+      "city": "חולון",
+      "facebook_url": "https://www.facebook.com/boutik.nadlan/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Boutique brokerage with 16 active listings on Yad2 (licensed broker #3184016) covering Holon/Rishon LeZion, active on Facebook, but the operator's personal name could not be confirmed publicly — worth identifying the owner on first contact.",
+      "website_status": "No website found — High confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 8, "property_activity": 16, "marketing_brand": 9, "website_need": 18, "photo_opportunity_score": 8, "commercial_value": 6, "total": 65},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/boutik.nadlan/",
+        "website_check": ["WebSearch: בוטיק נדל\"ן חולון ראשל\"צ אתר website", "yad2.co.il/realestate/agency/6750098/forsale"],
+        "activity_evidence": "Yad2 agency page shows 16 active for-sale listings under broker license 3184016 — concrete, verifiable deal-flow evidence — but no owner name appears on the FB page, Yad2 listing, or in search snippets."
+      }
+    },
+    {
+      "agency": "אורן ליכט - יועץ נדל\"ן",
+      "owner_or_lead_agent": "אורן ליכט (Oren Licht)",
+      "role_classification": "Lead Agent",
+      "city": "חולון",
+      "facebook_url": "https://www.facebook.com/orenlichttzabar/",
+      "facebook_followers": "Not publicly visible",
+      "description": "Independent real estate consultant and marketer in Holon; confirmed by name and phone number in a local business directory in addition to his Facebook page. No dedicated website found.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 15, "property_activity": 10, "marketing_brand": 9, "website_need": 16, "photo_opportunity_score": 8, "commercial_value": 5, "total": 63},
+      "priority": false,
+      "sources": {
+        "facebook": "https://www.facebook.com/orenlichttzabar/",
+        "website_check": ["WebSearch: אורן מאור יועץ נדל\"ן חולון אתר", "d.co.il Holon directory (city6600) page 4 — אורן ליכט יועץ נדלן, 055-6623421"],
+        "activity_evidence": "FB self-description \"יועץ ומשווק נדל\"ן\" (consultant and marketer) confirms he actively positions himself on marketing; independently confirmed by name+phone in the Holon brokers directory; no website surfaced in either source."
+      }
+    },
+    {
+      "agency": "אילן אמיר - תיווך ויזמות",
+      "owner_or_lead_agent": "אילן אמיר (Ilan Amir)",
+      "role_classification": "Owner",
+      "city": "גבעתיים",
+      "facebook_url": "Not publicly identified",
+      "facebook_followers": "Not publicly visible",
+      "description": "Owner-operated brokerage and development firm in Givatayim, self-described tagline emphasizes integrity, transparency and professionalism. No Facebook page or website located; directory listing is the only public presence found.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 14, "property_activity": 10, "marketing_brand": 7, "website_need": 16, "photo_opportunity_score": 8, "commercial_value": 6, "total": 61},
+      "priority": false,
+      "sources": {
+        "facebook": "Not found",
+        "website_check": ["b144.co.il/תיווך/גבעתיים/ directory listing (owner: אילן אמיר, Katzenelson 81, Givatayim)"],
+        "activity_evidence": "Directory-only evidence: named owner and a professional-sounding brand tagline (\"commitment to integrity, transparency and professionalism\"), also handles development (\"יזמות\") alongside brokerage. No WebSearch verification pass completed for this candidate due to search-budget limits."
+      }
+    },
+    {
+      "agency": "נשר נדל\"ן",
+      "owner_or_lead_agent": "נתן שוורץ (Natan Schwartz)",
+      "role_classification": "Owner",
+      "city": "בת ים",
+      "facebook_url": "Not publicly identified",
+      "facebook_followers": "Not publicly visible",
+      "description": "Owner-operated brokerage serving both Bat Yam and Givatayim, handling apartments, shops, income-producing properties and development deals, with 6 verified customer reviews on a local directory. No website found.",
+      "website_status": "No website found — Medium confidence",
+      "photo_opportunity": "Medium",
+      "score_breakdown": {"decision_authority": 14, "property_activity": 12, "marketing_brand": 7, "website_need": 16, "photo_opportunity_score": 8, "commercial_value": 6, "total": 63},
+      "priority": false,
+      "sources": {
+        "facebook": "Not found",
+        "website_check": ["b144.co.il/תיווך/בת-ים/ and b144.co.il/תיווך/גבעתיים/ directory listings (owner: נתן שוורץ)"],
+        "activity_evidence": "6 verified reviews on b144 plus a two-city footprint (Bat Yam + Givatayim) and a broad service tagline (\"brokerage, entrepreneurship and investments\") — concrete but moderate evidence of real, ongoing deal flow. No dedicated WebSearch pass completed due to search-budget limits."
+      }
+    }
+  ],
+  "rejected": [
+    {"agency": "HomeRun תיווך ויזמות נדל\"ן (Holon)", "reason": "Good website — REJECT (homerunadlan.co.il, ranked #1 on Madlan for Holon, 10 years/300+ transactions)."},
+    {"agency": "זמיר נדל\"ן (Holon/Bat Yam)", "reason": "Good website — REJECT (zamirnadlan.co.il, professional multi-page site, established 2004, 8 agents)."},
+    {"agency": "תיווך תרשיש (Holon/Bat Yam)", "reason": "Good website — REJECT (broker-t.co.il, established 2014)."},
+    {"agency": "דניאל חסידים נדל\"ן (Holon)", "reason": "Good website — REJECT (danielhasidim.com); also affiliated with RE/MAX Avenue."},
+    {"agency": "ערן דרורי נדל\"ן (Holon)", "reason": "Good website — REJECT (eran-drory.co.il); part of the Keller Williams franchise network."},
+    {"agency": "אבניו נדל\"ן / רימקס אבניו (Holon)", "reason": "Good website — REJECT (avenue-nadlan.co.il); RE/MAX franchise, 'hundreds of referrals' per directory tagline."},
+    {"agency": "נדלן פרו (Bat Yam/Givatayim)", "reason": "Good website — REJECT (nadlan-pro.co.il)."},
+    {"agency": "קלר וויליאמס בת ים (Keller Williams Bat Yam)", "reason": "National franchise with corporate web presence — REJECT."},
+    {"agency": "רימקס - מתן עזרא (Bat Yam)", "reason": "RE/MAX franchise — REJECT (franchise agents carry the network's site/profile)."},
+    {"agency": "שיא מרכז / רי-מקס שיא - קרול אליאב (Bat Yam)", "reason": "Confirmed to actually be a RE/MAX Shia franchise location — REJECT."},
+    {"agency": "מרכז הנדל\"ן (Bat Yam)", "reason": "Good website — REJECT (merkazhanadlan.com), 30+ years, established company."},
+    {"agency": "אור הנדל\"ן / אור נכסים (Holon/Bat Yam)", "reason": "Ambiguous conflation risk with a larger, separate company (אור נכסים, or-n.co.il, primarily Shephela/Rehovot-based) — could not confirm this is a distinct, local owner-operated agency without further research, so skipped to avoid mixing data between agencies."},
+    {"agency": "נתנאל שירותי נדל\"ן (Holon)", "reason": "Ambiguous conflation risk with the much larger, unrelated 'Netanel Group' (50-year real estate group) — could not confirm this small FB page is a distinct entity, skipped to avoid data-mixing errors."},
+    {"agency": "חי נכסים (Bat Yam)", "reason": "Strong activity signal ('leading office,' many years, luxury/commercial/plots) but no publicly identifiable owner or lead-agent name found in any source checked — fails the decision-authority bar as verified."},
+    {"agency": "Bcity שירותי נדל\"ן (Holon/Bat Yam)", "reason": "No identifiable owner/lead-agent name found publicly; insufficient info to verify decision authority."},
+    {"agency": "תיווך המרכז בת ים", "reason": "7 verified reviews and an active FB page show real activity, but no owner/lead-agent name found in any source — insufficient info to verify decision authority."},
+    {"agency": "שי מרום - יועץ נדל\"ן (Bat Yam)", "reason": "Insufficient public information gathered within available research budget to verify activity or authority."},
+    {"agency": "נדל\"ן פלוס (Holon)", "reason": "Insufficient public information gathered within available research budget."},
+    {"agency": "יובל טגליכט - יועץ נדל\"ן (Holon/Bat Yam)", "reason": "Cross-referenced content suggests he may operate under Eran Drory's Keller Williams team rather than independently — decision authority as an independent owner could not be established."},
+    {"agency": "ענת גרונדמן - יעוץ ושיווק נדל\"ן (Holon)", "reason": "Appears to operate as a consultant under a project-marketing company ('Yesodot') rather than as a fully independent owner; insufficient deal-flow evidence to clear the quality bar (score ~62/100)."},
+    {"agency": "רומנו מזרחי תיווך ושיווק נדל\"ן (Givatayim)", "reason": "Ambiguous whether 'Romano' and 'Mizrahi' represent one or two people; insufficient activity evidence beyond the FB page name (score ~60/100)."},
+    {"agency": "חיים בנדל\"ן (Givatayim)", "reason": "Only a first name ('Haim') could be confirmed; insufficient evidence of authority or activity."},
+    {"agency": "נדלן משתלם (Givatayim)", "reason": "No identifiable owner/lead-agent name found publicly."},
+    {"agency": "פילו נדלן (Givatayim)", "reason": "No identifiable owner/lead-agent name found; insufficient information within available research budget."},
+    {"agency": "נדל\"ן אנושי (Givatayim)", "reason": "No identifiable owner/lead-agent name found; insufficient information within available research budget."},
+    {"agency": "תיווך וונדרלנד (Givatayim)", "reason": "No identifiable owner/lead-agent name found; insufficient information within available research budget."},
+    {"agency": "קבוצת רם - רמי גמרי (Holon)", "reason": "Domain ramgroup.co.il returned an active (403 Forbidden, i.e. real/live) response rather than a DNS failure — precautionary reject given risk of an existing professional web presence that could not be fully inspected."},
+    {"agency": "אלמלם נדל\"ן - שמעון אלמלם (Bat Yam)", "reason": "Name confirmed via FB handle and directory, but marketing/activity evidence is too thin to clear the quality bar (score ~60/100)."},
+    {"agency": "אדיר נדל\"ן (Bat Yam/Givatayim)", "reason": "Established 2002, licensed, but no owner name found in any source; insufficient evidence to verify decision authority (score ~57/100)."},
+    {"agency": "מקסים נכסים (Bat Yam)", "reason": "Established 1999 but no owner name found and activity evidence too thin (score ~55/100)."},
+    {"agency": "מתן נסטל נדל\"ן (Givatayim)", "reason": "Named owner but marketing/activity evidence too thin to clear the quality bar (score ~58/100)."},
+    {"agency": "רון ניסים - תיווך מוצא ניסים (Givatayim)", "reason": "Named owner but essentially no other evidence found; insufficient to verify activity (score ~55/100)."}
+  ]
+}

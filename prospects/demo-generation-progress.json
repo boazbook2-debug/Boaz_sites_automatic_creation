@@ -1,0 +1,18 @@
+{
+  "batch_target_this_run": 86,
+  "note": "This run continues the demo-site campaign past the original 20-site goal, into the qualified-100 list (86 after website-check cleanup), per explicit user instruction on 2026-08-10.",
+  "data_packages_complete": 3,
+  "validated": 3,
+  "built": 10,
+  "deployed": 10,
+  "ready_to_send": 8,
+  "skipped_for_now": 36,
+  "failed": 0,
+  "disqualified_madlan_present": 2,
+  "initial_prospects": 86,
+  "disqualified_madlan_or_website": 41,
+  "eligible_target": 45,
+  "disqualified_after_build": 2,
+  "disqualified_total": 42,
+  "recovery_pass_note": "Yad2-first + no-portrait-fallback method validated: 2/2 Yad2-confirmed-match attempts converted (2, 19). Several Yad2 URL leads from batch WebSearch were false matches (different company, same/similar name) and were correctly rejected: rank4 tavel-nechasim (wrong city), rank20 jorno (matched a 178-branch franchise, clearly wrong). WebSearch quota exhausted mid-pass (200/200), blocking bulk Yad2-URL discovery for remaining candidates."
+}
