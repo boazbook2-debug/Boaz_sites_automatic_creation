@@ -1,6 +1,12 @@
 {
+  "schemaVersion": 2,
   "notes": "",
   "ready": false,
   "labels": {},
-  "yad2Url": "https://www.yad2.co.il/realestate/agency/4763286/forsale"
+  "yad2Url": "https://www.yad2.co.il/realestate/agency/4763286/forsale",
+  "agentPhoto": null,
+  "logo": null,
+  "propertyPhotos": [],
+  "customUploads": [],
+  "nextCustomId": 1
 }

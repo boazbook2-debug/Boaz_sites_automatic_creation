@@ -1,0 +1,35 @@
+{
+  "objective": "200 new qualified prospects via 4-wave tournament (originally specified)",
+  "status": "REAL DISCOVERY IN PROGRESS — WebSearch unavailable (200/200 exhausted, session-wide, confirmed non-resetting). Switched to browser-only channels: Facebook Pages search (primary, working) + Yad2 name-search (verification only, not discovery) + Yad2 location-directory (secondary, low yield) + Madlan site-search (Madlan-gate check).",
+  "wave": 0,
+  "round": "pre-wave discovery calibration",
+  "candidates_discovered_raw": 11,
+  "candidates_deep_qualified_checked": 9,
+  "final_qualified_new": 1,
+  "final_qualified_ids": [
+    101
+  ],
+  "rejected_this_session": 5,
+  "existing_8_yad2_recheck": {
+    "status": "COMPLETE",
+    "confirmed": [
+      2,
+      19,
+      27,
+      70
+    ],
+    "no_confident_match": [
+      1,
+      5,
+      11,
+      43
+    ]
+  },
+  "honest_note": "200 fully-verified, non-fabricated new prospects is not achievable in a small number of turns at this per-candidate verification cost (~8-12 browser tool calls each, ~50-75% rejection rate observed). Continuing in real batches turn over turn rather than fabricating volume. No prospect data has been invented — every rejection above has a concrete logged reason, every qualified candidate has a real FB/phone/recency source.",
+  "next_actions": [
+    "Run more Facebook Pages search queries with varied phrasing (avoid re-querying terms already producing duplicates) to find fresh names",
+    "Deep-qualify each fresh name (About/website check, post recency, Yad2 name-search, Madlan name-search)",
+    "Append every real pass to prospects/discovery/new_qualified.csv then re-run the merge+rerank script into sales-qualified-2026-08.csv",
+    "Continue appending real stats to prospect-search-patterns.json every batch"
+  ]
+}

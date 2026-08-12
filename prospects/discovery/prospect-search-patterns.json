@@ -1,0 +1,31 @@
+{
+  "strong_patterns": [
+    "Yad2 broker-search autocomplete (name known in advance) — near-100% hit rate for direct agency URL when exact name typed",
+    "Facebook Pages search with generic Hebrew query 'תיווך נדלן עצמאי' / 'סוכן נדלן עצמאי' — surfaces real small independent agents mixed with duplicates of already-known candidates"
+  ],
+  "weak_patterns": [
+    "Yad2 location-search directory (city or neighborhood grid) — dominated by franchise brands (REMAX, CITYZEN, Landsman, etc.), true independent single-agent shops are rare (~1 per 15-20 entries) and require manual visual scan for a real headshot + small listing count",
+    "Facebook Pages search with a city name appended to a generic query — Facebook's ranking mostly ignores the city qualifier and re-surfaces the same generic-query results already seen"
+  ],
+  "productive_locations": ["Haifa (via generic query, not location-filtered)"],
+  "productive_search_queries": [
+    "תיווך נדלן עצמאי",
+    "סוכן נדלן עצמאי"
+  ],
+  "productive_business_types": ["solo named agent pages (Property/Estate agent category, 100-1500 followers, real headshot)"],
+  "common_rejection_reasons": [
+    "GATE_D_WEBSITE — FB page 'Links'/About field lists a live personal domain (2 of 8 deep-checked candidates so far)",
+    "GATE_A_RECENCY — most recent visible FB post is >6 months old (2 of 8 deep-checked candidates so far)",
+    "Duplicate of already-known prospect — generic queries heavily re-surface names already in qualified-100.json / campaign-chart.csv (2 of 10 discovered names were exact duplicates: ד\"ש נדל\"ן, עמית בית-דגן, C נדל\"ן, איזק נדל\"ן, תיווך לאון — 5 total duplicate hits across ~5 queries)"
+  ],
+  "observed_yield_stats": {
+    "queries_run": 5,
+    "raw_names_surfaced": 10,
+    "duplicates_of_existing_prospects": 5,
+    "fresh_candidates_deep_checked": 4,
+    "passed_all_gates": 1,
+    "rejected_website": 2,
+    "rejected_recency": 2,
+    "real_qualified_per_hour_estimate": "~1 per 20-30 min of continuous browser-only research given no WebSearch — discovery+verification cost is roughly 8-12 tool calls per fully-vetted candidate, with ~50-75% rejection rate on deep check"
+  }
+}

@@ -340,3 +340,8 @@ BarHome - Boutique Brokers (גיא ברהום),MADLAN_PRESENT — used as identi
 שי נכסים – הראשון ברמת השרון,MADLAN_PRESENT — used as identity source (madlan.co.il/agent/...) before rule existed; demo already deployed but excluded from outreach
 "עופר נדל""ן",MADLAN_PRESENT — madlan.co.il/agentsOffice/re_office_fulcUA6FvXN
 "ליאור בר עוז - תיווך נדל""ן",MADLAN_PRESENT — madlan.co.il/agent/re_agent_ineDjAcENIK
+,אסנת ניניו - נדל"ן בהרצליה ורמת השרון,אסנת ניניו,GATE_D_WEBSITE,"FB page About lists live website nadlanham.co.il — disqualified, has existing site"
+,מאיר דינר - מתווך נדל"ן,מאיר דינר,GATE_A_RECENCY,"Most recent FB post 14 Dec 2024, no newer activity found — stale >6mo"
+,אלמות נדל"ן,איתי כהן,GATE_D_WEBSITE,"FB page Links field shows itay-cohen.co.il — owner has own branded website"
+,יפעת - יועצת ומשווקת נדל"ן (חיפה),יפעת,GATE_A_RECENCY,"Only visible/pinned post dated 15 June 2024, no confirmed activity within 6 months"
+,המיטב בנדל"ן,יגאל ידין,GATE_A_RECENCY,"Most recent regular post 17 September 2025, ~11mo stale — fails 6mo recency gate"
