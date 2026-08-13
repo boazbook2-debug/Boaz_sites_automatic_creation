@@ -111,6 +111,7 @@ export default function IntakeForm({ onBack, siteId }) {
     main: "#141414",
     accent1: "#1B2A41",
     accent2: "#B08D57",
+    headerBg: null,
   });
   const [brandStory, setBrandStory] = useState({
     yearsInBusiness: "",
@@ -286,9 +287,23 @@ export default function IntakeForm({ onBack, siteId }) {
   const setLogoFile = (file) => {
     if (!file) return;
     setLogoImage({ id: nextId("img"), file, previewUrl: URL.createObjectURL(file), removed: false });
+    // Header color auto-matches the logo's background — new sites only; an
+    // existing site's saved headerBg was already loaded from the server and
+    // shouldn't be silently overwritten just because its logo gets replaced.
+    if (!siteId) {
+      sampleLogoBackgroundColor(file).then((hex) => {
+        setColors((c) => ({ ...c, headerBg: hex }));
+      });
+    }
   };
 
-  const toggleLogoRemoved = () => setLogoImage((img) => (img ? { ...img, removed: !img.removed } : img));
+  const toggleLogoRemoved = () =>
+    setLogoImage((img) => {
+      if (!img) return img;
+      const removed = !img.removed;
+      if (!siteId && removed) setColors((c) => ({ ...c, headerBg: null }));
+      return { ...img, removed };
+    });
 
   const addHeroImages = (fileList) => {
     const added = Array.from(fileList).map((file) => ({
@@ -581,6 +596,41 @@ export default function IntakeForm({ onBack, siteId }) {
       return blob || file;
     } catch {
       return file;
+    }
+  };
+
+  // Samples the logo's own background color from its frame edges (corners +
+  // edge midpoints), so a new site's header can match the logo instead of
+  // clashing with it. Transparent edge pixels are skipped; if every sampled
+  // pixel is transparent (e.g. a logomark with no background), returns null
+  // so the header falls back to its default black.
+  const sampleLogoBackgroundColor = async (file) => {
+    try {
+      const bitmap = await createImageBitmap(file);
+      const { width: w, height: h } = bitmap;
+      const canvas = document.createElement("canvas");
+      canvas.width = w;
+      canvas.height = h;
+      const ctx = canvas.getContext("2d");
+      ctx.drawImage(bitmap, 0, 0);
+      const points = [
+        [0, 0], [w - 1, 0], [0, h - 1], [w - 1, h - 1],
+        [Math.floor(w / 2), 0], [Math.floor(w / 2), h - 1],
+        [0, Math.floor(h / 2)], [w - 1, Math.floor(h / 2)],
+      ];
+      const counts = new Map();
+      for (const [x, y] of points) {
+        const [r, g, b, a] = ctx.getImageData(x, y, 1, 1).data;
+        if (a < 10) continue;
+        const key = `${r},${g},${b}`;
+        counts.set(key, (counts.get(key) || 0) + 1);
+      }
+      if (counts.size === 0) return null;
+      const [mostCommon] = [...counts.entries()].sort((a, b) => b[1] - a[1])[0];
+      const [r, g, b] = mostCommon.split(",").map(Number);
+      return `#${[r, g, b].map((v) => v.toString(16).padStart(2, "0")).join("")}`;
+    } catch {
+      return null;
     }
   };
 
